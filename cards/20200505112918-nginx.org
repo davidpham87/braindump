@@ -16,3 +16,8 @@
 
 ** Links
    - https://nginx.org/en/
+
+
+** See also (generated)
+
+- [[file:devops.org][Devops]]

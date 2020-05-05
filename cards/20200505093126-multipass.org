@@ -10,3 +10,8 @@
 
 ** Source
    - [[https://multipass.run/]]
+
+
+** See also (generated)
+
+- [[file:devops.org][Devops]]

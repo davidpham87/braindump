@@ -112,7 +112,7 @@ Make sure that project&rsquo;s sponsor is aligned with those of the team.
 ## Talks
 
 
-## Maybe not - Rich Hickey [2018]
+### Maybe not - Rich Hickey [2018]
 
 The talk is about `clojure.spec` and about the optionality in requirements.
 
@@ -158,33 +158,9 @@ when testing a `index-of` function for string.
 Write about `s/fspec`. The trick in using `s/fspec` is to provide reasonable generators. Using the `gen/return` allows to wrap a high order function as a *generator*. Read `test.check.generator` for more [details](https://github.com/clojure/test.check/blob/master/doc/generator-examples.md).
 
 
-## Design, Composition and Performance [2013]
+### Design, Composition and Performance [2013]
 
-What is a good design? Separating into things that can be composed. Each component should be **about** one or a few things. We solve a problem by composing the parts. It is iterative.
-
-Design is about taking things apart.
-
--   **Requirements:** Move from the want/need to the problems. Explicit the knowns to the unknowns. Requirement from the domain side (how the information is transformed) to the solution side (on which technology should the code run). We can split the cause and the symptom for the problem, and explicit the unstated requirement (e.g. should not destroy the machine or crash).
--   **Time, order and flow:** In which ordering are the operation to happen, can they be commutative?
--   **Place, participants:** Who is participating into the process? Which processes?
--   **Information and mechanism:** Which components belongs to the information or business problem, and which belongs to the technical solution.
--   **Solutions:** We have to compare multiple solutions and state their benefits and trade offs.
-
-We should separate need/features from the intrinsic problem.
-
-Learning requires inefficiency.
-
-Constraint is a driver of Creativity. So we should ask as much constraint as possible when solving a problem. We are forced to take a choice and move on.
-
-Design is imagining (potential solution) and embrace constraints, create additional if not enough restrictive. It is optimistic, be positive and imagine a lot. Design is about making decisions. The value conveyed is in decisions made.
-
-Performing is preparing (planning). We should practice and study. Develop sensibilities you can apply on the fly (pattern, techniques to know what works and what not).
-
-Design is about take things apart in order to be able to pull them back together. Design like Bartok (communication very well at multiple levels). Code like Coltrane (preparedness and experience, by doing multiple things and not the same thing over and over).
-
-Choose tools that are like instruments (stable, simple and oriented at one thing and around people who know how to use them). They should express a fundamental idea (excitation for instruments).
-
-Try to pursue harmony in the design.
+-   [Design](../cards/20200430190921-design.md) card.
 
 
 ## See also (generated)

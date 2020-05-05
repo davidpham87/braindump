@@ -308,6 +308,7 @@
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
 - [[file:20200503222619-org_roam_clj.org][Org-roam-clj: Org-roam extension with Clojure]]
+- [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
 - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 - [[file:20200430235013-specs.org][specs]]
 - [[file:../todo.org][TODO]]

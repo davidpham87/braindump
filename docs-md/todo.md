@@ -6,15 +6,28 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 # Highly important
 
 
+## Read
+
+-   Check how to do deft ignore
+-   how to write note efficiently
+-   org journal
+
+
+## Idea
+
+-   Download clojure.core and use materiala for testing. [Materiala](cards/20200503165952-materiala.md)
+-   Fork marginalia parser and correct its bug: [parser](https://github.com/gdeer81/marginalia/blob/master/src/marginalia/parser.clj)
+
+
 ## Goals
 
 -   specs, core async, datomic, testing.
+-   Kubernetes, container technology.
 -   Webworkers and websockets.
 -   GPU computing
 -   GraphQL
 -   Spark
 -   Kafka
--   Kubernetes, container technology.
 -   Learn about databases (postgres, elastic search and datomic).
 
 
@@ -25,7 +38,7 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 
 ## Multipass and Ansible
 
-Use multipass and Ansible to simulate networks and kubernetes
+Use multipass and Ansible to simulate networks and kubernetes.
 
 
 ## Learn CSS
@@ -37,11 +50,6 @@ Use multipass and Ansible to simulate networks and kubernetes
 ## Leverage indices and org-parser
 
 Check whether we can use indices to create better indexing.
-
-
-## Idea
-
-Download clojure.core and use materiala.
 
 
 ## See also (generated)

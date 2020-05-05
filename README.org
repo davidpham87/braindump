@@ -25,14 +25,15 @@ automatic see also are created at the end of each page.
 
 See org-roam-clj on how to use the library.
 
-** Small index for quick accessa
+** Small index for quick access
 
 *** Programming
-   - [[file:decks/clojure.org][clj]], [[file:cards/20200430155819-core_async.org][core.async]],
+   - [[file:decks/clojure.org][clj]], [[file:cards/20200430155819-core_async.org][core.async]].
 
 ** See also (generated)
 
+- [[file:decks/clojure.org][Clojure]]
+- [[file:cards/20200430155819-core_async.org][core.async]]
 - [[file:blog/20200502171331-first_blog_ticket.org][First blog ticket]]
 - [[file:cards/20200430180442-org_mode.org][org mode]]
 - [[file:cards/readings.org][Readings]]
-

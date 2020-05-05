@@ -13,16 +13,18 @@ I created some functions to leverage the `org-roam.db` sqlite data base. With my
 See org-roam-clj on how to use the library.
 
 
-## Small index for quick accessa
+## Small index for quick access
 
 
 ### Programming
 
--   [clj](decks/clojure.md), [core.async](cards/20200430155819-core_async.md),
+-   [clj](decks/clojure.md), [core.async](cards/20200430155819-core_async.md).
 
 
 ## See also (generated)
 
+-   [Clojure](decks/clojure.md)
+-   [core.async](cards/20200430155819-core_async.md)
 -   [First blog ticket](blog/20200502171331-first_blog_ticket.md)
 -   [org mode](cards/20200430180442-org_mode.md)
 -   [Readings](cards/readings.md)

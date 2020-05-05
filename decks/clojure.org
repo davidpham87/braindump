@@ -228,3 +228,4 @@
 - [[file:../cards/20200502122138-simple_made_easy.org][Simple Made Easy]]
 - [[file:../cards/20200430235013-specs.org][specs]]
 - [[file:../cards/20200504204808-why_clojure.org][Why Clojure?]]
+

@@ -11,6 +11,7 @@ Library for extending org-roam.
 ** Ideas
 
 - Rewrite logic for tags to include indices and tags [and not only roam alias?].
+- Check sha1/hash in db to know which files to updates.
 - Extend to markdown parsing.
 - YAML heading.
 - Own database [implement same operation].
@@ -20,7 +21,11 @@ Library for extending org-roam.
 - Cross device syncing with privacy.
 
 - Use for leveraing  [[https://github.com/200ok-ch/org-parser][org-parser]]
+- Make own parser for displaying org files.
 - Learn about [[https://github.com/Engelberg/instaparse/][instaparse]].
+
+** Notes
+   - Pandoc does not convert the links so it requires a filter.
 
 ** See also (generated)
 

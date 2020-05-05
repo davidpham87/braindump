@@ -32,3 +32,9 @@
 ** Links
    - http://swannodette.github.io/2013/06/10/porting-notchs-minecraft-demo-to-clojurescript
    - https://github.com/swannodette/chambered
+
+
+** See also (generated)
+
+- [[file:../decks/clojure.org][Clojure]]
+- [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
