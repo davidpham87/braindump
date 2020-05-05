@@ -1,0 +1,34 @@
+#+TITLE: Python
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: python deep-learning data-science programming data-science statistics
+#+TAGS: programming data-science statistics
+
+* Python
+  + [X] IPython
+
+  + [X] Jupyter Noteboks
+      #+BEGIN_SRC bash
+      jupyter notebooks
+      #+END_SRC
+
+  + [ ] scikit, read documentation.
+
+  + [X] pylint
+    * pylintrc to determine which mistakes to solve.
+    * One can also use =# pylint= header in python files, e.g. pandas source code.
+    * you can use disable
+
+  + [X] pyflakes
+
+  + [ ] nose2 and automatic test.
+
+  + [X] [[https://www.tensorflow.org/][Google Tensorflow]].
+
+  + [ ] pytorch
+
+
+** See also (generated)
+
+- [[file:20200430153912-ethz.org][ETHZ]]
+- [[file:r_cran.org][R CRAN]]
+

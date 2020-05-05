@@ -1,0 +1,11 @@
+#+TITLE: Effective Programs - 10 years of clojure
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: effective-programs-10-years-of-clojure
+#+TAGS: effective-programs-10-years-of-clojure rich-hickey
+#+DATE: 2020-05-04
+
+* Effective Programs - 10 years of clojure
+
+** Links
+
+- https://www.youtube.com/watch?v=2V1FtfBDsLU, Conj 2017

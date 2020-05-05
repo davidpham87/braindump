@@ -1,0 +1,30 @@
+#+TITLE: Why Clojure?
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: why-clojure
+#+TAGS: why-clojure clj
+#+DATE: 2020-05-04
+
+* Why Clojure?
+
+  - Simplicity and concision (factor of 5 to 10), transparence.
+  - Information driven (work with data.
+  - Novelty of Lisp and functional programming.
+  - Better at design
+  - Macros, consumption, at change of paradigm
+  - Immutable
+  - Functions
+  - Reach (jvm, js, python)
+  - Concurrency and parallelism
+  - Reference type and why
+  - Testing
+
+** Topics
+
+   - Hot code reloading
+   - Effective programming from Rich Hickey
+
+** Links
+
+   - [[file:../decks/clojure.org][clojure]]
+   - [[file:20200430235013-specs.org][specs]]
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][core.async]]

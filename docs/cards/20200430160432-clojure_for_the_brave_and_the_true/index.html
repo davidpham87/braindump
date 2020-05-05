@@ -1,0 +1,1006 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.4">
+    
+    
+      
+        <title>Clojure for the brave and the true - David's Brain Dump</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4007cdc.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CSource+Sans+Pro&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Sans Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clojure-for-the-brave-and-the-true" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="David's Brain Dump" class="md-header-nav__button md-logo" aria-label="David's Brain Dump">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            David's Brain Dump
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Clojure for the brave and the true
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="David's Brain Dump" class="md-nav__button md-logo" aria-label="David's Brain Dump">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    David's Brain Dump
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../rationale/" title="Why?" class="md-nav__link">
+      Why?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../todo/" title="TOOD List" class="md-nav__link">
+      TOOD List
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Blog
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Blog" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20200502171331-first_blog_ticket/" title="First blog ticket" class="md-nav__link">
+      First blog ticket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Decks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Decks" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Decks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../decks/clojure/" title="Clojure" class="md-nav__link">
+      Clojure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Cards
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Cards" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Cards
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430141226-life_in_dynamic_typing/" title="Life In Dynamic Typing" class="md-nav__link">
+      Life In Dynamic Typing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430141609-david_nolen/" title="David Nolen" class="md-nav__link">
+      David Nolen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430153912-ethz/" title="ETHZ" class="md-nav__link">
+      ETHZ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154352-cli_arguments/" title="CLI Arguments" class="md-nav__link">
+      CLI Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
+      Multiple environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154647-shadow_cljs/" title="shadow-cljs" class="md-nav__link">
+      shadow-cljs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155438-mastering_clojure_macro/" title="Mastering Clojure Macro" class="md-nav__link">
+      Mastering Clojure Macro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155637-applied_clojure/" title="Applied Clojure" class="md-nav__link">
+      Applied Clojure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155819-core_async/" title="core.async" class="md-nav__link">
+      core.async
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Clojure for the brave and the true
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Clojure for the brave and the true" class="md-nav__link md-nav__link--active">
+      Clojure for the brave and the true
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-demons-concurrency" class="md-nav__link">
+    Parallel demons     :concurrency:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-type-concurrencyepochal_time_model" class="md-nav__link">
+    References type     :concurrency:epochal_time_model:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coreasync-and-channels-core_async" class="md-nav__link">
+    core.async and channels     :core_async:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraction-and-polymorphism" class="md-nav__link">
+    Abstraction and polymorphism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also-generated" class="md-nav__link">
+    See also (generated)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430180442-org_mode/" title="Org mode" class="md-nav__link">
+      Org mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430190921-design/" title="Design" class="md-nav__link">
+      Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430235013-specs/" title="Specs" class="md-nav__link">
+      Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200501163355-goals/" title="Goals" class="md-nav__link">
+      Goals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200501201607-quotes/" title="Quotes" class="md-nav__link">
+      Quotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200502122138-simple_made_easy/" title="Simple Made Easy" class="md-nav__link">
+      Simple Made Easy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200503165952-materiala/" title="Materiala" class="md-nav__link">
+      Materiala
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200503222619-org_roam_clj/" title="org-roam-clj" class="md-nav__link">
+      org-roam-clj
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
+      Continuing Education
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpp/" title="C/C++" class="md-nav__link">
+      C/C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devops/" title="Docker and Kubernete" class="md-nav__link">
+      Docker and Kubernete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gratitude/" title="Happiness and Sucess" class="md-nav__link">
+      Happiness and Sucess
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r_cran/" title="R" class="md-nav__link">
+      R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../readings/" title="Books" class="md-nav__link">
+      Books
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unix/" title="Unix command learning" class="md-nav__link">
+      Unix command learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../website/" title="Website" class="md-nav__link">
+      Website
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-demons-concurrency" class="md-nav__link">
+    Parallel demons     :concurrency:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-type-concurrencyepochal_time_model" class="md-nav__link">
+    References type     :concurrency:epochal_time_model:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coreasync-and-channels-core_async" class="md-nav__link">
+    core.async and channels     :core_async:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraction-and-polymorphism" class="md-nav__link">
+    Abstraction and polymorphism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also-generated" class="md-nav__link">
+    See also (generated)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="clojure-for-the-brave-and-the-true">Clojure for the brave and the true<a class="headerlink" href="#clojure-for-the-brave-and-the-true" title="Permanent link">&para;</a></h1>
+<h2 id="parallel-demons-concurrency">Parallel demons     :concurrency:<a class="headerlink" href="#parallel-demons-concurrency" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Reference cell: Read and write a shared state.</li>
+<li>Mutual exclusion: Example with writing a log with several processes, e.g. concatenate &ldquo;ab&rdquo; and &ldquo;cd&rdquo; in a file results in &ldquo;acbd&rdquo;.</li>
+<li>Deadlock: On a table, every one has to take the left and right stick and the same time. However, there is only one stick per person. Leading to a deadlock.</li>
+</ol>
+<p>Solutions to these are <code>future</code> (new thread), <code>delay</code> (like future but executed only at <code>deref</code> time), <code>promise</code> (empty memory location shared to all thread that will receive value only once with <code>deliver</code>). The advantage is all the execution are cached. <strong>Note</strong>: deference is done with either the <code>defer</code> function or the <code>@</code> sign in front of the variable.</p>
+<h2 id="references-type-concurrencyepochal_time_model">References type     :concurrency:epochal_time_model:<a class="headerlink" href="#references-type-concurrencyepochal_time_model" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>atom</code> are identities that can be set and shared by multiple threads. They use a set and compare algorithm, i.e. the <code>swap!</code> function modifies the value of the atom variable only if its values did not change between the beginning and the end of the transaction. <code>swap!</code> and <code>reset!</code> are the main function to work with atoms.</li>
+<li>
+<p><code>watch</code> are function with four arguments: a key (a keyword for identifying the process calling the watcher), a reference variable being watched, the old-state, and the new state.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">f</span> <span class="p">[</span><span class="nb">key </span><span class="nv">watched</span> <span class="nv">old-state</span> <span class="nv">new-state</span><span class="p">]</span> <span class="nv">nil</span><span class="p">)</span>
+</code></pre></div>
+
+<p>A watcher function is attached to a reference type (e.g an atom) with the <code>add-watch</code> function having the following signature:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">counter</span> <span class="p">(</span><span class="nf">atom</span> <span class="mi">0</span><span class="p">))</span>
+<span class="p">(</span><span class="nf">add-watch</span> <span class="nv">counter</span> <span class="ss">:watching-counter</span> <span class="nv">watch-fn</span><span class="p">)</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Validators are functions that can check if new states are valid. They take as argument the atom and return a boolean. They are added to the atom as follow</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">bigger-than-1</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span>
+  <span class="p">(</span><span class="nb">or </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">x</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nf">throw</span> <span class="p">(</span><span class="nf">IllegalStateException.</span> <span class="s">&quot;That&#39;s too small&quot;</span><span class="p">))))</span>
+<span class="p">(</span><span class="k">def </span><span class="nv">account</span> <span class="p">(</span><span class="nf">atom</span> <span class="mi">2</span> <span class="ss">:validator</span> <span class="nv">bigger-than-1</span><span class="p">))</span>
+<span class="p">(</span><span class="nf">swap!</span> <span class="nv">account</span> <span class="nv">inc</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">swap!</span> <span class="nv">account</span> <span class="nb">- </span><span class="mi">10</span><span class="p">)</span> <span class="c1">;; Throw an error</span>
+</code></pre></div>
+
+</li>
+<li>
+<p><code>ref</code> type are the ACI in the ACID accronym (atomic, consistent and isolated) and use <em>STM</em>. It means that either the operations between two refs happened correctly, or the transaction is aborted. <code>alter</code> and <code>dosync</code> are the key functions.</p>
+<ul>
+<li>In a transaction (that is the body of <code>dosync</code>), every <code>ref</code> keep their state to the transaction (invisible to outside threads) and when the transaction tries to commit, every <code>ref</code> checks if the value has been altered by other threads.</li>
+<li>If any of them has been change, then <strong>none</strong> of the <code>ref</code> are updated, and the transaction restart with the new value and commits only when the initial states has not been /alter/ed by other processes.</li>
+</ul>
+<p><code>commute</code> also allow to change the state of a ref. However, at transaction time, if ref states have been altered, only the <code>commute</code> part is run again with the new states, which might lead to inconsistent state, but increased performance. <code>ensure</code> function protects refs from being modified by other transaction. This is helpful, when a transaction must modify only one refs, but the other related refs must not be altered by other transaction.
+5.  <code>vars</code> are associations between symbols and objects. <code>^:dynamic</code> is a keyword in <code>def</code> to signal to clojure that a vars is dynamic. Varnames are enclosed around <code>*</code> (e.g. <code>*user-email*</code>) to show to other programmers that the variable is dynamic. <code>bindings</code> is a dynamic <code>let</code>. Dynamic vars are often use to name a resource that one ore more functions target. <code>set!</code> allows to change the state of the dynamic vars. <code>alter-var-root</code> allows to rebind a immutable vars (which is unadvised), and <code>with-redefs</code> allows to create local binding for testing.
+6.  <code>pmap</code> and the following <code>ppmap</code> can be used to execute parallel task:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">ppmap</span>
+  <span class="s">&quot;Partitioned pmap, for grouping map ops together to make parallel</span>
+<span class="s">  overehead worthwile&quot;</span>
+  <span class="p">[</span><span class="nv">grain-size</span> <span class="nv">f</span> <span class="o">&amp;</span> <span class="nv">colls</span><span class="p">]</span>
+  <span class="p">(</span><span class="nb">apply </span><span class="nv">concat</span>
+     <span class="p">(</span><span class="nb">apply </span><span class="nv">pmap</span>
+        <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="o">&amp;</span> <span class="nv">pgroups</span><span class="p">]</span> <span class="p">(</span><span class="nb">doall </span><span class="p">(</span><span class="nb">apply map </span><span class="nv">f</span> <span class="nv">pgroups</span><span class="p">)))</span>
+        <span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="nb">partial </span><span class="nv">partition-all</span> <span class="nv">grain-size</span><span class="p">)</span> <span class="nv">colls</span><span class="p">))))</span>
+</code></pre></div>
+
+</li>
+</ol>
+<h2 id="coreasync-and-channels-core_async">core.async and channels     :core_async:<a class="headerlink" href="#coreasync-and-channels-core_async" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>chan</code> creates a channel. And channel communicate through <em>messages</em>. One can <strong>put</strong> and <strong>take</strong> message. Processes wait for completion of their message. Process: Wait and do nothing until successful completion of either <em>put</em> or <em>take</em> from a channel. After success of the operation, continue.</li>
+<li><code>go</code> and their blocks (<em>go blocks</em>) runs separately on a concurrent thread. <code>go</code> creates a process (i.e. its go block), which runs a pool of threads equal two plus the number of machines cores (avoiding the overhead of creating threads). Each <code>go block</code> only live until it reach the ends of its body.</li>
+<li><code>&lt;!</code> and <code>&lt;!!</code> are the <em>take</em> function. It listen to the channel and wait until an another process puts a value in the channel which the <em>take</em> function returns. <code>&gt;!</code> and <code>&gt;!!</code> are the <em>put</em> function which always return true. It provides a message to a channel and wait until the message to be taken by another process before releasing resources. The number of <code>!</code> in the operation depends if one is inside a <em>go block</em> (one <code>!</code>) or not (two <code>!</code>). <em>Blocking</em> and <em>parking</em> waiting are key to understand the number of <code>!</code>. Parking wait allows a thread to handle several process (and this is only possible in a <em>go block</em>). When one of the process starts to wait, the thread put it aside and starts an another process until it starts to wait, and so on. Use <code>poll!</code> and <code>offer!</code> to have non blocking channel interactions in the REPL.</li>
+<li>
+<p>Channel buffers are created as following:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">buffer-size</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="k">def </span><span class="nv">channel-buffer</span> <span class="p">(</span><span class="nf">chan</span> <span class="nv">buffer-size</span><span class="p">))</span>
+</code></pre></div>
+
+<p>This means we can create 2 values without waiting for a response. <code>sliding-buffer</code> (FIFO) and <code>dropping-buffer</code> (LIFO) can be used to discard channel message without blocking.
+5.  <code>close!</code> <em>closes</em> channel. A closed channel does not accept any puts anymore and after all the values have been retrieved, the subsequent takes return <code>nil</code>.
+6.  <code>alts!!</code> lets us use the result of the first successful channel operation among a collection of channel operations. The elegant solution with <code>alts!!</code> is one can define a timeout</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">let </span><span class="p">[[</span><span class="nv">message</span> <span class="nv">channel</span><span class="p">]</span> <span class="p">(</span><span class="nf">alts!!</span> <span class="p">[</span><span class="nv">c1</span> <span class="nv">c2</span> <span class="p">(</span><span class="nf">timout</span> <span class="mi">20</span><span class="p">)])]</span> <span class="c1">;; c1 and c2 are predefined channels.</span>
+  <span class="p">(</span><span class="nb">println </span><span class="nv">message</span><span class="p">))</span>
+</code></pre></div>
+
+<p>if the timeout is the first to finish than <code>message</code> is <code>nil</code>. See <code>alt!</code> macro as well.
+7.  Queues and pipelines (escaping the callback hell) are common patterns.</p>
+</li>
+</ol>
+<h2 id="abstraction-and-polymorphism">Abstraction and polymorphism<a class="headerlink" href="#abstraction-and-polymorphism" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Multimethods</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defmulti </span><span class="nv">method-name</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">x</span><span class="p">]</span> <span class="p">(</span><span class="ss">:type</span> <span class="nv">x</span><span class="p">)))</span> <span class="c1">;; or simplty :type, can be more complicated as well</span>
+<span class="p">(</span><span class="kd">defmethod </span><span class="nv">method-name</span> <span class="ss">:hello</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span> <span class="s">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="kd">defmethod </span><span class="nv">method-name</span> <span class="ss">:good-bye</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span> <span class="s">&quot;Good-bye&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="kd">defmethod </span><span class="nv">method-name</span> <span class="ss">:default</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span> <span class="s">&quot;I don&#39;t know you&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">method-name</span> <span class="p">{</span><span class="ss">:type</span> <span class="ss">:hello</span><span class="p">})</span> <span class="c1">; =&gt; Hello</span>
+<span class="p">(</span><span class="nf">method-name</span> <span class="p">{</span><span class="ss">:type</span> <span class="ss">:good-bye</span><span class="p">})</span> <span class="c1">; Good-bye</span>
+<span class="p">(</span><span class="nf">method-name</span> <span class="p">{</span><span class="ss">:type</span> <span class="ss">:what?</span><span class="p">})</span> <span class="c1">; =&gt; I don&#39;t know you</span>
+</code></pre></div>
+
+<p>One can also create hierarchies with <code>derive</code> and namespace keywords.
+2.  A <em>protocol</em> allows to make dispatch by the type of the first argument and it is a collection of polymorphic operations (unlike multimethod which is just one function). Methods from protocols can not have a <code>&amp; rest</code> argument. Key functions are <code>defprotocol</code>, <code>extend-type</code>, <code>extend-protocol</code> (for specifying for several type at once).
+-   Caveat: methods from protocols are property of the namespace and not from the object.
+3.  Records are extension of <code>hash-map</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defrecord </span><span class="nv">WereWolf</span> <span class="p">[</span><span class="nb">name </span><span class="nv">title</span><span class="p">])</span>
+<span class="p">(</span><span class="nf">WereWolf.</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">-&gt;WereWolf</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">map-&gt;WereWolf</span>  <span class="p">{</span><span class="ss">:name</span> <span class="s">&quot;David&quot;</span> <span class="ss">:title</span> <span class="s">&quot;Master&quot;</span><span class="p">})</span>
+</code></pre></div>
+
+<p>On has to use the <code>:import:</code> statement in the <code>ns</code> macro in order to import records. One can access field through the keyword or the dot <code>.</code> macro.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">.name</span> <span class="p">(</span><span class="nf">WereWolf.</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">))</span> <span class="c1">; &quot;David&quot;</span>
+<span class="p">(</span><span class="ss">:title</span> <span class="p">(</span><span class="nf">WereWolf.</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">))</span> <span class="c1">; &quot;Master&quot;</span>
+</code></pre></div>
+
+<p>Any function on map works on record (although they do not retain their class if one <code>dissoc</code> or <code>assoc</code> them). Here is how one could extend a protocol.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defprotocol </span><span class="nv">WereCreature</span>
+  <span class="s">&quot;Awesom Were&quot;</span>
+  <span class="p">(</span><span class="nf">full-moon-behavior</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span> <span class="s">&quot;Full-moon behavior&quot;</span><span class="p">))</span>
+
+<span class="p">(</span><span class="kd">defrecord </span><span class="nv">WereWolf</span> <span class="p">[</span><span class="nb">name </span><span class="nv">title</span><span class="p">]</span>
+  <span class="nv">WereCreature</span>
+  <span class="p">(</span><span class="nf">full-moon-behavior</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span> <span class="p">(</span><span class="nb">str name </span><span class="s">&quot; will kill everyone&quot;</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nf">full-moon-behavior</span> <span class="p">(</span><span class="nf">WereWolf.</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+</li>
+<li>
+<p><code>deftype</code>, <code>reify</code>, <code>proxy</code>. reify is about implementing an anonymous protocol at runtime.</p>
+</li>
+</ol>
+<h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.braveclojure.com/clojure-for-the-brave-and-true/">Brave and the True</a></li>
+</ul>
+<h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../20200430155637-applied_clojure/">Applied Clojure</a></li>
+<li><a href="../20200430154352-cli_arguments/">CLI Arguments</a></li>
+<li><a href="../../decks/clojure/">Clojure</a></li>
+<li><a href="../20200430155819-core_async/">core.async</a></li>
+<li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
+<li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
+<li><a href="../20200430155438-mastering_clojure_macro/">Mastering Clojure Macro</a></li>
+<li><a href="../20200430154528-multiple_environment/">Multiple Environment</a></li>
+<li><a href="../20200502122138-simple_made_easy/">Simple Made Easy</a></li>
+<li><a href="../20200430235013-specs/">specs</a></li>
+<li><a href="../../todo/">TODO</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../20200430155819-core_async/" title="core.async" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                core.async
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../20200430180442-org_mode/" title="Org mode" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Org mode
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (C) 2020 David Pham
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.83fe6e3c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

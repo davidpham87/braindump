@@ -1,0 +1,89 @@
+#+TITLE: ETHZ
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: statistics studies mathematics
+#+TAGS: statistics causality
+
+* ETHZ
+
+- tags :: studies statistics ethz
+
+
+
+** Lectures
+*** DONE Projects [3/3]
+    CLOSED: [2020-01-05 So 21:41]
+    + [X] Semester paper in economics : Public Employment
+
+      + [X] Write e-mail.
+      + [X] Decide subject and write about it.
+      + [X] Read papers
+      + [X] Do the regression
+
+    + [X] Semester paper in statistics: Missing data
+
+      + [X] Read introduction missing data.
+      + [X] Play with mi.
+      + [X] Use Digital Ocean API in R.
+
+    + [X] Master thesis
+      - [X] Webapp to teach math in clojure and middleman yaml
+*** DONE Causality [2/2]
+
+I had 5.75 (kind of deserved).
+- PDAG: Partially means no directed cycle whereas DAG means no cycle at all.
+  CPDAG (Markov Equivalent Graphs): for every directed node, all graph have the
+  same edge. For undirected edges, there exist at least two graphs with
+  opposite direction of the edge.  Markov equivalent if they have the same
+  skeleton and immoralities (v-struct).
+- D-separation $\to$ Blocked Reverse engineer the definition by thinking about
+  the independence
+- Markov blanket $M$: for a target node $Y$, it is smallest set $M$ of nodes in
+  the graphs that make $Y$ independent of all the other nodes given $M$. In
+  DAG: for $X$ it contains its parents, its children and the parents of
+  children.
+- Causal minimality: $P^X$ is not markov to any proper subgraph of
+  $\mathcal{G}$ if and only if there are no useless edge.
+- Markov: conditional d-sep $\Rightarrow$ independence, faithfulness is the
+  converse. Local: $X$ is independent of any non descendent given its parnets.
+- Adjustment formula (tautology): the conditional probability given the parents
+  remains the same under the interventions.
+- The goal adjustment set: evaluate interventions or causality with
+  observational data.
+- Valid adjustment set $Z$: $p_{\mathcal{S}, do(X=x)}(y) = \sum_{z \in Z}
+  p_{\mathcal{S}}(y \vert X=x, z) p(z)$ for $y$ not in the parent of $x$ and
+  $x, y \notin Z$.
+- Backdoor criterion: $S$ blocks all paths from $X$ to $Y$ that come
+  \emph{into} $X$ (backward path) and $S$ contains no descendant of $X$.
+
+*** DONE QRM [3/3]
+    <2015-08-18 Die> Know the main theorems by heart: Fisher-Tippet,
+    Pickands-Balkema-de Hann, Sklar. 5.5/6
+    + [X] Read slides
+    + [X] Learn slides by heart
+    + [X] Do past exams
+*** DONE Multivariate Statistics [2/2]
+    I had 4.5/6 (which was not deserved at all).
+    + [X] Do exercises
+
+      + [X] Serie 1
+      + [X] Serie 2
+      + [X] Serie 3
+      + [X] Serie 4
+      + [X] Serie 5
+
+    + [X] Read scripts
+*** DONE Computational Statistics, finish the series [2/2]
+    <2015-08-18 Die> I got 6 (was a little bit easy, thanks to emacs and R-help).
+    + [X] Do Series
+    + [X] Read script
+*** DONE Economics Cycle [2/2]
+    <2015-06-09 Die> I had 4.75/6 at the exam.
+   + [X] Read scripts
+   + [X] Do Exercise
+
+
+** See also (generated)
+
+- [[file:python.org][Python]]
+- [[file:r_cran.org][R CRAN]]
+

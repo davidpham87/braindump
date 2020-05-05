@@ -1,0 +1,1063 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.4">
+    
+    
+      
+        <title>Applied Clojure - David's Brain Dump</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4007cdc.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CSource+Sans+Pro&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Sans Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#applied-clojure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="David's Brain Dump" class="md-header-nav__button md-logo" aria-label="David's Brain Dump">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            David's Brain Dump
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Applied Clojure
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="David's Brain Dump" class="md-nav__button md-logo" aria-label="David's Brain Dump">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    David's Brain Dump
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../rationale/" title="Why?" class="md-nav__link">
+      Why?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../todo/" title="TOOD List" class="md-nav__link">
+      TOOD List
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Blog
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Blog" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20200502171331-first_blog_ticket/" title="First blog ticket" class="md-nav__link">
+      First blog ticket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Decks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Decks" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Decks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../decks/clojure/" title="Clojure" class="md-nav__link">
+      Clojure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Cards
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Cards" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Cards
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430141226-life_in_dynamic_typing/" title="Life In Dynamic Typing" class="md-nav__link">
+      Life In Dynamic Typing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430141609-david_nolen/" title="David Nolen" class="md-nav__link">
+      David Nolen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430153912-ethz/" title="ETHZ" class="md-nav__link">
+      ETHZ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154352-cli_arguments/" title="CLI Arguments" class="md-nav__link">
+      CLI Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
+      Multiple environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154647-shadow_cljs/" title="shadow-cljs" class="md-nav__link">
+      shadow-cljs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155438-mastering_clojure_macro/" title="Mastering Clojure Macro" class="md-nav__link">
+      Mastering Clojure Macro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Applied Clojure
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Applied Clojure" class="md-nav__link md-nav__link--active">
+      Applied Clojure
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    Collections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-sequential-data" class="md-nav__link">
+    Processing Sequential Data.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-state-and-mutation" class="md-nav__link">
+    Reference, State and Mutation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-your-cores" class="md-nav__link">
+    Use your cores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-components" class="md-nav__link">
+    Designing components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compose-your-application" class="md-nav__link">
+    Compose Your Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinking-in-clojure" class="md-nav__link">
+    Thinking in Clojure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also-generated" class="md-nav__link">
+    See also (generated)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155819-core_async/" title="core.async" class="md-nav__link">
+      core.async
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430160432-clojure_for_the_brave_and_the_true/" title="Clojure for the brave and the true" class="md-nav__link">
+      Clojure for the brave and the true
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430180442-org_mode/" title="Org mode" class="md-nav__link">
+      Org mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430190921-design/" title="Design" class="md-nav__link">
+      Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430235013-specs/" title="Specs" class="md-nav__link">
+      Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200501163355-goals/" title="Goals" class="md-nav__link">
+      Goals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200501201607-quotes/" title="Quotes" class="md-nav__link">
+      Quotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200502122138-simple_made_easy/" title="Simple Made Easy" class="md-nav__link">
+      Simple Made Easy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200503165952-materiala/" title="Materiala" class="md-nav__link">
+      Materiala
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200503222619-org_roam_clj/" title="org-roam-clj" class="md-nav__link">
+      org-roam-clj
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
+      Continuing Education
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpp/" title="C/C++" class="md-nav__link">
+      C/C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devops/" title="Docker and Kubernete" class="md-nav__link">
+      Docker and Kubernete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gratitude/" title="Happiness and Sucess" class="md-nav__link">
+      Happiness and Sucess
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r_cran/" title="R" class="md-nav__link">
+      R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../readings/" title="Books" class="md-nav__link">
+      Books
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unix/" title="Unix command learning" class="md-nav__link">
+      Unix command learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../website/" title="Website" class="md-nav__link">
+      Website
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    Collections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-sequential-data" class="md-nav__link">
+    Processing Sequential Data.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-state-and-mutation" class="md-nav__link">
+    Reference, State and Mutation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-your-cores" class="md-nav__link">
+    Use your cores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-components" class="md-nav__link">
+    Designing components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compose-your-application" class="md-nav__link">
+    Compose Your Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinking-in-clojure" class="md-nav__link">
+    Thinking in Clojure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also-generated" class="md-nav__link">
+    See also (generated)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="applied-clojure">Applied Clojure<a class="headerlink" href="#applied-clojure" title="Permanent link">&para;</a></h1>
+<h2 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h2>
+<p>List (adddition at the head), vectors (addition at the end) and queues (FIFO).</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">new-orders</span> <span class="nv">clojure.lang.PersistentQueue/EMPTY</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Use <code>transient</code> and <code>persistent!</code> if the transformation is local. The library <code>medley</code> from <em>weavejester</em> incorporate useful functions. Collection accessing: use keyword first <code>(:key m)</code>, or <code>(m :key)</code> if it is certain that <code>m</code> is a map, otherwise if both might be null use <code>(get m k)</code>. If possible avoid having a stack of left parentheses such as <code>((f) x)</code>. Abuse of <code>select-keys</code> to subset a map. If performance is required, we can create custom collection by defining a type and implementing the protocol, a custom printing is possible.</p>
+<p>Use records and maps to describe your entities. Maps should be the default choice, unless you decide to use protocols and need performance for dispatch. Protocols and multimethods are the two ways for dispatching. Protocols are faster in Clojure, but multimethods are more flexible.</p>
+<h2 id="processing-sequential-data">Processing Sequential Data.<a class="headerlink" href="#processing-sequential-data" title="Permanent link">&para;</a></h2>
+<p>We can use <code>map</code>, <code>filter</code>, <code>reduce</code> to process sequence of values, but it might not be efficient. Transducers are created to avoid the concretion of the data structure.</p>
+<p>A transducer (usually denoted by <code>xf</code> or <code>xform</code>) is a function that transform a reducing function into an another reducing function. That is <code>xf: f -&gt; g</code> where <code>f</code> and <code>g</code> have signature <code>whatever, input -&gt; whatever</code>. Concrete example of reducing function are <code>conj</code> with whatever being a list, <code>+</code> (with whatever being a number, and input a number). See <a href="https://clojure.org/reference/transducers">here</a> for more details.</p>
+<p>The trick is you can define map, filter and other operations as reducing function (reducing function are used in <code>reduce</code> operations usually). It is important to note that reducing function can actually grow the whatever (see <code>conj</code>).</p>
+<p>We create them by omitting the <code>coll</code> argument in the typical sequence functions, e.g. <code>(map f)</code> yields a transducer. Use the <code>sequence</code> function to realize the transducer. The following calls are equal</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nb">map </span><span class="o">#</span><span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="nv">%</span><span class="p">)</span> <span class="p">(</span><span class="nb">range </span><span class="mi">10</span><span class="p">))</span>
+   <span class="p">(</span><span class="nf">sequence</span> <span class="p">(</span><span class="nb">map </span><span class="o">#</span><span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="nv">%</span><span class="p">))</span> <span class="p">(</span><span class="nb">range </span><span class="mi">10</span><span class="p">)))</span>
+</code></pre></div>
+
+<p>If we need eagerness we could use <code>into</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">into </span><span class="p">[]</span> <span class="p">(</span><span class="nb">map </span><span class="o">#</span><span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="nv">%</span><span class="p">))</span> <span class="p">(</span><span class="nb">range </span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+
+<p>The benefit of transducer is intermediate values are not allocated and there is a decoupling of the transformations with the reducer (reducing function and reducible collection). They are also polymorphic. We can compose transducers and reduction with <code>transduce</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">moons-transform</span>
+  <span class="p">(</span><span class="nb">comp </span><span class="p">(</span><span class="nb">filter </span><span class="nv">planet?</span><span class="p">)</span> <span class="p">(</span><span class="nb">map </span><span class="ss">:moons</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="kd">defn </span><span class="nv">total-moons</span> <span class="p">[</span><span class="nv">entities</span><span class="p">]</span>
+  <span class="p">(</span><span class="nf">transduce</span> <span class="nv">moons-transform</span> <span class="nb">+ </span><span class="mi">0</span> <span class="nv">entities</span><span class="p">))</span>
+</code></pre></div>
+
+<p>See <a href="http://elbenshira.com/blog/understanding-transducers/">understanding transducers</a> for more details.</p>
+<p>Duplicate removal with <code>distinct</code> and <code>dedupe</code> (only remove subsequent duplicate and safer for large input). Use <code>mapcat</code> instead of <code>(-&gt; map flatten)</code>.</p>
+<h2 id="reference-state-and-mutation">Reference, State and Mutation<a class="headerlink" href="#reference-state-and-mutation" title="Permanent link">&para;</a></h2>
+<p>Identity and state are two distinct notions. An identity is a sequence of immutable values, and the state is the actual value of an identity at a certain point of time. The challenge is to always display a single valid value to all the observer at the same time. There are two types of successions (mutation): atomic and transactions. An atomic transaction only cares about the change happening to the identity itself and not about the coordination of other identity. Transactional ensure that either all changes or none are performed.</p>
+<p>There are two states: program and runtime states. Program state is concerned with mutation in the problem domain, whereas runtime facilitate the software&rsquo;s execution (e.g. connections to databases or network, config files). Runtime state is often unavoidable whereas program state should be minimized and access through API with curated methods rather than directly.</p>
+<p>For managing change, we should <em>build just enough</em> to ensure the application&rsquo;s needs are met. Every side effect and mutable reference slows you down.</p>
+<p>We should be responsible over our functions (make them pure) and make choices about what need to be managed. State is a series of snapshots of values (data) which allows to act responsibly when considering the presence of observers in other processes. In Clojure, observers have consistent set of values as of a particular instant thanks to Clojure&rsquo;s mutable references.</p>
+<h2 id="use-your-cores">Use your cores<a class="headerlink" href="#use-your-cores" title="Permanent link">&para;</a></h2>
+<p>One of the problem is to send task of the main thread to be completed asynchronously and retrieve the result (<code>future</code> and <code>promise</code>).</p>
+<p>Tasks and workers for long lived task-oriented concurrency. We can also use <code>reducers</code> and <code>core.async</code> (with <em>channels</em> and <em>go blocks</em>).</p>
+<p>For agents, use <code>send</code> for computational tasks and won&rsquo;t block for I/O and <code>send-off</code> for updates that might block for an arbitrary time (thread pool will grow accordingly). The advantage is <code>agent</code> can maintain state compared to <code>future</code>.</p>
+<p>Use <code>deref</code> or <code>@</code> for retrieving back the value of a <code>future</code> or <code>promise</code>. Promise are used to returns several values from a <code>future</code> block. Use <code>realized?</code> to check if a <code>promise</code> is available, otherwise it will block. The <code>deref</code> function with an additional argument can force timeout.</p>
+<p>Use Java queues and workers for task oriented programs. This is for coarse grained task parallelism. <code>Queues</code>, <code>threads</code> and <code>executors</code> are the tools from Java to perform a queue of incoming work or requests.</p>
+<p>For fine-grained parallelism The <code>pmap</code> function can be used for easy parallelism, but the overhead might be consequential. The <code>clojure.core.reducer</code> library is the solution for parallelism [fine-grained operations and memory efficient]. A reducer is <em>reducible collection</em> combined with a <em>reducing function</em>. <code>fold</code> is used to perform the reduction [only vectors and maps can be folded in parallel, but the serial version can be faster thanks to avoiding intermediary values]. A <code>reducer</code> splits the data into partition, reduce the elements and then combine them. The reduce and the combine functions can hence be different.</p>
+<p>Concurrency (design the program as a set of concurrent threads of execution) we can use <code>core.async</code>.</p>
+<p>Channels come in unbuffered, fixed buffered, dropping (discard new data) and sliding buffer (discard old data). Creating a channel is done with <code>chan</code> the function. <code>nil</code> can not be passed into channels (as it is the value for saying the channel is closed). The important operations are <code>put</code> and <code>take</code>. A full channel (once the buffer is complete) blocks a thread if no process other process is the other end of the channel to <code>take</code> the value sent by <code>put</code>. Backpressure is the efffect that fixed sized buffers creates by making the producers block when trying to add to a full queue. Traditionally channels are used in <code>go block</code>.</p>
+<p>In the Communicating Sequential Processes (CSP), process belongs to a thread pool and are <em>parked</em> when not blocked by a channel operation (<code>&gt;!</code> or <code>&lt;!</code>). <code>Go blocks</code> are great for building pipelines of data transformation.</p>
+<p><code>core.async/pipelines</code> gives up the raw performance of fine-grained data parallelism but yield a more flexible architecture. The function moves the value from input to output channel with parallel transducer execution.</p>
+<p>Next step is to break a growing system into pieces using concurrency.</p>
+<h2 id="designing-components">Designing components<a class="headerlink" href="#designing-components" title="Permanent link">&para;</a></h2>
+<p>Use of channels, better to receive and provide channels for interface. In <code>core.async</code>, a single <code>go</code> block is to call the body of the <code>go</code> block <em>once</em> asynchronously, while <code>go-loop</code> is intended for looping, unless we close the channel. <code>go</code> blocks return a channel, which can be used for pedestal.</p>
+<p>A good design is to split an API layer and implementation layer with a record.</p>
+<p>As for <code>core.async</code>, there are three additional concept for channels that are useful: pipeline, fan-in and fan-out. In a system, pipelines link an output channel to an input channel (acting like as a conveyor belt) and can possibly transform its input values with a transducer (async, sync, blocking). The <code>pipe</code> function should be used when no transformation.</p>
+<p>Fan-in channels gather the input of several channels and provide a single output channel. <code>merge</code> is a simple way to merge all the incoming channels into a single output channels, but it can&rsquo;t be modified after creation.</p>
+<p>The <code>mix</code> (for audio mix) function with its functions <code>admix/unmix</code> allows channel to participate in the mix. Users can <code>toggle</code> options for each input channel: <code>:pause</code> (no consumption nor inclusion in output channel), <code>:mute</code> (consumption but no inclusion), <code>:solo</code> ( if true, only solo-ed channels in output channel mix, <code>:pause</code> and <code>:mute</code> ignored if this is the case).</p>
+<p>Fan-out have three ways: <code>mult</code>, <code>pub/sub</code>, <code>split</code>.</p>
+<p>The <code>mult</code> abstraction is multiply traffic from the input channel into multiple output channels. Output channels (with different blocking policy) can participate in the connection with <code>tap/untap</code> (if a tap is closed, it is removed from the <code>mult</code>). All the receiving channels must accept a value from the <code>mult</code> before the <code>mult</code> can move on to the next value. This is where alternative buffering strategy are useful.</p>
+<p>The <code>pub/sub</code> allows to distribute the traffic through a partition function and subscribers can inform to which partition value they want to lisen to.</p>
+<p><code>split</code> divides the traffic two channels based on a truthiness of a predicate. <code>split</code> is actually a <code>pub/sub</code> with a partition function providing only <code>truthy/falsy</code>.</p>
+<h2 id="compose-your-application">Compose Your Application<a class="headerlink" href="#compose-your-application" title="Permanent link">&para;</a></h2>
+<p>Taking things apart: usualy some portion of the code will work on the same data, or have the data has a common scope or lifetime, likelihehood of change from external requirement is similar are resource needed. If code is reusable when configured differently in more than one context, then it is a component.</p>
+<p>Component should communicate with channels, but in order to set up the system correctly, we need something to orchestrate it. Several library exist, the book recommends <code>Component</code>, but it has been super-seeded by <a href="https://github.com/weavejester/integrant">integrant</a>. An example can be found here <a href="https://github.com/dawran6/reitit/tree/integrant-example/examples/ring-integrant">reitit/integrant</a>.</p>
+<p>Environment variable also should exist with different settings. The solution in the book are a bit old. Environ still seems to be good on clojure (jvm).</p>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<p>There are three ways to create tests in clojure: repl, example based, generative testing (properties check).</p>
+<p>With REPL driven development, the example used for development are stored in a file (these are candidates for examples).</p>
+<p>For example based, there is the <code>expectations</code> library and the following snippets</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-range-are</span>
+  <span class="p">(</span><span class="nf">testing</span> <span class="s">&quot;Testing range(endIndex)&quot;</span>
+    <span class="p">(</span><span class="nf">are</span> <span class="p">[</span><span class="nv">expected</span> <span class="nv">endIndexf</span>
+      <span class="p">(</span><span class="nb">= </span><span class="nv">expected</span> <span class="p">(</span><span class="nb">range </span><span class="nv">endIndex</span><span class="p">))</span>
+      <span class="o">&#39;</span><span class="p">(</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">)</span> <span class="mi">5</span>
+      <span class="o">&#39;</span><span class="p">()</span> <span class="mi">0</span><span class="p">])))</span>
+</code></pre></div>
+
+<p>Generative testing using</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">ns </span><span class="nv">generative-testing.core</span>
+  <span class="p">(</span><span class="ss">:require</span> <span class="p">[</span><span class="nv">clojure.test.check</span> <span class="ss">:as</span> <span class="nv">tc</span><span class="p">]</span>
+        <span class="p">[</span><span class="nv">clojure.test.check.generators</span> <span class="ss">:as</span> <span class="nv">gen</span><span class="p">]</span>
+        <span class="p">[</span><span class="nv">clojure.test.check.properties</span> <span class="ss">:as</span> <span class="nv">prop</span><span class="p">]))</span>
+</code></pre></div>
+
+<p>I think nowadays we would use spec for it.</p>
+<blockquote>
+<p>We are looking for <em>invariants</em> &#x2013; properties that are always true. [&#x2026;] mathematical laws, relationships between inputs and outputs, round-trip or complementing functions, and comparing action effects.</p>
+<p>Properties like identity, associativity, commutativity and idempotency are an excellent place to start.</p>
+</blockquote>
+<p>Invariants are important because they reduce the number of case your code must consider.</p>
+<h2 id="thinking-in-clojure">Thinking in Clojure<a class="headerlink" href="#thinking-in-clojure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Make Reasoned Choices: always compare trade-off of solutions (benefits and costs). <em>Think first, then do</em>. Careful treatment of decisions and weighed trade-off to fully understand the consequences.</p>
+</li>
+<li>
+<p>Be Reasonable: code with clearly expressed intent, limited side effects, neatly separated concerns, and unambiguous naming. Simple.</p>
+</li>
+<li>
+<p>Keep It Simple: Keep distinct concern as distinct as possible and avoid entangling concepts with other concepts.</p>
+<p>The code can be reasoned about, test and implemented without any incidental complexity.</p>
+<p>Entities are simplest when distinct and composable.</p>
+<p>Domain functions avoid complexity by avoiding side effects and concerning themselves only with entities in their domain.</p>
+</li>
+<li>
+<p>Build Just Enough: Keep complexity at bay and avoid overengineering.</p>
+</li>
+<li>
+<p>Compose: compose component, and evaluate your code composability by using it from another component.</p>
+<p>Results will be a set of tidy interfaces to distinct independent subsystems with clear communication channels. With a stable interface, a component can grow easily and adapt quickly.</p>
+</li>
+<li>
+<p>Be Precise: avoid ambiguity and communicate clearly with others and your future self. Entities typify one concept. Functions effect a single transformation. Queries ask simple questions and return unambiguous results.</p>
+</li>
+<li>
+<p>Use What Works: look for working libraries, solution in other languages or papers.</p>
+</li>
+</ul>
+<h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="https://pragprog.com/book/vmclojeco/clojure-applied">Clojure Applied</a></p>
+</li>
+<li>
+<p><strong>tags:</strong> <a href="../../decks/clojure/">clj</a> <a href="../20200430155819-core_async/">core-async</a> <a href="../20200430190921-design/">design</a></p>
+</li>
+</ul>
+<h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../20200430154352-cli_arguments/">CLI Arguments</a></li>
+<li><a href="../../decks/clojure/">Clojure</a></li>
+<li><a href="../20200430160432-clojure_for_the_brave_and_the_true/">Clojure for the brave and the true</a></li>
+<li><a href="../20200430155819-core_async/">core.async</a></li>
+<li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
+<li><a href="../20200430190921-design/">Design</a></li>
+<li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
+<li><a href="../20200430155438-mastering_clojure_macro/">Mastering Clojure Macro</a></li>
+<li><a href="../20200430154528-multiple_environment/">Multiple Environment</a></li>
+<li><a href="../20200502122138-simple_made_easy/">Simple Made Easy</a></li>
+<li><a href="../20200430235013-specs/">specs</a></li>
+<li><a href="../../todo/">TODO</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../20200430155438-mastering_clojure_macro/" title="Mastering Clojure Macro" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Mastering Clojure Macro
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../20200430155819-core_async/" title="core.async" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                core.async
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (C) 2020 David Pham
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.83fe6e3c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

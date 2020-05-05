@@ -1,0 +1,24 @@
+#+TITLE: org mode
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: org-mode org notes-taking
+#+TAGS: org org-mode
+
+* Org mode
+
+- tags :: org-mode
+
+ [[https://github.com/fniessen/orgmk#orga966e29][Orgmk]] allows to use command line for exporting org files.
+
+#+begin_src bash
+org2gfm [OPTION] FILE
+#+end_src
+
+** Tricks
+   - [[https://emacs.stackexchange.com/questions/37430/change-date-from-active-to-inactive][Changing timestamp status]]. shift-up/down on the delimiters.
+
+
+
+** See also (generated)
+
+- [[file:../rationale.org][Home for ideas for my Zettelkasten]]
+

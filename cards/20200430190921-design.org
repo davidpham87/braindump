@@ -1,0 +1,17 @@
+#+TITLE: Design
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: decomposition design agility
+#+TAGS: design simplicity
+
+* Design
+
+** Links
+
+- [[https://www.youtube.com/watch?v=MCZ3YgeEUPg][Design, Composition, and Performance - Rich Hickey]]
+
+
+** See also (generated)
+
+- [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+- [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
+

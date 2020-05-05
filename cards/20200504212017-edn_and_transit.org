@@ -1,0 +1,24 @@
+#+TITLE: edn and transit
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: edn-and-transit
+#+TAGS: edn-and-transit data-format clj
+#+DATE: 2020-05-04
+
+* edn and transit
+
+** EDN
+
+[[https://github.com/edn-format/edn][EDN]] is the data format from Clojure.
+
+** Transit
+
+Transit compress EDN to json or message pack and allows smaller payloads. You
+lose human readability, metadata and you need more context to understand the
+payloads.
+
+- https://github.com/cognitect/transit-cljs/wiki/Getting-Started
+
+** Links
+
+- https://swannodette.github.io/2014/07/26/transit-clojurescript
+- https://blog.cognitect.com/blog/2014/7/22/transit

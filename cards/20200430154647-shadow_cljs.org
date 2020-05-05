@@ -1,0 +1,44 @@
+#+TITLE: shadow-cljs
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: cljs build-tool
+#+TAGS: cljs js webapp tool front-end nginx
+
+* shadow-cljs
+
+** NGINX Configuration for developping locally
+
+#+BEGIN_SRC conf
+  server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    server_name _;
+
+    location / {
+      proxy_pass http://localhost:8080/;
+      try_files $uri $uri/a 404;
+    }
+
+    location /shadow-cljs/ {
+      # upgrade to websocket
+      proxy_pass http://localhost:9630/;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "Upgrade";
+      proxy_set_header Host $host;
+    }
+
+  }
+#+END_SRC
+
+** Links
+
+- [[https://shadow-cljs.github.io/docs/UsersGuide.html][shadow-cljs]]
+- [[https://clojurescript.org/][cljs]]
+
+** See also (generated)
+
+- [[file:../decks/clojure.org][Clojure]]
+- [[file:20200430141609-david_nolen.org][David Nolen]]
+

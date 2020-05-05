@@ -1,0 +1,18 @@
+#+TITLE: specs
+#+OPTIONS: toc:nil
+#+TAGS: specs test.check quick-check clj
+#+ROAM_ALIAS: types test generative.testing test.check validation
+
+* Specs
+
+* Links
+
+** See also (generated)
+
+- [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+- [[file:../decks/clojure.org][Clojure]]
+- [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+- [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
+- [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+- [[file:../todo.org][TODO]]
+

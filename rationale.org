@@ -1,0 +1,43 @@
+#+TITLE: Home for ideas for my Zettelkasten
+#+AUTHOR: David
+#+OPTIONS: toc:nil
+#+TAGS: org read rationale
+#+ROAM_ALIAS: org read rationale
+
+* Why?
+
+- Using [[https://github.com/jethrokuan/org-roam][org-roam]], [[https://squidfunk.github.io/mkdocs-material/][mkdocs-material]], I can generate a website to search for my
+  idea, using the zettelkasten methods.
+- Org mode is great for authoring, but I do prefer some nice font and a good
+  navigation, search navigation. mkdocs-material offered a great compromise and
+  orgmk allowed me to have a command line conversion.
+- [[file:decks/clojure.org][Clojure]] allowed to handle all the files systems, interaction with the sqlite
+  database, the parsing and the concurrency.
+- I came up with my own set up, cards for writing anything that goes into my
+  minds, links them and decks for writing summaries. Blog posts are a place
+  where I can write some ideas and opinions to share them.
+
+** Technical challenge
+
+I created some functions to leverage the ~org-roam.db~ sqlite data base. With
+my own starting template, the code reads the tags and the links, such that
+automatic see also are created at the end of each page.
+
+See org-roam-clj on how to use the library.
+
+** Small index for quick accessa
+
+*** Programming
+   - [[file:decks/clojure.org][clj]], [[file:cards/20200430155819-core_async.org][core.async]],
+
+*** Gratitude
+   - [[file:cards/gratitude.org][Gratitudes and Journaling]]
+
+** See also (generated)
+
+- [[file:decks/clojure.org][Clojure]]
+- [[file:cards/20200430155819-core_async.org][core.async]]
+- [[file:blog/20200502171331-first_blog_ticket.org][First blog ticket]]
+- [[file:cards/gratitude.org][Gratitudes and Journaling]]
+- [[file:cards/20200430180442-org_mode.org][org mode]]
+- [[file:cards/readings.org][Readings]]

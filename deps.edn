@@ -1,0 +1,3 @@
+{:deps {org-roam-clj {:local/root "/home/david/Documents/org-roam-clj"}}
+ :aliases
+ {:dev {:main-opts ["-m" "org-roam-clj.core"]}}}

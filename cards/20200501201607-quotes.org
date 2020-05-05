@@ -1,0 +1,91 @@
+#+TITLE: Quotes
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: quotes
+#+TAGS: quotes
+#+DATE: 2020-05-01
+
+
+* Quotes
+** Comics
+   #+BEGIN_QUOTE
+   The measure of man lies not in what he *says* but in what he *does*. -- Johnatan KENT
+   #+END_QUOTE
+
+** Fiction
+   #+BEGIN_QUOTE
+   Si on n'est pas prêt à tout, on n'est prêt à rien. -- Paul AUSTER.
+   #+END_QUOTE
+
+   #+BEGIN_QUOTE
+   A career is wonderful, but you can't curl up with it on a cold night. -- Marilyn MONROE
+   #+END_QUOTE
+
+** Science
+   These quote are attributed to Einstein but I am not convinced.
+
+   #+BEGIN_QUOTE
+   You can't blame gravity for falling in love.
+
+   Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.
+
+   Try not to become a man of success, but rather try to become a man of value.
+   #+END_QUOTE
+
+   These, however, are probably from Einstein.
+
+   #+BEGIN_QUOTE
+   Insanity: doing the same thing over and over again and expecting different results.
+
+   The true sign of intelligence is not knowledge but imagination.
+
+   The development of general ability for independent thinking and judgment
+   should always be placed foremost. -- Albert EINSTEIN
+   #+END_QUOTE
+
+** Education
+   #+BEGIN_QUOTE
+   Everybody is a genius. But if you judge a dolphin by its ability to climb a
+   tree, it will live its whole life believing that it is stupid. -- Anonymous
+   #+END_QUOTE
+
+** Life Style
+   These are inspirational philosophy [but not empirically approved in class room].
+
+   #+BEGIN_QUOTE
+   Growth mindset is about meaningful and purposed efforts. -- Carol DWECK
+   #+END_QUOTE
+
+   #+BEGIN_QUOTE
+   Grit is passion and sustained persistence applied toward long-term
+   achievement, with no particular concern for rewards or recognition along the
+   way. -- Angela DUCKWORTH
+   #+END_QUOTE
+
+   There should be a mixed between targeted skills [with clear steps to achieve
+   them] and efforts.
+
+   Deliberated practice is the key to mastery.
+
+** Computer Science
+
+   #+begin_quote
+   I don't know, I don't want to know. (Rich Hickey)
+   #+end_quote
+
+   #+begin_quote
+   In C++ and now in Haskell, we used to say that If it compiles, it is
+   probably correct. It was as true then, as it is now. (Rich Hickey)
+   #+end_quote
+
+   #+begin_quote
+   Programmers know the benefits of everything and the tradeoffs of nothing.
+   (Rich Hickey)
+   #+end_quote
+
+   - tags :: [[file:../decks/clojure.org][clj]]
+
+
+** See also (generated)
+
+- [[file:../decks/clojure.org][Clojure]]
+

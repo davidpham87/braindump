@@ -1,0 +1,19 @@
+#+TITLE: C, C++
+#+OPTIONS: toc:nil
+#+TAGS: gpu-computing opencl cuda native
+
+* C/C++
+
+  + [ ] Learn C the hard way
+  + [ ] Use [[https://root.cern.ch/cling][Cling]], the C++ interpreter
+  + [X] Learn CUDA <-> Udacity
+  + [ ] Read a tour of C++
+  + [ ] Modern C++ (Scott Meyer)
+  + [ ] Redo the cpp exercise
+  + [ ] Reread Google Style Guide in C++
+
+
+** See also (generated)
+
+- 
+

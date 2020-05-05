@@ -1,0 +1,312 @@
+#+TITLE: Applied Clojure
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: clj clj-advanced design transducers core.async concurrency
+#+TAGS: clj advanced core.async design transducers book
+
+* Applied Clojure
+
+** Collections
+  List (adddition at the head), vectors (addition at the end) and queues
+  (FIFO).
+  #+BEGIN_SRC clojure
+  (def new-orders clojure.lang.PersistentQueue/EMPTY)
+  #+END_SRC
+  Use =transient= and =persistent!= if the transformation is local. The
+  library =medley= from /weavejester/ incorporate useful functions.
+  Collection accessing: use keyword first =(:key m)=, or =(m :key)= if it is
+  certain that =m= is a map, otherwise if both might be null use =(get m
+  k)=. If possible avoid having a stack of left parentheses such as =((f)
+  x)=. Abuse of =select-keys= to subset a map. If performance is required,
+  we can create custom collection by defining a type and implementing the
+  protocol, a custom printing is possible.
+
+  Use records and maps to describe your entities. Maps should be the default
+  choice, unless you decide to use protocols and need performance for
+  dispatch. Protocols and multimethods are the two ways for
+  dispatching. Protocols are faster in Clojure, but multimethods are more
+  flexible.
+
+** Processing Sequential Data.
+  We can use =map=, =filter=, =reduce= to process sequence of values, but it
+  might not be efficient. Transducers are created to avoid the concretion of
+  the data structure.
+
+  A transducer (usually denoted by =xf= or =xform=) is a function that
+  transform a reducing function into an another reducing function. That is
+  =xf: f -> g= where =f= and =g= have signature =whatever, input ->
+  whatever=.  Concrete example of reducing function are =conj= with whatever
+  being a list, =+= (with whatever being a number, and input a number). See
+  [[https://clojure.org/reference/transducers][here]] for more details.
+
+  The trick is you can define map, filter and other operations as reducing
+  function (reducing function are used in =reduce= operations usually). It
+  is important to note that reducing function can actually grow the whatever
+  (see =conj=).
+
+  We create them by omitting the =coll= argument in the typical sequence
+  functions, e.g. =(map f)= yields a transducer. Use the =sequence= function
+  to realize the transducer. The following calls are equal
+  #+BEGIN_SRC clojure
+    (= (map #(* 2 %) (range 10))
+       (sequence (map #(* 2 %)) (range 10)))
+  #+END_SRC
+  If we need eagerness we could use =into=
+  #+BEGIN_SRC clojure
+   (into [] (map #(* 2 %)) (range 10))
+  #+END_SRC
+  The benefit of transducer is intermediate values are not allocated and
+  there is a decoupling of the transformations with the reducer (reducing
+  function and reducible collection). They are also polymorphic. We can
+  compose transducers and reduction with =transduce=
+  #+BEGIN_SRC clojure
+   (def moons-transform
+     (comp (filter planet?) (map :moons)))
+
+   (defn total-moons [entities]
+     (transduce moons-transform + 0 entities))
+  #+END_SRC
+  See [[http://elbenshira.com/blog/understanding-transducers/][understanding transducers]] for more details.
+
+  Duplicate removal with =distinct= and =dedupe= (only remove subsequent
+  duplicate and safer for large input). Use =mapcat= instead of =(-> map
+  flatten)=.
+** Reference, State and Mutation
+  Identity and state are two distinct notions. An identity is a sequence of
+  immutable values, and the state is the actual value of an identity at a
+  certain point of time. The challenge is to always display a single valid
+  value to all the observer at the same time.  There are two types of
+  successions (mutation): atomic and transactions. An atomic transaction
+  only cares about the change happening to the identity itself and not about
+  the coordination of other identity. Transactional ensure that either all
+  changes or none are performed.
+
+  There are two states: program and runtime states. Program state is
+  concerned with mutation in the problem domain, whereas runtime facilitate
+  the software's execution (e.g. connections to databases or network, config
+  files). Runtime state is often unavoidable whereas program state should be
+  minimized and access through API with curated methods rather than
+  directly.
+
+  For managing change, we should /build just enough/ to ensure the
+  application's needs are met. Every side effect and mutable reference slows
+  you down.
+
+  We should be responsible over our functions (make them pure) and make
+  choices about what need to be managed. State is a series of snapshots of
+  values (data) which allows to act responsibly when considering the
+  presence of observers in other processes. In Clojure, observers have
+  consistent set of values as of a particular instant thanks to Clojure's
+  mutable references.
+
+** Use your cores
+
+  One of the problem is to send task of the main thread to be completed
+  asynchronously and retrieve the result (=future= and =promise=).
+
+  Tasks and workers for long lived task-oriented concurrency. We can also
+  use =reducers= and =core.async= (with /channels/ and /go blocks/).
+
+  For agents, use =send= for computational tasks and won't block for I/O and
+  =send-off= for updates that might block for an arbitrary time (thread pool
+  will grow accordingly). The advantage is =agent= can maintain state
+  compared to =future=.
+
+  Use =deref= or =@= for retrieving back the value of a =future= or
+  =promise=. Promise are used to returns several values from a =future=
+  block. Use =realized?= to check if a =promise= is available, otherwise it
+  will block. The =deref= function with an additional argument can force
+  timeout.
+
+  Use Java queues and workers for task oriented programs. This is for coarse
+  grained task parallelism. =Queues=, =threads= and =executors= are the
+  tools from Java to perform a queue of incoming work or requests.
+
+  For fine-grained parallelism The =pmap= function can be used for easy
+  parallelism, but the overhead might be consequential. The
+  =clojure.core.reducer= library is the solution for parallelism
+  [fine-grained operations and memory efficient]. A reducer is /reducible
+  collection/ combined with a /reducing function/. =fold= is used to perform
+  the reduction [only vectors and maps can be folded in parallel, but the
+  serial version can be faster thanks to avoiding intermediary values]. A
+  =reducer= splits the data into partition, reduce the elements and then
+  combine them. The reduce and the combine functions can hence be different.
+
+  Concurrency (design the program as a set of concurrent threads of
+  execution) we can use =core.async=.
+
+  Channels come in unbuffered, fixed buffered, dropping (discard new data)
+  and sliding buffer (discard old data). Creating a channel is done with
+  =chan= the function. =nil= can not be passed into channels (as it is the
+  value for saying the channel is closed). The important operations are
+  =put= and =take=. A full channel (once the buffer is complete) blocks a
+  thread if no process other process is the other end of the channel to
+  =take= the value sent by =put=. Backpressure is the efffect that fixed
+  sized buffers creates by making the producers block when trying to add to
+  a full queue. Traditionally channels are used in =go block=.
+
+  In the Communicating Sequential Processes (CSP), process belongs to a
+  thread pool and are /parked/ when not blocked by a channel operation (=>!=
+  or =<!=). =Go blocks= are great for building pipelines of data
+  transformation.
+
+  =core.async/pipelines= gives up the raw performance of fine-grained data
+  parallelism but yield a more flexible architecture. The function moves the
+  value from input to output channel with parallel transducer execution.
+
+  Next step is to break a growing system into pieces using concurrency.
+** Designing components
+  Use of channels, better to receive and provide channels for interface.  In
+  =core.async=, a single =go= block is to call the body of the =go= block
+  /once/ asynchronously, while =go-loop= is intended for looping, unless we
+  close the channel. =go= blocks return a channel, which can be used for
+  pedestal.
+
+  A good design is to split an API layer and implementation layer with a record.
+
+  As for =core.async=, there are three additional concept for channels that
+  are useful: pipeline, fan-in and fan-out. In a system, pipelines link an
+  output channel to an input channel (acting like as a conveyor belt) and
+  can possibly transform its input values with a transducer (async, sync,
+  blocking). The =pipe= function should be used when no transformation.
+
+  Fan-in channels gather the input of several channels and provide a single
+  output channel. =merge= is a simple way to merge all the incoming channels
+  into a single output channels, but it can't be modified after creation.
+
+  The =mix= (for audio mix) function with its functions =admix/unmix= allows
+  channel to participate in the mix. Users can =toggle= options for each
+  input channel: =:pause= (no consumption nor inclusion in output channel),
+  =:mute= (consumption but no inclusion), =:solo= ( if true, only solo-ed
+  channels in output channel mix, =:pause= and =:mute= ignored if this is
+  the case).
+
+  Fan-out have three ways: =mult=, =pub/sub=, =split=.
+
+  The =mult= abstraction is multiply traffic from the input channel into
+  multiple output channels. Output channels (with different blocking policy)
+  can participate in the connection with =tap/untap= (if a tap is closed, it
+  is removed from the =mult=). All the receiving channels must accept a
+  value from the =mult= before the =mult= can move on to the next
+  value. This is where alternative buffering strategy are useful.
+
+  The =pub/sub= allows to distribute the traffic through a partition
+  function and subscribers can inform to which partition value they want to
+  lisen to.
+
+  =split= divides the traffic two channels based on a truthiness of a
+  predicate. =split= is actually a =pub/sub= with a partition function
+  providing only =truthy/falsy=.
+
+** Compose Your Application
+  Taking things apart: usualy some portion of the code will work on the same
+  data, or have the data has a common scope or lifetime, likelihehood of
+  change from external requirement is similar are resource needed. If code
+  is reusable when configured differently in more than one context, then it
+  is a component.
+
+  Component should communicate with channels, but in order to set up the
+  system correctly, we need something to orchestrate it. Several library
+  exist, the book recommends =Component=, but it has been super-seeded by
+  [[https://github.com/weavejester/integrant][integrant]]. An example can be found here [[https://github.com/dawran6/reitit/tree/integrant-example/examples/ring-integrant][reitit/integrant]].
+
+  Environment variable also should exist with different settings. The
+  solution in the book are a bit old. Environ still seems to be good on
+  clojure (jvm).
+
+** Testing
+  There are three ways to create tests in clojure: repl, example based,
+  generative testing (properties check).
+
+  With REPL driven development, the example used for development are stored
+  in a file (these are candidates for examples).
+
+  For example based, there is the =expectations= library and the following snippets
+
+  #+BEGIN_SRC clojure
+    (deftest test-range-are
+      (testing "Testing range(endIndex)"
+        (are [expected endIndexf
+              (= expected (range endIndex))
+              '(0 1 2 3 4) 5
+              '() 0])))
+  #+END_SRC
+
+  Generative testing using
+  #+BEGIN_SRC clojure
+    (ns generative-testing.core
+      (:require [clojure.test.check :as tc]
+                [clojure.test.check.generators :as gen]
+                [clojure.test.check.properties :as prop]))
+  #+END_SRC
+  I think nowadays we would use spec for it.
+
+  #+BEGIN_QUOTE
+  We are looking for /invariants/ -- properties that are always true. [...]
+  mathematical laws, relationships between inputs and outputs, round-trip or
+  complementing functions, and comparing action effects.
+
+  Properties like identity, associativity, commutativity and idempotency are
+  an excellent place to start.
+  #+END_QUOTE
+
+  Invariants are important because they reduce the number of case your code
+  must consider.
+
+** Thinking in Clojure
+  - Make Reasoned Choices: always compare trade-off of solutions (benefits
+    and costs). /Think first, then do/. Careful treatment of decisions and
+    weighed trade-off to fully understand the consequences.
+
+  - Be Reasonable: code with clearly expressed intent, limited side effects,
+    neatly separated concerns, and unambiguous naming. Simple.
+
+  - Keep It Simple: Keep distinct concern as distinct as possible and avoid
+    entangling concepts with other concepts.
+
+    The code can be reasoned about, test and implemented without any
+    incidental complexity.
+
+    Entities are simplest when distinct and
+    composable.
+
+    Domain functions avoid complexity by avoiding side effects and
+    concerning themselves only with entities in their domain.
+
+  - Build Just Enough: Keep complexity at bay and avoid overengineering.
+
+  - Compose: compose component, and evaluate your code composability by
+    using it from another component.
+
+    Results will be a set of tidy interfaces to distinct independent subsystems
+    with clear communication channels. With a stable interface, a component
+    can grow easily and adapt quickly.
+
+  - Be Precise: avoid ambiguity and communicate clearly with others and your
+    future self. Entities typify one concept. Functions effect a single
+    transformation. Queries ask simple questions and return unambiguous
+    results.
+
+  - Use What Works: look for working libraries, solution in other languages
+    or papers.
+
+** Link
+- [[https://pragprog.com/book/vmclojeco/clojure-applied][Clojure Applied]]
+
+- tags :: [[file:../decks/clojure.org][clj]] [[file:20200430155819-core_async.org][core-async]] [[file:20200430190921-design.org][design]]
+
+
+** See also (generated)
+
+- [[file:20200430154352-cli_arguments.org][CLI Arguments]]
+- [[file:../decks/clojure.org][Clojure]]
+- [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+- [[file:20200430155819-core_async.org][core.async]]
+- [[file:20200430141609-david_nolen.org][David Nolen]]
+- [[file:20200430190921-design.org][Design]]
+- [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
+- [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+- [[file:20200430154528-multiple_environment.org][Multiple Environment]]
+- [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
+- [[file:20200430235013-specs.org][specs]]
+- [[file:../todo.org][TODO]]
+
