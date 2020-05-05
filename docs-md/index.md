@@ -20,12 +20,6 @@ See [README](README.md) on how to use it the library.
 
 -   [clj](decks/clojure.md), [core.async](cards/20200430155819-core_async.md),
 
-
-### Gratitude
-
--   [Gratitudes and Journaling](cards/gratitude.md)
-
-
 ## See also (generated)
 
 -   [Clojure](decks/clojure.md)

@@ -30,9 +30,6 @@ See org-roam-clj on how to use the library.
 *** Programming
    - [[file:decks/clojure.org][clj]], [[file:cards/20200430155819-core_async.org][core.async]],
 
-*** Gratitude
-   - [[file:cards/gratitude.org][Gratitudes and Journaling]]
-
 ** See also (generated)
 
 - [[file:decks/clojure.org][Clojure]]
