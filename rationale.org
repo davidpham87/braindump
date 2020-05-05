@@ -38,6 +38,5 @@ See org-roam-clj on how to use the library.
 - [[file:decks/clojure.org][Clojure]]
 - [[file:cards/20200430155819-core_async.org][core.async]]
 - [[file:blog/20200502171331-first_blog_ticket.org][First blog ticket]]
-- [[file:cards/gratitude.org][Gratitudes and Journaling]]
 - [[file:cards/20200430180442-org_mode.org][org mode]]
 - [[file:cards/readings.org][Readings]]
