@@ -13,4 +13,9 @@ I just created this website to gather my notes and find a system that can make
 leverage of all the ideas. I think the zettelkasten method is interesting and I
 decided to try it.
 
-Please read the [[file:../rationale.org][rationale]] for more details!
+Please read the [[file:../README.org][README]] for more details!
+
+
+** See also (generated)
+
+- [[file:../README.org][Home for ideas for my Zettelkasten]]

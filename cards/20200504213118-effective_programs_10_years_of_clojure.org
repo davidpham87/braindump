@@ -9,3 +9,9 @@
 ** Links
 
 - https://www.youtube.com/watch?v=2V1FtfBDsLU, Conj 2017
+
+
+** See also (generated)
+
+- [[file:20200504213225-rich_hickey.org][Rich Hickey]]
+

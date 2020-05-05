@@ -34,14 +34,14 @@ Use multipass and Ansible to simulate networks and kubernetes
 -   garden-cljs.
 
 
-## Leverage TAGS
+## Leverage indices and org-parser
 
-Use `#+TAGS` options of orgs for generating automatically see also and tags field.
+Check whether we can use indices to create better indexing.
 
 
-## Tags
+## Idea
 
--   **tags:** TODO goals [core.async](cards/20200430155819-core_async.md) [specs](cards/20200430235013-specs.md) [goals](cards/20200501163355-goals.md)
+Download clojure.core and use materiala.
 
 
 ## See also (generated)

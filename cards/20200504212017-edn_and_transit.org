@@ -22,3 +22,12 @@ payloads.
 
 - https://swannodette.github.io/2014/07/26/transit-clojurescript
 - https://blog.cognitect.com/blog/2014/7/22/transit
+
+
+** See also (generated)
+
+- [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+- [[file:../decks/clojure.org][Clojure]]
+- [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+- [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+

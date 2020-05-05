@@ -10,7 +10,7 @@
 
 I created some functions to leverage the `org-roam.db` sqlite data base. With my own starting template, the code reads the tags and the links, such that automatic see also are created at the end of each page.
 
-See [README](README.md) on how to use it the library.
+See org-roam-clj on how to use the library.
 
 
 ## Small index for quick accessa
@@ -20,10 +20,9 @@ See [README](README.md) on how to use it the library.
 
 -   [clj](decks/clojure.md), [core.async](cards/20200430155819-core_async.md),
 
+
 ## See also (generated)
 
--   [Clojure](decks/clojure.md)
--   [core.async](cards/20200430155819-core_async.md)
 -   [First blog ticket](blog/20200502171331-first_blog_ticket.md)
 -   [org mode](cards/20200430180442-org_mode.md)
 -   [Readings](cards/readings.md)

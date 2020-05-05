@@ -15,4 +15,5 @@
 - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:../todo.org][TODO]]
+- [[file:20200504204808-why_clojure.org][Why Clojure?]]
 

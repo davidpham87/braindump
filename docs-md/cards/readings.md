@@ -74,4 +74,4 @@ Philosophy of linux.
 
 ## See also (generated)
 
--   [Home for ideas for my Zettelkasten](../rationale.md)
+-   [Home for ideas for my Zettelkasten](../README.md)

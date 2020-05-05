@@ -4,4 +4,9 @@ Voilà! The start of a new blog! Probably like all blogs, this one will remain p
 
 I just created this website to gather my notes and find a system that can make leverage of all the ideas. I think the zettelkasten method is interesting and I decided to try it.
 
-Please read the [rationale](../rationale.md) for more details!
+Please read the [README](../README.md) for more details!
+
+
+## See also (generated)
+
+-   [Home for ideas for my Zettelkasten](../README.md)

@@ -303,10 +303,13 @@
 - [[file:20200430155819-core_async.org][core.async]]
 - [[file:20200430141609-david_nolen.org][David Nolen]]
 - [[file:20200430190921-design.org][Design]]
+- [[file:20200504212017-edn_and_transit.org][edn and transit]]
 - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
+- [[file:20200503222619-org_roam_clj.org][Org-roam-clj: Org-roam extension with Clojure]]
 - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 - [[file:20200430235013-specs.org][specs]]
 - [[file:../todo.org][TODO]]
+- [[file:20200504204808-why_clojure.org][Why Clojure?]]
 
