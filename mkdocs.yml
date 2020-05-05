@@ -24,8 +24,7 @@ extra_javascript:
 
 plugins:
   - search # necessary for search to work
-  - awesome-pages:
-      collapse_single_pages: true
+  - awesome-pages #: collapse_single_pages: true
 
 
 copyright: "Copyright (C) 2020 David Pham"
