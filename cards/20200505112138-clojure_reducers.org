@@ -1,0 +1,15 @@
+#+TITLE: Parallel Programming in Clojure with Reducers
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: reducers parallel-programming-in-clojure-with-reducers clj-hpc
+#+ROAM_KEY: https://www.braveclojure.com/quests/reducers/intro/
+#+TAGS: clj book reducers parallelism concurrency hpc
+#+DATE: 2020-05-05
+
+* Clojure Reducers
+
+** Sources
+   - https://www.braveclojure.com/quests/reducers/intro/
+
+** Links
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]

@@ -9,21 +9,30 @@
 
 * Highly important
 
+** Read
+   - Check how to do deft ignore
+   - how to write note efficiently
+   - org journal
+
+** Idea
+   - Download clojure.core and use materiala for testing.   [[file:cards/20200503165952-materiala.org][Materiala]]
+   - Fork marginalia parser and correct its bug: [[https://github.com/gdeer81/marginalia/blob/master/src/marginalia/parser.clj][parser]]
+
 ** Goals
    - specs, core async, datomic, testing.
+   - Kubernetes, container technology.
    - Webworkers and websockets.
    - GPU computing
    - GraphQL
    - Spark
    - Kafka
-   - Kubernetes, container technology.
    - Learn about databases (postgres, elastic search and datomic).
 
 ** TODO Read Advanced Data Analysis from an elementary point of view
    [[http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/][Advanced data analysis from an elementary point of view]]
 
 ** Multipass and Ansible
-   Use multipass and Ansible to simulate networks and kubernetes
+   Use multipass and Ansible to simulate networks and kubernetes.
 
 ** Learn CSS
    - Write a summary (check create of Bulma)
@@ -31,9 +40,6 @@
 
 ** Leverage indices and org-parser
    Check whether we can use indices to create better indexing.
-
-** Idea
-   Download clojure.core and use materiala.
 
 
 
@@ -45,4 +51,3 @@
 - [[file:cards/20200430155819-core_async.org][core.async]]
 - [[file:cards/20200501163355-goals.org][Goals]]
 - [[file:cards/20200430235013-specs.org][specs]]
-

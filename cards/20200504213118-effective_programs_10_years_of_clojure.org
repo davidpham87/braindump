@@ -14,4 +14,3 @@
 ** See also (generated)
 
 - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
-

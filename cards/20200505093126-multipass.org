@@ -1,0 +1,12 @@
+#+TITLE: Multipass
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: multipass
+#+TAGS: multipass k8s devops
+#+DATE: 2020-05-05
+
+* Multipass
+
+  Multipass is VM technology for running ubuntu VMs.
+
+** Source
+   - [[https://multipass.run/]]

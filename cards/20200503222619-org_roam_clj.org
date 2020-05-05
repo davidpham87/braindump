@@ -10,6 +10,7 @@ Library for extending org-roam.
 
 ** Ideas
 
+- Rewrite logic for tags to include indices and tags [and not only roam alias?].
 - Extend to markdown parsing.
 - YAML heading.
 - Own database [implement same operation].
@@ -27,4 +28,3 @@ Library for extending org-roam.
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
-

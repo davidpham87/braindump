@@ -1,0 +1,24 @@
+#+TITLE: Ansible
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: ansible
+#+TAGS: ansible devops
+#+DATE: 2020-05-05
+
+* Ansible
+
+  - playbook :: definition of the targeted end state of the VM.
+  - roles :: collection of playbooks.
+
+  - inventories :: a collection of configuration of hosts, aliases and variables
+  - variables :: values that can be used dynamically in your playbook.
+
+** Roles
+
+   #+begin_quote
+   You define a role’s tasks in tasks/main.yml and the default values for a role
+   in defaults/main.yml.
+   #+end_quote
+
+** Source
+   - https://www.ansible.com/
+   - https://www.braveclojure.com/quests/deploy/ansible-tutorial/
