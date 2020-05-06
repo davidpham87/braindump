@@ -89,6 +89,11 @@ sudo apt-get install aspell-fr aspell-de
 In prelude `"C-c j"` and then `char` jumps to a given character in the buffer.
 
 
+## Deft ignore file regex
+
+Set `deft-ignore-file-regexp` <span class="timestamp-wrapper"><span class="timestamp">[2020-05-06 Wed]</span></span>.
+
+
 ## See also (generated)
 
 -   [cider](20200505164639-cider.md)

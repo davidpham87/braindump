@@ -13,6 +13,7 @@
 ** See also (generated)
 
 - [[file:../decks/clojure.org][Clojure]]
+- [[file:20200506224558-enlive.org][Enlive]]
 - [[file:20200505125105-medley.org][medley]]
 - [[file:20200505124708-potemkin.org][Potemkin: some ideas which are almost good]]
 - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]

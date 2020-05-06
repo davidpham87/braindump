@@ -8,9 +8,9 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 
 ## Read
 
--   Check how to do deft ignore
--   how to write note efficiently
--   org journal
+-   how to write note efficiently.
+-   org journal.
+-   Check if org gather indices properties.
 
 
 ## Idea
