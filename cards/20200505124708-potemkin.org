@@ -13,7 +13,8 @@
    difficult than they should be. All functions are within the potemkin namespace.
    #+end_quote
 
-   The important function is
+   The important function is =impots-vars=, it allows to define variable in one
+   namespace and expose them in another.
 
 *** Source
     - https://github.com/ztellman/potemkin
@@ -26,4 +27,3 @@
 
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
-

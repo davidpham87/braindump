@@ -33,24 +33,25 @@
    following:
 
    - Amazing immutable data structures :: When all values are immutable, you don't
-   have to think about a lot of things you have to think when you are programming
-   in other languages.
+     have to think about a lot of things you have to think when you are programming
+     in other languages.
 
    - Great set of general functions ::  working on all of these via the unified
-   sequence abstraction. I have never seen anything like this.
+     sequence abstraction. I have never seen anything like this.
 
    - The language :: it is unusual but when you spend some time with it, it is really
-   simple There are no surprises, no strange syntax, on overloading of meaning. I
-   can't say this for any other language I have ever used: C++, Java, Python, ...
+     simple There are no surprises, no strange syntax, on overloading of meaning. I
+     can't say this for any other language I have ever used: C++, Java, Python, ...
 
-   - REPL :: is live changing. A lot of languages nowadays have something they call
-   REPL, giving you the illusion it is the same. Clojure REPL is a completely
-   different beast. It is not just a quick console to test pieces of your code,
-   for which it is even better, since its output is again a code. In Clojure, you
-   get rid of the life-sucking compile-test loop. Instead you compile your program
-   once and you run it while developing and testing. At any moment, you can
-   investigate the state while manipulating the program, write new functionality
-   and immediately see whether it works, etc.
+   - REPL :: is live changing. A lot of languages nowadays have something they
+     call REPL, giving you the illusion it is the same. Clojure REPL is a
+     completely different beast. It is not just a quick console to test pieces
+     of your code, for which it is even better, since its output is again a
+     code. In Clojure, you get rid of the life-sucking compile-test
+     loop. Instead you compile your program once and you run it while
+     developing and testing. At any moment, you can investigate the state while
+     manipulating the program, write new functionality and immediately see
+     whether it works, etc.
 
    The combination of Clojure and ClojureScript is amazing because now you can
    target everything with one language.
@@ -64,9 +65,8 @@
 
 ** See also (generated)
 
-- [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-- [[file:../decks/clojure.org][Clojure]]
-- [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-- [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
-- [[file:20200430235013-specs.org][specs]]
-
+   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+   - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+   - [[file:20200430235013-specs.org][specs]]
