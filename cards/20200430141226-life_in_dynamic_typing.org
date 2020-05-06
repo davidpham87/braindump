@@ -1,7 +1,7 @@
 #+TITLE: Life In Dynamic Typing
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: life-dynamic-type
-#+TAGS: dynamic-typing test clj david-nolen
+#+TAGS: dynamic-typing test clj david-nolen cljs
 
 * Life In Dynamic Typing
 
@@ -29,5 +29,6 @@ and =:post= assertions in your code.
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430141609-david_nolen.org][David Nolen]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+- [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
 - [[file:20200430235013-specs.org][specs]]
 

@@ -1,0 +1,29 @@
+#+TITLE: Potemkin: some ideas which are almost good
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: potemkin
+#+TAGS: potemkin clj-library clj
+#+DATE: 2020-05-05
+
+* Potemkin
+
+** Some ideas which are almost good
+
+   #+begin_quote
+   Potemkin is a collection of facades and workarounds for things that are more
+   difficult than they should be. All functions are within the potemkin namespace.
+   #+end_quote
+
+   The important function is
+
+*** Source
+    - https://github.com/ztellman/potemkin
+
+** Link
+   [[file:20200505124946-clj_toolkit.org][clj-toolkit]]
+
+
+** See also (generated)
+
+- [[file:../decks/clojure.org][Clojure]]
+- [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+

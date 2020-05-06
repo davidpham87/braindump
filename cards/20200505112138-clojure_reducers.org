@@ -22,3 +22,4 @@
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430155819-core_async.org][core.async]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+

@@ -23,6 +23,7 @@ Library for extending org-roam.
 - Use for leveraing  [[https://github.com/200ok-ch/org-parser][org-parser]]
 - Make own parser for displaying org files.
 - Learn about [[https://github.com/Engelberg/instaparse/][instaparse]].
+- Automatic index cards pages with maybe tags with primary tags.
 
 ** Notes
    - Pandoc does not convert the links so it requires a filter.
@@ -33,3 +34,4 @@ Library for extending org-roam.
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+

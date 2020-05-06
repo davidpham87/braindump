@@ -1,7 +1,7 @@
 #+TITLE: shadow-cljs
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: cljs build-tool
-#+TAGS: cljs js webapp tool front-end nginx
+#+TAGS: cljs js webapp tool front-end nginx clj-toolkit
 
 * shadow-cljs
 
@@ -40,6 +40,9 @@
 ** See also (generated)
 
 - [[file:../decks/clojure.org][Clojure]]
+- [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
 - [[file:20200430141609-david_nolen.org][David Nolen]]
+- [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
+- [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
 - [[file:20200505112918-nginx.org][nginx]]
 

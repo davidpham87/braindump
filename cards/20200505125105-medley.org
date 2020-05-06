@@ -1,0 +1,17 @@
+#+TITLE: medley
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: medley
+#+TAGS: medley clj-toolkit
+#+DATE: 2020-05-05
+
+* medley
+  Clojure and ClojureScript common functions not implemented in core
+
+*** Source
+    - https://github.com/weavejester/medley
+
+
+** See also (generated)
+
+- [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+

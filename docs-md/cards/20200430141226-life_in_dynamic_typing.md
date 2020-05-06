@@ -21,4 +21,5 @@ In dynamic typed language, assertions are used often to check assumption of your
 -   [Clojure for the brave and the true](20200430160432-clojure_for_the_brave_and_the_true.md)
 -   [David Nolen](20200430141609-david_nolen.md)
 -   [Mastering Clojure Macro](20200430155438-mastering_clojure_macro.md)
+-   [shadow-cljs](20200430154647-shadow_cljs.md)
 -   [specs](20200430235013-specs.md)

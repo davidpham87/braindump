@@ -1,6 +1,6 @@
 #+TITLE: Applied Clojure
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clj clj-advanced design transducers core.async concurrency
+#+ROAM_ALIAS: clj-advanced design transducers core.async concurrency
 #+TAGS: clj advanced core.async design transducers book
 
 * Applied Clojure

@@ -1,0 +1,25 @@
+#+TITLE: Enlive
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: enlive web-template
+#+TAGS: enlive web-scrapping web-template clj-web clj-toolkit
+#+DATE: 2020-05-06
+
+* Enlive
+
+  The best template library for Clojure.
+
+  - Use real web page as template, use =deftempalte= and =defsnippet= to create
+    reusable parts.
+  - Use CSS selectors for selecting the nodes on the HTML page.
+
+*** Trick
+    - Reload your namespace file for updating the html.
+
+*** Source
+    - https://github.com/cgrand/enlive
+    - https://github.com/swannodette/enlive-tutorial/
+
+
+** See also (generated)
+
+- [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]

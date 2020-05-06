@@ -58,4 +58,5 @@ Check whether we can use indices to create better indexing.
 -   [Clojure for the brave and the true](cards/20200430160432-clojure_for_the_brave_and_the_true.md)
 -   [core.async](cards/20200430155819-core_async.md)
 -   [Goals](cards/20200501163355-goals.md)
+-   [Materiala](cards/20200503165952-materiala.md)
 -   [specs](cards/20200430235013-specs.md)

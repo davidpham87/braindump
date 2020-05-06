@@ -1,6 +1,6 @@
 #+TITLE: Clojure for the brave and the true
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clj-intro clj-beginner clj core.async
+#+ROAM_ALIAS: clj-intro clj-beginner core.async
 #+TAGS: clj clj-beginner core.async book
 
 * Clojure for the brave and the true

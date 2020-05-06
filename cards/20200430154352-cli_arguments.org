@@ -1,6 +1,6 @@
 #+TITLE: CLI Arguments
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: build-tools cli tools
+#+ROAM_ALIAS: build-tools cli tools build
 #+TAGS: clj build cli tools babashka
 
 * CLI Arguments
@@ -25,6 +25,7 @@
 - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+- [[file:general.org][General Skills]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200503165952-materiala.org][Materiala]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]

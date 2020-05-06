@@ -45,3 +45,10 @@
 ** Links
    - [[file:20200505093245-ansible.org][ansible]]
    - [[file:python.org][programming]]
+
+
+** See also (generated)
+
+- [[file:20200505093245-ansible.org][Ansible]]
+- [[file:python.org][Python]]
+

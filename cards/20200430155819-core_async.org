@@ -1,7 +1,7 @@
 #+TITLE: core.async
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: core.async concurrency
-#+TAGS: clj concurrency
+#+ROAM_ALIAS: core.async concurrency parallelism
+#+TAGS: clj concurrency core.async
 
 * core.async
 
@@ -70,5 +70,6 @@
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:../README.org][Home for ideas for my Zettelkasten]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+- [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
 - [[file:../todo.org][TODO]]
 
