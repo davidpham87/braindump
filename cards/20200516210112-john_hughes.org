@@ -1,0 +1,14 @@
+#+TITLE: John Hughes
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: john-hughes
+#+TAGS: john-hughes quick-check
+#+DATE: 2020-05-16
+
+* John Hughes
+
+  Creator quick check.
+
+** Links
+   - [[https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf][How to specify it?]], [[https://www.youtube.com/watch?v=G0NUOst-53U][video]] (jump until minute 10 for start of content).
+   - [[https://www.youtube.com/watch?v=zi0rHwfiX1Q][How to write test and stay sane?]]
+   - [[https://en.wikipedia.org/wiki/John_Hughes_(computer_scientist)][wiki]]

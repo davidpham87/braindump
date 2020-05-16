@@ -6,6 +6,8 @@
 
 * First blog ticket
 
+Written on 2020-05-02.
+
 Voilà! The start of a new blog! Probably like all blogs, this one will remain
 probably empty, without a lot of content.
 
@@ -15,8 +17,6 @@ decided to try it.
 
 Please read the [[file:../README.org][README]] for more details!
 
-
 ** See also (generated)
 
 - [[file:../README.org][Home for ideas for my Zettelkasten]]
-

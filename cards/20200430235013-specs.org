@@ -1,7 +1,7 @@
 #+TITLE: specs
 #+OPTIONS: toc:nil
-#+TAGS: specs test.check quick-check clj property-based-testing
-#+ROAM_ALIAS: types test generative.testing test.check validation
+#+TAGS: specs test.check quick-check clj property-based-testing types test
+#+ROAM_ALIAS: clojure.spec
 
 * Specs
 
@@ -9,6 +9,9 @@
   - [[https://clojure.org/guides/spec][Guide]]
 
 ** Summary
+
+   This is a quick summary of the official guide in Clojure. The goal is to
+   gather most function in a single place and also acts as a reminder.
 
    High leverage on specifying entities in Clojure code.
 
@@ -171,11 +174,16 @@
 
 *** Functions specs
 
-    =s/fdef= defines spec of a function while =s/fspec= allows to defines a generic
-    function signature. The keys are =:args=, =:ret= and =:fn= all accepts
-    predicates/specs as argument. The =:fn= keyword arguments is special as it is
-    meant for defining *properties* of the function for generative testing (similar
-    to =prop/for-all= in =test.check=).
+    =s/fdef= defines spec of a function while =s/fspec= allows to defines a
+    generic function signature. The keys are =:args=, =:ret= and =:fn= all
+    accepts predicates/specs as argument. The =:fn= keyword arguments is
+    special as it is meant for defining *properties* of the function for
+    generative testing (similar to =prop/for-all= in =test.check=). The
+    properties can be enforced on the argument (preconditions) on the result
+    (post conditions) or on a relationship between the arguments and the return
+    value or some invariant properties on the function call itself.
+
+    See [[file:20200516171955-generative_testing.org][Generative Testing]].
 
 *** Generation
 
@@ -196,6 +204,22 @@
         (gen/generate (s/gen ::x)) ;; => 12734020
         (gen/sample (s/gen ::x)) ;; => (1 1 2 4 4 7 3 55 4 10)
         (gen/sample (s/gen ::x) 3) ;;  => (2 2 2)
+
+
+        (s/def ::m (s/map-of keyword? pos-int? :min-count 2))
+
+        (s/exercise ::m 1)
+
+        (let [custom-gen
+              (gen/bind
+               (s/gen ::m)
+               (fn [m]
+                 (gen/tuple
+                  (gen/return m)
+                  (gen/vector-distinct
+                   (gen/elements (keys m)) {:min-elements 2}))))]
+
+          (gen/sample custom-gen 10))
       #+end_src
 
 *** Custom generation
@@ -206,7 +230,7 @@
     first two are strongly recommended).
 
     The main functions are =gen/fmap= (returns a value from a generator) or
-    =gen/bind= (returns a generator from a generator). Using =gen/let= allows
+    =gen/bind= (returns a generator from a generator). Using =test.check/let= allows
     to use =gen/bind= with sanity.
 
     #+begin_src clojure
@@ -216,8 +240,70 @@
           #(s/gen #{:my.domain/name :my.domain/occupation :my.domain/id})))
 
       (gen/sample (s/gen ::kws))
+
+      (def kw-gen-2 (gen/fmap #(keyword "my.domain" %) (gen/string-ascii)))
+      (gen/sample kw-gen-2 10)
+
+      (def kw-gen-3
+        (gen/fmap #(keyword "my.domain" %)
+                  (gen/such-that #(not= % "")
+                                 (gen/string-alphanumeric))))
+      (gen/sample kw-gen-3 5)
+
+      ;; this is what we call using a model to generate our output
+
+      (s/def ::hello
+        (s/with-gen #(clojure.string/includes? % "hello")
+          #(gen/fmap (fn [[s1 s2]] (str s1 "hello" s2))
+                     (gen/tuple (gen/string-alphanumeric)
+                                (gen/string-alphanumeric)))))
+      (gen/sample (s/gen ::hello))
     #+end_src
 
+*** Testing
+
+    Instrumentation is to validate the input argument (the =:args= key),
+    whereas checking is for testing with random input and all the =:args=,
+    =:ret=, =:fn= keys.
+
+    #+begin_src clojure
+      (require '[clojure.spec.test.alpha :as stest])
+      (require '[clojure.spec.alpha :as s])
+
+      (defn ranged-rand
+        "Returns random int in range start <= rand < end"
+        [start end]
+        (+ start (long (rand (- end start)))))
+
+
+      (s/def ::int int?)
+      (s/fdef ranged-rand
+        :args (s/and (s/cat :start ::int :end ::int)
+                     #(< (:start %) (:end %)))
+        :ret int?
+        :fn (fn [{:keys [args ret]}]
+              (s/and #(>= ret (:start args))
+                     #(< ret (:end args)))))
+
+      (doc ranged-rand)
+
+      (s/exercise-fn `ranged-rand)
+      (stest/check `ranged-rand)
+      (stest/check `ranged-rand {:gen {::int #{2 5 7 10}}})
+    #+end_src
+
+
+    In order to check all function in a given namepsace you can use
+    =enumerate-namespace=.
+
+    #+begin_src clojure
+      (-> (stest/enumerate-namespace 'user) stest/check)
+    #+end_src
+
+    When =stest/instrument= is applied to a function, it can take options on
+    function and the stub keys takes a spec =x= as a value which replace the
+    function invokation by a generated value from the spec =x=. Hence it useful
+    for testing systems without invoking server and side effects/IO.
 
 ** Tricks
 
@@ -257,26 +343,13 @@
       (s/fdef g ::f)
     #+end_src
 
-
 *** Properties
 
-    Taking from [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-
-    #+BEGIN_QUOTE
-    We are looking for /invariants/ -- properties that are always true. [...]
-    mathematical laws, relationships between inputs and outputs, round-trip or
-    complementing functions, and comparing action effects.
-
-    Properties like identity, associativity, commutativity and idempotency are
-    an excellent place to start.
-    #+END_QUOTE
-
+    See [[file:20200516171955-generative_testing.org][Generative Testing]].
 
 ** test.check
 
-*** Generators
-
-** Generative testing
+*** Generative testing
 
    Using the namespace
    #+begin_src clojure
@@ -287,10 +360,12 @@
    The following are combinators of simple generators
 
    #+begin_src clojure
+     gen/vector
+     gen/vector-distinct
      gen/tuple ;; concatenate the generator
      gen/one-of ;; random choice of generator
      gen/frequency ;; distribution of generators
-     gen/such-that ;; post conditions
+     gen/such-that ;; conditions for generation
      gen/fmap ;; returns a value from a generator
      gen/bind ;; returns a new generator
      gen/let ;; sane macro for using bind.
@@ -298,8 +373,18 @@
 
 ** Links
 
-   - https://github.com/clojure/test.check
-
+   - https://github.com/clojure/test.check, quick check implementation in Clojure.
+   - https://github.com/clojure/test.check/blob/master/doc/cheatsheet.md
+   - https://github.com/metosin/spec-tools, tools for clojure.spec
+   - https://github.com/jeaye/orchestra, complete instrumentation for clojure.spec.
+   - https://github.com/bhb/expound, improved specs errors message.
+   - https://github.com/bhauman/spell-spec, spell checker for keys in map
+     entities.
+   - https://github.com/reifyhealth/specmonstah, simulation of database state
+     given specs and a schema.
+   - https://github.com/stathissideris/spec-provider, infer clojure specs from sample data.
+   - https://github.com/gnl/ghostwheel sane notation for fdef.
+   - [[https://clojure.org/api/cheatsheet][Clojure cheat sheet]]
 
 ** See also (generated)
 
@@ -310,4 +395,3 @@
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:../todo.org][TODO]]
 - [[file:20200504204808-why_clojure.org][Why Clojure?]]
-

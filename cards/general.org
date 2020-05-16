@@ -62,6 +62,11 @@
 ** Deft ignore file regex
    Set =deft-ignore-file-regexp= [2020-05-06 Mi].
 
+** Regex in search
+   For grouping you need to escape the parenthesis.
+   - [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Regexps.html][Documentation on regex]]
+   - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Backslash.html#Regexp-Backslash][Escape characters]]
+
 
 ** See also (generated)
 
@@ -69,4 +74,3 @@
 - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
 - [[file:20200503165952-materiala.org][Materiala]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
-
