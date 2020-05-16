@@ -14,6 +14,11 @@ In dynamic typed language, assertions are used often to check assumption of your
 `{:elide-asserts true}` in production build compiler options to remove `:pre` and `:post` assertions in your code.
 
 
+## Source
+
+-   <http://swannodette.github.io/2015/01/09/life-with-dynamic-typing/>
+
+
 ## See also (generated)
 
 -   [Applied Clojure](20200430155637-applied_clojure.md)

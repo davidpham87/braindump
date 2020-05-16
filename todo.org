@@ -12,8 +12,14 @@
 ** Read
    - how to write note efficiently.
    - org journal.
-   - Check if org gather indices properties.
+   - git subrepositories
+   - Check how org gather indices properties.
+   - pods in babashka
 
+** Write
+   - Simple made easy
+   - Design, Composition and Performance
+   - test.check and generative testing
 
 ** Idea
    - Download clojure.core and use materiala for testing. [[file:cards/20200503165952-materiala.org][Materiala]]
@@ -40,7 +46,8 @@
    - garden-cljs.
 
 ** Leverage indices and org-parser
-   Check whether we can use indices to create better indexing.
+   - Check whether we can use indices to create better indexing.
+   - Use pods and sqlite to leverage on the org-roam and extend it to markdown.
 
 ** See also (generated)
 

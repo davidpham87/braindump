@@ -225,8 +225,8 @@
   #+BEGIN_SRC clojure
     (deftest test-range-are
       (testing "Testing range(endIndex)"
-        (are [expected endIndexf
-              (= expected (range endIndex))
+        (are [expected endIndex
+              (= (range endIndex) expected)
               '(0 1 2 3 4) 5
               '() 0])))
   #+END_SRC

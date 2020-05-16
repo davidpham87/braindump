@@ -1,0 +1,26 @@
+#+TITLE: Clojure tools.deps
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: tools-deps
+#+TAGS: tools-deps clj-toolkit
+#+DATE: 2020-05-14
+
+* tools.deps
+
+** Git deps
+
+   You can put ~:sha~ as location or tag
+   #+begin_src clojure
+     {:deps {cljs.nodejs.shell {:git/url "https://github.com/bolasblack/cljs.nodejs.shell"
+                                :tag "0.2.1"}}}
+   #+end_src
+
+** Links
+   - https://github.com/clojure/tools.deps.alpha
+   - https://clojure.org/guides/deps_and_cli
+   - https://clojure.org/reference/deps_and_cli
+
+
+** See also (generated)
+
+- [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+

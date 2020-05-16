@@ -449,6 +449,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pitfalls" class="md-nav__link">
+    Pitfalls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-read" class="md-nav__link">
+    To Read
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#link" class="md-nav__link">
     Link
   </a>
@@ -763,6 +777,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../20200514104809-clojure_debug/" title="Clojure Debug" class="md-nav__link">
+      Clojure Debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200514114627-tools_deps/" title="tools.deps" class="md-nav__link">
+      tools.deps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -923,6 +961,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pitfalls" class="md-nav__link">
+    Pitfalls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-read" class="md-nav__link">
+    To Read
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#link" class="md-nav__link">
     Link
   </a>
@@ -997,6 +1049,15 @@
 <li>Make dependencies/connections between modules/components explicit (the system can introspect itself). It increase leverage;</li>
 <li>Leverage this for easier testing;</li>
 <li>Use core.async to enable cleaner abstractions, not as aned in itself.</li>
+</ul>
+<h2 id="pitfalls">Pitfalls<a class="headerlink" href="#pitfalls" title="Permanent link">&para;</a></h2>
+<p>Sliding/dropping buffers still required to be put into channels</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">c</span> <span class="p">(</span><span class="nf">chan</span> <span class="p">(</span><span class="nf">sliding-buffer</span> <span class="mi">10</span><span class="p">)))</span>
+</code></pre></div>
+
+<h2 id="to-read">To Read<a class="headerlink" href="#to-read" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.teigfam.net/oyvind/home/technology/084-csp-on-node-js-and-clojurescript-by-javascript/#coreasync_channels_library">https://www.teigfam.net/oyvind/home/technology/084-csp-on-node-js-and-clojurescript-by-javascript/#coreasync_channels_library</a></li>
 </ul>
 <h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
 <ul>

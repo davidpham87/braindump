@@ -1,6 +1,7 @@
 .PHONY: http
 http:
-	cd docs && python3 -m http.server 8000
+	cd docs && python3 -m http.server 8000 &
+	firefox localhost:8000
 
 .PHONY: tags
 tags:

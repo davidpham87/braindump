@@ -10,7 +10,16 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 
 -   how to write note efficiently.
 -   org journal.
--   Check if org gather indices properties.
+-   git subrepositories
+-   Check how org gather indices properties.
+-   pods in babashka
+
+
+## Write
+
+-   Simple made easy
+-   Design, Composition and Performance
+-   test.check and generative testing
 
 
 ## Idea
@@ -49,7 +58,8 @@ Use multipass and Ansible to simulate networks and kubernetes.
 
 ## Leverage indices and org-parser
 
-Check whether we can use indices to create better indexing.
+-   Check whether we can use indices to create better indexing.
+-   Use pods and sqlite to leverage on the org-roam and extend it to markdown.
 
 
 ## See also (generated)

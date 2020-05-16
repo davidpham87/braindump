@@ -1,11 +1,305 @@
 #+TITLE: specs
 #+OPTIONS: toc:nil
-#+TAGS: specs test.check quick-check clj
+#+TAGS: specs test.check quick-check clj property-based-testing
 #+ROAM_ALIAS: types test generative.testing test.check validation
 
 * Specs
 
-* Links
+  - [[https://clojure.org/about/spec][Rationale]]
+  - [[https://clojure.org/guides/spec][Guide]]
+
+** Summary
+
+   High leverage on specifying entities in Clojure code.
+
+   1. Adds validation
+   2. Conformance
+   3. Documentation
+   4. Generative testing
+
+   Specs are predicates and can be composed with the assigned keys. You want to
+   add this dependency at test time for generative testing
+
+   #+begin_src clojure
+  ;; deps.edn
+  {:aliases {:dev {:extra-deps {org.clojure/test.check {:mvn/version "1.0.0"}}}}}
+   #+end_src
+
+*** Definitions
+
+    =s/def= defines specs (with fully qualified keys). =s/valid= and =s/conform=
+    are the most important function for checking on runtime the specifications of
+    input/output.
+
+    #+begin_src clojure
+      (require '[clojure.spec.alpha :as s])
+
+      (s/def :image/size
+        (s/cat :height pos-int?
+               :width pos-int?
+               :depth pos-int?))
+
+      (s/conform :image/size [10 23 4]) ;; useful for turning tuples into maps
+      ;; => {:height 10, :width 23, :depth 4}
+      (s/valid? :image/size [10 23 4]) ;; => true
+      (s/valid? :image/size [10 23 "s"]) ;; => false
+      (s/valid? :image/size [10 23 -1]) ;; => false
+    #+end_src
+
+    Composition is achieved with =s/and= and =s/or=
+
+    #+begin_src clojure
+      (s/def ::big-even (s/and pos-int? even? #(> % 1000)))
+      (s/def ::identifier (s/or :name string?
+                                :id pos-int?))
+      (s/conform ::identifier "abc")
+      (s/conform ::identifier 100)
+    #+end_src
+
+    =explain= allows to have data on why a spec is failing.
+
+*** Entities map
+
+    Entities map are defined with =s/keys= and has the =req=, =req-un=, =opt=,
+    =opt-un= keywords argument (=un= stands for unqualified keys). Sequential
+    keyword arguments can be defined with the =s/keys*= function which will
+    check vector of keywords-values pair. You can use =s/and= and =s/or= with
+    the keys for a finer definition of membership of keys (for example when a
+    field in a map, then other keys are required and having different element
+    conforming). For example, either an email or a id string is required being
+    conform.
+
+*** Collection
+
+    Collection has =s/cat=, =s/coll-of=, =s/every=, =s/map-of=, =s/every-kv=,
+    =s/tuple=. The last one is the most permissive as it similar product
+    type. =every= and =every-kv= are suitable for large collection as they will
+    not conform their value (trade off against =coll-of= and =map-of= is error
+    message are less detailed).
+
+    #+begin_src clojure
+      (s/def ::point-0 (s/tuple double? double?))
+
+      (s/def ::x double?)
+      (s/def ::y double?)
+      (s/def ::point-1 (s/tuple ::x ::y))
+
+      (s/def ::point-2 (s/cat :x double? :y double?))
+
+      (s/def ::point-3 (s/coll-of? double?))
+      ;; additional arguments: :kind (type such as vector?)
+      ;; :count (exact) :min-count (minimal) :max-count (maximal) :distinct (unique
+      ;; values) :into ([] {} () #{})
+    #+end_src
+
+*** Multi specs
+
+    You can use multimethods to define multi-specs. Useful for conforming maps
+    depending on certain keys.
+
+    #+begin_src clojure
+      (defmulti event-type :event/type)
+      (defmethod event-type :event/search [_]
+        (s/keys :req [:event/type :event/timestamp :search/url]))
+      (defmethod event-type :event/error [_]
+        (s/keys :req [:event/type :event/timestamp :error/message :error/code]))
+
+      (s/def :event/type keyword?) ;; this will be used by multi-spec
+      ;; the last argument is used for generative testing
+      (s/def :event/event (s/multi-spec event-type :event/type))
+
+      (s/valid? :event/event
+                {:event/type :event/search
+                 :event/timestamp 1463970123000
+                 :search/url "https://clojure.org"}) ;; => true
+
+      (s/explain :event/event
+                 {:event/type :event/search
+                  :search/url 200}) ;; fails because missing timestamp
+      ;; 200 - failed: string? in: [:search/url]
+      ;;   at: [:event/search :search/url] spec: :search/url
+      ;; {:event/type :event/search, :search/url 200} - failed: (contains? % :event/timestamp)
+      ;;   at: [:event/search] spec: :event/event
+    #+end_src
+
+*** Sequence specs
+
+    - Sequences can be expressed with the regular expression operators =s/cat=,
+    =s/alt=, =s/*=, =s/+=, =s/?=.
+
+    - =s/alt= is difference from or as it will select one precisely and is
+      usually use with =s/cat=.
+
+    - You can =s/describe= to take the description of a spec.
+
+    - =s/&= allows to combine and regex operators and additional predicates.
+
+    - =s/spec= should be used for nesting regex specs.
+
+    #+begin_src clojure
+      (s/def ::nested
+        (s/cat :names-kw #{:names}
+               :names (s/spec (s/* string?))
+               :nums-kw #{:nums}
+               :nums (s/spec (s/* number?))))
+      (s/conform ::nested [:names ["a" "b"] :nums [1 2 3]])
+      ;; => {:names-kw :names, :names ["a" "b"], :nums-kw :nums, :nums [1 2 3]}
+
+      (s/def ::unnested
+        (s/cat :names-kw #{:names}
+               :names (s/* string?)
+               :nums-kw #{:nums}
+               :nums (s/* number?)))
+      (s/conform ::unnested [:names "a" "b" :nums 1 2 3])
+      ;; => {:names-kw :names, :names ["a" "b"], :nums-kw :nums, :nums [1 2 3]}
+    #+end_src
+
+*** Validation
+
+    - Assertion can be done with =s/assert=, on success the value is returned on
+    failure assertion error is thrown.
+    - Default is assertion checking is off, and can be change with =s/check-asserts=.
+    - Using =s/conform=, the result is either
+    conformed, or =::s/invalid= which is a special key and can be used for throwing
+    errors.
+
+    #+begin_src clojure
+      ;; ex-info stands for exception info
+      (when (= (s/conform ::config input) ::s/invalid)
+        (throw (ex-info "Invalid input" (s/explain-data ::config input))))
+    #+end_src
+
+*** Functions specs
+
+    =s/fdef= defines spec of a function while =s/fspec= allows to defines a generic
+    function signature. The keys are =:args=, =:ret= and =:fn= all accepts
+    predicates/specs as argument. The =:fn= keyword arguments is special as it is
+    meant for defining *properties* of the function for generative testing (similar
+    to =prop/for-all= in =test.check=).
+
+*** Generation
+
+    - The main namespace is
+      #+begin_src clojure
+        (require '[clojure.spec.gen.alpha :as gen])
+      #+end_src
+      and the function are =gen/generate=, =gen/sample= allows to generate
+      value from the specs. If you want to conformed data as well you can use
+      the =s/exercise= for sample value and conformed and =s/exercise-fn= to
+      see to see sample arguments and results. An example of generation is
+
+      #+begin_src clojure
+        (require '[clojure.spec.alpha :as s])
+        (require '[clojure.spec.gen.alpha :as gen])
+
+        (s/def ::x pos-int?)
+        (gen/generate (s/gen ::x)) ;; => 12734020
+        (gen/sample (s/gen ::x)) ;; => (1 1 2 4 4 7 3 55 4 10)
+        (gen/sample (s/gen ::x) 3) ;;  => (2 2 2)
+      #+end_src
+
+*** Custom generation
+
+    Three ways to create generators: spec create from the predicates, create
+    our own with spec.gen and use =test.check= or compatible (such as
+    [[https://github.com/gfredericks/test.chuck][test.chuk]]), last options requires runtime dependence on test check (so
+    first two are strongly recommended).
+
+    The main functions are =gen/fmap= (returns a value from a generator) or
+    =gen/bind= (returns a generator from a generator). Using =gen/let= allows
+    to use =gen/bind= with sanity.
+
+    #+begin_src clojure
+      (s/def ::kws
+        (s/with-gen
+          (s/and keyword? #(= (namespace %) "my.domain"))
+          #(s/gen #{:my.domain/name :my.domain/occupation :my.domain/id})))
+
+      (gen/sample (s/gen ::kws))
+    #+end_src
+
+
+** Tricks
+
+*** Check membership
+
+    Use sets to check for membership
+
+    #+begin_src clojure
+      (s/def ::assets #{:equity :fixed-income :commodity :etf :products})
+
+      (s/valid? ::assets :equity) ; => true
+      (s/valid? ::assets :spx) ; => false
+    #+end_src
+
+*** Check relationship between values of a map
+
+    #+begin_src clojure
+      (s/def ::dates (s/coll-of inst?))
+      (s/def ::values (s/coll-of double?))
+
+      (s/def ::timeseries
+        (s/and (s/keys :req-un [::dates ::values])
+               #(let [{:keys [dates values]} %]
+                  (= (count dates) (count values)))))
+    #+end_src
+
+*** Generic function signature
+
+    #+begin_src clojure
+      (defn f [x y] x)
+      (defn g [x y] y)
+
+      (s/def ::f (s/fspec :args (s/coll-of int?)
+                          :ret int?))
+
+      (s/fdef f ::f)
+      (s/fdef g ::f)
+    #+end_src
+
+
+*** Properties
+
+    Taking from [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+
+    #+BEGIN_QUOTE
+    We are looking for /invariants/ -- properties that are always true. [...]
+    mathematical laws, relationships between inputs and outputs, round-trip or
+    complementing functions, and comparing action effects.
+
+    Properties like identity, associativity, commutativity and idempotency are
+    an excellent place to start.
+    #+END_QUOTE
+
+
+** test.check
+
+*** Generators
+
+** Generative testing
+
+   Using the namespace
+   #+begin_src clojure
+     (require '[test.check.generators :as gen]) ;; or
+     (require '[clojure.spec.gen.alph :as gen])
+   #+end_src
+
+   The following are combinators of simple generators
+
+   #+begin_src clojure
+     gen/tuple ;; concatenate the generator
+     gen/one-of ;; random choice of generator
+     gen/frequency ;; distribution of generators
+     gen/such-that ;; post conditions
+     gen/fmap ;; returns a value from a generator
+     gen/bind ;; returns a new generator
+     gen/let ;; sane macro for using bind.
+   #+end_src
+
+** Links
+
+   - https://github.com/clojure/test.check
+
 
 ** See also (generated)
 

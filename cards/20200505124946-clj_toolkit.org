@@ -9,7 +9,6 @@
   Libraries supporting writing clojure in a better way. It can be code editor
   support or libraries to avoid writing too much code.
 
-
 ** See also (generated)
 
 - [[file:../decks/clojure.org][Clojure]]

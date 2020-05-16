@@ -792,6 +792,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../20200514104809-clojure_debug/" title="Clojure Debug" class="md-nav__link">
+      Clojure Debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200514114627-tools_deps/" title="tools.deps" class="md-nav__link">
+      tools.deps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1078,8 +1102,8 @@
 <p>For example based, there is the <code>expectations</code> library and the following snippets</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">deftest</span> <span class="nv">test-range-are</span>
   <span class="p">(</span><span class="nf">testing</span> <span class="s">&quot;Testing range(endIndex)&quot;</span>
-    <span class="p">(</span><span class="nf">are</span> <span class="p">[</span><span class="nv">expected</span> <span class="nv">endIndexf</span>
-      <span class="p">(</span><span class="nb">= </span><span class="nv">expected</span> <span class="p">(</span><span class="nb">range </span><span class="nv">endIndex</span><span class="p">))</span>
+    <span class="p">(</span><span class="nf">are</span> <span class="p">[</span><span class="nv">expected</span> <span class="nv">endIndex</span>
+      <span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nb">range </span><span class="nv">endIndex</span><span class="p">)</span> <span class="nv">expected</span><span class="p">)</span>
       <span class="o">&#39;</span><span class="p">(</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">)</span> <span class="mi">5</span>
       <span class="o">&#39;</span><span class="p">()</span> <span class="mi">0</span><span class="p">])))</span>
 </code></pre></div>
