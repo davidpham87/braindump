@@ -53,6 +53,7 @@
 
 ## See also (generated)
 
+-   [(](20200430235013-specs.md)
 -   [Applied Clojure](20200430155637-applied_clojure.md)
 -   [CLI Arguments](20200430154352-cli_arguments.md)
 -   [Clojure](../decks/clojure.md)
@@ -65,5 +66,4 @@
 -   [Org-roam-clj: Org-roam extension with Clojure](20200503222619-org_roam_clj.md)
 -   [Parallel Programming in Clojure with Reducers](20200505112138-clojure_reducers.md)
 -   [Simple Made Easy](20200502122138-simple_made_easy.md)
--   [specs](20200430235013-specs.md)
 -   [Why Clojure?](20200504204808-why_clojure.md)

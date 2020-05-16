@@ -540,6 +540,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -595,21 +602,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generators" class="md-nav__link">
-    Generators
+  <a href="#generative-testing" class="md-nav__link">
+    Generative testing
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generative-testing" class="md-nav__link">
-    Generative testing
-  </a>
   
 </li>
       
@@ -904,6 +904,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../20200516171955-generative_testing/" title="Generative Testing" class="md-nav__link">
+      Generative Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200516210112-john_hughes/" title="John Hughes" class="md-nav__link">
+      John Hughes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1107,6 +1131,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1162,21 +1193,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generators" class="md-nav__link">
-    Generators
+  <a href="#generative-testing" class="md-nav__link">
+    Generative testing
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generative-testing" class="md-nav__link">
-    Generative testing
-  </a>
   
 </li>
       
@@ -1216,6 +1240,7 @@
 <li><a href="https://clojure.org/guides/spec">Guide</a></li>
 </ul>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This is a quick summary of the official guide in Clojure. The goal is to gather most function in a single place and also acts as a reminder.</p>
 <p>High leverage on specifying entities in Clojure code.</p>
 <ol>
 <li>Adds validation</li>
@@ -1349,7 +1374,8 @@
 </code></pre></div>
 
 <h3 id="functions-specs">Functions specs<a class="headerlink" href="#functions-specs" title="Permanent link">&para;</a></h3>
-<p><code>s/fdef</code> defines spec of a function while <code>s/fspec</code> allows to defines a generic function signature. The keys are <code>:args</code>, <code>:ret</code> and <code>:fn</code> all accepts predicates/specs as argument. The <code>:fn</code> keyword arguments is special as it is meant for defining <strong>properties</strong> of the function for generative testing (similar to <code>prop/for-all</code> in <code>test.check</code>).</p>
+<p><code>s/fdef</code> defines spec of a function while <code>s/fspec</code> allows to defines a generic function signature. The keys are <code>:args</code>, <code>:ret</code> and <code>:fn</code> all accepts predicates/specs as argument. The <code>:fn</code> keyword arguments is special as it is meant for defining <strong>properties</strong> of the function for generative testing (similar to <code>prop/for-all</code> in <code>test.check</code>). The properties can be enforced on the argument (preconditions) on the result (post conditions) or on a relationship between the arguments and the return value or some invariant properties on the function call itself.</p>
+<p>See <a href="../20200516171955-generative_testing/">Generative Testing</a>.</p>
 <h3 id="generation">Generation<a class="headerlink" href="#generation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -1365,21 +1391,87 @@
 <span class="p">(</span><span class="nf">gen/generate</span> <span class="p">(</span><span class="nf">s/gen</span> <span class="ss">::x</span><span class="p">))</span> <span class="c1">;; =&gt; 12734020</span>
 <span class="p">(</span><span class="nf">gen/sample</span> <span class="p">(</span><span class="nf">s/gen</span> <span class="ss">::x</span><span class="p">))</span> <span class="c1">;; =&gt; (1 1 2 4 4 7 3 55 4 10)</span>
 <span class="p">(</span><span class="nf">gen/sample</span> <span class="p">(</span><span class="nf">s/gen</span> <span class="ss">::x</span><span class="p">)</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">;;  =&gt; (2 2 2)</span>
+
+
+<span class="p">(</span><span class="nf">s/def</span> <span class="ss">::m</span> <span class="p">(</span><span class="nf">s/map-of</span> <span class="nb">keyword? </span><span class="nv">pos-int?</span> <span class="ss">:min-count</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nf">s/exercise</span> <span class="ss">::m</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">custom-gen</span>
+      <span class="p">(</span><span class="nf">gen/bind</span>
+       <span class="p">(</span><span class="nf">s/gen</span> <span class="ss">::m</span><span class="p">)</span>
+       <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">m</span><span class="p">]</span>
+     <span class="p">(</span><span class="nf">gen/tuple</span>
+      <span class="p">(</span><span class="nf">gen/return</span> <span class="nv">m</span><span class="p">)</span>
+      <span class="p">(</span><span class="nf">gen/vector-distinct</span>
+       <span class="p">(</span><span class="nf">gen/elements</span> <span class="p">(</span><span class="nb">keys </span><span class="nv">m</span><span class="p">))</span> <span class="p">{</span><span class="ss">:min-elements</span> <span class="mi">2</span><span class="p">}))))]</span>
+
+  <span class="p">(</span><span class="nf">gen/sample</span> <span class="nv">custom-gen</span> <span class="mi">10</span><span class="p">))</span>
 </code></pre></div>
 
 </li>
 </ul>
 <h3 id="custom-generation">Custom generation<a class="headerlink" href="#custom-generation" title="Permanent link">&para;</a></h3>
 <p>Three ways to create generators: spec create from the predicates, create our own with spec.gen and use <code>test.check</code> or compatible (such as <a href="https://github.com/gfredericks/test.chuck">test.chuk</a>), last options requires runtime dependence on test check (so first two are strongly recommended).</p>
-<p>The main functions are <code>gen/fmap</code> (returns a value from a generator) or <code>gen/bind</code> (returns a generator from a generator). Using <code>gen/let</code> allows to use <code>gen/bind</code> with sanity.</p>
+<p>The main functions are <code>gen/fmap</code> (returns a value from a generator) or <code>gen/bind</code> (returns a generator from a generator). Using <code>test.check/let</code> allows to use <code>gen/bind</code> with sanity.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">s/def</span> <span class="ss">::kws</span>
   <span class="p">(</span><span class="nf">s/with-gen</span>
     <span class="p">(</span><span class="nf">s/and</span> <span class="nb">keyword? </span><span class="o">#</span><span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nb">namespace </span><span class="nv">%</span><span class="p">)</span> <span class="s">&quot;my.domain&quot;</span><span class="p">))</span>
     <span class="o">#</span><span class="p">(</span><span class="nf">s/gen</span> <span class="o">#</span><span class="p">{</span><span class="ss">:my.domain/name</span> <span class="ss">:my.domain/occupation</span> <span class="ss">:my.domain/id</span><span class="p">})))</span>
 
 <span class="p">(</span><span class="nf">gen/sample</span> <span class="p">(</span><span class="nf">s/gen</span> <span class="ss">::kws</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">def </span><span class="nv">kw-gen-2</span> <span class="p">(</span><span class="nf">gen/fmap</span> <span class="o">#</span><span class="p">(</span><span class="nb">keyword </span><span class="s">&quot;my.domain&quot;</span> <span class="nv">%</span><span class="p">)</span> <span class="p">(</span><span class="nf">gen/string-ascii</span><span class="p">)))</span>
+<span class="p">(</span><span class="nf">gen/sample</span> <span class="nv">kw-gen-2</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">def </span><span class="nv">kw-gen-3</span>
+  <span class="p">(</span><span class="nf">gen/fmap</span> <span class="o">#</span><span class="p">(</span><span class="nb">keyword </span><span class="s">&quot;my.domain&quot;</span> <span class="nv">%</span><span class="p">)</span>
+        <span class="p">(</span><span class="nf">gen/such-that</span> <span class="o">#</span><span class="p">(</span><span class="nb">not= </span><span class="nv">%</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+               <span class="p">(</span><span class="nf">gen/string-alphanumeric</span><span class="p">))))</span>
+<span class="p">(</span><span class="nf">gen/sample</span> <span class="nv">kw-gen-3</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1">;; this is what we call using a model to generate our output</span>
+
+<span class="p">(</span><span class="nf">s/def</span> <span class="ss">::hello</span>
+  <span class="p">(</span><span class="nf">s/with-gen</span> <span class="o">#</span><span class="p">(</span><span class="nf">clojure.string/includes?</span> <span class="nv">%</span> <span class="s">&quot;hello&quot;</span><span class="p">)</span>
+    <span class="o">#</span><span class="p">(</span><span class="nf">gen/fmap</span> <span class="p">(</span><span class="k">fn </span><span class="p">[[</span><span class="nv">s1</span> <span class="nv">s2</span><span class="p">]]</span> <span class="p">(</span><span class="nb">str </span><span class="nv">s1</span> <span class="s">&quot;hello&quot;</span> <span class="nv">s2</span><span class="p">))</span>
+           <span class="p">(</span><span class="nf">gen/tuple</span> <span class="p">(</span><span class="nf">gen/string-alphanumeric</span><span class="p">)</span>
+              <span class="p">(</span><span class="nf">gen/string-alphanumeric</span><span class="p">)))))</span>
+<span class="p">(</span><span class="nf">gen/sample</span> <span class="p">(</span><span class="nf">s/gen</span> <span class="ss">::hello</span><span class="p">))</span>
 </code></pre></div>
 
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<p>Instrumentation is to validate the input argument (the <code>:args</code> key), whereas checking is for testing with random input and all the <code>:args</code>, <code>:ret</code>, <code>:fn</code> keys.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">clojure.spec.test.alpha</span> <span class="ss">:as</span> <span class="nv">stest</span><span class="p">])</span>
+<span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">clojure.spec.alpha</span> <span class="ss">:as</span> <span class="nv">s</span><span class="p">])</span>
+
+<span class="p">(</span><span class="kd">defn </span><span class="nv">ranged-rand</span>
+  <span class="s">&quot;Returns random int in range start &lt;= rand &lt; end&quot;</span>
+  <span class="p">[</span><span class="nv">start</span> <span class="nv">end</span><span class="p">]</span>
+  <span class="p">(</span><span class="nb">+ </span><span class="nv">start</span> <span class="p">(</span><span class="nb">long </span><span class="p">(</span><span class="nb">rand </span><span class="p">(</span><span class="nb">- </span><span class="nv">end</span> <span class="nv">start</span><span class="p">)))))</span>
+
+
+<span class="p">(</span><span class="nf">s/def</span> <span class="ss">::int</span> <span class="nv">int?</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">s/fdef</span> <span class="nv">ranged-rand</span>
+  <span class="ss">:args</span> <span class="p">(</span><span class="nf">s/and</span> <span class="p">(</span><span class="nf">s/cat</span> <span class="ss">:start</span> <span class="ss">::int</span> <span class="ss">:end</span> <span class="ss">::int</span><span class="p">)</span>
+           <span class="o">#</span><span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="ss">:start</span> <span class="nv">%</span><span class="p">)</span> <span class="p">(</span><span class="ss">:end</span> <span class="nv">%</span><span class="p">)))</span>
+  <span class="ss">:ret</span> <span class="nv">int?</span>
+  <span class="ss">:fn</span> <span class="p">(</span><span class="k">fn </span><span class="p">[{</span><span class="ss">:keys</span> <span class="p">[</span><span class="nv">args</span> <span class="nv">ret</span><span class="p">]}]</span>
+    <span class="p">(</span><span class="nf">s/and</span> <span class="o">#</span><span class="p">(</span><span class="nb">&gt;= </span><span class="nv">ret</span> <span class="p">(</span><span class="ss">:start</span> <span class="nv">args</span><span class="p">))</span>
+           <span class="o">#</span><span class="p">(</span><span class="nb">&lt; </span><span class="nv">ret</span> <span class="p">(</span><span class="ss">:end</span> <span class="nv">args</span><span class="p">)))))</span>
+
+<span class="p">(</span><span class="nb">doc </span><span class="nv">ranged-rand</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">s/exercise-fn</span> <span class="o">`</span><span class="nv">ranged-rand</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">stest/check</span> <span class="o">`</span><span class="nv">ranged-rand</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">stest/check</span> <span class="o">`</span><span class="nv">ranged-rand</span> <span class="p">{</span><span class="ss">:gen</span> <span class="p">{</span><span class="ss">::int</span> <span class="o">#</span><span class="p">{</span><span class="mi">2</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">10</span><span class="p">}}})</span>
+</code></pre></div>
+
+<p>In order to check all function in a given namepsace you can use <code>enumerate-namespace</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">-&gt; </span><span class="p">(</span><span class="nf">stest/enumerate-namespace</span> <span class="ss">&#39;user</span><span class="p">)</span> <span class="nv">stest/check</span><span class="p">)</span>
+</code></pre></div>
+
+<p>When <code>stest/instrument</code> is applied to a function, it can take options on function and the stub keys takes a spec <code>x</code> as a value which replace the function invokation by a generated value from the spec <code>x</code>. Hence it useful for testing systems without invoking server and side effects/IO.</p>
 <h2 id="tricks">Tricks<a class="headerlink" href="#tricks" title="Permanent link">&para;</a></h2>
 <h3 id="check-membership">Check membership<a class="headerlink" href="#check-membership" title="Permanent link">&para;</a></h3>
 <p>Use sets to check for membership</p>
@@ -1411,24 +1503,21 @@
 </code></pre></div>
 
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
-<p>Taking from <a href="../20200430155637-applied_clojure/">Applied Clojure</a></p>
-<blockquote>
-<p>We are looking for <em>invariants</em> &#x2013; properties that are always true. [&#x2026;] mathematical laws, relationships between inputs and outputs, round-trip or complementing functions, and comparing action effects.</p>
-<p>Properties like identity, associativity, commutativity and idempotency are an excellent place to start.</p>
-</blockquote>
+<p>See <a href="../20200516171955-generative_testing/">Generative Testing</a>.</p>
 <h2 id="testcheck">test.check<a class="headerlink" href="#testcheck" title="Permanent link">&para;</a></h2>
-<h3 id="generators">Generators<a class="headerlink" href="#generators" title="Permanent link">&para;</a></h3>
-<h2 id="generative-testing">Generative testing<a class="headerlink" href="#generative-testing" title="Permanent link">&para;</a></h2>
+<h3 id="generative-testing">Generative testing<a class="headerlink" href="#generative-testing" title="Permanent link">&para;</a></h3>
 <p>Using the namespace</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">test.check.generators</span> <span class="ss">:as</span> <span class="nv">gen</span><span class="p">])</span> <span class="c1">;; or</span>
 <span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">clojure.spec.gen.alph</span> <span class="ss">:as</span> <span class="nv">gen</span><span class="p">])</span>
 </code></pre></div>
 
 <p>The following are combinators of simple generators</p>
-<div class="highlight"><pre><span></span><code><span class="nv">gen/tuple</span> <span class="c1">;; concatenate the generator</span>
+<div class="highlight"><pre><span></span><code><span class="nv">gen/vector</span>
+<span class="nv">gen/vector-distinct</span>
+<span class="nv">gen/tuple</span> <span class="c1">;; concatenate the generator</span>
 <span class="nv">gen/one-of</span> <span class="c1">;; random choice of generator</span>
 <span class="nv">gen/frequency</span> <span class="c1">;; distribution of generators</span>
-<span class="nv">gen/such-that</span> <span class="c1">;; post conditions</span>
+<span class="nv">gen/such-that</span> <span class="c1">;; conditions for generation</span>
 <span class="nv">gen/fmap</span> <span class="c1">;; returns a value from a generator</span>
 <span class="nv">gen/bind</span> <span class="c1">;; returns a new generator</span>
 <span class="nv">gen/let</span> <span class="c1">;; sane macro for using bind.</span>
@@ -1436,7 +1525,16 @@
 
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/clojure/test.check">https://github.com/clojure/test.check</a></li>
+<li><a href="https://github.com/clojure/test.check">https://github.com/clojure/test.check</a>, quick check implementation in Clojure.</li>
+<li><a href="https://github.com/clojure/test.check/blob/master/doc/cheatsheet.md">https://github.com/clojure/test.check/blob/master/doc/cheatsheet.md</a></li>
+<li><a href="https://github.com/metosin/spec-tools">https://github.com/metosin/spec-tools</a>, tools for clojure.spec</li>
+<li><a href="https://github.com/jeaye/orchestra">https://github.com/jeaye/orchestra</a>, complete instrumentation for clojure.spec.</li>
+<li><a href="https://github.com/bhb/expound">https://github.com/bhb/expound</a>, improved specs errors message.</li>
+<li><a href="https://github.com/bhauman/spell-spec">https://github.com/bhauman/spell-spec</a>, spell checker for keys in map entities.</li>
+<li><a href="https://github.com/reifyhealth/specmonstah">https://github.com/reifyhealth/specmonstah</a>, simulation of database state given specs and a schema.</li>
+<li><a href="https://github.com/stathissideris/spec-provider">https://github.com/stathissideris/spec-provider</a>, infer clojure specs from sample data.</li>
+<li><a href="https://github.com/gnl/ghostwheel">https://github.com/gnl/ghostwheel</a> sane notation for fdef.</li>
+<li><a href="https://clojure.org/api/cheatsheet">Clojure cheat sheet</a></li>
 </ul>
 <h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
 <ul>

@@ -15,7 +15,7 @@
     
     
       
-        <title>Mastering Clojure Macro - David's Brain Dump</title>
+        <title>John Hughes - David's Brain Dump</title>
       
     
     
@@ -56,7 +56,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mastering-clojure-macro" class="md-skip">
+        <a href="#john-hughes" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Mastering Clojure Macro
+              John Hughes
             
           </span>
         </div>
@@ -361,60 +361,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Mastering Clojure Macro
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Mastering Clojure Macro" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../20200430155438-mastering_clojure_macro/" title="Mastering Clojure Macro" class="md-nav__link">
       Mastering Clojure Macro
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -770,11 +721,53 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../20200516210112-john_hughes/" title="John Hughes" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        John Hughes
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="John Hughes" class="md-nav__link md-nav__link--active">
       John Hughes
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -923,13 +916,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#see-also-generated" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -946,72 +932,13 @@
                   
                 
                 
-                <h1 id="mastering-clojure-macro">Mastering Clojure Macro<a class="headerlink" href="#mastering-clojure-macro" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Macro is about manipulating the arguments of your functions before they get evaluated. We should think about templating when thinking about macros.</li>
-<li>The macro returns a S-Expression which should be valid Clojure code.</li>
-<li>Use <code>`</code> for namespace quoting everything after the backquote (usually a list). Unquote is done through <code>~</code>. Unquote splicing <code>~@</code> allows to remove the parenthesis in a list and put them at the same level as the parent S-Expression. For example the following <code>`(1 2 ~@(3 4) 5)`</code> returns <code>(1 2 3 4 5)</code>.</li>
-<li>Whenever we need to bind a symbol in a macro (e.g <code>fn</code> and <code>let</code>), the argument should be gensym, or symbol appended of a <code>#</code>, e.g <code>x#</code>.</li>
-<li><code>&amp;form</code> [the calling expression] and <code>&amp;env</code> [the binding environment] are special values only available in macros.</li>
-<li>Disadvantage with macros. Macros are not values (as they are not functions). So we can&rsquo;t use <code>map</code> or any other function on them. Macros can be contagious as they can leak force your user to also write macros to use your library. They can be tough to get right (mainly because of side effect and computation time). We should avoid doing a mess in our user namespace whenever writing macros.</li>
-<li>
-<p>Macros are useful to evaluate code in Context. When using dynamic binding,</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">declare </span><span class="o">^</span><span class="ss">:dynamic</span> <span class="nv">*radius*</span><span class="p">)</span>
-<span class="p">(</span><span class="kd">defn </span><span class="nv">circle-area</span> <span class="p">[]</span>
-  <span class="p">(</span><span class="nb">* </span><span class="nv">Math/PI</span> <span class="p">(</span><span class="nb">* </span><span class="nv">*radius*</span> <span class="nv">*radius*</span><span class="p">)))</span>
-<span class="p">(</span><span class="nb">binding </span><span class="p">[</span><span class="nv">*radius*</span> <span class="mi">10</span><span class="p">]</span>
-  <span class="p">(</span><span class="nf">circle-area</span><span class="p">))</span>
-</code></pre></div>
-
-<p>it can be useful to abstract the binding step with a macro. Most common bindings are for <code>*out*</code>. In general, we should have the core of the manipulation of a macro written in a function, and have the smallest possible amount of lines of code into a the macro.</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">with-out-file-fn</span> <span class="p">[</span><span class="nv">file</span> <span class="nv">body-fn</span><span class="p">]</span>
-  <span class="p">(</span><span class="nb">with-open </span><span class="p">[</span><span class="nv">writer</span> <span class="p">(</span><span class="nf">clojure.java.io/writer</span> <span class="nv">file</span> <span class="ss">:append</span> <span class="nv">true</span><span class="p">)]</span>
-    <span class="p">(</span><span class="nb">binding </span><span class="p">[</span><span class="nv">*out*</span> <span class="nv">writer</span><span class="p">]</span>
-      <span class="p">(</span><span class="nf">body-fn</span><span class="p">))))</span>
-
-<span class="p">(</span><span class="kd">defn </span><span class="nv">with-out-file</span> <span class="p">[</span><span class="nv">file</span> <span class="o">&amp;</span> <span class="nv">body</span><span class="p">]</span>
-  <span class="o">`</span><span class="p">(</span><span class="nf">with-out-file-fn</span> <span class="o">~</span><span class="nv">file</span>
-     <span class="p">(</span><span class="k">fn </span><span class="p">[]</span> <span class="o">~@</span><span class="nv">body</span><span class="p">)))</span>
-</code></pre></div>
-
-<p>Macro can also decide how we evaluate (or not) the input, e.g. <code>comment</code>. A cool trick for a function that should be executed only once</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">x</span> <span class="ss">:a</span>
-      <span class="nv">f</span> <span class="p">(</span><span class="o">^</span><span class="ss">:once</span> <span class="nv">fn*</span> <span class="p">[]</span> <span class="p">(</span><span class="nb">println </span><span class="nv">x</span><span class="p">))]</span>
-  <span class="p">(</span><span class="nf">f</span><span class="p">)</span>  <span class="c1">;; prints :a</span>
-  <span class="p">(</span><span class="nf">f</span><span class="p">))</span> <span class="c1">;; prints nil</span>
-</code></pre></div>
-
-<p>Macros can also rescuing errors and clean up resources. The main point is macros allow to eliminate noisy details of cleaning up an open resource, rescuing errors, or setting up dynamic bindings or other context for evaluation. It allows to abstract away the contextual details and core operations can be clarified to make the purpose of the code more obvious.
--   Optimization. Before optimizing, we should know how to benchmark. <code>criterium.core</code> is a nice solution for that. Macros can let write type hinting without the users being noticed and as the computation is done at compile time, they allow optimization of operations or functions which does not depend on user input.
--   Macro can build apis that say what they mean. It allows to avoid unnecessary intermediary steps for the users to know, especially ones that require forms that are not essentials to the API. For example, building resources or calling functions. In this case, we should try to have as much operations in functions, to avoid bugs but also to offer the choice to the user to call functions (which are values) or macros.
--   As macro execute the logic of its body before executing its arguments, we can bend the control flow of our code. The lowest level of looping in Clojure is the <code>loop/recur</code> construction and most control flow in Clojure are derived from this. This is a special case of creating languages features.</p>
-</li>
-</ul>
+                <h1 id="john-hughes">John Hughes<a class="headerlink" href="#john-hughes" title="Permanent link">&para;</a></h1>
+<p>Creator quick check.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><a href="https://pragprog.com/book/cjclojure/mastering-clojure-macros">Mastering Clojure Macros</a></p>
-</li>
-<li>
-<p><strong>tags:</strong> <a href="../../decks/clojure/">clj</a></p>
-</li>
-</ul>
-<h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../20200430235013-specs/">(</a></li>
-<li><a href="../20200430155637-applied_clojure/">Applied Clojure</a></li>
-<li><a href="../20200430154352-cli_arguments/">CLI Arguments</a></li>
-<li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200430160432-clojure_for_the_brave_and_the_true/">Clojure for the brave and the true</a></li>
-<li><a href="../20200430155819-core_async/">core.async</a></li>
-<li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
-<li><a href="../20200504212017-edn_and_transit/">edn and transit</a></li>
-<li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
-<li><a href="../20200430154528-multiple_environment/">Multiple Environment</a></li>
-<li><a href="../20200503222619-org_roam_clj/">Org-roam-clj: Org-roam extension with Clojure</a></li>
-<li><a href="../20200505112138-clojure_reducers/">Parallel Programming in Clojure with Reducers</a></li>
-<li><a href="../20200502122138-simple_made_easy/">Simple Made Easy</a></li>
-<li><a href="../20200504204808-why_clojure/">Why Clojure?</a></li>
+<li><a href="https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf">How to specify it?</a>, <a href="https://www.youtube.com/watch?v=G0NUOst-53U">video</a> (jump until minute 10 for start of content).</li>
+<li><a href="https://www.youtube.com/watch?v=zi0rHwfiX1Q">How to write test and stay sane?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/John_Hughes_(computer_scientist)">wiki</a></li>
 </ul>
                 
               
@@ -1031,7 +958,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../20200430154647-shadow_cljs/" title="shadow-cljs" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../20200516171955-generative_testing/" title="Generative Testing" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1040,19 +967,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                shadow-cljs
+                Generative Testing
               </div>
             </div>
           </a>
         
         
-          <a href="../20200430155637-applied_clojure/" title="Applied Clojure" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../continuing_education/" title="Continuing Education" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Applied Clojure
+                Continuing Education
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
