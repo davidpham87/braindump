@@ -15,7 +15,7 @@
     
     
       
-        <title>TOOD List - David's Brain Dump</title>
+        <title>Index - David's Brain Dump</title>
       
     
     
@@ -55,11 +55,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#tood-list" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +78,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              TOOD List
+              Index
             
           </span>
         </div>
@@ -166,20 +161,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="TOOD List" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../todo/" title="TOOD List" class="md-nav__link">
       TOOD List
     </a>
-    
   </li>
 
     
@@ -229,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Decks
@@ -254,11 +242,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../decks/" title="Index" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Index" class="md-nav__link md-nav__link--active">
       Index
     </a>
+    
   </li>
 
         
@@ -268,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../decks/clojure/" title="Clojure" class="md-nav__link">
+    <a href="clojure/" title="Clojure" class="md-nav__link">
       Clojure
     </a>
   </li>
@@ -880,21 +875,6 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -904,63 +884,9 @@
                   
                 
                 
-                <h1 id="tood-list">TOOD List<a class="headerlink" href="#tood-list" title="Permanent link">&para;</a></h1>
-<p>This Todo file is a simple example of what I still have to learn or do. These are the goals I would like to reach or interest me.</p>
-<h1 id="highly-important">Highly important<a class="headerlink" href="#highly-important" title="Permanent link">&para;</a></h1>
-<h2 id="read">Read<a class="headerlink" href="#read" title="Permanent link">&para;</a></h2>
-<ul>
-<li>how to write note efficiently.</li>
-<li>org journal.</li>
-<li>git subrepositories</li>
-<li>Check how org gather indices properties.</li>
-<li>pods in babashka</li>
-</ul>
-<h2 id="write">Write<a class="headerlink" href="#write" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Simple made easy</li>
-<li>Design, Composition and Performance</li>
-<li>test.check and generative testing</li>
-</ul>
-<h2 id="idea">Idea<a class="headerlink" href="#idea" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Check sha1 in converting org files (because it is super slow otherwise) org-roam-clj</li>
-<li>Download clojure.core and use materiala for testing. <a href="../cards/20200503165952-materiala/">Materiala</a></li>
-<li>Fork marginalia parser and correct its bug: <a href="https://github.com/gdeer81/marginalia/blob/master/src/marginalia/parser.clj">parser</a></li>
-</ul>
-<h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
-<ul>
-<li>specs, core async, datomic, testing.</li>
-<li>Kubernetes, container technology.</li>
-<li>Webworkers and websockets.</li>
-<li>GPU computing</li>
-<li>GraphQL</li>
-<li>Spark</li>
-<li>Kafka</li>
-<li>Learn about databases (postgres, elastic search and datomic).</li>
-</ul>
-<h2 id="todo-read-advanced-data-analysis-from-an-elementary-point-of-view">TODO Read Advanced Data Analysis from an elementary point of view<a class="headerlink" href="#todo-read-advanced-data-analysis-from-an-elementary-point-of-view" title="Permanent link">&para;</a></h2>
-<p><a href="http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Advanced data analysis from an elementary point of view</a></p>
-<h2 id="multipass-and-ansible">Multipass and Ansible<a class="headerlink" href="#multipass-and-ansible" title="Permanent link">&para;</a></h2>
-<p>Use multipass and Ansible to simulate networks and kubernetes.</p>
-<h2 id="learn-css">Learn CSS<a class="headerlink" href="#learn-css" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Write a summary (check create of Bulma)</li>
-<li>garden-cljs.</li>
-</ul>
-<h2 id="leverage-indices-and-org-parser">Leverage indices and org-parser<a class="headerlink" href="#leverage-indices-and-org-parser" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Check whether we can use indices to create better indexing.</li>
-<li>Use pods and sqlite to leverage on the org-roam and extend it to markdown.</li>
-</ul>
-<h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../cards/20200430155637-applied_clojure/">Applied Clojure</a></li>
-<li><a href="../cards/20200430160432-clojure_for_the_brave_and_the_true/">Clojure for the brave and the true</a></li>
-<li><a href="../cards/20200430235013-specs/">clojure specs</a></li>
-<li><a href="../cards/20200430155819-core_async/">core.async</a></li>
-<li><a href="../cards/20200501163355-goals/">Goals</a></li>
-<li><a href="../cards/20200503165952-materiala/">Materiala</a></li>
-</ul>
+                  <h1>Index</h1>
+                
+                
                 
               
               
@@ -979,7 +905,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." title="Why?" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../blog/20200502171331-first_blog_ticket/" title="First blog ticket" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -988,19 +914,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Why?
+                First blog ticket
               </div>
             </div>
           </a>
         
         
-          <a href="../blog/20200502171331-first_blog_ticket/" title="First blog ticket" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="clojure/" title="Clojure" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                First blog ticket
+                Clojure
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

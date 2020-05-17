@@ -1,7 +1,7 @@
 #+TITLE: Generative Testing
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: generative-testing generative.testing
-#+TAGS: generative-testing clojure.spec test validation quick-check
+#+TAGS: generative-testing clojure.spec test validation quick-check PBT
 #+DATE: 2020-05-16
 
 * Generative Testing
@@ -30,6 +30,19 @@
      (e.g. =create= is =assoc=, =delete= is =dissoc=).
    - Avoid to implement again the same algorithms.
    - Commutativity of operations
+   - Hard to prove, quick to verify (e.g. path in maze to the exit).
+   - Backward properties: generate the output and think which input would have
+     yielded this output (like in finding a key in a hash map: inserting the
+     key first to insure the key is in the collection).
+
+
+   - Expect failures and create failure.
+   - Ask the hard questions.
+   - Create the visibility you need (for asserting that a function did what it
+     is supposed to do).
+   - What defines success of a service? This leads to property.
+   - Hammock time leads (care and randomness).
+
 
 ** How to specify it
 
@@ -80,8 +93,10 @@
    - https://fsharpforfunandprofit.com/posts/property-based-testing-2/
    - [[https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf][How to specify it?]], [[https://www.youtube.com/watch?v=G0NUOst-53U][video]] (jump until minute 10 for start of content).
    - [[https://www.youtube.com/watch?v=zi0rHwfiX1Q][How to write test and stay sane?]]
-
+   - [[https://www.youtube.com/watch?v=shngiiBfD80][Jessica Kerr (midwest.io 2014)]]
+   - ScalaCheck (book about PBT)
 
 ** See also (generated)
 
-- [[file:20200430235013-specs.org][(]]
+- [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+- [[file:20200430235013-specs.org][clojure specs]]

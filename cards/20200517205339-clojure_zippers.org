@@ -1,0 +1,30 @@
+#+TITLE: Clojure Zippers
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: clojure-zippers clj/zippers
+#+TAGS: clojure-zippers zippers clj
+#+DATE: 2020-05-17
+
+* Clojure Zippers
+
+Usually tress are of the forms of maps and vectors
+
+#+begin_src clojure
+  (defn map-zipper [m]
+    (zip/zipper
+     (fn [x] (or (map? x) #_(vector? x))
+     (fn [x] (:children x))
+     (fn [x children]
+       (assoc x :children children)) m))
+#+end_src
+
+** Links
+   - https://clojuredocs.org/clojure.zip
+   - https://lambdaisland.com/blog/2018-11-26-art-tree-shaping-clojure-zip
+   - http://josf.info/blog/2014/03/21/getting-acquainted-with-clojure-zippers/
+   - http://josf.info/blog/2014/03/28/clojure-zippers-structure-editing-with-your-mind/
+   - http://josf.info/blog/2014/04/14/seqs-of-clojure-zippers/
+
+
+** See also (generated)
+
+- [[file:../decks/clojure.org][Clojure]]

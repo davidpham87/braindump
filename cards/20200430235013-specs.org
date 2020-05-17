@@ -1,7 +1,7 @@
-#+TITLE: specs
+#+TITLE: clojure specs
 #+OPTIONS: toc:nil
-#+TAGS: specs test.check quick-check clj property-based-testing types test
-#+ROAM_ALIAS: clojure.spec
+#+TAGS: specs quick-check test.check clj property-based-testing types test
+#+ROAM_ALIAS: specs spec clojure.spec
 
 * Specs
 
@@ -391,6 +391,7 @@
 - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+- [[file:20200516171955-generative_testing.org][Generative Testing]]
 - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:../todo.org][TODO]]

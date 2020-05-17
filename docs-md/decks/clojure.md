@@ -165,10 +165,10 @@ Write about `s/fspec`. The trick in using `s/fspec` is to provide reasonable gen
 
 ## See also (generated)
 
--   [(](../cards/20200430235013-specs.md)
 -   [Applied Clojure](../cards/20200430155637-applied_clojure.md)
 -   [CLI Arguments](../cards/20200430154352-cli_arguments.md)
 -   [Clojure for the brave and the true](../cards/20200430160432-clojure_for_the_brave_and_the_true.md)
+-   [clojure specs](../cards/20200430235013-specs.md)
 -   [Clojure toolkit](../cards/20200505124946-clj_toolkit.md)
 -   [core.async](../cards/20200430155819-core_async.md)
 -   [David Nolen](../cards/20200430141609-david_nolen.md)

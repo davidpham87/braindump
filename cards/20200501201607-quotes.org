@@ -48,6 +48,15 @@
    tree, it will live its whole life believing that it is stupid. -- Anonymous
    #+END_QUOTE
 
+** Professional advice
+
+   #+begin_quote
+   Do all the useless baggage stuff like writing thank-you emails whenever someone
+   notifies you of an error, respond when it’s fixed, and no matter if they care
+   or not, write a quick one-minute explanation of why the error happened in the
+   first place and how you fixed it. -- [[https://medium.com/better-programming/how-to-thrive-as-an-average-programmer-1dd202540ac][keypressmonkey]]
+   #+end_quote
+
 ** Life Style
    These are inspirational philosophy [but not empirically approved in class room].
 

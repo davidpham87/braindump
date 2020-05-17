@@ -15,6 +15,8 @@ Other general properties:
 -   Trusted implementation. Compare the results and calculation on a trusted different implementation (different language, slower/faster version). For stateful components (like database), apply same logical operation on a logical model correct implementation like hash-map or vectors (e.g. `create` is `assoc`, `delete` is `dissoc`).
 -   Avoid to implement again the same algorithms.
 -   Commutativity of operations
+-   Hard to prove, quick to verify (e.g. path in maze to the exit).
+-   Backward properties: generate the output and think which input would have yielded this output (like in finding a key in a hash map: inserting the key first to insure the key is in the collection).
 
 
 ## How to specify it
@@ -47,8 +49,10 @@ Model-based properties is one of the most powerful representation. However, the 
 -   <https://fsharpforfunandprofit.com/posts/property-based-testing-2/>
 -   [How to specify it?](https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf), [video](https://www.youtube.com/watch?v=G0NUOst-53U) (jump until minute 10 for start of content).
 -   [How to write test and stay sane?](https://www.youtube.com/watch?v=zi0rHwfiX1Q)
+-   [Jessica Kerr (midwest.io 2014)](https://www.youtube.com/watch?v=shngiiBfD80)
 
 
 ## See also (generated)
 
--   [(](20200430235013-specs.md)
+-   [Applied Clojure](20200430155637-applied_clojure.md)
+-   [clojure specs](20200430235013-specs.md)

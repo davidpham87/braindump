@@ -139,10 +139,10 @@ Solutions to these are `future` (new thread), `delay` (like future but executed 
 
 ## See also (generated)
 
--   [(](20200430235013-specs.md)
 -   [Applied Clojure](20200430155637-applied_clojure.md)
 -   [CLI Arguments](20200430154352-cli_arguments.md)
 -   [Clojure](../decks/clojure.md)
+-   [clojure specs](20200430235013-specs.md)
 -   [core.async](20200430155819-core_async.md)
 -   [David Nolen](20200430141609-david_nolen.md)
 -   [edn and transit](20200504212017-edn_and_transit.md)
