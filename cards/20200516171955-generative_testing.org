@@ -35,7 +35,6 @@
      yielded this output (like in finding a key in a hash map: inserting the
      key first to insure the key is in the collection).
 
-
    - Expect failures and create failure.
    - Ask the hard questions.
    - Create the visibility you need (for asserting that a function did what it
@@ -43,6 +42,11 @@
    - What defines success of a service? This leads to property.
    - Hammock time leads (care and randomness).
 
+   - Preconditions are predicates returning if some operations are valid, given
+     the state of object or input of the function. If the preconditions is not
+     met, then it is a noop (no operation).
+   - Postcondition are what ought to be true after the function call (usually
+     we check if the result coincide with a predicted model).
 
 ** How to specify it
 
@@ -53,8 +57,8 @@
      are usually small).
    - Make sure that generator are also valid.
 
-   - Postcondition :: Asking what is the postcondition? Finding what ought to be true after
-     the function call.
+   - Postcondition :: Asking what is the postcondition? Finding what ought to
+     be true after the function call.
    - If the properties requires to have the function under test, create a
      generator that insures that the state is consistent (for example, in a
      hash-map, for testing =contains?=, you can insert and remove key to test the
@@ -88,8 +92,28 @@
 *** Source
     [[https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf][How to specify it?]], [[https://www.youtube.com/watch?v=G0NUOst-53U][video]] (jump until minute 10 for start of content).
 
-** Links
 
+** Geneartive Testing, Group Theory and Category Theory
+
+   The model based properties (as in how to specify it) are the most powerful
+   when you can find an *isomorphism* between your function or system under
+   test for a certain algebras (or structure, or restricted invariant).
+
+   This is powerful because you can then apply your operation on your model
+   space which is probably much simpler and in all time transform the result
+   back into function space. As finding algebraic structure (or group
+   operation) might be too restrictive, we can relax the hypothesis to category
+   theory (as long as we still have a bijective/ismorphic map).
+
+   Isomorphism spaces are useful as they *equivalent* and their representation
+   might used from one space to the other for practical purposes.
+
+   For practical concerns, once you find an isomorphism to the function or
+   entity under test, you can usually find many equivalent operations from your
+   system onto your model and can randomly apply these property in any order to
+   insure that your implementation is correct.
+
+** Links
    - https://fsharpforfunandprofit.com/posts/property-based-testing-2/
    - [[https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf][How to specify it?]], [[https://www.youtube.com/watch?v=G0NUOst-53U][video]] (jump until minute 10 for start of content).
    - [[https://www.youtube.com/watch?v=zi0rHwfiX1Q][How to write test and stay sane?]]
@@ -100,4 +124,3 @@
 
 - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
 - [[file:20200430235013-specs.org][clojure specs]]
-
