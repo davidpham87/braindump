@@ -11,7 +11,7 @@
 
 ** Read
    - how to write note efficiently.
-   - org journal.
+   - org journal, org-roam-server.
    - git subrepositories
    - Check how org gather indices properties.
    - pods in babashka
@@ -58,4 +58,3 @@
 - [[file:cards/20200430155819-core_async.org][core.async]]
 - [[file:cards/20200501163355-goals.org][Goals]]
 - [[file:cards/20200503165952-materiala.org][Materiala]]
-
