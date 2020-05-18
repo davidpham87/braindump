@@ -52,17 +52,15 @@
 
    Talk about how to specify properties for pure functions.
 
-   - Invariant :: things that ought to be always true.
-   - Optimize for correctness in the assertion, not for performance (test case
-     are usually small).
-   - Make sure that generator are also valid.
+   - Invariant :: things that ought to be always true. Optimize for correctness
+     in the assertion, not for performance (test case are usually small). Make
+     sure that generator are also valid.
 
    - Postcondition :: Asking what is the postcondition? Finding what ought to
-     be true after the function call.
-   - If the properties requires to have the function under test, create a
-     generator that insures that the state is consistent (for example, in a
-     hash-map, for testing =contains?=, you can insert and remove key to test the
-     properties of =contains?=).
+     be true after the function call. If the properties requires to have the
+     function under test, create a generator that insures that the state is
+     consistent (for example, in a hash-map, for testing =contains?=, you can
+     insert and remove key to test the properties of =contains?=).
 
    - Metamorphic properties :: instead of predicting and test the result from
      an input, predict and test the relationship of result from two almost
