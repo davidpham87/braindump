@@ -18,6 +18,12 @@ Other general properties:
 -   Hard to prove, quick to verify (e.g. path in maze to the exit).
 -   Backward properties: generate the output and think which input would have yielded this output (like in finding a key in a hash map: inserting the key first to insure the key is in the collection).
 
+-   Expect failures and create failure.
+-   Ask the hard questions.
+-   Create the visibility you need (for asserting that a function did what it is supposed to do).
+-   What defines success of a service? This leads to property.
+-   Hammock time leads (care and randomness).
+
 
 ## How to specify it
 
@@ -50,6 +56,7 @@ Model-based properties is one of the most powerful representation. However, the 
 -   [How to specify it?](https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf), [video](https://www.youtube.com/watch?v=G0NUOst-53U) (jump until minute 10 for start of content).
 -   [How to write test and stay sane?](https://www.youtube.com/watch?v=zi0rHwfiX1Q)
 -   [Jessica Kerr (midwest.io 2014)](https://www.youtube.com/watch?v=shngiiBfD80)
+-   ScalaCheck (book about PBT)
 
 
 ## See also (generated)

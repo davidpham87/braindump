@@ -650,6 +650,62 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#server-blocks" class="md-nav__link">
+    Server blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-directive" class="md-nav__link">
+    Root directive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-file-distribution-through-alias" class="md-nav__link">
+    Static file distribution through alias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-pass" class="md-nav__link">
+    Proxy pass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-path" class="md-nav__link">
+    Regex path
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-source-folder" class="md-nav__link">
+    Multiple source folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    HTTPS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket" class="md-nav__link">
+    Websocket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -808,6 +864,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20200517212936-postmortem/" title="Postmortem" class="md-nav__link">
+      Postmortem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -941,6 +1009,62 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#server-blocks" class="md-nav__link">
+    Server blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-directive" class="md-nav__link">
+    Root directive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-file-distribution-through-alias" class="md-nav__link">
+    Static file distribution through alias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-pass" class="md-nav__link">
+    Proxy pass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-path" class="md-nav__link">
+    Regex path
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-source-folder" class="md-nav__link">
+    Multiple source folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    HTTPS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket" class="md-nav__link">
+    Websocket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -971,16 +1095,106 @@
                 
                 
                 <h1 id="nginx">nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h1>
+<p>This is a quick reminder about a few tricks in nginx. For me, nginx is the tools that solves the question:</p>
 <ul>
-<li>Alias</li>
-<li>root</li>
-<li>proxy pass</li>
-<li>https</li>
-<li>websocket</li>
+<li>How can I serve multiple web apps from a single server with a common root?</li>
+<li>How can I serve multiple domain from the same server?</li>
 </ul>
+<p>Usually, the nginx root folder is stored under <code>/etc/nginx</code>. Note that adaptation (usually path) might be required between linux distribution.</p>
+<p>First of all, when you distribute multiple web app, it is much easier if you can have multiple domain names: web apps will have their routes and avoid paths conflict. In this case you will create <strong>server block</strong> for each domain.</p>
+<p>Tips: pay attention to the slashes (<code>/</code>) it the path, as nginx mainly concatenate strings, so you might accidentally have double slashes in your path which usually leads to unintended consequence.</p>
+<h2 id="server-blocks">Server blocks<a class="headerlink" href="#server-blocks" title="Permanent link">&para;</a></h2>
+<p>Server blocks usually lives in the <code>conf.d</code> or <code>sites-availables</code></p>
+<div class="highlight"><pre><span></span><code>server {
+    listen 80;
+    listen [::]:80;
+
+    root /var/www/your_domain/html;
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name your_domain www.your_domain;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+</code></pre></div>
+
+<p>where <code>your_domain</code> is replaced by the domain you own. The <code>root</code> directive provides the root of your web app, the folder needs to be reachable by the process which started nginx. If the server block is defined in <code>sites-availables</code>, you need to create a symlink into the <code>sites-enabled</code> folder.</p>
+<h2 id="root-directive">Root directive<a class="headerlink" href="#root-directive" title="Permanent link">&para;</a></h2>
+<p>The root directive provides the root path of your request. In the previous server block, the response from <code>nginx</code> to the request on the path <code>www.your_domain/css/file.css</code> will be the filer located under <code>/var/www/your_domain/html/css/file.css</code>, because <code>/var/www/your_domain/html</code> was defined as the root and <code>/css/file.css</code> is the path requested. If the files does not exists, the <code>404 (not found)</code> answer is returned.</p>
+<p>Nginx has concatenated the root with the path.</p>
+<p>You can change the root for each <code>location</code> directive, which can handy for distribution under several folders (see later).</p>
+<h2 id="static-file-distribution-through-alias">Static file distribution through alias<a class="headerlink" href="#static-file-distribution-through-alias" title="Permanent link">&para;</a></h2>
+<p>Usually, you desire to use some path of your domain to target different folder because they serve the files for your webapp. Most webapp are defined as if they were placed on the root folder, so if the web app is distributed under <code>/my_webapp</code> the associated assets files (javascript, css, images) will usually be unfound. To solve this problem, we use the <strong>alias</strong> directive. In a server block (the default or any other), the following directive will alias the <code>www.your_domain/my_webapp</code> to <code>/var/www/my_webapp/html</code>.</p>
+<div class="highlight"><pre><span></span><code>location /my_webapp {
+    alias /var/www/my_webapp/html;
+}
+</code></pre></div>
+
+<p>The consequences are that nginx will answer to request <code>www.your_domain/my_webapp/css/file.css</code> with the file <code>/var/www/my_webapp/html/css/files.css</code>, concatenating the alias and the path. If root instead of alias was used, nginx would have returned <code>/var/www/my_webapp/html/my_webapp/css/file.css</code>, because nginx always append the full path to the route, whereas alias replace the the match path with the value provided to alias.</p>
+<p>In my personal experience, you will use and abuse <strong>alias</strong> more often than root.</p>
+<h2 id="proxy-pass">Proxy pass<a class="headerlink" href="#proxy-pass" title="Permanent link">&para;</a></h2>
+<p>When creating web apps, you will often create a backend server. This server will usually be connected to some port under root (e.g. 8000, 8050, 8081). Under development, you will often use <code>localhost:8050</code> as domain. In production, you will launch the same program which will still listen to the same port. However, you want your user to call a path on <code>your_domain</code>. The <strong>proxy_pass</strong> directive is the solution to this problem.</p>
+<div class="highlight"><pre><span></span><code>location /backend_path {
+    proxy_pass locahost:8050;
+}
+</code></pre></div>
+
+<p>Hence the for each request called to <code>my_domain//backend_path/data</code>, the backend will match it to <code>/data</code>.</p>
+<p>Obviously you can use <strong>nginx</strong> to also perform some indirection</p>
+<div class="highlight"><pre><span></span><code>location /backend_path/x {
+    proxy_pass locahost:8050/y;
+}
+</code></pre></div>
+
+<p>In this case, under the request <code>my_domain//backend_path/x/data</code>, the backend will return the handler registered under the route <code>/y/data</code>.</p>
+<h2 id="regex-path">Regex path<a class="headerlink" href="#regex-path" title="Permanent link">&para;</a></h2>
+<p>Regex can be used to match multiple paths in nginx. You start a regex path by adding a tilde <code>~</code> sign after location and then using standard regex notation to reuse the match parts.</p>
+<div class="highlight"><pre><span></span><code>location ~ /images/(.+)$ {
+  try_files /other_images_folders/$1 =404;
+}
+</code></pre></div>
+
+<h2 id="multiple-source-folder">Multiple source folder<a class="headerlink" href="#multiple-source-folder" title="Permanent link">&para;</a></h2>
+<p>It might happens that your apps call the same path, but the content is located in different folder. In this case, we can combine root and regex to sovle the issue.</p>
+<div class="highlight"><pre><span></span><code>location ~ /images/(.+)$ {
+  root /var/www;
+  try_files /my_webapp/images/$1 /your_domain/images/$1 =404;
+}
+</code></pre></div>
+
+<p>Here nginx will try to server <code>/images/file.jpeg</code> from <code>/my_webapp/images/file.jpeg</code> before <code>/your_domain/images/file.jpeg</code>.</p>
+<h2 id="https">HTTPS<a class="headerlink" href="#https" title="Permanent link">&para;</a></h2>
+<p>In order to promote the connection to https, you will need to change the server blocks and define the path of your certificates.</p>
+<div class="highlight"><pre><span></span><code>server {
+    listen              443 ssl;
+    server_name         www.example.com;
+    ssl_certificate     path/to/www.example.com.crt;
+    ssl_certificate_key path/to/www.example.com.key;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+}
+</code></pre></div>
+
+<p>Usually, you will want <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04">letsencrypt</a> (if you own the domain name) to save this for you.</p>
+<h2 id="websocket">Websocket<a class="headerlink" href="#websocket" title="Permanent link">&para;</a></h2>
+<p>In order to allow websocket, you must <strong>upgrade</strong> the connection. For this you can adapt the following snippet under the desired location:</p>
+<div class="highlight"><pre><span></span><code>location /shadow-cljs/ {
+  # upgrade to websocket
+  proxy_pass http://localhost:9630/;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection &quot;Upgrade&quot;;
+  proxy_set_header Host $host;
+}
+</code></pre></div>
+
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://nginx.org/en/">https://nginx.org/en/</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04">Digital ocean guide</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts">An Introduction to DNS Terminology, Components, and Concepts</a></li>
 </ul>
 <h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
 <ul>

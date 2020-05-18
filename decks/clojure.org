@@ -217,6 +217,7 @@
 - [[file:../cards/20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:../cards/20200430235013-specs.org][clojure specs]]
 - [[file:../cards/20200505124946-clj_toolkit.org][Clojure toolkit]]
+- [[file:../cards/20200517205339-clojure_zippers.org][Clojure Zippers]]
 - [[file:../cards/20200430155819-core_async.org][core.async]]
 - [[file:../cards/20200430141609-david_nolen.org][David Nolen]]
 - [[file:../cards/20200430190921-design.org][Design]]

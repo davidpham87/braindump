@@ -9,7 +9,7 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 ## Read
 
 -   how to write note efficiently.
--   org journal.
+-   org journal, org-roam-server.
 -   git subrepositories
 -   Check how org gather indices properties.
 -   pods in babashka

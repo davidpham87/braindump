@@ -15,7 +15,7 @@
     
     
       
-        <title>High Performance Clojurescript - David's Brain Dump</title>
+        <title>Postmortem - David's Brain Dump</title>
       
     
     
@@ -56,7 +56,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#high-performance-clojurescript" class="md-skip">
+        <a href="#postmortem" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              High Performance Clojurescript
+              Postmortem
             
           </span>
         </div>
@@ -625,120 +625,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        High Performance Clojurescript
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="High Performance Clojurescript" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../20200505113402-high_performance_clojurescript/" title="High Performance Clojurescript" class="md-nav__link">
       High Performance Clojurescript
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#chambered" class="md-nav__link">
-    Chambered
-  </a>
-  
-    <nav class="md-nav" aria-label="Chambered">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source" class="md-nav__link">
-    Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clojurescript-webworkers-webgl" class="md-nav__link">
-    ClojureScript, WebWorkers &amp; WebGL
-  </a>
-  
-    <nav class="md-nav" aria-label="ClojureScript, WebWorkers &amp; WebGL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source_1" class="md-nav__link">
-    Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tfjs" class="md-nav__link">
-    TFJS
-  </a>
-  
-    <nav class="md-nav" aria-label="TFJS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source_2" class="md-nav__link">
-    Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -866,11 +757,60 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../20200517212936-postmortem/" title="Postmortem" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Postmortem
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Postmortem" class="md-nav__link md-nav__link--active">
       Postmortem
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also-generated" class="md-nav__link">
+    See also (generated)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1013,66 +953,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chambered" class="md-nav__link">
-    Chambered
-  </a>
-  
-    <nav class="md-nav" aria-label="Chambered">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source" class="md-nav__link">
-    Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clojurescript-webworkers-webgl" class="md-nav__link">
-    ClojureScript, WebWorkers &amp; WebGL
-  </a>
-  
-    <nav class="md-nav" aria-label="ClojureScript, WebWorkers &amp; WebGL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source_1" class="md-nav__link">
-    Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tfjs" class="md-nav__link">
-    TFJS
-  </a>
-  
-    <nav class="md-nav" aria-label="TFJS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source_2" class="md-nav__link">
-    Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -1102,36 +982,17 @@
                   
                 
                 
-                <h1 id="high-performance-clojurescript">High Performance Clojurescript<a class="headerlink" href="#high-performance-clojurescript" title="Permanent link">&para;</a></h1>
-<h2 id="chambered">Chambered<a class="headerlink" href="#chambered" title="Permanent link">&para;</a></h2>
-<p>Use of for loop locals and javascript arrays for speed.</p>
-<h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/swannodette/chambered">https://github.com/swannodette/chambered</a></li>
-</ul>
-<h2 id="clojurescript-webworkers-webgl">ClojureScript, WebWorkers &amp; WebGL<a class="headerlink" href="#clojurescript-webworkers-webgl" title="Permanent link">&para;</a></h2>
-<p>Webworkers and javascript arrays for transfering data.</p>
-<h3 id="source_1">Source<a class="headerlink" href="#source_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://medium.com/@thi.ng/clojurescript-webworkers-webgl-6c2f3c717d9e">https://medium.com/@thi.ng/clojurescript-webworkers-webgl-6c2f3c717d9e</a></li>
-<li><a href="https://github.com/thi-ng/ws-ldn-8/tree/master/day3/ex07">https://github.com/thi-ng/ws-ldn-8/tree/master/day3/ex07</a></li>
-</ul>
-<h2 id="tfjs">TFJS<a class="headerlink" href="#tfjs" title="Permanent link">&para;</a></h2>
-<p>The wasm part of tensorflow js provides incredible performance boost.</p>
-<h3 id="source_2">Source<a class="headerlink" href="#source_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://blog.tensorflow.org/2020/03/introducing-webassembly-backend-for-tensorflow-js.html">https://blog.tensorflow.org/2020/03/introducing-webassembly-backend-for-tensorflow-js.html</a></li>
-<li><a href="https://github.com/tensorflow/tfjs">https://github.com/tensorflow/tfjs</a></li>
-</ul>
+                <h1 id="postmortem">Postmortem<a class="headerlink" href="#postmortem" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>A tiny value-oriented debugging tool for Clojure(Script), powered by transducers</p>
+</blockquote>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://swannodette.github.io/2013/06/10/porting-notchs-minecraft-demo-to-clojurescript">http://swannodette.github.io/2013/06/10/porting-notchs-minecraft-demo-to-clojurescript</a></li>
-<li><a href="https://github.com/swannodette/chambered">https://github.com/swannodette/chambered</a></li>
+<li><a href="https://github.com/athos/postmortem">https://github.com/athos/postmortem</a></li>
 </ul>
 <h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200430154647-shadow_cljs/">shadow-cljs</a></li>
+<li><a href="../20200505124946-clj_toolkit/">Clojure toolkit</a></li>
 </ul>
                 
               
@@ -1151,7 +1012,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../20200505112918-nginx/" title="nginx" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../20200517205339-clojure_zippers/" title="Clojure Zippers" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1160,19 +1021,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                nginx
+                Clojure Zippers
               </div>
             </div>
           </a>
         
         
-          <a href="../20200505124708-potemkin/" title="Potemkin" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../continuing_education/" title="Continuing Education" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Potemkin
+                Continuing Education
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
