@@ -1100,7 +1100,7 @@
 <li>How can I serve multiple web apps from a single server with a common root?</li>
 <li>How can I serve multiple domain from the same server?</li>
 </ul>
-<p>Usually, the nginx root folder is stored under <code>/etc/nginx</code>. Note that adaptation (usually path) might be required between linux distribution.</p>
+<p>Usually, the nginx root folder is stored under <code>/etc/nginx</code>. Note that adaptation (usually path) might be required between linux distributions.</p>
 <p>First of all, when you distribute multiple web app, it is much easier if you can have multiple domain names: web apps will have their routes and avoid paths conflict. In this case you will create <strong>server block</strong> for each domain.</p>
 <p>Tips: pay attention to the slashes (<code>/</code>) it the path, as nginx mainly concatenate strings, so you might accidentally have double slashes in your path which usually leads to unintended consequence.</p>
 <h2 id="server-blocks">Server blocks<a class="headerlink" href="#server-blocks" title="Permanent link">&para;</a></h2>

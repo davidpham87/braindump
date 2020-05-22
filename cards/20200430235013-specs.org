@@ -1,6 +1,6 @@
 #+TITLE: clojure specs
 #+OPTIONS: toc:nil
-#+TAGS: specs quick-check test.check clj property-based-testing types test
+#+ROAM_TAGS: specs quick-check test.check clj property-based-testing types test
 #+ROAM_ALIAS: specs spec clojure.spec
 
 * Specs
@@ -396,4 +396,3 @@
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:../todo.org][TODO]]
 - [[file:20200504204808-why_clojure.org][Why Clojure?]]
-

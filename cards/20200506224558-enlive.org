@@ -1,7 +1,7 @@
 #+TITLE: Enlive
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: enlive web-template
-#+TAGS: enlive web-scrapping web-template clj-web clj-toolkit
+#+ROAM_TAGS: enlive web-scrapping web-template clj-web clj-toolkit
 #+DATE: 2020-05-06
 
 * Enlive
@@ -23,4 +23,3 @@
 ** See also (generated)
 
 - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
-

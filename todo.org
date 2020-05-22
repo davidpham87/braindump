@@ -1,6 +1,6 @@
 #+TITLE: TODO
 #+OPTIONS: toc:nil
-#+TAGS: todo core.async specs goals
+#+ROAM_TAGS: todo core.async specs goals
 
 * TOOD List
 
@@ -35,6 +35,7 @@
    - Spark
    - Kafka
    - Learn about databases (postgres, elastic search and datomic).
+   - SICP, Read data science and algorithm manual.
 
 ** TODO Read Advanced Data Analysis from an elementary point of view
    [[http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/][Advanced data analysis from an elementary point of view]]
@@ -44,7 +45,7 @@
 
 ** Learn CSS
    - Write a summary (check create of Bulma)
-   - garden-cljs.
+   - [[https://github.com/clj-commons/cljss][cljss]], [[https://github.com/manutter51/woolybear][woolybear]]
 
 ** Leverage indices and org-parser
    - Check whether we can use indices to create better indexing.
@@ -58,4 +59,3 @@
 - [[file:cards/20200430155819-core_async.org][core.async]]
 - [[file:cards/20200501163355-goals.org][Goals]]
 - [[file:cards/20200503165952-materiala.org][Materiala]]
-

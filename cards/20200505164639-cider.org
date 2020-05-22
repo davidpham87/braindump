@@ -1,7 +1,7 @@
 #+TITLE: cider
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: cider
-#+TAGS: cider emacs clj-tools
+#+ROAM_TAGS: cider emacs clj-tools
 #+DATE: 2020-05-05
 
 * cider
@@ -55,4 +55,3 @@
 ** See also (generated)
 
 - [[file:general.org][General Skills]]
-

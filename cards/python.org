@@ -1,7 +1,7 @@
 #+TITLE: Python
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: python deep-learning data-science programming data-science statistics
-#+TAGS: programming data-science statistics
+#+ROAM_TAGS: programming data-science statistics
 
 * Python
   + [X] IPython
@@ -32,4 +32,3 @@
 - [[file:20200430153912-ethz.org][ETHZ]]
 - [[file:20200505111243-learning_tips.org][Learning tips]]
 - [[file:r_cran.org][R CRAN]]
-

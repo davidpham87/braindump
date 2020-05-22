@@ -1,7 +1,7 @@
 #+TITLE: shadow-cljs
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: cljs build-tool
-#+TAGS: cljs js webapp tool front-end nginx clj-toolkit
+#+ROAM_TAGS: cljs js webapp tool front-end nginx clj-toolkit
 
 * shadow-cljs
 
@@ -32,6 +32,29 @@
   }
 #+END_SRC
 
+** Inspect
+
+Inject the correct namespaces with ~:devtools~ preloads in the
+=shadow-cljs.edn= config file.
+
+#+begin_src clojure
+  {:devtools
+   {:preloads [shadow.remote.runtime.cljs.browser
+               ;; shadow.remote.runtime.cljs.node ;; for nodejs
+               ]}}
+#+end_src
+
+Inspect with Clojure and not only ClojureScript
+
+#+begin_src clojure
+  (require '[shadow.cljs.devtools.server :as server])
+  (server/start!)
+  (tap> :hello)
+#+end_src
+
+*** Sources
+    https://clojureverse.org/t/introducing-shadow-cljs-inspect/5012
+
 ** Links
 
 - [[https://shadow-cljs.github.io/docs/UsersGuide.html][shadow-cljs]]
@@ -45,4 +68,3 @@
 - [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
 - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
 - [[file:20200505112918-nginx.org][nginx]]
-

@@ -1,6 +1,6 @@
 #+TITLE: Goals
 #+OPTIONS: toc:nil
-#+TAGS: todo journal improvment
+#+ROAM_TAGS: todo journal improvment
 
 * Goals
 
@@ -13,4 +13,3 @@
 ** See also (generated)
 
 - [[file:../todo.org][TODO]]
-

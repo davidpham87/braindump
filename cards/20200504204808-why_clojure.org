@@ -1,7 +1,7 @@
 #+TITLE: Why Clojure?
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: why-clojure
-#+TAGS: why-clojure clj
+#+ROAM_TAGS: why-clojure clj
 #+DATE: 2020-05-04
 
 * Why Clojure?
@@ -70,4 +70,3 @@
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430235013-specs.org][clojure specs]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
-

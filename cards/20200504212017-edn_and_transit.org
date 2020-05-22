@@ -1,7 +1,7 @@
 #+TITLE: edn and transit
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: edn-and-transit
-#+TAGS: edn-and-transit data-format clj
+#+ROAM_TAGS: edn-and-transit data-format clj
 #+DATE: 2020-05-04
 
 * edn and transit
@@ -30,4 +30,3 @@ payloads.
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
-

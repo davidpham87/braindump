@@ -1,7 +1,7 @@
 #+TITLE: Quotes
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: quotes
-#+TAGS: quotes
+#+ROAM_TAGS: quotes
 #+DATE: 2020-05-01
 
 
@@ -97,4 +97,3 @@
 ** See also (generated)
 
 - [[file:../decks/clojure.org][Clojure]]
-

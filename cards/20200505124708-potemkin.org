@@ -1,7 +1,7 @@
 #+TITLE: Potemkin: some ideas which are almost good
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: potemkin
-#+TAGS: potemkin clj-library clj
+#+ROAM_TAGS: potemkin clj-library clj
 #+DATE: 2020-05-05
 
 * Potemkin
@@ -27,4 +27,3 @@
 
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
-

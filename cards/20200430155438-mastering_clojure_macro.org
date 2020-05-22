@@ -1,7 +1,7 @@
 #+TITLE: Mastering Clojure Macro
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: macro lisp clj-advanced
-#+TAGS: macro clj advanced danger book
+#+ROAM_TAGS: macro clj advanced danger book
 
 * Mastering Clojure Macro
   - Macro is about manipulating the arguments of your functions before they
@@ -99,4 +99,3 @@
 - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
 - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 - [[file:20200504204808-why_clojure.org][Why Clojure?]]
-

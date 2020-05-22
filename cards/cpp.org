@@ -1,6 +1,6 @@
 #+TITLE: C, C++
 #+OPTIONS: toc:nil
-#+TAGS: gpu-computing opencl cuda native
+#+ROAM_TAGS: gpu-computing opencl cuda native
 
 * C/C++
 
@@ -15,5 +15,4 @@
 
 ** See also (generated)
 
-- 
-
+-

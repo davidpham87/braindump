@@ -1,7 +1,7 @@
 #+TITLE: High Performance CLJS
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: high-performance-clojurescript hpc-cljs
-#+TAGS: hpc cljs
+#+ROAM_TAGS: hpc cljs
 #+DATE: 2020-05-05
 
 * High Performance Clojurescript
@@ -38,4 +38,3 @@
 
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
-

@@ -1,7 +1,7 @@
 #+TITLE: Devops
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: docker k8s kubernete
-#+TAGS: docker kubernete
+#+ROAM_TAGS: docker kubernete
 
 * Docker and Kubernete
   Docker are containers/processes which can be considered as lightweight VMs.
@@ -25,4 +25,3 @@
 - [[file:20200505093245-ansible.org][Ansible]]
 - [[file:20200505093126-multipass.org][Multipass]]
 - [[file:20200505112918-nginx.org][nginx]]
-

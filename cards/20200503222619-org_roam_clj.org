@@ -1,7 +1,7 @@
 #+TITLE: Org-roam-clj: Org-roam extension with Clojure
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: org-roam-clj org-roam
-#+TAGS: org-roam-clj org-roam clj-db project clj
+#+ROAM_TAGS: org-roam-clj org-roam clj-db project clj
 #+DATE: 2020-05-03
 
 * org-roam-clj
@@ -10,8 +10,8 @@ Library for extending org-roam.
 
 ** Ideas
 
-- Rewrite logic for tags to include indices and tags [and not only roam alias?].
 - Check sha1/hash in db to know which files to updates.
+- Rewrite logic for tags to include indices and tags [and not only roam alias?].
 - Extend to markdown parsing.
 - YAML heading.
 - Own database [implement same operation].
@@ -20,10 +20,14 @@ Library for extending org-roam.
 - Use Hugo for rendering.
 - Cross device syncing with privacy.
 
-- Use for leveraing  [[https://github.com/200ok-ch/org-parser][org-parser]]
+- Use for leveraging:  [[https://github.com/200ok-ch/org-parser][org-parser]]
 - Make own parser for displaying org files.
 - Learn about [[https://github.com/Engelberg/instaparse/][instaparse]].
 - Automatic index cards pages with maybe tags with primary tags.
+
+- Pandoc for org to html conversion.
+- Use of datascript for database.
+- Use ~#ROAM_TAGS:~ for defining tags.
 
 ** Notes
    - Pandoc does not convert the links so it requires a filter.
@@ -34,4 +38,3 @@ Library for extending org-roam.
 - [[file:../decks/clojure.org][Clojure]]
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
-

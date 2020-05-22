@@ -1,7 +1,7 @@
 #+TITLE: First blog ticket
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: first-blog-ticket
-#+TAGS: first-blog-ticket intro notes
+#+ROAM_TAGS: first-blog-ticket intro notes
 #+DATE: 2020-05-02
 
 * First blog ticket
@@ -20,4 +20,3 @@ Please read the [[file:../README.org][README]] for more details!
 ** See also (generated)
 
 - [[file:../README.org][Home for ideas for my Zettelkasten]]
-

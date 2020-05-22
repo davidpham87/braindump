@@ -1,7 +1,7 @@
 #+TITLE: org mode
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: org-mode org notes-taking
-#+TAGS: org org-mode
+#+ROAM_TAGS: org org-mode
 
 * Org mode
 
@@ -21,4 +21,3 @@ org2gfm [OPTION] FILE
 ** See also (generated)
 
 - [[file:../README.org][Home for ideas for my Zettelkasten]]
-

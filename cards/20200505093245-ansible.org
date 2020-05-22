@@ -1,7 +1,7 @@
 #+TITLE: Ansible
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: ansible
-#+TAGS: ansible devops
+#+ROAM_TAGS: ansible devops
 #+DATE: 2020-05-05
 
 * Ansible
@@ -28,4 +28,3 @@
 
 - [[file:devops.org][Devops]]
 - [[file:20200505111243-learning_tips.org][Learning tips]]
-

@@ -1,7 +1,7 @@
 #+TITLE: medley
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: medley
-#+TAGS: medley clj-toolkit
+#+ROAM_TAGS: medley clj-toolkit
 #+DATE: 2020-05-05
 
 * medley
@@ -14,4 +14,3 @@
 ** See also (generated)
 
 - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
-

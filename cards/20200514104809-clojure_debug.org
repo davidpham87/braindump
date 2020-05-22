@@ -1,7 +1,7 @@
 #+TITLE: Clojure Debug
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: clojure-debug
-#+TAGS: clojure-debug clj-toolkit
+#+ROAM_TAGS: clojure-debug clj-toolkit
 #+DATE: 2020-05-14
 
 * Clojure Debug
@@ -19,4 +19,3 @@
 ** See also (generated)
 
 - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
-

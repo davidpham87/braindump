@@ -1,7 +1,7 @@
 #+TITLE: General Skills
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: emacs linux
-#+TAGS: emacs build tool
+#+ROAM_TAGS: emacs build tool
 
 * General
  + Learn with https://www.hackerrank.com/ (especially Clojure).
@@ -74,4 +74,3 @@
 - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
 - [[file:20200503165952-materiala.org][Materiala]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
-

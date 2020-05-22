@@ -1,7 +1,7 @@
 #+TITLE: Postmortem
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: postmortem
-#+TAGS: postmortem clj-toolkit debug
+#+ROAM_TAGS: postmortem clj-toolkit debug
 #+DATE: 2020-05-17
 
 * Postmortem

@@ -1,7 +1,7 @@
 #+Title: UNIX
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: unix linux
-#+TAGS: tooling tool
+#+ROAM_TAGS: tooling tool
 
 * Unix command learning
    + [X] find command: options are: =-name ("*.cpp" or ".c")=, =-type (f, d)=,

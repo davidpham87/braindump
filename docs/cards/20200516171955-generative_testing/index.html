@@ -785,6 +785,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geneartive-testing-group-theory-and-category-theory" class="md-nav__link">
+    Geneartive Testing, Group Theory and Category Theory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -1007,6 +1014,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geneartive-testing-group-theory-and-category-theory" class="md-nav__link">
+    Geneartive Testing, Group Theory and Category Theory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -1059,21 +1073,22 @@
 <li>Ask the hard questions.</li>
 <li>Create the visibility you need (for asserting that a function did what it is supposed to do).</li>
 <li>What defines success of a service? This leads to property.</li>
-<li>Hammock time leads (care and randomness).</li>
+<li>
+<p>Hammock time leads (care and randomness).</p>
+</li>
+<li>
+<p>Preconditions are predicates returning if some operations are valid, given the state of object or input of the function. If the preconditions is not met, then it is a noop (no operation).</p>
+</li>
+<li>Postcondition are what ought to be true after the function call (usually we check if the result coincide with a predicted model).</li>
 </ul>
 <h2 id="how-to-specify-it">How to specify it<a class="headerlink" href="#how-to-specify-it" title="Permanent link">&para;</a></h2>
 <p>Talk about how to specify properties for pure functions.</p>
 <ul>
-<li><strong>Invariant:</strong> things that ought to be always true.</li>
-<li>Optimize for correctness in the assertion, not for performance (test case are usually small).</li>
 <li>
-<p>Make sure that generator are also valid.</p>
+<p><strong>Invariant:</strong> things that ought to be always true. Optimize for correctness in the assertion, not for performance (test case are usually small). Make sure that generator are also valid.</p>
 </li>
 <li>
-<p><strong>Postcondition:</strong> Asking what is the postcondition? Finding what ought to be true after the function call.</p>
-</li>
-<li>
-<p>If the properties requires to have the function under test, create a generator that insures that the state is consistent (for example, in a hash-map, for testing <code>contains?</code>, you can insert and remove key to test the properties of <code>contains?</code>).</p>
+<p><strong>Postcondition:</strong> Asking what is the postcondition? Finding what ought to be true after the function call. If the properties requires to have the function under test, create a generator that insures that the state is consistent (for example, in a hash-map, for testing <code>contains?</code>, you can insert and remove key to test the properties of <code>contains?</code>).</p>
 </li>
 <li>
 <p><strong>Metamorphic properties:</strong> instead of predicting and test the result from an input, predict and test the relationship of result from two almost input. It is the idea of paths for getting to a final state. The relationship could be equality, size comparison. You can also check equivalence on result (as function of the result). You have to change in terms of the space of continuous functions: if input change, how will the change on the image be <span><span class="MathJax_Preview">\Delta f = f(x+\delta) - f(x)</span><script type="math/tex">\Delta f = f(x+\delta) - f(x)</script></span>? Some write metamorphic relations.</p>
@@ -1088,6 +1103,11 @@
 <p>Model-based properties is one of the most powerful representation. However, the model based properties can look too alike than the implementation or the function under test. If you feel you write too much code on the model based version, switch to metamorphic properties do not require on a model (and they are easier to write with good effectiveness). Invariant properties should be first because they are the most fundamental.</p>
 <h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf">How to specify it?</a>, <a href="https://www.youtube.com/watch?v=G0NUOst-53U">video</a> (jump until minute 10 for start of content).</p>
+<h2 id="geneartive-testing-group-theory-and-category-theory">Geneartive Testing, Group Theory and Category Theory<a class="headerlink" href="#geneartive-testing-group-theory-and-category-theory" title="Permanent link">&para;</a></h2>
+<p>The model based properties (as in how to specify it) are the most powerful when you can find an <strong>isomorphism</strong> between your function or system under test for a certain algebras (or structure, or restricted invariant).</p>
+<p>This is powerful because you can then apply your operation on your model space which is probably much simpler and in all time transform the result back into function space. As finding algebraic structure (or group operation) might be too restrictive, we can relax the hypothesis to category theory (as long as we still have a bijective/ismorphic map).</p>
+<p>Isomorphism spaces are useful as they <strong>equivalent</strong> and their representation might used from one space to the other for practical purposes.</p>
+<p>For practical concerns, once you find an isomorphism to the function or entity under test, you can usually find many equivalent operations from your system onto your model and can randomly apply these property in any order to insure that your implementation is correct.</p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://fsharpforfunandprofit.com/posts/property-based-testing-2/">https://fsharpforfunandprofit.com/posts/property-based-testing-2/</a></li>

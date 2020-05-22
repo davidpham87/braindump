@@ -1,7 +1,7 @@
 #+TITLE: Multipass
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: multipass
-#+TAGS: multipass k8s devops
+#+ROAM_TAGS: multipass k8s devops
 #+DATE: 2020-05-05
 
 * Multipass
@@ -15,4 +15,3 @@
 ** See also (generated)
 
 - [[file:devops.org][Devops]]
-

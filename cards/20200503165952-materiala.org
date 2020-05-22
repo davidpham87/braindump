@@ -1,6 +1,6 @@
 #+TITLE: Materiala
 #+OPTIONS: toc:nil
-#+TAGS: docs clj-docs clj-tool build
+#+ROAM_TAGS: docs clj-docs clj-tool build
 #+ROAM_ALIAS: docs clj-docs clj-tool build
 #+DATE: 2020-05-03
 
@@ -32,4 +32,3 @@ My own tools for linking mkdocs and marginalia. See [[https://github.com/davidph
 - [[file:general.org][General Skills]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
 - [[file:../todo.org][TODO]]
-

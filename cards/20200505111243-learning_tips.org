@@ -1,7 +1,7 @@
 #+TITLE: Learning tips
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: learning-tips
-#+TAGS: learning-tips learning continuing-education teaching
+#+ROAM_TAGS: learning-tips learning continuing-education teaching
 #+DATE: 2020-05-05
 
 * Learning tips
@@ -51,4 +51,3 @@
 
 - [[file:20200505093245-ansible.org][Ansible]]
 - [[file:python.org][Python]]
-

@@ -1,7 +1,7 @@
 #+TITLE: CLI Arguments
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: build-tools cli tools build
-#+TAGS: clj-toolkit build cli babashka
+#+ROAM_TAGS: clj-toolkit build cli babashka
 
 * CLI Arguments
 
@@ -30,4 +30,3 @@
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200503165952-materiala.org][Materiala]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
-

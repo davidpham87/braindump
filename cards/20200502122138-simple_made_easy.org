@@ -1,7 +1,7 @@
 #+TITLE: Simple Made Easy
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: simple-made-easy simplicity design talk
-#+TAGS: simple-made-easy simplicity design clj rich-hickey talk
+#+ROAM_TAGS: simple-made-easy simplicity design clj rich-hickey talk
 #+DATE: 2020-05-02
 
 * Simple Made Easy
@@ -15,4 +15,3 @@
 - [[file:20200430190921-design.org][Design]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
-

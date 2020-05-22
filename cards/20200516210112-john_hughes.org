@@ -1,7 +1,7 @@
 #+TITLE: John Hughes
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: john-hughes
-#+TAGS: john-hughes quick-check
+#+ROAM_TAGS: john-hughes quick-check
 #+DATE: 2020-05-16
 
 * John Hughes

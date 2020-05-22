@@ -2,7 +2,7 @@
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: reducers parallel-programming-in-clojure-with-reducers clj-hpc
 #+ROAM_KEY: https://www.braveclojure.com/quests/reducers/intro/
-#+TAGS: clj book reducers parallelism concurrency hpc
+#+ROAM_TAGS: clj book reducers parallelism concurrency hpc
 #+DATE: 2020-05-05
 
 * Clojure Reducers
@@ -22,4 +22,3 @@
 - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
 - [[file:20200430155819-core_async.org][core.async]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
-

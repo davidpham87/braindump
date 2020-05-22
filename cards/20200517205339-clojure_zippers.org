@@ -1,7 +1,7 @@
 #+TITLE: Clojure Zippers
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: clojure-zippers clj/zippers
-#+TAGS: clojure-zippers zippers clj
+#+ROAM_TAGS: clojure-zippers zippers clj
 #+DATE: 2020-05-17
 
 * Clojure Zippers
@@ -28,4 +28,3 @@ Usually tress are of the forms of maps and vectors
 ** See also (generated)
 
 - [[file:../decks/clojure.org][Clojure]]
-

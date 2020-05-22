@@ -1,7 +1,7 @@
 #+TITLE: Clojure tools.deps
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: tools-deps
-#+TAGS: tools-deps clj-toolkit
+#+ROAM_TAGS: tools-deps clj-toolkit
 #+DATE: 2020-05-14
 
 * tools.deps
@@ -23,4 +23,3 @@
 ** See also (generated)
 
 - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
-

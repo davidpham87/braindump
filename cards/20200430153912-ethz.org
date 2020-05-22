@@ -1,7 +1,7 @@
 #+TITLE: ETHZ
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: statistics studies mathematics
-#+TAGS: statistics causality
+#+ROAM_TAGS: statistics causality
 
 * ETHZ
 
@@ -86,4 +86,3 @@ I had 5.75 (kind of deserved).
 
 - [[file:python.org][Python]]
 - [[file:r_cran.org][R CRAN]]
-

@@ -1,7 +1,7 @@
 #+TITLE: Multiple Environment
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: production acceptance build
-#+TAGS: build prod clj
+#+ROAM_TAGS: build prod clj
 
 ** Multiple environments
    - We can have different class paths for configuration with =clj= and alias
@@ -24,4 +24,3 @@
 - [[file:general.org][General Skills]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200503165952-materiala.org][Materiala]]
-

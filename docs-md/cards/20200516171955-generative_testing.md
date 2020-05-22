@@ -24,17 +24,17 @@ Other general properties:
 -   What defines success of a service? This leads to property.
 -   Hammock time leads (care and randomness).
 
+-   Preconditions are predicates returning if some operations are valid, given the state of object or input of the function. If the preconditions is not met, then it is a noop (no operation).
+-   Postcondition are what ought to be true after the function call (usually we check if the result coincide with a predicted model).
+
 
 ## How to specify it
 
 Talk about how to specify properties for pure functions.
 
--   **Invariant:** things that ought to be always true.
--   Optimize for correctness in the assertion, not for performance (test case are usually small).
--   Make sure that generator are also valid.
+-   **Invariant:** things that ought to be always true. Optimize for correctness in the assertion, not for performance (test case are usually small). Make sure that generator are also valid.
 
--   **Postcondition:** Asking what is the postcondition? Finding what ought to be true after the function call.
--   If the properties requires to have the function under test, create a generator that insures that the state is consistent (for example, in a hash-map, for testing `contains?`, you can insert and remove key to test the properties of `contains?`).
+-   **Postcondition:** Asking what is the postcondition? Finding what ought to be true after the function call. If the properties requires to have the function under test, create a generator that insures that the state is consistent (for example, in a hash-map, for testing `contains?`, you can insert and remove key to test the properties of `contains?`).
 
 -   **Metamorphic properties:** instead of predicting and test the result from an input, predict and test the relationship of result from two almost input. It is the idea of paths for getting to a final state. The relationship could be equality, size comparison. You can also check equivalence on result (as function of the result). You have to change in terms of the space of continuous functions: if input change, how will the change on the image be \(\Delta f = f(x+\delta) - f(x)\)? Some write metamorphic relations.
 
@@ -48,6 +48,17 @@ Model-based properties is one of the most powerful representation. However, the 
 ### Source
 
 [How to specify it?](https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf), [video](https://www.youtube.com/watch?v=G0NUOst-53U) (jump until minute 10 for start of content).
+
+
+## Geneartive Testing, Group Theory and Category Theory
+
+The model based properties (as in how to specify it) are the most powerful when you can find an **isomorphism** between your function or system under test for a certain algebras (or structure, or restricted invariant).
+
+This is powerful because you can then apply your operation on your model space which is probably much simpler and in all time transform the result back into function space. As finding algebraic structure (or group operation) might be too restrictive, we can relax the hypothesis to category theory (as long as we still have a bijective/ismorphic map).
+
+Isomorphism spaces are useful as they **equivalent** and their representation might used from one space to the other for practical purposes.
+
+For practical concerns, once you find an isomorphism to the function or entity under test, you can usually find many equivalent operations from your system onto your model and can randomly apply these property in any order to insure that your implementation is correct.
 
 
 ## Links

@@ -1,7 +1,7 @@
 #+TITLE: Generative Testing
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: generative-testing generative.testing
-#+TAGS: generative-testing clojure.spec test validation quick-check PBT
+#+ROAM_TAGS: generative-testing clojure.spec test validation quick-check PBT
 #+DATE: 2020-05-16
 
 * Generative Testing
