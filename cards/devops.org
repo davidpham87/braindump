@@ -14,10 +14,10 @@
   Learn about ansible (again).
 ** Ubuntu Server/Install Starting Projects
 *** DONE Git [3/3]
-   Remains to test in practice, but the [[https://github.com/davidpham87/new-ubuntu-config][project]] is pretty stable now.
-  - [X] Create a python file that writes the makefile automatically
-  - [X] Create README.md where appropriate.
-  - [X] Test the application
+    Remains to test in practice, but the [[https://github.com/davidpham87/new-ubuntu-config][project]] is pretty stable now.
+    - [X] Create a python file that writes the makefile automatically
+    - [X] Create README.md where appropriate.
+    - [X] Test the application
 
 
 ** See also (generated)
@@ -25,4 +25,3 @@
    - [[file:20200505093245-ansible.org][Ansible]]
    - [[file:20200505093126-multipass.org][Multipass]]
    - [[file:20200505112918-nginx.org][nginx]]
-

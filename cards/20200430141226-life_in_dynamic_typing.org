@@ -5,25 +5,25 @@
 
 * Life In Dynamic Typing
 
-- tags :: [[file:../decks/clojure.org][Clojure]]
+  - tags :: [[file:../decks/clojure.org][Clojure]]
 
-In dynamic typed language, assertions are used often to check assumption of
-your input data. In Clojure the =:pre= and =:post= conditions can be used
-effectively to fill this purpose.
+  In dynamic typed language, assertions are used often to check assumption of
+  your input data. In Clojure the =:pre= and =:post= conditions can be used
+  effectively to fill this purpose.
 
-#+BEGIN_SRC clojure
+  #+BEGIN_SRC clojure
      (defn f [x]
        {:pre [(integer? x)]
         :post string?}
        (str x))
-#+END_SRC
+  #+END_SRC
 
-={:elide-asserts true}= in production build compiler options to remove =:pre=
-and =:post= assertions in your code.
+  ={:elide-asserts true}= in production build compiler options to remove =:pre=
+  and =:post= assertions in your code.
 
 ** Source
 
-- http://swannodette.github.io/2015/01/09/life-with-dynamic-typing/
+   - http://swannodette.github.io/2015/01/09/life-with-dynamic-typing/
 
 ** See also (generated)
 
@@ -34,4 +34,3 @@ and =:post= assertions in your code.
    - [[file:20200430141609-david_nolen.org][David Nolen]]
    - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
    - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
-
