@@ -11,6 +11,7 @@
 ## TODO Diff, ediff
 
 -   `a` or `b` to select which version is correct. Append `x` for saving.
+-   In magit, use `e` for diffing with ediff.
 
 
 ## magit and git, gitimmersion
@@ -21,7 +22,7 @@
 
 ## Master/read manual org-mode
 
--   org-mode easy template (e.g. `<s[tab]`) allows to easily include org syntax.
+-   org-mode easy template (e.g. `<s[tab]`) allows to easily include org syntax. `C-c C-,` to open the shortcut window.
 -   `C-c C-q` (insert tags), `C-c /` (filter org-file by).
 
 
@@ -30,21 +31,22 @@
 It would be good to get a unified version of my **.emacs.d** with org files and usepackage.
 
 
-## DONE Dired mode
+## Dired mode
 
 -   Find files with grep
 -   Still have to learn the new shortcuts. Most important are `R`, `C`, `D`, `(`, `% m` and =% g0.
 -   Using `Q`, empower the user to query and replace in files. Using `* u` to select all non-saved buffer to close them all.
 
 
-## DONE Perfect use of keyboard <code>[2/2]</code>
+## Perfect use of keyboard <code>[2/2]</code>
 
 -   [X] The comma should be hit with the middle finger.
 -   [X] Emacs keybindings should be used using both hands, this has to be set with key-bindings.
 -   Tip: use the hand palm for reaching the CTRL keys.
+-   [ ]: balance the space between the hand. Especially the right thumb as most words in english finish with the left hand letters.
 
 
-## DONE Write a script to update my-emacs-config automatically.
+## Write a script to update my-emacs-config automatically.
 
 Best way would be to use git. Used a fork of emacs-live.
 

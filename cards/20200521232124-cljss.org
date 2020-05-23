@@ -14,3 +14,9 @@
 
 *** Source
    - [[https://github.com/clj-commons/cljss][cljss]]
+
+
+** See also (generated)
+
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
