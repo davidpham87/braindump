@@ -7,6 +7,44 @@
 
 ** Design, Composition and Performance - Rich Hickey [2013]
 
+*** Summary
+
+    *Design* is about taking things apart in such a way we can recompose them
+    again. There are numerous concepts we should take apart (needs to problem,
+    information to mechanism, knowns to unknowns, domain to technological
+    solution, benefits and tradeoffs of solutions.) Design is an effective way
+    to reduce the cost of bugs and to test our software as test now embeds the
+    value of our design.
+
+    *Composition* is about constraints and communication. A composition is a
+    design, or a plan for the performer. Bigger scales require more precision
+    and lower scale allows more freedom to the performer.
+
+    *Performance* is about preparation, study and experience. It is the ability
+    to bring our knowledge and our experience to solve the problem on a given
+    context. Most coders stop learning after college which is a contrast to any
+    artistic career who are lifelong learners.
+
+    Both activities requires a sensibility about *harmony* (in a given context,
+    will two things work well together?).
+
+    Programming languages are like instruments. As such, we should chose those
+    who are backing some fundamental idea (e.g. immutability, functional
+    programming) and chose those who are aimed to those who have studied the
+    language.
+
+    In software engineering, everything is code all the way down. Hence we have
+    a paralysis of choice and distraction (we can improve any part of the
+    problem). Making choices, and hence putting constraints move us
+    forward. Thus, the value of the design is based on the decision made.
+
+    In conclusion, good design is about taking things about such that we can
+    put them back together, we should compose by requiring as much constraint
+    as possible, perform by preparing and studying and finally choose and learn
+    simple tools aimed to experts.
+
+*** Notes
+
    Disclamer (joke): analogies are like equivalence, except when they are not.
 
    Design by definition is about to prepare the plans for (a work to be
@@ -181,42 +219,6 @@
 *** Source
     - [[https://www.youtube.com/watch?v=MCZ3YgeEUPg][Design, Composition, and Performance - Rich Hickey]]
 
-*** Summary
-
-    *Design* is about taking things apart in such a way we can recompose them
-    again. There are numerous concepts we should take apart (needs to problem,
-    information to mechanism, knowns to unknowns, domain to technological
-    solution, benefits and tradeoffs of solutions.) Design is an effective way
-    to reduce the cost of bugs and to test our software as test now embeds the
-    value of our design.
-
-    *Composition* is about constraints and communication. A composition is a
-    design, or a plan for the performer. Bigger scales require more precision
-    and lower scale allows more freedom to the performer.
-
-    *Performance* is about preparation, study and experience. It is the ability
-    to bring our knowledge and our experience to solve the problem on a given
-    context. Most coders stop learning after college which is a contrast to any
-    artistic career who are lifelong learners.
-
-    Both activities requires a sensibility about *harmony* (in a given context,
-    will two things work well together?).
-
-    Programming languages are like instruments. As such, we should chose those
-    who are backing some fundamental idea (e.g. immutability, functional
-    programming) and chose those who are aimed to those who have studied the
-    language.
-
-    In software engineering, everything is code all the way down. Hence we have
-    a paralysis of choice and distraction (we can improve any part of the
-    problem). Making choices, and hence putting constraints move us
-    forward. Thus, the value of the design is based on the decision made.
-
-    In conclusion, good design is about taking things about such that we can
-    put them back together, we should compose by requiring as much constraint
-    as possible, perform by preparing and studying and finally choose and learn
-    simple tools aimed to experts.
-
 
 ** Solving Problems the Clojure Way - Rafal Dittwald [2019]
    - *Pure* functions everywhere.
@@ -235,3 +237,4 @@
    - [[file:../decks/clojure.org][Clojure]]
    - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
    - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
+
