@@ -70,8 +70,8 @@
 
 ** See also (generated)
 
-- [[file:20200505164639-cider.org][cider]]
-- [[file:20200430154352-cli_arguments.org][CLI Arguments]]
-- [[file:20200503165952-materiala.org][Materiala]]
-- [[file:20200430154528-multiple_environment.org][Multiple Environment]]
+   - [[file:20200505164639-cider.org][cider]]
+   - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
+   - [[file:20200503165952-materiala.org][Materiala]]
+   - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
 

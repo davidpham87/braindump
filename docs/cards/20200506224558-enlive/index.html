@@ -729,6 +729,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hiccup" class="md-nav__link">
+    Hiccup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source" class="md-nav__link">
     Source
   </a>
@@ -991,6 +998,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hiccup" class="md-nav__link">
+    Hiccup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source" class="md-nav__link">
     Source
   </a>
@@ -1030,6 +1044,18 @@
 <ul>
 <li>Reload your namespace file for updating the html.</li>
 </ul>
+<h3 id="hiccup">Hiccup<a class="headerlink" href="#hiccup" title="Permanent link">&para;</a></h3>
+<p>Quick and dirty transformation to hiccup</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">html-&gt;hiccup</span>
+   <span class="p">[</span><span class="nv">html</span><span class="p">]</span>
+   <span class="p">(</span><span class="nb">if-not </span><span class="p">(</span><span class="nb">string? </span><span class="nv">html</span><span class="p">)</span>
+     <span class="p">(</span><span class="nf">-&gt;&gt;</span> <span class="p">(</span><span class="nb">map </span><span class="nv">html-&gt;hiccup</span> <span class="p">(</span><span class="ss">:content</span> <span class="nv">html</span><span class="p">))</span>
+       <span class="p">(</span><span class="nb">concat </span><span class="p">[(</span><span class="ss">:tag</span> <span class="nv">html</span><span class="p">)</span> <span class="p">(</span><span class="ss">:attrs</span> <span class="nv">html</span><span class="p">)])</span>
+       <span class="p">(</span><span class="nf">keep</span> <span class="nv">identity</span><span class="p">)</span>
+       <span class="nv">vec</span><span class="p">)</span>
+     <span class="nv">html</span><span class="p">))</span>
+</code></pre></div>
+
 <h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/cgrand/enlive">https://github.com/cgrand/enlive</a></li>

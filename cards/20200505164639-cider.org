@@ -54,5 +54,5 @@
 
 ** See also (generated)
 
-- [[file:general.org][General Skills]]
+   - [[file:general.org][General Skills]]
 

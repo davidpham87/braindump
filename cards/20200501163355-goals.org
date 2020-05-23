@@ -12,5 +12,5 @@
 
 ** See also (generated)
 
-- [[file:../todo.org][TODO]]
+   - [[file:../todo.org][TODO]]
 

@@ -15,6 +15,20 @@
 *** Trick
     - Reload your namespace file for updating the html.
 
+*** Hiccup
+    Quick and dirty transformation to hiccup
+
+    #+begin_src clojure
+      (defn html->hiccup
+         [html]
+         (if-not (string? html)
+           (->> (map html->hiccup (:content html))
+             (concat [(:tag html) (:attrs html)])
+             (keep identity)
+             vec)
+           html))
+    #+end_src
+
 *** Source
     - https://github.com/cgrand/enlive
     - https://github.com/swannodette/enlive-tutorial/
@@ -22,5 +36,5 @@
 
 ** See also (generated)
 
-- [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
 

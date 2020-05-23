@@ -84,6 +84,6 @@ I had 5.75 (kind of deserved).
 
 ** See also (generated)
 
-- [[file:python.org][Python]]
-- [[file:r_cran.org][R CRAN]]
+   - [[file:python.org][Python]]
+   - [[file:r_cran.org][R CRAN]]
 
