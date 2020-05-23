@@ -10,11 +10,11 @@
 * Highly important
 
 ** Read
-   - how to write note efficiently.
+   - how to write notes efficiently.
    - org journal, org-roam-server.
-   - git subrepositories
+   - git subrepositories (for multiple projects).
    - Check how org gather indices properties.
-   - pods in babashka
+   - pods in babashka.
 
 ** Write
    - Simple made easy
@@ -25,6 +25,7 @@
    - Check sha1 in converting org files (because it is super slow otherwise) org-roam-clj
    - Download clojure.core and use materiala for testing. [[file:cards/20200503165952-materiala.org][Materiala]]
    - Fork marginalia parser and correct its bug: [[https://github.com/gdeer81/marginalia/blob/master/src/marginalia/parser.clj][parser]]
+
 
 ** Goals
    - specs, core async, datomic, testing.
@@ -59,3 +60,4 @@
 - [[file:cards/20200430155819-core_async.org][core.async]]
 - [[file:cards/20200501163355-goals.org][Goals]]
 - [[file:cards/20200503165952-materiala.org][Materiala]]
+

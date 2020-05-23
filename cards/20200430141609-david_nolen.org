@@ -50,3 +50,4 @@ ClojureScript (cljs) lead developer
 - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
+

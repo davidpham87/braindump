@@ -83,3 +83,4 @@
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
 - [[file:../todo.org][TODO]]
+

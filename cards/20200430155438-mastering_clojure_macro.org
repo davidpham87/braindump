@@ -99,3 +99,4 @@
 - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
 - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 - [[file:20200504204808-why_clojure.org][Why Clojure?]]
+

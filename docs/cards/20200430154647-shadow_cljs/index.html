@@ -405,6 +405,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inspect" class="md-nav__link">
+    Inspect
+  </a>
+  
+    <nav class="md-nav" aria-label="Inspect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -827,6 +847,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../20200521223909-computer_science_interview/" title="Computer Science Interview" class="md-nav__link">
+      Computer Science Interview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200521232124-cljss/" title="cljss" class="md-nav__link">
+      cljss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -967,6 +1011,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inspect" class="md-nav__link">
+    Inspect
+  </a>
+  
+    <nav class="md-nav" aria-label="Inspect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -1022,6 +1086,22 @@
 }
 </code></pre></div>
 
+<h2 id="inspect">Inspect<a class="headerlink" href="#inspect" title="Permanent link">&para;</a></h2>
+<p>Inject the correct namespaces with <code>:devtools</code> preloads in the <code>shadow-cljs.edn</code> config file.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="ss">:devtools</span>
+ <span class="p">{</span><span class="ss">:preloads</span> <span class="p">[</span><span class="nv">shadow.remote.runtime.cljs.browser</span>
+         <span class="c1">;; shadow.remote.runtime.cljs.node ;; for nodejs</span>
+         <span class="p">]}}</span>
+</code></pre></div>
+
+<p>Inspect with Clojure and not only ClojureScript</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">shadow.cljs.devtools.server</span> <span class="ss">:as</span> <span class="nv">server</span><span class="p">])</span>
+<span class="p">(</span><span class="nf">server/start!</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">tap&gt;</span> <span class="ss">:hello</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h3>
+<p><a href="https://clojureverse.org/t/introducing-shadow-cljs-inspect/5012">https://clojureverse.org/t/introducing-shadow-cljs-inspect/5012</a></p>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://shadow-cljs.github.io/docs/UsersGuide.html">shadow-cljs</a></li>

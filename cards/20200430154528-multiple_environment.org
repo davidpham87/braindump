@@ -24,3 +24,4 @@
 - [[file:general.org][General Skills]]
 - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
 - [[file:20200503165952-materiala.org][Materiala]]
+

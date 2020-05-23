@@ -32,3 +32,4 @@ My own tools for linking mkdocs and marginalia. See [[https://github.com/davidph
 - [[file:general.org][General Skills]]
 - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
 - [[file:../todo.org][TODO]]
+

@@ -122,3 +122,4 @@
 
 - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
 - [[file:20200430235013-specs.org][clojure specs]]
+

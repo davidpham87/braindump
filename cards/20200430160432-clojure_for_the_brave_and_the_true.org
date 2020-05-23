@@ -222,3 +222,4 @@
 - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 - [[file:../todo.org][TODO]]
 - [[file:20200504204808-why_clojure.org][Why Clojure?]]
+

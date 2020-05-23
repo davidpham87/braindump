@@ -1,10 +1,10 @@
-- [Website <code>[3/3]</code>](#org9fb8029)
-- [Recreate online cv with middleman and org for blog](#orga630e8b)
-  - [See also (generated)](#orga11280d)
+- [Website <code>[3/3]</code>](#org862eb44)
+- [Recreate online cv with middleman and org for blog](#org73fcf00)
+  - [See also (generated)](#org7f9b104)
 
 
 
-<a id="org9fb8029"></a>
+<a id="org862eb44"></a>
 
 # Website <code>[3/3]</code>
 
@@ -21,7 +21,7 @@
 -   [X] Write about codemirror and mathjax in codemirror
 
 
-<a id="orga630e8b"></a>
+<a id="org73fcf00"></a>
 
 # Recreate online cv with middleman and org for blog
 
@@ -31,7 +31,7 @@
 -   [ ] Publish summaries.
 
 
-<a id="orga11280d"></a>
+<a id="org7f9b104"></a>
 
 ## See also (generated)
 

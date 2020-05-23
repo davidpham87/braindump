@@ -1,7 +1,7 @@
 #+TITLE: Computer Science Interview
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: computer-science-interview
-#+TAGS: computer-science-interview
+#+ROAM_TAGS: computer-science-interview cs interview job
 #+DATE: 2020-05-21
 
 * Computer Science Interview

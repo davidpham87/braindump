@@ -8,11 +8,11 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 
 ## Read
 
--   how to write note efficiently.
+-   how to write notes efficiently.
 -   org journal, org-roam-server.
--   git subrepositories
+-   git subrepositories (for multiple projects).
 -   Check how org gather indices properties.
--   pods in babashka
+-   pods in babashka.
 
 
 ## Write
@@ -39,6 +39,7 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 -   Spark
 -   Kafka
 -   Learn about databases (postgres, elastic search and datomic).
+-   SICP, Read data science and algorithm manual.
 
 
 ## TODO Read Advanced Data Analysis from an elementary point of view
@@ -54,7 +55,7 @@ Use multipass and Ansible to simulate networks and kubernetes.
 ## Learn CSS
 
 -   Write a summary (check create of Bulma)
--   garden-cljs.
+-   [cljss](https://github.com/clj-commons/cljss), [woolybear](https://github.com/manutter51/woolybear)
 
 
 ## Leverage indices and org-parser
