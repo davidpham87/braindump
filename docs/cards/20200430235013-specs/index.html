@@ -600,6 +600,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#share-specs-over-the-wire" class="md-nav__link">
+    Share specs over the wire
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -988,6 +995,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20200524185034-clojure_functional_programming_principles/" title="Clojure Functional Programming Principles" class="md-nav__link">
+      Clojure Functional Programming Principles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1235,6 +1254,13 @@
           <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
     Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share-specs-over-the-wire" class="md-nav__link">
+    Share specs over the wire
   </a>
   
 </li>
@@ -1564,6 +1590,17 @@
 
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
 <p>See <a href="../20200516171955-generative_testing/">Generative Testing</a>.</p>
+<h3 id="share-specs-over-the-wire">Share specs over the wire<a class="headerlink" href="#share-specs-over-the-wire" title="Permanent link">&para;</a></h3>
+<p>You can use the <code>s/form</code> function to get the definitions of the specs</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">s/def</span> <span class="ss">::a</span> <span class="p">(</span><span class="nf">s/and</span> <span class="nv">even?</span> <span class="nv">pos-int?</span><span class="p">))</span>
+<span class="p">(</span><span class="nf">s/def</span> <span class="ss">::m</span> <span class="p">(</span><span class="nf">s/keys</span> <span class="ss">:req</span> <span class="p">[</span><span class="ss">::a</span><span class="p">]))</span>
+
+<span class="p">(</span><span class="nf">s/form</span> <span class="ss">::a</span><span class="p">)</span>
+<span class="c1">;; =&gt; (clojure.spec.alpha/and clojure.core/even? clojure.core/pos-int?)</span>
+<span class="p">(</span><span class="nf">s/form</span> <span class="ss">::m</span><span class="p">)</span>
+<span class="c1">;; =&gt; (clojure.spec.alpha/keys :req [:user/a])</span>
+</code></pre></div>
+
 <h2 id="testcheck">test.check<a class="headerlink" href="#testcheck" title="Permanent link">&para;</a></h2>
 <h3 id="generative-testing">Generative testing<a class="headerlink" href="#generative-testing" title="Permanent link">&para;</a></h3>
 <p>Using the namespace</p>

@@ -216,7 +216,6 @@
    - [[file:../cards/20200430154352-cli_arguments.org][CLI Arguments]]
    - [[file:../cards/20200521232124-cljss.org][cljss]]
    - [[file:../cards/20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-   - [[file:../cards/20200430235013-specs.org][clojure specs]]
    - [[file:../cards/20200505124946-clj_toolkit.org][Clojure toolkit]]
    - [[file:../cards/20200517205339-clojure_zippers.org][Clojure Zippers]]
    - [[file:../cards/20200430155819-core_async.org][core.async]]
@@ -234,5 +233,6 @@
    - [[file:../cards/20200501201607-quotes.org][Quotes]]
    - [[file:../cards/20200430154647-shadow_cljs.org][shadow-cljs]]
    - [[file:../cards/20200502122138-simple_made_easy.org][Simple Made Easy]]
+   - [[file:../cards/20200430235013-specs.org][Specs]]
    - [[file:../cards/20200504204808-why_clojure.org][Why Clojure?]]
 

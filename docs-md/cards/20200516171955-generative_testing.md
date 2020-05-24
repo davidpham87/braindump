@@ -61,6 +61,21 @@ Isomorphism spaces are useful as they **equivalent** and their representation mi
 For practical concerns, once you find an isomorphism to the function or entity under test, you can usually find many equivalent operations from your system onto your model and can randomly apply these property in any order to insure that your implementation is correct.
 
 
+## Property Based Testing with Proper
+
+-   Side effects can be grouped together at one end of the system, and we can
+
+keep the rest of the code as pure as possible.
+
+-   Targeted Properties and Simulated Annealing are cool stuff to learn about,
+
+even if you won’t use Property-Based Testing that much. Don’t skim over that chapter in the book.
+
+> Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius &#x2013; and a lot of courage &#x2013; to move in the opposite direction.
+> 
+> &#x2013; Ernst Friedrich &ldquo;Fritz&rdquo; Schumacher (in Small is Beautiful).
+
+
 ## Links
 
 -   <https://fsharpforfunandprofit.com/posts/property-based-testing-2/>
@@ -68,9 +83,11 @@ For practical concerns, once you find an isomorphism to the function or entity u
 -   [How to write test and stay sane?](https://www.youtube.com/watch?v=zi0rHwfiX1Q)
 -   [Jessica Kerr (midwest.io 2014)](https://www.youtube.com/watch?v=shngiiBfD80)
 -   ScalaCheck (book about PBT)
+-   [Fast check](https://github.com/dubzzz/fast-check), quick check for javascript.
+-   [Hypothesis](https://hypothesis.works/articles/), quick check for python.
 
 
 ## See also (generated)
 
 -   [Applied Clojure](20200430155637-applied_clojure.md)
--   [clojure specs](20200430235013-specs.md)
+-   [Specs](20200430235013-specs.md)

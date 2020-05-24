@@ -80,3 +80,9 @@
    - [[https://clojure.org/about/rationale][Clojure rationale]]
    - [[https://github.com/edn-format/edn][edn]]
    - [[https://blog.cognitect.com/blog/2014/7/22/transit][transit]]
+
+
+** See also (generated)
+
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]

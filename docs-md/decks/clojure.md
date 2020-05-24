@@ -169,7 +169,6 @@ Write about `s/fspec`. The trick in using `s/fspec` is to provide reasonable gen
 -   [CLI Arguments](../cards/20200430154352-cli_arguments.md)
 -   [cljss](../cards/20200521232124-cljss.md)
 -   [Clojure for the brave and the true](../cards/20200430160432-clojure_for_the_brave_and_the_true.md)
--   [clojure specs](../cards/20200430235013-specs.md)
 -   [Clojure toolkit](../cards/20200505124946-clj_toolkit.md)
 -   [Clojure Zippers](../cards/20200517205339-clojure_zippers.md)
 -   [core.async](../cards/20200430155819-core_async.md)
@@ -187,4 +186,5 @@ Write about `s/fspec`. The trick in using `s/fspec` is to provide reasonable gen
 -   [Quotes](../cards/20200501201607-quotes.md)
 -   [shadow-cljs](../cards/20200430154647-shadow_cljs.md)
 -   [Simple Made Easy](../cards/20200502122138-simple_made_easy.md)
+-   [Specs](../cards/20200430235013-specs.md)
 -   [Why Clojure?](../cards/20200504204808-why_clojure.md)
