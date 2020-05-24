@@ -90,7 +90,6 @@
 *** Source
     [[https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf][How to specify it?]], [[https://www.youtube.com/watch?v=G0NUOst-53U][video]] (jump until minute 10 for start of content).
 
-
 ** Geneartive Testing, Group Theory and Category Theory
 
    The model based properties (as in how to specify it) are the most powerful
@@ -111,15 +110,33 @@
    system onto your model and can randomly apply these property in any order to
    insure that your implementation is correct.
 
+** Property Based Testing with Proper
+
+   - Side effects can be grouped together at one end of the system, and we can
+   keep the rest of the code as pure as possible.
+
+   - Targeted Properties and Simulated Annealing are cool stuff to learn about,
+   even if you won’t use Property-Based Testing that much. Don’t skim over that
+   chapter in the book.
+
+   #+begin_quote
+   Any intelligent fool can make things bigger, more complex, and more
+   violent. It takes a touch of genius -- and a lot of courage -- to move in
+   the opposite direction.
+
+   -- Ernst Friedrich "Fritz" Schumacher (in Small is Beautiful).
+   #+end_quote
+
 ** Links
    - https://fsharpforfunandprofit.com/posts/property-based-testing-2/
    - [[https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf][How to specify it?]], [[https://www.youtube.com/watch?v=G0NUOst-53U][video]] (jump until minute 10 for start of content).
    - [[https://www.youtube.com/watch?v=zi0rHwfiX1Q][How to write test and stay sane?]]
    - [[https://www.youtube.com/watch?v=shngiiBfD80][Jessica Kerr (midwest.io 2014)]]
    - ScalaCheck (book about PBT)
+   - [[https://github.com/dubzzz/fast-check][Fast check]], quick check for javascript.
+   - [[https://hypothesis.works/articles/][Hypothesis]], quick check for python.
 
 ** See also (generated)
 
    - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
    - [[file:20200430235013-specs.org][clojure specs]]
-
