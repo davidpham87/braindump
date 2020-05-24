@@ -167,6 +167,7 @@ Write about `s/fspec`. The trick in using `s/fspec` is to provide reasonable gen
 
 -   [Applied Clojure](../cards/20200430155637-applied_clojure.md)
 -   [CLI Arguments](../cards/20200430154352-cli_arguments.md)
+-   [cljss](../cards/20200521232124-cljss.md)
 -   [Clojure for the brave and the true](../cards/20200430160432-clojure_for_the_brave_and_the_true.md)
 -   [clojure specs](../cards/20200430235013-specs.md)
 -   [Clojure toolkit](../cards/20200505124946-clj_toolkit.md)

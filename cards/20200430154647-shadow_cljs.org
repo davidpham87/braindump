@@ -62,6 +62,7 @@ Inspect with Clojure and not only ClojureScript
 
 ** See also (generated)
 
+   - [[file:20200521232124-cljss.org][cljss]]
    - [[file:../decks/clojure.org][Clojure]]
    - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
    - [[file:20200430141609-david_nolen.org][David Nolen]]
