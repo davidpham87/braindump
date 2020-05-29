@@ -7,6 +7,9 @@
 
 ** NGINX Configuration for developping locally
 
+Install nginx on your remote server and place this file into your
+configuration.
+
 #+BEGIN_SRC conf
   server {
     listen 80 default_server;
@@ -31,6 +34,9 @@
 
   }
 #+END_SRC
+
+- Open the ports: `sudo ufw 8080` and `sudo ufw 9630`.
+- Connect directly to the ip/domain of the server with the correct ports.
 
 ** Inspect
 
@@ -69,4 +75,3 @@ Inspect with Clojure and not only ClojureScript
    - [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
    - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
    - [[file:20200505112918-nginx.org][nginx]]
-
