@@ -7,7 +7,7 @@
 
 ** NGINX Configuration for developping locally
 
-#+BEGIN_SRC conf
+   #+BEGIN_SRC conf
   server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -30,35 +30,60 @@
     }
 
   }
-#+END_SRC
+   #+END_SRC
 
 ** Inspect
 
-Inject the correct namespaces with ~:devtools~ preloads in the
-=shadow-cljs.edn= config file.
+   Inject the correct namespaces with ~:devtools~ preloads in the
+   =shadow-cljs.edn= config file.
 
-#+begin_src clojure
-  {:devtools
-   {:preloads [shadow.remote.runtime.cljs.browser
-               ;; shadow.remote.runtime.cljs.node ;; for nodejs
-               ]}}
-#+end_src
+   #+begin_src clojure
+     {:devtools
+      {:preloads [shadow.remote.runtime.cljs.browser
+                  ;; shadow.remote.runtime.cljs.node ;; for nodejs
+                  ]}}
+   #+end_src
 
-Inspect with Clojure and not only ClojureScript
+   Inspect with Clojure and not only ClojureScript
 
-#+begin_src clojure
-  (require '[shadow.cljs.devtools.server :as server])
-  (server/start!)
-  (tap> :hello)
-#+end_src
+   #+begin_src clojure
+     (require '[shadow.cljs.devtools.server :as server])
+     (server/start!)
+     (tap> :hello)
+   #+end_src
+
+** Devcards
+
+   For devcards 0.2.7, we have to make the following adjustment for making it
+   work with shadow-cljs.
+
+   #+begin_src clojure
+          {:builds
+           {:app
+            {:build-options {:ns-aliases {devcards-marked cljsjs.marked
+                                          devcards-syntax-highlighter cljsjs.highlight}}}}}
+
+     (ns cljsjs.marked
+       (:require ["marked" :as marked]))
+
+     (js/goog.exportSymbol "marked" marked)
+     (js/goog.exportSymbol "DevcardsMarked" marked)
+
+     (ns cljsjs.highlight
+       (:require ["highlight" :as highlight]))
+
+     (js/goog.exportSymbol "highlight" highlight)
+     (js/goog.exportSymbol "DevcardsSyntaxHighlighter" highlight)
+
+   #+end_src
 
 *** Sources
     https://clojureverse.org/t/introducing-shadow-cljs-inspect/5012
 
 ** Links
 
-- [[https://shadow-cljs.github.io/docs/UsersGuide.html][shadow-cljs]]
-- [[https://clojurescript.org/][cljs]]
+   - [[https://shadow-cljs.github.io/docs/UsersGuide.html][shadow-cljs]]
+   - [[https://clojurescript.org/][cljs]]
 
 ** See also (generated)
 
@@ -69,4 +94,3 @@ Inspect with Clojure and not only ClojureScript
    - [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
    - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
    - [[file:20200505112918-nginx.org][nginx]]
-
