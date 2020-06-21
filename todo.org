@@ -25,9 +25,8 @@
    - Download clojure.core and use materiala for testing. [[file:cards/20200503165952-materiala.org][Materiala]]
    - Fork marginalia parser and correct its bug: [[https://github.com/gdeer81/marginalia/blob/master/src/marginalia/parser.clj][parser]]
 
-
 ** Goals
-   - specs, core async, datomic, testing.
+   - specs, core.async, datomic, testing.
    - Kubernetes, container technology.
    - Webworkers and websockets.
    - GPU computing

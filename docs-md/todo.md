@@ -30,7 +30,7 @@ This Todo file is a simple example of what I still have to learn or do. These ar
 
 ## Goals
 
--   specs, core async, datomic, testing.
+-   specs, core.async, datomic, testing.
 -   Kubernetes, container technology.
 -   Webworkers and websockets.
 -   GPU computing
