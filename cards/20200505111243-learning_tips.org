@@ -49,6 +49,6 @@
 
 ** See also (generated)
 
-   - [[file:20200505093245-ansible.org][Ansible]]
-   - [[file:python.org][Python]]
+   - [[file:20200505093245-ansible.org]]
+   - [[file:python.org]]
 

@@ -76,11 +76,11 @@
 
 ** See also (generated)
 
-   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-   - [[file:../README.org][Home for ideas for my Zettelkasten]]
-   - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
-   - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
-   - [[file:../todo.org][TODO]]
+   - [[file:../decks/clojure.org]]
+   - [[file:../README.org]]
+   - [[file:../todo.org]]
+   - [[file:20200430155438-mastering_clojure_macro.org]]
+   - [[file:20200430155637-applied_clojure.org]]
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org]]
+   - [[file:20200505112138-clojure_reducers.org]]
 

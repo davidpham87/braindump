@@ -1,0 +1,90 @@
+#+TITLE: Datascript
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: datascript
+#+ROAM_TAGS: datascript datalog clojurescript cljs
+#+DATE: 2020-08-23
+
+* datascript
+
+** First step with datascript.
+
+   - Transformation of the input is required, and transactions are not for
+     free. Usually, it requires setting a schema and wrapping the keys for
+     external entities into a datascript representation.
+
+   - Quote the queries in =d/q=.
+
+   - You can use the vector form (=[:db/add]=, =[:db/retract]=) or the map form
+     (={:user/id "my name"}=, see datascript test for more example.
+
+** re-frame and datascript
+
+   [[https://github.com/day8/re-frame][Re-frame]] is one of the common state management library in ClojureScript. It
+   is an event with publisher subscriber system. The advantage of adding
+   datascript to re-frame is the ability to exploit the query language and the
+   normalization layer.
+
+   There exist multiple package to couple the language but I found that the
+   easiest way to leverage on datascript is to create immutable datascript
+   database inside the re-frame database and to refer to them through
+   subscription and us =datascript.api/db-with= to perform transactions.
+
+   Since the database is immutable, the subscription will react on any change
+   to the datastore.
+
+   #+begin_src clojurescript
+     (require '[datascript.core :as d])
+     (require '[re-frame.core :as rf])
+
+     (def schema {:user/id {:db/unique :db.unique/identity}})
+
+     (def db-init
+       {:ds (d/empty-db schema)})
+
+     (rf/reg-event-db
+      :init
+      (fn [_ _ ] db-init))
+
+     (rf/reg-event-db
+      :ds-transact
+      (fn [db [_ tx-data]]
+        (update db :ds d/db-with tx-data)))
+
+     (rf/reg-sub
+      :ds
+      (fn [db] (:ds db)))
+
+     (rf/reg-sub
+      :users
+      :<- [:ds]
+      (fn [ds]
+        (d/q '[:find (pull ?e [*])
+               :where
+               [?e :user/id]]
+             ds)))
+   #+end_src
+
+   The users subscriptions will now be updated every time we transact a new
+   users.
+
+   #+begin_src clojurescript
+     (rf/dispatch [:init]) ;; initialize the database
+
+     (rf/dispatch [:ds-transact [{:user/id "jean"}]])
+
+     @(rf/subscribe [:users])
+     ;; => ([{:db/id 1, :user/id "jean"}])
+
+     (rf/dispatch [:ds-transact [{:user/id "logan"}]])
+
+     @(rf/subscribe [:users])
+     ;; => ([{:db/id 1, :user/id "jean"}] [{:db/id 2, :user/id "logan"}])
+   #+end_src
+
+   The advantage of this methods is that we keep re-frame and datascript
+   concepts separate: Re-frame events and subscriptions are the same as before
+   (in contrast to posh/re-posh), and datascript queries and transactions are
+   performed against an actual datascript database.
+
+*** Links
+    - https://github.com/tonsky/datascript

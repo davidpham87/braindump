@@ -89,5 +89,5 @@ even if you won’t use Property-Based Testing that much. Don’t skim over that
 
 ## See also (generated)
 
--   [Applied Clojure](20200430155637-applied_clojure.md)
--   [Specs](20200430235013-specs.md)
+-   <20200430155637-applied_clojure.md>
+-   <20200430235013-specs.md>

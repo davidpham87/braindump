@@ -11,4 +11,4 @@ Please read the [README](../README.md) for more details!
 
 ## See also (generated)
 
--   [Home for ideas for my Zettelkasten](../README.md)
+-   <../README.md>

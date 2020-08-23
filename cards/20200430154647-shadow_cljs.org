@@ -122,3 +122,36 @@ configuration.
    - [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
    - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
    - [[file:20200505112918-nginx.org][nginx]]
+
+** See also (generated)
+
+   - [[file:../decks/clojure.org]]
+   - [[file:20200430141226-life_in_dynamic_typing.org]]
+   - [[file:20200430141609-david_nolen.org]]
+   - [[file:20200505112918-nginx.org]]
+   - [[file:20200505113402-high_performance_clojurescript.org]]
+   - [[file:20200505124946-clj_toolkit.org]]
+   - [[file:20200521232124-cljss.org]]
+   - [[file:20200524185034-clojure_functional_programming_principles.org]]
+
+** See also (generated)
+
+   - [[file:../decks/clojure.org]]
+   - [[file:20200430141226-life_in_dynamic_typing.org]]
+   - [[file:20200430141609-david_nolen.org]]
+   - [[file:20200505112918-nginx.org]]
+   - [[file:20200505113402-high_performance_clojurescript.org]]
+   - [[file:20200505124946-clj_toolkit.org]]
+   - [[file:20200521232124-cljss.org]]
+   - [[file:20200524185034-clojure_functional_programming_principles.org]]
+
+** See also (generated)
+
+   - [[file:../decks/clojure.org]]
+   - [[file:20200430141226-life_in_dynamic_typing.org]]
+   - [[file:20200430141609-david_nolen.org]]
+   - [[file:20200505112918-nginx.org]]
+   - [[file:20200505113402-high_performance_clojurescript.org]]
+   - [[file:20200505124946-clj_toolkit.org]]
+   - [[file:20200521232124-cljss.org]]
+   - [[file:20200524185034-clojure_functional_programming_principles.org]]

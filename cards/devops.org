@@ -22,7 +22,7 @@
 
 ** See also (generated)
 
-   - [[file:20200505093245-ansible.org][Ansible]]
-   - [[file:20200505093126-multipass.org][Multipass]]
-   - [[file:20200505112918-nginx.org][nginx]]
+   - [[file:20200505093126-multipass.org]]
+   - [[file:20200505093245-ansible.org]]
+   - [[file:20200505112918-nginx.org]]
 

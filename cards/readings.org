@@ -77,5 +77,5 @@
 
 ** See also (generated)
 
-   - [[file:../README.org][Home for ideas for my Zettelkasten]]
+   - [[file:../README.org]]
 

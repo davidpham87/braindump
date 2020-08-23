@@ -8,4 +8,4 @@
 
 ## See also (generated)
 
--   [Rich Hickey](20200504213225-rich_hickey.md)
+-   <20200504213225-rich_hickey.md>

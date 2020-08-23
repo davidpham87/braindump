@@ -59,5 +59,5 @@ The language is dynamic, hence it handles heterogeneous collections and return t
 
 ## See also (generated)
 
--   [Clojure](../decks/clojure.md)
--   [shadow-cljs](20200430154647-shadow_cljs.md)
+-   <../decks/clojure.md>
+-   <20200430154647-shadow_cljs.md>

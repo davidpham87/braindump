@@ -23,8 +23,8 @@ See org-roam-clj on how to use the library.
 
 ## See also (generated)
 
--   [Clojure](decks/clojure.md)
--   [core.async](cards/20200430155819-core_async.md)
--   [First blog ticket](blog/20200502171331-first_blog_ticket.md)
--   [org mode](cards/20200430180442-org_mode.md)
--   [Readings](cards/readings.md)
+-   <blog/20200502171331-first_blog_ticket.md>
+-   <cards/20200430155819-core_async.md>
+-   <cards/20200430180442-org_mode.md>
+-   <cards/readings.md>
+-   <decks/clojure.md>
