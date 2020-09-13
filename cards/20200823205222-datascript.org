@@ -38,8 +38,7 @@
 
      (def schema {:user/id {:db/unique :db.unique/identity}})
 
-     (def db-init
-       {:ds (d/empty-db schema)})
+     (def db-init {:ds (d/empty-db schema)})
 
      (rf/reg-event-db
       :init
@@ -47,8 +46,7 @@
 
      (rf/reg-event-db
       :ds-transact
-      (fn [db [_ tx-data]]
-        (update db :ds d/db-with tx-data)))
+      (fn [db [_ tx-data]] (update db :ds d/db-with tx-data)))
 
      (rf/reg-sub
       :ds
@@ -85,6 +83,25 @@
    concepts separate: Re-frame events and subscriptions are the same as before
    (in contrast to posh/re-posh), and datascript queries and transactions are
    performed against an actual datascript database.
+
+** Caveat
+
+   When queries are time expensive and multiple queries exist within a single
+   view, all the subscription queries will run after any change in the
+   datascript db.
+
+   To avoid this, one can/should use posh/re-posh. The library detects the data
+   required for queries and rerun them only when the underlying data has been
+   modified by the transaction.
+
+   The advantage of the library is obviously speed. The disadvantage is a new
+   layer of complexity in the web app, as re-posh does not integrate seamlessly
+   with re-frame.
+
+   The performance issue without re-posh, might be a concern in some context
+   [e.g. live streaming or live data updating, and chatting], but these can be
+   avoided by creating multiple store inside re-frame and also transacting data
+   smartly.
 
 *** Links
     - https://github.com/tonsky/datascript
