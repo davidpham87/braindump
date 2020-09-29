@@ -54,5 +54,5 @@
 
 ** See also (generated)
 
-   - [[file:general.org]]
+   - [[general.org]]
 

@@ -32,9 +32,9 @@ See org-roam-clj on how to use the library.
 
 ** See also (generated)
 
-   - [[file:blog/20200502171331-first_blog_ticket.org]]
-   - [[file:cards/20200430155819-core_async.org]]
-   - [[file:cards/20200430180442-org_mode.org]]
-   - [[file:cards/readings.org]]
-   - [[file:decks/clojure.org]]
+   - [[blog/20200502171331-first_blog_ticket.org]]
+   - [[cards/20200430155819-core_async.org]]
+   - [[cards/20200430180442-org_mode.org]]
+   - [[cards/readings.org]]
+   - [[decks/clojure.org]]
 

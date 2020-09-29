@@ -52,10 +52,10 @@
 
 ** See also (generated)
 
-   - [[file:cards/20200430155637-applied_clojure.org]]
-   - [[file:cards/20200430155819-core_async.org]]
-   - [[file:cards/20200430160432-clojure_for_the_brave_and_the_true.org]]
-   - [[file:cards/20200430235013-specs.org]]
-   - [[file:cards/20200501163355-goals.org]]
-   - [[file:cards/20200503165952-materiala.org]]
+   - [[cards/20200430155637-applied_clojure.org]]
+   - [[cards/20200430155819-core_async.org]]
+   - [[cards/20200430160432-clojure_for_the_brave_and_the_true.org]]
+   - [[cards/20200430235013-specs.org]]
+   - [[cards/20200501163355-goals.org]]
+   - [[cards/20200503165952-materiala.org]]
 

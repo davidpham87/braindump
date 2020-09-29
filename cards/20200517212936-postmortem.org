@@ -16,5 +16,5 @@ A tiny value-oriented debugging tool for Clojure(Script), powered by transducers
 
 ** See also (generated)
 
-   - [[file:20200505124946-clj_toolkit.org]]
+   - [[20200505124946-clj_toolkit.org]]
 

@@ -26,6 +26,6 @@
 
 ** See also (generated)
 
-   - [[file:20200505111243-learning_tips.org]]
-   - [[file:devops.org]]
+   - [[20200505111243-learning_tips.org]]
+   - [[devops.org]]
 

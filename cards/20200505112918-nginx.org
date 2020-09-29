@@ -189,6 +189,6 @@
 
 ** See also (generated)
 
-   - [[file:20200430154647-shadow_cljs.org]]
-   - [[file:devops.org]]
+   - [[20200430154647-shadow_cljs.org]]
+   - [[devops.org]]
 

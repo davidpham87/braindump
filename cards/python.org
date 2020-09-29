@@ -29,7 +29,7 @@
 
 ** See also (generated)
 
-   - [[file:20200430153912-ethz.org]]
-   - [[file:20200505111243-learning_tips.org]]
-   - [[file:r_cran.org]]
+   - [[20200430153912-ethz.org]]
+   - [[20200505111243-learning_tips.org]]
+   - [[r_cran.org]]
 

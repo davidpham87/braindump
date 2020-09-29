@@ -13,6 +13,6 @@
 
 ** See also (generated)
 
-   - [[file:20200430153912-ethz.org]]
-   - [[file:python.org]]
+   - [[20200430153912-ethz.org]]
+   - [[python.org]]
 

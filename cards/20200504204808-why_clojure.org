@@ -65,9 +65,9 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org]]
-   - [[file:20200430155438-mastering_clojure_macro.org]]
-   - [[file:20200430155637-applied_clojure.org]]
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org]]
-   - [[file:20200430235013-specs.org]]
+   - [[../decks/clojure.org]]
+   - [[20200430155438-mastering_clojure_macro.org]]
+   - [[20200430155637-applied_clojure.org]]
+   - [[20200430160432-clojure_for_the_brave_and_the_true.org]]
+   - [[20200430235013-specs.org]]
 

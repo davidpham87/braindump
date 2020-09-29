@@ -138,6 +138,6 @@
 
 ** See also (generated)
 
-   - [[file:20200430155637-applied_clojure.org]]
-   - [[file:20200430235013-specs.org]]
+   - [[20200430155637-applied_clojure.org]]
+   - [[20200430235013-specs.org]]
 

@@ -11,13 +11,13 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org]]
-   - [[file:20200430154352-cli_arguments.org]]
-   - [[file:20200430154647-shadow_cljs.org]]
-   - [[file:20200505124708-potemkin.org]]
-   - [[file:20200505125105-medley.org]]
-   - [[file:20200506224558-enlive.org]]
-   - [[file:20200514104809-clojure_debug.org]]
-   - [[file:20200514114627-tools_deps.org]]
-   - [[file:20200517212936-postmortem.org]]
+   - [[../decks/clojure.org]]
+   - [[20200430154352-cli_arguments.org]]
+   - [[20200430154647-shadow_cljs.org]]
+   - [[20200505124708-potemkin.org]]
+   - [[20200505125105-medley.org]]
+   - [[20200506224558-enlive.org]]
+   - [[20200514104809-clojure_debug.org]]
+   - [[20200514114627-tools_deps.org]]
+   - [[20200517212936-postmortem.org]]
 

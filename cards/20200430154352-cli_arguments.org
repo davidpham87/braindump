@@ -22,12 +22,12 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org]]
-   - [[file:20200430154528-multiple_environment.org]]
-   - [[file:20200430155438-mastering_clojure_macro.org]]
-   - [[file:20200430155637-applied_clojure.org]]
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org]]
-   - [[file:20200503165952-materiala.org]]
-   - [[file:20200505124946-clj_toolkit.org]]
-   - [[file:general.org]]
+   - [[../decks/clojure.org]]
+   - [[20200430154528-multiple_environment.org]]
+   - [[20200430155438-mastering_clojure_macro.org]]
+   - [[20200430155637-applied_clojure.org]]
+   - [[20200430160432-clojure_for_the_brave_and_the_true.org]]
+   - [[20200503165952-materiala.org]]
+   - [[20200505124946-clj_toolkit.org]]
+   - [[general.org]]
 

@@ -36,6 +36,6 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org]]
-   - [[file:20200430154647-shadow_cljs.org]]
+   - [[../decks/clojure.org]]
+   - [[20200430154647-shadow_cljs.org]]
 

@@ -25,6 +25,6 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org]]
-   - [[file:20200505124946-clj_toolkit.org]]
+   - [[../decks/clojure.org]]
+   - [[20200505124946-clj_toolkit.org]]
 
