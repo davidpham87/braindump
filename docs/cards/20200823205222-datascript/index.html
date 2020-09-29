@@ -865,7 +865,14 @@
     re-frame and datascript
   </a>
   
-    <nav class="md-nav" aria-label="re-frame and datascript">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveat" class="md-nav__link">
+    Caveat
+  </a>
+  
+    <nav class="md-nav" aria-label="Caveat">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -877,6 +884,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also-generated" class="md-nav__link">
+    See also (generated)
+  </a>
   
 </li>
       
@@ -1037,7 +1051,14 @@
     re-frame and datascript
   </a>
   
-    <nav class="md-nav" aria-label="re-frame and datascript">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveat" class="md-nav__link">
+    Caveat
+  </a>
+  
+    <nav class="md-nav" aria-label="Caveat">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1049,6 +1070,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also-generated" class="md-nav__link">
+    See also (generated)
+  </a>
   
 </li>
       
@@ -1090,8 +1118,7 @@
 
 <span class="p">(</span><span class="k">def </span><span class="nv">schema</span> <span class="p">{</span><span class="ss">:user/id</span> <span class="p">{</span><span class="ss">:db/unique</span> <span class="ss">:db.unique/identity</span><span class="p">}})</span>
 
-<span class="p">(</span><span class="k">def </span><span class="nv">db-init</span>
-  <span class="p">{</span><span class="ss">:ds</span> <span class="p">(</span><span class="nf">d/empty-db</span> <span class="nv">schema</span><span class="p">)})</span>
+<span class="p">(</span><span class="k">def </span><span class="nv">db-init</span> <span class="p">{</span><span class="ss">:ds</span> <span class="p">(</span><span class="nf">d/empty-db</span> <span class="nv">schema</span><span class="p">)})</span>
 
 <span class="p">(</span><span class="nf">rf/reg-event-db</span>
  <span class="ss">:init</span>
@@ -1099,8 +1126,7 @@
 
 <span class="p">(</span><span class="nf">rf/reg-event-db</span>
  <span class="ss">:ds-transact</span>
- <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">db</span> <span class="p">[</span><span class="nv">_</span> <span class="nv">tx-data</span><span class="p">]]</span>
-   <span class="p">(</span><span class="nf">update</span> <span class="nv">db</span> <span class="ss">:ds</span> <span class="nv">d/db-with</span> <span class="nv">tx-data</span><span class="p">)))</span>
+ <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">db</span> <span class="p">[</span><span class="nv">_</span> <span class="nv">tx-data</span><span class="p">]]</span> <span class="p">(</span><span class="nf">update</span> <span class="nv">db</span> <span class="ss">:ds</span> <span class="nv">d/db-with</span> <span class="nv">tx-data</span><span class="p">)))</span>
 
 <span class="p">(</span><span class="nf">rf/reg-sub</span>
  <span class="ss">:ds</span>
@@ -1131,10 +1157,17 @@
 </code></pre></div>
 
 <p>The advantage of this methods is that we keep re-frame and datascript concepts separate: Re-frame events and subscriptions are the same as before (in contrast to posh/re-posh), and datascript queries and transactions are performed against an actual datascript database.</p>
+<h2 id="caveat">Caveat<a class="headerlink" href="#caveat" title="Permanent link">&para;</a></h2>
+<p>When queries are time expensive and multiple queries exist within a single view, all the subscription queries will run after any change in the datascript db.</p>
+<p>To avoid this, one can/should use posh/re-posh. The library detects the data required for queries and rerun them only when the underlying data has been modified by the transaction.</p>
+<p>The advantage of the library is obviously speed. The disadvantage is a new layer of complexity in the web app, as re-posh does not integrate seamlessly with re-frame.</p>
+<p>The performance issue without re-posh, might be a concern in some context [e.g. live streaming or live data updating, and chatting], but these can be avoided by creating multiple store inside re-frame and also transacting data smartly.</p>
 <h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/tonsky/datascript">https://github.com/tonsky/datascript</a></li>
 </ul>
+<h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
+<p>-</p>
                 
               
               

@@ -89,3 +89,8 @@ In some situation, `nrepl` might be a too high requirement for your project (bec
 The goal of the post is to give you a straightforward plan for kick start repl driven development. You achieve this by having a compatible editor, launching a `nrepl` server with `clojure` or `bb` , connecting your editor to the REPL.
 
 I hope this simple workflow will allow to experiment much more with Clojure and have fun with it.
+
+
+## See also (generated)
+
+-
