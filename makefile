@@ -5,12 +5,12 @@ http:
 
 .PHONY: tags
 tags:
-	clojure -Adev -t create-tags
+	clojure -A:dev -t create-tags
 
 .PHONY: docs
 docs: tags
-	clojure -Adev -t markdown
+	clojure -A:dev -t markdown
 
 .PHONY: docs-only
 docs-only:
-	clojure -Adev -t markdown
+	clojure -A:dev -t markdown

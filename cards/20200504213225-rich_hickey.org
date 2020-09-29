@@ -14,7 +14,7 @@
 
 ** See also (generated)
 
-   - [[20200430190921-design.org]]
-   - [[20200502122138-simple_made_easy.org]]
-   - [[20200504213118-effective_programs_10_years_of_clojure.org]]
+   - [[file:20200430190921-design.org][Design]]
+   - [[file:20200504213118-effective_programs_10_years_of_clojure.org][Effective Programs - 10 years of clojure]]
+   - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 

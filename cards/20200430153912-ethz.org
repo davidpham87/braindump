@@ -80,6 +80,6 @@
 
 ** See also (generated)
 
-   - [[python.org]]
-   - [[r_cran.org]]
+   - [[file:python.org][Python]]
+   - [[file:r_cran.org][R CRAN]]
 

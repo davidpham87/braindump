@@ -12,5 +12,5 @@
 
 ** See also (generated)
 
-   - [[../todo.org]]
+   - [[file:../todo.org][TODO]]
 

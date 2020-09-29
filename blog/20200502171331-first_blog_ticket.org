@@ -19,5 +19,5 @@ Please read the [[file:../README.org][README]] for more details!
 
 ** See also (generated)
 
-   - [[../README.org]]
+   - [[file:../README.org][Home for ideas for my Zettelkasten]]
 

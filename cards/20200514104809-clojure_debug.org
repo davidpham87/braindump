@@ -18,5 +18,5 @@
 
 ** See also (generated)
 
-   - [[20200505124946-clj_toolkit.org]]
+   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
 

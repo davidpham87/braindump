@@ -22,6 +22,6 @@ Remains to test in practice, but the [project](https://github.com/davidpham87/ne
 
 ## See also (generated)
 
--   <20200505093126-multipass.md>
--   <20200505093245-ansible.md>
--   <20200505112918-nginx.md>
+-   [Ansible](20200505093245-ansible.md)
+-   [Multipass](20200505093126-multipass.md)
+-   [nginx](20200505112918-nginx.md)

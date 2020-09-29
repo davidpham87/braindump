@@ -9,5 +9,5 @@
 
 ## See also (generated)
 
--   <20200430153912-ethz.md>
--   <python.md>
+-   [ETHZ](20200430153912-ethz.md)
+-   [Python](python.md)

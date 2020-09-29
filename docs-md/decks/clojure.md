@@ -165,27 +165,27 @@ Write about `s/fspec`. The trick in using `s/fspec` is to provide reasonable gen
 
 ## See also (generated)
 
--   <../cards/20200430141226-life_in_dynamic_typing.md>
--   <../cards/20200430141609-david_nolen.md>
--   <../cards/20200430154352-cli_arguments.md>
--   <../cards/20200430154528-multiple_environment.md>
--   <../cards/20200430154647-shadow_cljs.md>
--   <../cards/20200430155438-mastering_clojure_macro.md>
--   <../cards/20200430155637-applied_clojure.md>
--   <../cards/20200430155819-core_async.md>
--   <../cards/20200430160432-clojure_for_the_brave_and_the_true.md>
--   <../cards/20200430190921-design.md>
--   <../cards/20200430235013-specs.md>
--   <../cards/20200501201607-quotes.md>
--   <../cards/20200502122138-simple_made_easy.md>
--   <../cards/20200503222619-org_roam_clj.md>
--   <../cards/20200504204808-why_clojure.md>
--   <../cards/20200504212017-edn_and_transit.md>
--   <../cards/20200505112138-clojure_reducers.md>
--   <../cards/20200505113402-high_performance_clojurescript.md>
--   <../cards/20200505124708-potemkin.md>
--   <../cards/20200505124946-clj_toolkit.md>
--   <../cards/20200517205339-clojure_zippers.md>
--   <../cards/20200521232124-cljss.md>
--   <../cards/20200524185034-clojure_functional_programming_principles.md>
--   <../README.md>
+-   [Applied Clojure](../cards/20200430155637-applied_clojure.md)
+-   [CLI Arguments](../cards/20200430154352-cli_arguments.md)
+-   [cljss](../cards/20200521232124-cljss.md)
+-   [Clojure for the brave and the true](../cards/20200430160432-clojure_for_the_brave_and_the_true.md)
+-   [Clojure Functional Programming Principles](../cards/20200524185034-clojure_functional_programming_principles.md)
+-   [Clojure toolkit](../cards/20200505124946-clj_toolkit.md)
+-   [Clojure Zippers](../cards/20200517205339-clojure_zippers.md)
+-   [core.async](../cards/20200430155819-core_async.md)
+-   [David Nolen](../cards/20200430141609-david_nolen.md)
+-   [Design](../cards/20200430190921-design.md)
+-   [edn and transit](../cards/20200504212017-edn_and_transit.md)
+-   [High Performance CLJS](../cards/20200505113402-high_performance_clojurescript.md)
+-   [Home for ideas for my Zettelkasten](../README.md)
+-   [Life In Dynamic Typing](../cards/20200430141226-life_in_dynamic_typing.md)
+-   [Mastering Clojure Macro](../cards/20200430155438-mastering_clojure_macro.md)
+-   [Multiple Environment](../cards/20200430154528-multiple_environment.md)
+-   [Org-roam-clj: Org-roam extension with Clojure](../cards/20200503222619-org_roam_clj.md)
+-   [Parallel Programming in Clojure with Reducers](../cards/20200505112138-clojure_reducers.md)
+-   [Potemkin: some ideas which are almost good](../cards/20200505124708-potemkin.md)
+-   [Quotes](../cards/20200501201607-quotes.md)
+-   [shadow-cljs](../cards/20200430154647-shadow_cljs.md)
+-   [Simple Made Easy](../cards/20200502122138-simple_made_easy.md)
+-   [Specs](../cards/20200430235013-specs.md)
+-   [Why Clojure?](../cards/20200504204808-why_clojure.md)

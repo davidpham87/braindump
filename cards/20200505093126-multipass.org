@@ -14,5 +14,5 @@
 
 ** See also (generated)
 
-   - [[devops.org]]
+   - [[file:devops.org][Devops]]
 

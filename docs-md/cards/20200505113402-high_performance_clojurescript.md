@@ -41,5 +41,5 @@ The wasm part of tensorflow js provides incredible performance boost.
 
 ## See also (generated)
 
--   <../decks/clojure.md>
--   <20200430154647-shadow_cljs.md>
+-   [Clojure](../decks/clojure.md)
+-   [shadow-cljs](20200430154647-shadow_cljs.md)

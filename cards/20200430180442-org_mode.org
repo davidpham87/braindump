@@ -20,5 +20,5 @@ org2gfm [OPTION] FILE
 
 ** See also (generated)
 
-   - [[../README.org]]
+   - [[file:../README.org][Home for ideas for my Zettelkasten]]
 

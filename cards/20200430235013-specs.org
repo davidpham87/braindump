@@ -404,12 +404,12 @@
 
 ** See also (generated)
 
-   - [[../decks/clojure.org]]
-   - [[../todo.org]]
-   - [[20200430141226-life_in_dynamic_typing.org]]
-   - [[20200430155438-mastering_clojure_macro.org]]
-   - [[20200430155637-applied_clojure.org]]
-   - [[20200430160432-clojure_for_the_brave_and_the_true.org]]
-   - [[20200504204808-why_clojure.org]]
-   - [[20200516171955-generative_testing.org]]
+   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+   - [[file:20200516171955-generative_testing.org][Generative Testing]]
+   - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
+   - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
+   - [[file:../todo.org][TODO]]
+   - [[file:20200504204808-why_clojure.org][Why Clojure?]]
 

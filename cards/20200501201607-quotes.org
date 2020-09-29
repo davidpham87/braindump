@@ -96,5 +96,5 @@
 
 ** See also (generated)
 
-   - [[../decks/clojure.org]]
+   - [[file:../decks/clojure.org][Clojure]]
 
