@@ -1,0 +1,25 @@
+#+TITLE: ClojureCuda
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: clojure-cuda
+#+ROAM_TAGS: clojure-cuda clj Neanderthal
+#+DATE: 2020-10-03
+
+* ClojureCuda
+
+** Installation
+
+Insure that the paths are updated at the end of your =.bashrc= file
+
+#+begin_src sh
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+#+end_src
+
+
+The version minor version of the cuda library also matter. You also need to
+simlink the exact =libnvrt.so.MAJOR.MINOR= binary into
+=/usr/lib/x86_64-linux-gnu/=. For example
+
+#+begin_src shell
+ln -s /usr/local/cuda/lib64/libnvrtc.so.11.0 /usr/lib/x86_64-linux-gnu/
+#+end_src

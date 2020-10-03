@@ -1,0 +1,72 @@
+#+TITLE: clojurecl
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: clojurecl
+#+ROAM_TAGS: clojurecl opencl clj neanderthal
+#+DATE: 2020-10-03
+
+* clojurecl
+
+Some notes about opencl for a quick summary.
+
+** Concepts
+
+- Plateforms: constructor specific implementation of opencl (amd, nvidia, etc).
+- Devices: concrete hardware implementing a platform.
+- Kernel: a function written in opencl.
+- Programs: a set of kernels.
+- Context: a set of devices where kernels can be executed.
+- Queue: kernels/tasks are sent to devices sequentially through a queue.
+- Release: for memory management.
+
+Analogy with a poker game: dealer is the host, poker table is the context,
+player's card are kernels, deck of cards are programs.
+
+#+begin_src clojure
+  (ns cl
+    (:require
+     [uncomplicate.clojurecl.core :as cl]
+     [uncomplicate.clojurecl.info :as cl-info]
+     [uncomplicate.commons.core :refer (release)]))
+
+  (map cl-info/name-info (cl/platforms)) ;; get plateforms
+
+  (def nvidia-platform (first (cl/platforms)))
+
+  (map cl-info/name-info (cl/devices nvidia-platform))
+
+  (def my-nvidia-gpu (first (cl/devices nvidia-platform))) ;; set the devices
+
+  (def ctx (cl/context [my-nvidia-gpu])) ;; set devices in context
+  ctx
+
+  ;; 1024 bytes as float are 4 bytes it is 256 array
+  (def gpu-array (cl/cl-buffer ctx 1024 :read-write)) ;; create a buffer for gpu
+  (def main-array (float-array (range 256))) ;; (-> (* 256 4) (= 1024))
+  (take 10 main-array)
+
+  (def queue (cl/command-queue ctx my-nvidia-gpu)) ;; create a queue
+  (cl/enq-write! queue gpu-array main-array) ;; transfer data
+
+  (def roundtrip-array (float-array 256))
+  (cl/enq-read! queue gpu-array roundtrip-array) ;; transfer data back
+
+  (take 12 roundtrip-array)
+
+  (def kernel-source (slurp "src/kernel.cl")) ;; read the mul10 kernel
+  (def hello-program (cl/build-program!
+                      (cl/program-with-source ctx [kernel-source]))) ;; compile into opencl code
+  (def mul10 (cl/kernel hello-program "mul10")) ;; extracte the kernel
+
+  (def result (float-array 256))
+
+  (cl/set-args! mul10 0 gpu-array) ;; set args for kernel
+  (cl/enq-kernel! queue mul10 (cl/work-size-1d 256)) ;; run the kernel
+  (cl/enq-read! queue gpu-array result) ;; transfer backx
+
+  (take 12 result)
+  ;; clean up
+  (release gpu-array)
+  (release hello-program)
+  (release queue)
+  (release ctx)
+#+end_src
