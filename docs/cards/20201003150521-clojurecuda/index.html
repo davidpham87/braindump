@@ -872,6 +872,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    Logic
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1036,6 +1043,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    Logic
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1062,6 +1076,62 @@
 <p>The version minor version of the cuda library also matter. You also need to simlink the exact <code>libnvrt.so.MAJOR.MINOR</code> binary into <code>/usr/lib/x86_64-linux-gnu/</code>. For example</p>
 <div class="highlight"><pre><span></span><code>ln -s /usr/local/cuda/lib64/libnvrtc.so.11.0 /usr/lib/x86_64-linux-gnu/
 </code></pre></div>
+
+<h2 id="logic">Logic<a class="headerlink" href="#logic" title="Permanent link">&para;</a></h2>
+<p>The logic follows the cuda model, but the compilation happens with the <code>clojurecuda.core/compile!</code> function. Most example shows that you write a <code>*.cu</code> file and concatenate the sources, while headers are a map of their name (e.g <code>stdint.h</code>) to their code source. The best example if taken from <a href="https://github.com/uncomplicate/neanderthal/blob/master/src/clojure/uncomplicate/neanderthal/internal/device/cublas.clj">uncomplicate.neanderthal.internal.device.cublas</a> namespace.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">src</span> <span class="p">(</span><span class="nb">str </span><span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/clojurecuda/kernels/reduction.cu&quot;</span><span class="p">))</span>
+           <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/cuda/number.cu&quot;</span><span class="p">))</span>
+           <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/cuda/blas-plus.cu&quot;</span><span class="p">))</span>
+           <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/cuda/vect-math.cu&quot;</span><span class="p">))</span>
+           <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/cuda/random.cu&quot;</span><span class="p">)))</span>
+
+      <span class="nv">integer-src</span> <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/cuda/number.cu&quot;</span><span class="p">))</span>
+
+      <span class="nv">standard-headers</span> <span class="p">{</span><span class="s">&quot;stdint.h&quot;</span> <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/clojurecuda/include/jitify/stdint.h&quot;</span><span class="p">))</span>
+            <span class="s">&quot;float.h&quot;</span> <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/clojurecuda/include/jitify/float.h&quot;</span><span class="p">))}</span>
+      <span class="nv">philox-headers</span>
+      <span class="p">(</span><span class="nb">merge </span><span class="nv">standard-headers</span>
+         <span class="p">{</span><span class="s">&quot;Random123/philox.h&quot;</span>
+          <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/include/Random123/philox.h&quot;</span><span class="p">))</span>
+          <span class="s">&quot;features/compilerfeatures.h&quot;</span>
+          <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/include/Random123/features/compilerfeatures.h&quot;</span><span class="p">))</span>
+          <span class="s">&quot;nvccfeatures.h&quot;</span>
+          <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/include/Random123/features/nvccfeatures.h&quot;</span><span class="p">))</span>
+          <span class="s">&quot;array.h&quot;</span> <span class="p">(</span><span class="nb">slurp </span><span class="p">(</span><span class="nf">io/resource</span> <span class="s">&quot;uncomplicate/neanderthal/internal/device/include/Random123/array.h&quot;</span><span class="p">))})]</span>
+
+  <span class="p">(</span><span class="nf">JCublas2/setExceptionsEnabled</span> <span class="nv">false</span><span class="p">)</span>
+
+  <span class="p">(</span><span class="kd">defn </span><span class="nv">cublas-double</span> <span class="p">[</span><span class="nv">ctx</span> <span class="nv">hstream</span><span class="p">]</span>
+    <span class="p">(</span><span class="nf">in-context</span>
+     <span class="nv">ctx</span>
+     <span class="p">(</span><span class="nf">with-release</span>
+       <span class="p">[</span><span class="nv">prog</span> <span class="p">(</span><span class="nf">compile!</span>
+          <span class="p">(</span><span class="nf">program</span> <span class="nv">src</span> <span class="nv">philox-headers</span><span class="p">)</span>
+          <span class="p">[</span><span class="s">&quot;-DNUMBER=double&quot;</span> <span class="s">&quot;-DREAL=double&quot;</span> <span class="s">&quot;-DACCUMULATOR=double&quot;</span>
+           <span class="s">&quot;-DCAST(fun)=fun&quot;</span> <span class="o">#</span><span class="nv">_</span><span class="s">&quot;-use_fast_math&quot;</span> <span class="s">&quot;-default-device&quot;</span>
+           <span class="p">(</span><span class="nf">format</span> <span class="s">&quot;-DCUDART_VERSION=%s&quot;</span> <span class="p">(</span><span class="nf">driver-version</span><span class="p">))])]</span>
+       <span class="p">(</span><span class="nf">let-release</span> <span class="p">[</span><span class="nv">modl</span> <span class="p">(</span><span class="nf">module</span> <span class="nv">prog</span><span class="p">)</span>
+             <span class="nv">handle</span> <span class="p">(</span><span class="nf">cublas-handle</span> <span class="nv">hstream</span><span class="p">)</span>
+             <span class="nv">hstream</span> <span class="p">(</span><span class="nf">get-cublas-stream</span> <span class="nv">handle</span><span class="p">)]</span>
+     <span class="p">(</span><span class="nf">-&gt;CUFactory</span>
+      <span class="nv">modl</span> <span class="nv">hstream</span> <span class="p">(</span><span class="nf">cu-double-accessor</span> <span class="p">(</span><span class="nf">current-context</span><span class="p">)</span> <span class="nv">hstream</span><span class="p">)</span> <span class="nv">native-double</span>
+      <span class="p">(</span><span class="nf">-&gt;DoubleVectorEngine</span> <span class="nv">handle</span> <span class="nv">modl</span> <span class="nv">hstream</span><span class="p">)</span> <span class="p">(</span><span class="nf">-&gt;DoubleGEEngine</span> <span class="nv">handle</span> <span class="nv">modl</span> <span class="nv">hstream</span><span class="p">)</span>
+      <span class="p">(</span><span class="nf">-&gt;DoubleTREngine</span> <span class="nv">handle</span> <span class="nv">modl</span> <span class="nv">hstream</span><span class="p">)</span> <span class="p">(</span><span class="nf">-&gt;DoubleSYEngine</span> <span class="nv">handle</span> <span class="nv">modl</span> <span class="nv">hstream</span><span class="p">))))))</span>
+
+  <span class="p">(</span><span class="kd">defn </span><span class="nv">cublas-int</span> <span class="p">[</span><span class="nv">ctx</span> <span class="nv">hstream</span><span class="p">]</span>
+    <span class="p">(</span><span class="nf">in-context</span>
+     <span class="nv">ctx</span>
+     <span class="p">(</span><span class="nf">with-release</span>
+       <span class="p">[</span><span class="nv">prog</span> <span class="p">(</span><span class="nf">compile!</span> <span class="p">(</span><span class="nf">program</span> <span class="nv">integer-src</span><span class="p">)</span>
+               <span class="p">[</span><span class="s">&quot;-DNUMBER=int&quot;</span> <span class="s">&quot;-use_fast_math&quot;</span> <span class="s">&quot;-default-device&quot;</span><span class="p">])]</span>
+       <span class="p">(</span><span class="nf">let-release</span> <span class="p">[</span><span class="nv">modl</span> <span class="p">(</span><span class="nf">module</span> <span class="nv">prog</span><span class="p">)</span>
+             <span class="nv">handle</span> <span class="p">(</span><span class="nf">cublas-handle</span> <span class="nv">hstream</span><span class="p">)</span>
+             <span class="nv">hstream</span> <span class="p">(</span><span class="nf">get-cublas-stream</span> <span class="nv">handle</span><span class="p">)]</span>
+     <span class="p">(</span><span class="nf">-&gt;CUFactory</span> <span class="nv">modl</span> <span class="nv">hstream</span> <span class="p">(</span><span class="nf">cu-int-accessor</span> <span class="p">(</span><span class="nf">current-context</span><span class="p">)</span> <span class="nv">hstream</span><span class="p">)</span> <span class="nv">native-int</span>
+              <span class="p">(</span><span class="nf">-&gt;IntegerVectorEngine</span> <span class="nv">handle</span> <span class="nv">modl</span> <span class="nv">hstream</span><span class="p">)</span> <span class="nv">nil</span> <span class="nv">nil</span> <span class="nv">nil</span><span class="p">))))))</span>
+</code></pre></div>
+
+<p>At the <code>compile!</code> function call, we can see that the <code>program</code> function requires the concatenate sources, and the headers as map. The second argument to <code>compile!</code> are the arguments to <code>nvcc</code> (or more precisely the nvidia compiler).</p>
                 
               
               
