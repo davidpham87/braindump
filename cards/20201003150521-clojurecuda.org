@@ -90,3 +90,9 @@ At the =compile!= function call, we can see that the =program= function
 requires the concatenate sources, and the headers as map. The second argument
 to =compile!= are the arguments to =nvcc= (or more precisely the nvidia
 compiler).
+
+** Java, C++ and JNA
+
+   When we want to leverage other's code, we need to create bridge between C++
+   and Java. One typical is to pass custom =struct=. To solve this we could use
+   jna.

@@ -879,6 +879,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#java-c-and-jna" class="md-nav__link">
+    Java, C++ and JNA
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -894,6 +901,18 @@
   <li class="md-nav__item">
     <a href="../20201003214304-clojurecl/" title="clojurecl" class="md-nav__link">
       clojurecl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20201011155722-jna/" title="JNA" class="md-nav__link">
+      JNA
     </a>
   </li>
 
@@ -1050,6 +1069,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#java-c-and-jna" class="md-nav__link">
+    Java, C++ and JNA
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1132,6 +1158,8 @@
 </code></pre></div>
 
 <p>At the <code>compile!</code> function call, we can see that the <code>program</code> function requires the concatenate sources, and the headers as map. The second argument to <code>compile!</code> are the arguments to <code>nvcc</code> (or more precisely the nvidia compiler).</p>
+<h2 id="java-c-and-jna">Java, C++ and JNA<a class="headerlink" href="#java-c-and-jna" title="Permanent link">&para;</a></h2>
+<p>When we want to leverage other&rsquo;s code, we need to create bridge between C++ and Java. One typical is to pass custom <code>struct</code>. To solve this we could use jna.</p>
                 
               
               

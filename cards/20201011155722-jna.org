@@ -1,0 +1,64 @@
+#+TITLE: JNA
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: jna
+#+ROAM_TAGS: jna hpc clojure-cuda
+#+DATE: 2020-10-11
+
+* JNA
+
+  Using =tech.jna=, we can link =C= native libraries into Clojure.
+
+  #+begin_src clojure
+    (ns jna
+      (:require [tech.jna :as jna]
+                [tech.jna.base :as base])
+      (:import [java.nio FloatBuffer]
+               [com.sun.jna Native Pointer NativeLibrary]))
+
+    (jna/def-jna-fn "c" memset
+      "Set byte memory to a value"
+      com.sun.jna.Pointer
+      [data identity]
+      [value int]
+      [n-byes jna/size-t])
+
+    (def test-ary (float-array [1 2 3 4]))
+    (vec test-ary)
+    (memset test-ary 0 (* 4 Float/BYTES))
+    (vec test-ary)
+
+    (FloatBuffer/wrap test-ary)
+
+    (def test-ary-buf *1)
+    test-ary-buf
+    (memset test-ary-buf 1 (* 4 (Float/BYTES)))
+    (vec test-ary)
+
+    (defn float-ptr->vec [ptr n-floats]
+      (->> (range n-floats)
+           (mapv #(.getFloat ptr (* % Float/BYTES)))))
+
+    (def test-ptr (-> (Native/malloc (* 4 Float/BYTES))
+                      (Pointer.)))
+
+    test-ptr
+
+    (float-ptr->vec test-ptr 4)
+
+    (memset test-ptr 0 (* 4 Float/BYTES))
+    (float-ptr->vec test-ptr 4)
+  #+end_src
+
+
+  The following function is useful for interactive programming to reload native
+  libraries.
+
+  #+begin_src clojure
+    (defn reload!
+      "Reload a shared library."
+      [libname]
+      (when-let [native-lib (get @base/*loaded-libraries* libname)]
+        (.dispose native-lib)
+        (swap! base/*loaded-libraries* dissoc libname)
+        (base/do-load-library libname)))
+  #+end_src
