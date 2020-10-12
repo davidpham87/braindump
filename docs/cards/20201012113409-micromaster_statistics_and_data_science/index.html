@@ -1,0 +1,1307 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.4">
+    
+    
+      
+        <title>Probability and Statistics - David's Brain Dump</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4007cdc.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.8435c73a.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CSource+Sans+Pro&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Sans Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#probability-and-statistics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="David's Brain Dump" class="md-header-nav__button md-logo" aria-label="David's Brain Dump">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            David's Brain Dump
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Probability and Statistics
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="David's Brain Dump" class="md-nav__button md-logo" aria-label="David's Brain Dump">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    David's Brain Dump
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Why?" class="md-nav__link">
+      Why?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../todo/" title="TOOD List" class="md-nav__link">
+      TOOD List
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Blog
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Blog" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20200502171331-first_blog_ticket/" title="First blog ticket" class="md-nav__link">
+      First blog ticket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Decks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Decks" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Decks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../decks/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../decks/clojure/" title="Clojure" class="md-nav__link">
+      Clojure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Cards
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Cards" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Cards
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430141226-life_in_dynamic_typing/" title="Life In Dynamic Typing" class="md-nav__link">
+      Life In Dynamic Typing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430141609-david_nolen/" title="David Nolen" class="md-nav__link">
+      David Nolen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430153912-ethz/" title="ETHZ" class="md-nav__link">
+      ETHZ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154352-cli_arguments/" title="CLI Arguments" class="md-nav__link">
+      CLI Arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
+      Multiple environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430154647-shadow_cljs/" title="shadow-cljs" class="md-nav__link">
+      shadow-cljs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155438-mastering_clojure_macro/" title="Mastering Clojure Macro" class="md-nav__link">
+      Mastering Clojure Macro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155637-applied_clojure/" title="Applied Clojure" class="md-nav__link">
+      Applied Clojure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430155819-core_async/" title="core.async" class="md-nav__link">
+      core.async
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430160432-clojure_for_the_brave_and_the_true/" title="Clojure for the brave and the true" class="md-nav__link">
+      Clojure for the brave and the true
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430180442-org_mode/" title="Org mode" class="md-nav__link">
+      Org mode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430190921-design/" title="Design" class="md-nav__link">
+      Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200430235013-specs/" title="Specs" class="md-nav__link">
+      Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200501163355-goals/" title="Goals" class="md-nav__link">
+      Goals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200501201607-quotes/" title="Quotes" class="md-nav__link">
+      Quotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200502122138-simple_made_easy/" title="Simple Made Easy and Simplicity Matters" class="md-nav__link">
+      Simple Made Easy and Simplicity Matters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200503165952-materiala/" title="Materiala" class="md-nav__link">
+      Materiala
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200503222619-org_roam_clj/" title="org-roam-clj" class="md-nav__link">
+      org-roam-clj
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200504204808-why_clojure/" title="Why Clojure?" class="md-nav__link">
+      Why Clojure?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200504212017-edn_and_transit/" title="edn and transit" class="md-nav__link">
+      edn and transit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200504213118-effective_programs_10_years_of_clojure/" title="Effective Programs - 10 years of clojure" class="md-nav__link">
+      Effective Programs - 10 years of clojure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200504213225-rich_hickey/" title="Rich Hickey" class="md-nav__link">
+      Rich Hickey
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505093126-multipass/" title="Multipass" class="md-nav__link">
+      Multipass
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505093245-ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505111243-learning_tips/" title="Learning tips" class="md-nav__link">
+      Learning tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505112138-clojure_reducers/" title="Clojure Reducers" class="md-nav__link">
+      Clojure Reducers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505112918-nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505113402-high_performance_clojurescript/" title="High Performance Clojurescript" class="md-nav__link">
+      High Performance Clojurescript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505124708-potemkin/" title="Potemkin" class="md-nav__link">
+      Potemkin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505124946-clj_toolkit/" title="clj-toolkit" class="md-nav__link">
+      clj-toolkit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505125105-medley/" title="medley" class="md-nav__link">
+      medley
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200505164639-cider/" title="cider" class="md-nav__link">
+      cider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200506224558-enlive/" title="Enlive" class="md-nav__link">
+      Enlive
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200514104809-clojure_debug/" title="Clojure Debug" class="md-nav__link">
+      Clojure Debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200514114627-tools_deps/" title="tools.deps" class="md-nav__link">
+      tools.deps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200516171955-generative_testing/" title="Generative Testing" class="md-nav__link">
+      Generative Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200516210112-john_hughes/" title="John Hughes" class="md-nav__link">
+      John Hughes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200517205339-clojure_zippers/" title="Clojure Zippers" class="md-nav__link">
+      Clojure Zippers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200517212936-postmortem/" title="Postmortem" class="md-nav__link">
+      Postmortem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200521223909-computer_science_interview/" title="Computer Science Interview" class="md-nav__link">
+      Computer Science Interview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200521232124-cljss/" title="cljss" class="md-nav__link">
+      cljss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200524185034-clojure_functional_programming_principles/" title="Clojure Functional Programming Principles" class="md-nav__link">
+      Clojure Functional Programming Principles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../202005291001-starting_scripting_clojure/" title="Starting Scripting Clojure" class="md-nav__link">
+      Starting Scripting Clojure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200823205222-datascript/" title="datascript" class="md-nav__link">
+      datascript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20201003150521-clojurecuda/" title="ClojureCuda" class="md-nav__link">
+      ClojureCuda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20201003214304-clojurecl/" title="clojurecl" class="md-nav__link">
+      clojurecl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20201011155722-jna/" title="JNA" class="md-nav__link">
+      JNA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Probability and Statistics" class="md-nav__link md-nav__link--active">
+      Probability and Statistics
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
+      Continuing Education
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpp/" title="C/C++" class="md-nav__link">
+      C/C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devops/" title="Docker and Kubernete" class="md-nav__link">
+      Docker and Kubernete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r_cran/" title="R" class="md-nav__link">
+      R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../readings/" title="Books" class="md-nav__link">
+      Books
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unix/" title="Unix command learning" class="md-nav__link">
+      Unix command learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../website/" title="Website" class="md-nav__link">
+      Website
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="probability-and-statistics">Probability and Statistics<a class="headerlink" href="#probability-and-statistics" title="Permanent link">&para;</a></h1>
+<p>\footnotesize</p>
+<p>\begin{multicols*}{4}</p>
+<p>\paragraph{Partitions}
+Given <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> elements, and <span><span class="MathJax_Preview">k_i \in \mathbb{N}, i=1, \dots, r</span><script type="math/tex">k_i \in \mathbb{N}, i=1, \dots, r</script></span> with <span><span class="MathJax_Preview">\sum_i k_i = n</span><script type="math/tex">\sum_i k_i = n</script></span>, the number
+of partition of the set into <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> disjoint subset with the <span><span class="MathJax_Preview">i^{th}</span><script type="math/tex">i^{th}</script></span> subset
+containing exactly <span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span> elements is equal to
+\begin{align<em>}
+  \binom{n}{k_1 \cdots k_r} = \frac{n!}{k_1!\dots k_r!}.
+\end{align</em>}</p>
+<p>\paragraph{Transformation}
+Let <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> be a continuous r.v and <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> monotonoic when <span><span class="MathJax_Preview">f_X(x) &gt; 0</span><script type="math/tex">f_X(x) > 0</script></span> then for
+<span><span class="MathJax_Preview">Y=g(X)</span><script type="math/tex">Y=g(X)</script></span>, <span><span class="MathJax_Preview">f_y(y) = f_X(h(y))\vert \partial_yh(y)\vert</span><script type="math/tex">f_y(y) = f_X(h(y))\vert \partial_yh(y)\vert</script></span>, where <span><span class="MathJax_Preview">h = g^-1</span><script type="math/tex">h = g^-1</script></span> where <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>
+is monotonic. If <span><span class="MathJax_Preview">Z=X+Y</span><script type="math/tex">Z=X+Y</script></span> then <span><span class="MathJax_Preview">f_z(z) = \int f_X(x)f_Y(z-x) dz</span><script type="math/tex">f_z(z) = \int f_X(x)f_Y(z-x) dz</script></span>.</p>
+<p>\paragraph{Expectation}
+\begin{align<em>}
+Eg(\vec X) &amp; = \sum_{\vec x} g(\vec x) p_{\vec X}(\vec x), \quad g: \mathbb{R}^n \to \mathbb{R} \
+Eg(\vec X) &amp; = \int_{\mathbb{R}^n} g(\vec x) f_{\vec X}(\vec x) d\vec x
+\end{align</em>}</p>
+<p>\paragraph{Dependence}
+<span><span class="MathJax_Preview">Cov(X,Y)</span><script type="math/tex">Cov(X,Y)</script></span> is bilinear, and <span><span class="MathJax_Preview">Cov(X,Y) = E[(X-\mu)(Y-\nu)] = EXY -
+EXEY</span><script type="math/tex">Cov(X,Y) = E[(X-\mu)(Y-\nu)] = EXY -
+EXEY</script></span>. <span><span class="MathJax_Preview">\rho_{X,Y}=Cov(x,y)/\sigma_x\sigma_y</span><script type="math/tex">\rho_{X,Y}=Cov(x,y)/\sigma_x\sigma_y</script></span> The total variance is
+<span><span class="MathJax_Preview">Var(Y) = E[Var(Y\vert X)] + Var(E[Y\vert X])</span><script type="math/tex">Var(Y) = E[Var(Y\vert X)] + Var(E[Y\vert X])</script></span>. If <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> random,
+<span><span class="MathJax_Preview">X_1, \dots, X_N</span><script type="math/tex">X_1, \dots, X_N</script></span> are iid, then
+\begin{align<em>}
+  EY &amp; = EN \cdot EX \
+  Var(Y) &amp; = EN \cdot Var(X) + (EX)^2 Var(N)
+\end{align</em>}</p>
+<p>Iterated expectetation <span><span class="MathJax_Preview">E[E[X \vert Y] = E[X]</span><script type="math/tex">E[E[X \vert Y] = E[X]</script></span>. <span><span class="MathJax_Preview">E[X\vert Y]</span><script type="math/tex">E[X\vert Y]</script></span> is the rv that
+take value <span><span class="MathJax_Preview">E[X \vert Y = y]</span><script type="math/tex">E[X \vert Y = y]</script></span> whenever <span><span class="MathJax_Preview">Y=y</span><script type="math/tex">Y=y</script></span>.</p>
+<p>\paragraph{Conditional PMF}
+\begin{align<em>}
+p_{X\vert Y}(x \vert y) &amp; = \frac{p_{X,Y}(x,y)}{p_Y(y)} \
+f_{X\vert Y}(x \vert y) &amp; = \frac{f_{X,Y}{X,Y}(x,y)}{f_Y(y)}
+\end{align</em>}</p>
+<p>\paragraph{Markov-chain}
+\emph{recurrent} (come back), \emph{transient} (never come back),
+GCD of number of steps for returning is $ &gt;1 $, otherwise \emph{aperiodic}.
+\emph{Transition matrix} <span><span class="MathJax_Preview">Q^1</span><script type="math/tex">Q^1</script></span>, where <span><span class="MathJax_Preview">q_{ij} = P(X_{n+1}=i\vert X_n =
+i)</span><script type="math/tex">q_{ij} = P(X_{n+1}=i\vert X_n =
+i)</script></span>. <span><span class="MathJax_Preview">Q^m</span><script type="math/tex">Q^m</script></span> gives the probability for <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> steps. If <span><span class="MathJax_Preview">X_0 \sim \vec p</span><script type="math/tex">X_0 \sim \vec p</script></span>, then
+<span><span class="MathJax_Preview">X_n \sim \vec{p} Q^n</span><script type="math/tex">X_n \sim \vec{p} Q^n</script></span>. \emph{Stationary} is <span><span class="MathJax_Preview">\vec sQ =  \vec s</span><script type="math/tex">\vec sQ =  \vec s</script></span>.</p>
+<p>\paragraph{Inequalities}
+\begin{enumerate}
+\item <span><span class="MathJax_Preview">\vert EXY \vert^2 \leq EX^2 EY^2</span><script type="math/tex">\vert EXY \vert^2 \leq EX^2 EY^2</script></span> (Cauchy-Schwarz)
+\item <span><span class="MathJax_Preview">P(X \geq a) \leq E\vert X \vert / a</span><script type="math/tex">P(X \geq a) \leq E\vert X \vert / a</script></span>, <span><span class="MathJax_Preview">a&gt; 0</span><script type="math/tex">a> 0</script></span>. (Markov)
+\item <span><span class="MathJax_Preview">P(\vert X-\mu \vert \geq a) \leq \sigma^2/a^2</span><script type="math/tex">P(\vert X-\mu \vert \geq a) \leq \sigma^2/a^2</script></span>. (Chebyshev)
+\item <span><span class="MathJax_Preview">g(EX) \leq Eg(X)</span><script type="math/tex">g(EX) \leq Eg(X)</script></span> if <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> convex, reverse if <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> concave. (Jensen)
+\end{enumerate}
+\paragraph{Convergence}
+<span><span class="MathJax_Preview">(Y_n)_{n=1}^\infty \to Y</span><script type="math/tex">(Y_n)_{n=1}^\infty \to Y</script></span> in probability if
+<span><span class="MathJax_Preview">P(\vert Y_n - Y \vert &lt; \epsilon) \to 1</span><script type="math/tex">P(\vert Y_n - Y \vert < \epsilon) \to 1</script></span>, <span><span class="MathJax_Preview">n \to \infty</span><script type="math/tex">n \to \infty</script></span>,
+<span><span class="MathJax_Preview">\forall \epsilon &gt; 0</span><script type="math/tex">\forall \epsilon > 0</script></span>, <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> a rv. \emph{Slutsky}, if <span><span class="MathJax_Preview">X_n \to a</span><script type="math/tex">X_n \to a</script></span>, <span><span class="MathJax_Preview">\Y_n \to b</span><script type="math/tex">\Y_n \to b</script></span>
+in prob. (constants), then <span><span class="MathJax_Preview">X_n+Y_n \to a+b</span><script type="math/tex">X_n+Y_n \to a+b</script></span>, if <span><span class="MathJax_Preview">g\in C^0(\mathbb{R})</span><script type="math/tex">g\in C^0(\mathbb{R})</script></span>,
+<span><span class="MathJax_Preview">g(X_n) \to g(a)</span><script type="math/tex">g(X_n) \to g(a)</script></span>. <span><span class="MathJax_Preview">EX_n</span><script type="math/tex">EX_n</script></span> does not always converge to <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>.</p>
+<p>WLLN. <span><span class="MathJax_Preview">(X_i)_{i=1}^\infty</span><script type="math/tex">(X_i)_{i=1}^\infty</script></span> i.i.d, <span><span class="MathJax_Preview">EX_i = \mu</span><script type="math/tex">EX_i = \mu</script></span>,
+<span><span class="MathJax_Preview">X \in L^2(\mathbb{R})</span><script type="math/tex">X \in L^2(\mathbb{R})</script></span>, then <span><span class="MathJax_Preview">\forall \epsilon &gt; 0</span><script type="math/tex">\forall \epsilon > 0</script></span>
+\begin{align<em>}
+\lim_{n\to\infty} P(\vert \bar X_n - \mu \vert &lt; \epsilon) = 1
+\end{align</em>}
+CLT. Same assumptions as wlln. Then <span><span class="MathJax_Preview">Var(X_i) = \sigma^2</span><script type="math/tex">Var(X_i) = \sigma^2</script></span>, and
+<span><span class="MathJax_Preview">Z_n = \sum_{i=1}^n (X_i-\mu)/(\sigma\sqrt n)</span><script type="math/tex">Z_n = \sum_{i=1}^n (X_i-\mu)/(\sigma\sqrt n)</script></span>, then
+\begin{align<em>}
+\lim_{n\to\infty} F_{Z_n}(z)\to F_z(z), \quad Z \sim \mathcal{N}(0, 1).
+\end{align</em>}
+De Moivre-Laplace Approximation to Binomial
+\begin{align<em>}
+  P(X=i) = P\Big(i-\frac{1}{2} \leq X \leq i + \frac{1}{2}\Big)
+\end{align</em>}
+using CLT to approximate the PMF of <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>.</p>
+<p>\paragraph{Laws}</p>
+<p>Bernouilli: <span><span class="MathJax_Preview">p(k)=\binon{n}{k} p^k (1-p)^{n-k}</span><script type="math/tex">p(k)=\binon{n}{k} p^k (1-p)^{n-k}</script></span>, <span><span class="MathJax_Preview">EX=p</span><script type="math/tex">EX=p</script></span>, <span><span class="MathJax_Preview">Var(X)=np(1-p)</span><script type="math/tex">Var(X)=np(1-p)</script></span>.</p>
+<p>Geometric: <span><span class="MathJax_Preview">p(k) = (1-p)^{k-1}p</span><script type="math/tex">p(k) = (1-p)^{k-1}p</script></span>, <span><span class="MathJax_Preview">EX = p^{-1}</span><script type="math/tex">EX = p^{-1}</script></span>, <span><span class="MathJax_Preview">Var(X)= (1-p)/p^2</span><script type="math/tex">Var(X)= (1-p)/p^2</script></span>.  Let <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>
+be a given a time and let <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> be the first time of success after <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>. Then
+<span><span class="MathJax_Preview">T-n</span><script type="math/tex">T-n</script></span> follows a geometric distribution with parameter <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> and
+<span><span class="MathJax_Preview">T - n \perp X_1, \dots,X_n</span><script type="math/tex">T - n \perp X_1, \dots,X_n</script></span>. Let <span><span class="MathJax_Preview">Y_k = \sum_i=1^k T_k</span><script type="math/tex">Y_k = \sum_i=1^k T_k</script></span>, then <span><span class="MathJax_Preview">EY_k=k/p</span><script type="math/tex">EY_k=k/p</script></span>,
+<span><span class="MathJax_Preview">Var(Y_k)=kp/(1-p)^2</span><script type="math/tex">Var(Y_k)=kp/(1-p)^2</script></span>. PMF is Pascal PMF of order <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>
+\begin{align<em>}
+  p_{Y_k}(t) = \binom{t-1}{k-1}p^k (1-p)^{t-k}, \quad t=k,k+1, \dots
+\end{align</em>}</p>
+<p>Poisson: <span><span class="MathJax_Preview">p(k) = e^{-\lambda} \lambda^k/k!</span><script type="math/tex">p(k) = e^{-\lambda} \lambda^k/k!</script></span>, <span><span class="MathJax_Preview">k=0,1,\dots</span><script type="math/tex">k=0,1,\dots</script></span>. <span><span class="MathJax_Preview">EX=\lambda</span><script type="math/tex">EX=\lambda</script></span>,
+<span><span class="MathJax_Preview">Var(X)=\lambda</span><script type="math/tex">Var(X)=\lambda</script></span>. For a fixed lambda, binomial law converge to poisson with
+<span><span class="MathJax_Preview">p=\lambda/n</span><script type="math/tex">p=\lambda/n</script></span>. So poisson is a good approx if <span><span class="MathJax_Preview">\lambda = np</span><script type="math/tex">\lambda = np</script></span>, <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> large and <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>
+really small.</p>
+<p>Poisson process <span><span class="MathJax_Preview">P(k, \tau)</span><script type="math/tex">P(k, \tau)</script></span> (<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> arrivals, intervals length <span><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>):
+time-homogeneity, independence, small interval probabilities (probabilities are
+<span><span class="MathJax_Preview">O(\tau)</span><script type="math/tex">O(\tau)</script></span>.</p>
+<p>Exponential: <span><span class="MathJax_Preview">f(t) = \lambda \exp(-\lambdat)</span><script type="math/tex">f(t) = \lambda \exp(-\lambdat)</script></span>, <span><span class="MathJax_Preview">EX = 1/\lambda</span><script type="math/tex">EX = 1/\lambda</script></span>,
+<span><span class="MathJax_Preview">Var(X)=1/\lambda^2</span><script type="math/tex">Var(X)=1/\lambda^2</script></span>.</p>
+<p>Poisson is indpendent of paste, waiting time is exponential and indpendent of
+past. <span><span class="MathJax_Preview">k^{th}</span><script type="math/tex">k^{th}</script></span> arrival time is described as the sum of each arrival time and
+has <span><span class="MathJax_Preview">EY_k=k/\lambda</span><script type="math/tex">EY_k=k/\lambda</script></span> and <span><span class="MathJax_Preview">Var(Y_k) = k/\lambda^2</span><script type="math/tex">Var(Y_k) = k/\lambda^2</script></span>. PDF is
+<span><span class="MathJax_Preview">f(y) = \lambda^k y^{k-1} e^{-\lambda y}/(k-1)!</span><script type="math/tex">f(y) = \lambda^k y^{k-1} e^{-\lambda y}/(k-1)!</script></span>.</p>
+<p>\paragraph{Sum of RV}
+If <span><span class="MathJax_Preview">Y = X_1 + \dots + X_N</span><script type="math/tex">Y = X_1 + \dots + X_N</script></span>, then
+\begin{enumerate}
+\item <span><span class="MathJax_Preview">X_i \sim Ber(p)</span><script type="math/tex">X_i \sim Ber(p)</script></span>, <span><span class="MathJax_Preview">N \sim Bin(m, q)</span><script type="math/tex">N \sim Bin(m, q)</script></span>, <span><span class="MathJax_Preview">Y\sim Bin(m, pq)</span><script type="math/tex">Y\sim Bin(m, pq)</script></span>.
+\item <span><span class="MathJax_Preview">X_i \sim Ber(p)</span><script type="math/tex">X_i \sim Ber(p)</script></span>, <span><span class="MathJax_Preview">N \sim Poi(\lambda)</span><script type="math/tex">N \sim Poi(\lambda)</script></span>, <span><span class="MathJax_Preview">Y\sim Poi(\lambda p)</span><script type="math/tex">Y\sim Poi(\lambda p)</script></span>.
+\item <span><span class="MathJax_Preview">X_i \sim Geom(p)</span><script type="math/tex">X_i \sim Geom(p)</script></span>, <span><span class="MathJax_Preview">N \sim Geom(q)</span><script type="math/tex">N \sim Geom(q)</script></span>, <span><span class="MathJax_Preview">Y\sim Geom(pq)</span><script type="math/tex">Y\sim Geom(pq)</script></span>.
+\item <span><span class="MathJax_Preview">X_i \sim Exp(\lambda)</span><script type="math/tex">X_i \sim Exp(\lambda)</script></span>, <span><span class="MathJax_Preview">N \sim Geom(q)</span><script type="math/tex">N \sim Geom(q)</script></span>, <span><span class="MathJax_Preview">Y\sim Exp(\lambda q)</span><script type="math/tex">Y\sim Exp(\lambda q)</script></span>.
+\end{enumerate}</p>
+<p>When two process are poissons, the distribution of the combination of both
+event is a poisson where rates are added (<span><span class="MathJax_Preview">\lambda = \sum_i r_i</span><script type="math/tex">\lambda = \sum_i r_i</script></span>).. Expectation
+time between two events is twice the mean. Each event in a component has a
+probability <span><span class="MathJax_Preview">r_i/\lambda</span><script type="math/tex">r_i/\lambda</script></span>.</p>
+<p>\paragraph{Bayesian Inference} Maximum a posteriori prob. (MAP), Least mean
+squares (LMS), Linear least mean squares (OLS). Bayesian inference:
+\begin{enumerate}
+\item start with a prior <span><span class="MathJax_Preview">f_\Theta</span><script type="math/tex">f_\Theta</script></span> of <span><span class="MathJax_Preview">\Theta</span><script type="math/tex">\Theta</script></span>.
+\item have a model <span><span class="MathJax_Preview">f_{X\vert \Theta}</span><script type="math/tex">f_{X\vert \Theta}</script></span> of the observation <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>.
+\item Update <span><span class="MathJax_Preview">p_{\Theta\vert x}</span><script type="math/tex">p_{\Theta\vert x}</script></span> using Baye's rule.
+\end{enumerate}
+Update rule (adapt for discrete laws).
+\begin{align<em>}
+  f_{\Theta \vert X}(\theta \vert x) =
+  \frac{f_\Theta(\theta) f_{X \vert \Theta}(x \vert \theta)}
+  {\int f_\Theta(\eta) f_{X \vert \Theta}(x \vert \eta) d\eta}
+\end{align</em>}
+MAP:
+<span><span class="MathJax_Preview">\hat\theta = \textrm{argmax}_\theta f_\Theta(\theta)f_{X\vert \Theta}(x\vert
+\theta)</span><script type="math/tex">\hat\theta = \textrm{argmax}_\theta f_\Theta(\theta)f_{X\vert \Theta}(x\vert
+\theta)</script></span> (<span><span class="MathJax_Preview">\hat\theta</span><script type="math/tex">\hat\theta</script></span> maximizes the posterior). If <span><span class="MathJax_Preview">\Theta</span><script type="math/tex">\Theta</script></span> is discrete, the
+MAP minimizes (over all decision rules) the prob. of selecting an incorrect
+hypothesis. Estimator is a function of the data.  Conditional Expectation (LMS)
+sets the <span><span class="MathJax_Preview">\hat \theta = E[\Theta \vert X = x]</span><script type="math/tex">\hat \theta = E[\Theta \vert X = x]</script></span>. Hypothesis testing: MAP rules
+selects hypothesis which has the largest a posteriori distribution. The MAP
+rule minimizes the probability of selecting an incorrect hypothesis for any
+observation value x, as well as the probability of error over all decision
+rules.</p>
+<p>Estimators: <span><span class="MathJax_Preview">\hat\theta = E\Theta</span><script type="math/tex">\hat\theta = E\Theta</script></span> minimizes the equation <span><span class="MathJax_Preview">E(\Theta-\theta)^2</span><script type="math/tex">E(\Theta-\theta)^2</script></span>
+(idem for <span><span class="MathJax_Preview">E[\dot \vert X = x]</span><script type="math/tex">E[\dot \vert X = x]</script></span>). <span><span class="MathJax_Preview">\hat g(X) = E[\Theta \vert X]</span><script type="math/tex">\hat g(X) = E[\Theta \vert X]</script></span> minimizes
+<span><span class="MathJax_Preview">E(\Theta - g(X))^2</span><script type="math/tex">E(\Theta - g(X))^2</script></span> over all estimators. <span><span class="MathJax_Preview">\hat g(X)</span><script type="math/tex">\hat g(X)</script></span> is unbiased [0
+(un)conditional mean]. The error $\tilde \Theta = \hat \Theta - \theta $
+is uncorrelated with the estimates. The variance of <span><span class="MathJax_Preview">\Theta</span><script type="math/tex">\Theta</script></span> can be decomposed as
+<span><span class="MathJax_Preview">Var(\hat \Theta) + Var(\tilde \Theta)</span><script type="math/tex">Var(\hat \Theta) + Var(\tilde \Theta)</script></span>. The linear LMS is given by
+\begin{align<em>}
+  \hat \Theta = E \Theta + \frac{cov(\Theta, X)}{var(X)} (X - EX)
+\end{align</em>}
+with mse equal to $(1- \rho^2)\sigma_\Theta^2 $,
+<span><span class="MathJax_Preview">\rho = cov(\Theta, X)/(\sigma_\Theta\sigma_X)</span><script type="math/tex">\rho = cov(\Theta, X)/(\sigma_\Theta\sigma_X)</script></span>.</p>
+<p>\paragraph{Classical Statistical Inferance}
+Estimator error $\tilde \Theta = \hat \Theta - \theta $, bias
+$E \tilde \Theta $. Expected value, variance and bias depends on <span><span class="MathJax_Preview">\hat \Theta</span><script type="math/tex">\hat \Theta</script></span>
+while estimation error also <span><span class="MathJax_Preview">X_1 \dots, X_n</span><script type="math/tex">X_1 \dots, X_n</script></span>. Unbiased if bias is 0 for all
+<span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, asymptotically unbiased if <span><span class="MathJax_Preview">E\hat \Theta_n \to \theta</span><script type="math/tex">E\hat \Theta_n \to \theta</script></span>, for all
+<span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>. An estimator is consistent if the sequence <span><span class="MathJax_Preview">\hat \Theta_n</span><script type="math/tex">\hat \Theta_n</script></span> converge
+to the true parameter <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> for all possible <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>.</p>
+<p>MLE <span><span class="MathJax_Preview">\hat \theta = argmax h(f_X(x \vert \theta))</span><script type="math/tex">\hat \theta = argmax h(f_X(x \vert \theta))</script></span>, where <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> is bijective function
+(e.g. <span><span class="MathJax_Preview">\log</span><script type="math/tex">\log</script></span>). Under some condition MLE is consistent and asymptotically
+normal. <span><span class="MathJax_Preview">\bar X_n</span><script type="math/tex">\bar X_n</script></span> is unbiased for <span><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> and variance <span><span class="MathJax_Preview">\sigma^2/n</span><script type="math/tex">\sigma^2/n</script></span>. Variance
+estimator <span><span class="MathJax_Preview">\hat S^2_n = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar X_n)^2</span><script type="math/tex">\hat S^2_n = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar X_n)^2</script></span> is
+unbiased.</p>
+<p>Confidence Interval of <span><span class="MathJax_Preview">1-\alpha</span><script type="math/tex">1-\alpha</script></span> such that
+\begin{align<em>}
+P(\Theta \in [\hat \Theta^-_n, \hat \Theta^+_n])) \geq 1-\alpha, \quad \forall \textrm{ valid } \theta.
+\end{align</em>}
+OLS: <span><span class="MathJax_Preview">\beta_1 = \sigma_{xy}/\sigma_x</span><script type="math/tex">\beta_1 = \sigma_{xy}/\sigma_x</script></span>, <span><span class="MathJax_Preview">\beta_0 = \bar y - \beta_1 \bar x</span><script type="math/tex">\beta_0 = \bar y - \beta_1 \bar x</script></span>,
+with <span><span class="MathJax_Preview">\sigma_x</span><script type="math/tex">\sigma_x</script></span> begin the biased estimator of the standard deviation. Bayesian LS assume
+\begin{itemize}
+\item <span><span class="MathJax_Preview">Y_i = \Theta_0 + \Theta_1 x_i + W_i</span><script type="math/tex">Y_i = \Theta_0 + \Theta_1 x_i + W_i</script></span>
+\item <span><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> are known constants, <span><span class="MathJax_Preview">\Theta_0, \Theta_1, W_j</span><script type="math/tex">\Theta_0, \Theta_1, W_j</script></span> are normal independent.
+\item <span><span class="MathJax_Preview">E\Theta_0 = E\Theta_1 = 0</span><script type="math/tex">E\Theta_0 = E\Theta_1 = 0</script></span> and variance <span><span class="MathJax_Preview">\Theta_i = \sigma_i^2</span><script type="math/tex">\Theta_i = \sigma_i^2</script></span>, <span><span class="MathJax_Preview">i=1,2</span><script type="math/tex">i=1,2</script></span>, <span><span class="MathJax_Preview">W_j \sim \mathcal{N}(0, \sigma^2)</span><script type="math/tex">W_j \sim \mathcal{N}(0, \sigma^2)</script></span>.
+\end{itemize}</p>
+<p>Estimates are</p>
+<div>
+<div class="MathJax_Preview">\begin{align*}
+  \hat \theta_1 &amp; = \frac{\sigma_1^2}{\sigma^2+\sigma_1^2\sum_i (x_i - \bar x)²}
+  \sum_{i=1}^n (x_i -\bar x) (y_i - \bar y) \\
+  \hat \theta_0 &amp; = \frac{n\sigma_0^2}{\sigma^2+n\sigma_0^2} (\bar y - \hat \theta_1 \bar x)
+\end{align*}</div>
+<script type="math/tex; mode=display">\begin{align*}
+  \hat \theta_1 & = \frac{\sigma_1^2}{\sigma^2+\sigma_1^2\sum_i (x_i - \bar x)²}
+  \sum_{i=1}^n (x_i -\bar x) (y_i - \bar y) \\
+  \hat \theta_0 & = \frac{n\sigma_0^2}{\sigma^2+n\sigma_0^2} (\bar y - \hat \theta_1 \bar x)
+\end{align*}</script>
+</div>
+<p>Likelihood ratio test: start with a target value <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> (5\%) for false
+rejection prob. Choose <span><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span> such that <span><span class="MathJax_Preview">P(L(X)&gt;\xi \vert H_0) = \alpha</span><script type="math/tex">P(L(X)>\xi \vert H_0) = \alpha</script></span>. Once
+the value <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> of X is observed, reject <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> is <span><span class="MathJax_Preview">L(x) &gt; \xi</span><script type="math/tex">L(x) > \xi</script></span>. Neyman-Person
+Lemma, given <span><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span>, we have <span><span class="MathJax_Preview">P(L(X)&gt;\xi \vert H_0) = \alpha</span><script type="math/tex">P(L(X)>\xi \vert H_0) = \alpha</script></span> and
+<span><span class="MathJax_Preview">P(L(X)&gt;\xi \vert H_1) = \beta</span><script type="math/tex">P(L(X)>\xi \vert H_1) = \beta</script></span>. Suppose that some other test, with rejection
+region <span><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>, achieves a smaller or equal false rejection prob:
+<span><span class="MathJax_Preview">P(X\in R \vert H_0) \leq a</span><script type="math/tex">P(X\in R \vert H_0) \leq a</script></span>. Then <span><span class="MathJax_Preview">P(X \notin R \vert H_1) \geq \beta</span><script type="math/tex">P(X \notin R \vert H_1) \geq \beta</script></span>, with
+strict inequality, when <span><span class="MathJax_Preview">P(X \in R \vert H_0) &lt; \alpha</span><script type="math/tex">P(X \in R \vert H_0) < \alpha</script></span>.</p>
+<p>Significance testing method: choose a test statistic, find the shape of
+rejection region given <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span>, choose the significance level, and the critical
+value <span><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span> so that prob. of false rejection is around <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>. This sets the
+rejection region. Reject hypothesis <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> if the observed test statistics falls
+in the rejection region.</p>
+<p>\end{multicols*}</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../20201011155722-jna/" title="JNA" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JNA
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../continuing_education/" title="Continuing Education" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Continuing Education
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (C) 2020 David Pham
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.83fe6e3c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

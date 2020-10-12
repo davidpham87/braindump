@@ -62,3 +62,8 @@
         (swap! base/*loaded-libraries* dissoc libname)
         (base/do-load-library libname)))
   #+end_src
+
+** Links
+
+  - https://github.com/techascent/tech.jna
+  - https://techascent.com/blog/jna-simplifies-your-life.html
