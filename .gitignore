@@ -1,3 +1,5 @@
 .cpcache/*
 .shadow-cljs/  
 org-roam.db
+*.tex
+*.pdf

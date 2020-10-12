@@ -13,7 +13,7 @@
 #+OPTIONS: author:nil
 #+OPTIONS: date:nil
 
-* Probability and Statistics
+# * Probability and Statistics
 
 \footnotesize
 
@@ -30,7 +30,7 @@ containing exactly $k_i$ elements is equal to
 
 \paragraph{Transformation}
 Let $X$ be a continuous r.v and $g$ monotonoic when $f_X(x) > 0$ then for
-$Y=g(X)$, $f_y(y) = f_X(h(y))\vert \partial_yh(y)\vert$, where $h = g^-1$ where $g$
+$Y=g(X)$, $f_y(y) = f_X(h(y))\vert \partial_yh(y)\vert$, where $h = g^{-1}$ where $g$
 is monotonic. If $Z=X+Y$ then $f_z(z) = \int f_X(x)f_Y(z-x) dz$.
 
 \paragraph{Expectation}
@@ -185,7 +185,7 @@ $\theta$, asymptotically unbiased if $E\hat \Theta_n \to \theta$, for all
 $\theta$. An estimator is consistent if the sequence $\hat \Theta_n$ converge
 to the true parameter $\theta$ for all possible $\theta$.
 
-MLE $\hat \theta = argmax h(f_X(x \vert \theta))$, where $h$ is bijective function
+MLE $\hat \theta = \textrm{argmax}_\theta h(f_X(x \vert \theta))$, where $h$ is bijective function
 (e.g. $\log$). Under some condition MLE is consistent and asymptotically
 normal. $\bar X_n$ is unbiased for $\mu$ and variance $\sigma^2/n$. Variance
 estimator $\hat S^2_n = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar X_n)^2$ is
