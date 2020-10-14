@@ -352,11 +352,17 @@ support of $P_\theta$ does not depends on $\theta^*$, $\theta^*$ is not on the
 boundaries of $\Theta$, $I(\theta)$ is invertible on $B_\delta(\theta)$, and
 some other technical conditions, then as $n\to \infty$
 \begin{align*}
-  \hat \theta_n^{MLE} & \to \theta^*, w.r.t P_{\theta^*} \\
+  \hat \theta_n^{MLE} & \to \theta^*, \textrm{in} \ P\\
   \sqrt n (\hat \theta_n^{MLE} - \theta^*) & \to \mathcal{N}_d\{\vec{0},
-  I^{-1}(\theta)\}, w.r.t P_{\theta^*}
+  I^{-1}(\theta)\}, \textrm{in} \ (d)
 \end{align*}
+w.r.t $P_{\theta^*}$.
 
+\paragraph{Methods of Moments}
+$m_k(\theta) = E_\theta[X_1^k]$. Empirical moments are the plug in averages
+$\hat m_k = \bar{X_n^k}$. From LLN, $\hat m_K \to m_k(\theta)$ in $P$ or
+a.s. Then the method of moments identifies $\theta$ by solving $\hat\theta^{MM}
+=M^1(\hat m_1, \dots, \hat m_k)$.
 
 \end{multicols*}
 #+end_export
