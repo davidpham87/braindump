@@ -15,7 +15,7 @@
 
 # * Probability and Statistics
 
-\footnotesize
+\small
 
 #+begin_export latex
 \begin{multicols*}{4}
@@ -72,11 +72,14 @@ $X_n \sim \vec{p} Q^n$. \emph{Stationary} is $\vec sQ =  \vec s$.
 \item $P(X \geq a) \leq E\vert X \vert / a$, $a> 0$. (Markov)
 \item $P(\vert X-\mu \vert \geq a) \leq \sigma^2/a^2$. (Chebyshev)
 \item $g(EX) \leq Eg(X)$ if $g$ convex, reverse if $g$ concave. (Jensen)
+\item $P(\vert X-\mu \vert \geq \epsilon) \leq 2exp(-2n\epsilon^2/(b-a)^2)$, $X
+  \in [a,b]$, $\forall \epsilon >0$. Replace with $\epsilon = c/\sqrt(n)$ (Hoeffding).
 \end{enumerate}
+
 \paragraph{Convergence}
 $(Y_n)_{n=1}^\infty \to Y$ in probability if
 $P(\vert Y_n - Y \vert < \epsilon) \to 1$, $n \to \infty$,
-$\forall \epsilon > 0$, $Y$ a rv. \emph{Slutsky}, if $X_n \to a$, $\Y_n \to b$
+$\forall \epsilon > 0$, $Y$ a rv. If $X_n \to a$, $\Y_n \to b$
 in prob. (constants), then $X_n+Y_n \to a+b$, if $g\in C^0(\mathbb{R})$,
 $g(X_n) \to g(a)$. $EX_n$ does not always converge to $a$.
 
@@ -85,16 +88,38 @@ $X \in L^2(\mathbb{R})$, then $\forall \epsilon > 0$
 \begin{align*}
 \lim_{n\to\infty} P(\vert \bar X_n - \mu \vert < \epsilon) = 1
 \end{align*}
+
+
 CLT. Same assumptions as wlln. Then $Var(X_i) = \sigma^2$, and
 $Z_n = \sum_{i=1}^n (X_i-\mu)/(\sigma\sqrt n)$, then
 \begin{align*}
 \lim_{n\to\infty} F_{Z_n}(z)\to F_z(z), \quad Z \sim \mathcal{N}(0, 1).
 \end{align*}
+
+
 De Moivre-Laplace Approximation to Binomial
 \begin{align*}
   P(X=i) = P\Big(i-\frac{1}{2} \leq X \leq i + \frac{1}{2}\Big)
 \end{align*}
 using CLT to approximate the PMF of $X$.
+
+Almost surely $T_n \to T$ \emph{a.s} if $P(\{\omega: T_n(\omega) \to T(w), n \to \infty\}) = 1$.
+
+Convergence in distribution: $T_n \to T$ in $(d)$, if $F_{T_n}(z) \to
+F_T(z)$ for all $z$ that are continuous, equivalently $E[f(T_n)] \to E[f(T)]$
+for all continuous bounded function $f$.
+
+Properties: $(T_n)_{n\geq 1}$ converge $a.s$, $\Rightarrow$ in $P$, and limit
+are equal a.s. Convergence in $P$ implies convergence in $(d)$. Convergence in
+distribution implies convergence of probability if the limit has a density.
+
+Linear and multiplication and division holds in the limit for a.s. conv and
+prob. conv. (division, denominator is not 0). \emph{Slutsky}: if $T_n \to T$ in
+$(d)$, and $U_n \to u$ in $P$, and $u$ constant, then $T_n + U_n \to T + u$ in
+$(d)$, $T_nU_n \to Tu$ in $(d)$, and $u\neq0$, $T_n/U_n \to T/u$ in $(d)$.
+
+Continuous mapping theorem: for all type of convergence, $T_n \to T \Rightarrow
+f(T_n) \to f(T)$, when $f \in C^0(\mathbb{R})$.
 
 \paragraph{Laws}
 
@@ -165,7 +190,7 @@ observation value x, as well as the probability of error over all decision
 rules.
 
 Estimators: $\hat\theta = E\Theta$ minimizes the equation $E(\Theta-\theta)^2$
-(idem for $E[\dot \vert X = x]$). $\hat g(X) = E[\Theta \vert X]$ minimizes
+(idem for $E[\,\cdot\, \vert X = x]$). $\hat g(X) = E[\Theta \vert X]$ minimizes
 $E(\Theta - g(X))^2$ over all estimators. $\hat g(X)$ is unbiased [0
 (un)conditional mean]. The error $\tilde \Theta = \hat \Theta - \theta $
 is uncorrelated with the estimates. The variance of $\Theta$ can be decomposed as
@@ -177,7 +202,7 @@ with mse equal to $(1- \rho^2)\sigma_\Theta^2 $,
 $\rho = cov(\Theta, X)/(\sigma_\Theta\sigma_X)$.
 
 
-\paragraph{Classical Statistical Inferance}
+\paragraph{Classical Statistical Inference}
 Estimator error $\tilde \Theta = \hat \Theta - \theta $, bias
 $E \tilde \Theta $. Expected value, variance and bias depends on $\hat \Theta$
 while estimation error also $X_1 \dots, X_n$. Unbiased if bias is 0 for all
@@ -191,10 +216,12 @@ normal. $\bar X_n$ is unbiased for $\mu$ and variance $\sigma^2/n$. Variance
 estimator $\hat S^2_n = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar X_n)^2$ is
 unbiased.
 
-Confidence Interval of $1-\alpha$ such that
+Confidence Interval \mathcal{I} of $1-\alpha$ such that
 \begin{align*}
 P(\Theta \in [\hat \Theta^-_n, \hat \Theta^+_n])) \geq 1-\alpha, \quad \forall \textrm{ valid } \theta.
 \end{align*}
+\mathcal{I} is random and the boundaries does not depend on $\Theta$.
+
 OLS: $\beta_1 = \sigma_{xy}/\sigma_x$, $\beta_0 = \bar y - \beta_1 \bar x$,
 with $\sigma_x$ begin the biased estimator of the standard deviation. Bayesian LS assume
 \begin{itemize}
@@ -225,6 +252,110 @@ rejection region given $H_0$, choose the significance level, and the critical
 value $\xi$ so that prob. of false rejection is around $\alpha$. This sets the
 rejection region. Reject hypothesis $H_0$ if the observed test statistics falls
 in the rejection region.
+
+\paragraph{Gaussian}
+Gaussian is symmetric, stable for linear transformation ($\sigma Z + \mu \sim
+\mathbcal{N}(\mu, \sigma^2), Z \sim \mathbcal{N}(0, 1)$. Quantiles $F(q_alpha)
+= 1-\alpha$. For $Z \sim \mathcal{N}(0, 1)$, $q_{2.5\%} = 1.96$.
+
+\paragraph{Statistical Model}
+\emph{Statistical experiment} is a sample of $X_1, \dots, X_n ~ P$ iid, with
+$supp(X) = E \subset \mathbb{R}$. A \emph{stat. model} is the pair $(E,
+(P_\theta)_{\theta\in\Theta}))$, where $E$ is the \emph{sample space},
+$(P_\theta)_{\theta\in\Theta})$ a family of probability measure on $E$,
+$\Theta$ is the parameter set. Well specified means $\exists \theta \vert P =
+P_\theta$. $\theta$ is the true \emph{parameter}. When $\Theta \subset
+\mathbb{R}^d$, parametric model, when $\theta$ has infinite dimension, then
+nonparametric. Semi parametric, when $\Theta$ can be decomposed in two subset,
+one of whiche is finite dimension. Parameter $\theta$ is identifiable if the
+$\theta: \Theta \to P_\theta$ is injective $(P_\theta = P_\eta \Rightarrow
+\theta = \eta).$
+
+A statistic is a function of the data, an esimator of $\theta$ is a statistic
+not depending on $\theta$, a weakly consistent $\hat\theta_n$ if $\hat \theta_n
+\to \theta$ in $P$ w.r.t $P_\theta$. Strongly consistent if $\to$ is
+$.a.s.$. $\hat\theta_n$ is asymptotically normal if $\sqrt n (\hat\theta_n -
+\theta) \to \mathbacl{N}(0, \sigma^2)$, where $\sigma^2$ is the asymptotic
+variance or $\hat\theta_n$. Quadratic risk $R(\hat\theta_n)= E[(\hat\theta_n-
+  \theta)^2]$ which is equal to $Var(\hat\theta_n) + (E[\hat\theta_n] -
+\theta)^2$. A CI $\mathcal{I}$ of asymptotic level $1-\alpha$ for $\theta$ if
+$\lim_{n\to \infty} P_\theta(\theta \in \mathcal{I}) \geq 1-\alpha$. In
+practice, we can bound the variance of the estimator, or solve the
+inequalities, or plug-in (replace the parameter in the variance with the
+estimate.
+
+\paragraph{Delta $\Delta$ method}.
+Let $\sqrt n (Z_n-\theta)/\sigma^2 \to \mathcal{N}(0, 1)}$, $g \in
+C^1(B_\delta(\theta))$, then $\sqrt n \{g(Z_n)-g(\theta)\} \to \mathcal{N}(0,
+\{g'(\theta)\}^2 \sigma^2)$ in $(d)$.
+
+\paragraph{Hypothesis testing}
+$\Theta_i$ disjoint subsets of $\Theta$. $H_i: \theta \in \Theta_i$,
+$i=1,2$. $H_0$ is the \emph{null hypothesis}, $H_1$ is the alternative. Test
+$H_0$ against $H_1$ if we believe $\theta in \Theta_0$ or $\Theta_1$. Decide to
+reject $H_0$. Data only to disprove $H_0$, lack of evidence does not mean $H_0$
+is true (innocent until proven guilty). A test statistics $\psi \in {0, 1}$
+such that $\psi=0$ means $H_0$ not reject, if $\psi=1$, $H_0$ rejected. Rejection region of a test $\psi$ is
+\begin{align*}
+  R_\psi = \{ x \in E^n: \psi = 1\}
+\end{align*}
+Type 1 error $\alpha_\psi: P(\psi = 1 \vert H_0)$, type 2 error $\beta_\psi =
+P(\psi = 0 \vert H_1)$. Power of $\psi$: $\pi_\psi = \inf_{\theta \in \Theta_1}
+\{1 - \beta_\psi(\theta)\}$. Asymptotic Level $\alpha$ if $\lim_{n\to \infty}
+\alpha_{\psi_n}(\theta) \leq \alpha$, $\forall \theta \in \Theta_0$. In general
+$\psi=1(T_n > c)$ for test statistic $T_n$, threshold $c\in\mathbb{R}$,
+rejection region $R_\psi = \{ T_n > c \}$. $p$-value of a test $\psi_\alpha$ is
+the smallest level $\alpha at which $\psi_\alpha$ reject $H_0$. Random and
+depends on the sample. Rule: $p$-value $\leq \alpha$ iff $H_0$ is rejected
+$\psi_\alpha$ at the (asymptotic) level $\alpha$.
+
+\paragraph{Methods of estimation}
+Three methods: MLE, methods of moments, M-estimators. \emph{Total variance
+  distance} is $TV(P_\theta, P_\eta) = \max_{A\subset E} \vert P_\theta(A) -
+P_\eta(A) \vert$ Discrete case is equal $1/2 \sum_{x\in E} \vert
+p_\theta(x)-p_\eta(x) \vert$. Continuous case is $1/2 \int_E \vert
+f_\theta(x)-f_\eta(x) \vert dx$. TV is a distance between probability
+distribution. KL divergence is $K(P_\theta, P_\eta) = \int_E f_\theta(x) \log
+\{f_\theta(x)/f_\eta(x)\} dx$ (continuous). $K(P_\theta, P_\eta) \geq 0$,
+definite if zero, then args are equal. KL is a divergence, and the asymmetry is
+the key to estimate it. Minimizes $KL$ is equivalent to max. $\sum_n \log
+p_\theta(X_i)$. Likelihood is $L_n(x_1, \dots, x_n, \theta) = \prod_{i=1}^n
+f_\theta(x_i)$. MLE is defined as
+
+\begin{align*}
+  \hat \theta_n^{MLE} = \textrm{argmax}_{\theta \in \Theta} \log\{L(X_1, \dots,
+  X_n, \theta)\}.
+\end{align*}
+
+Multivariate concave functions is $x^T\textbf{H}h(\theta)x \leq 0$ for all $x
+\in \mathbb{R}^d$, $\theta \in \Theta$, where $\textbf{H}h(\theta)$ is the
+hessian matrix. Strictly concave with strict equality for some $\vec x \neq
+\vec 0$. Optimality $\nabla h(\theta) = \vec 0$.
+
+Bernouilli, Poisson, Gaussian mean $\bar X_n$, Gaussian variance biased sample
+variance. Under regularity conditions $\hat \theta_n^{MLE} \to \theta^*$ in
+$O$. $Cov(AX+B) = A\Sigma A^T$. CLT Multivariate $\sqrt{n}\Sigma^{-1/2} (\bar
+X_n -\mu) \to \mathcal{N}_d(0, I_d)$ in $(d)$. Delta $\Delta$ method multivariate
+$\sqrt{n}\{g(T_n) - g(\theta)\} \to \mathcal{N}_k\{0, \nabla g(\theta)^T \Sigma
+\nabla g(\theta)\}$, $g: \mathbb{R}^d\to \mathbb{R}^k$.
+
+Fischer information: $\el(\theta) = \log L_1(X, \theta)$, then
+\begin{align*}
+  I(\theta) = - E[\textbf{H}\el(\theta)] = var[\el'(\theta)] = -
+  E[\el''(\theta)],
+\end{align*}
+where last two equalities only for $\theta \in \mathbb{R}$. \textbf{Don't forget the minus sign.}
+
+\paragraph{Asymptotic normality of the MLE}
+If $\theta^* \in \Theta$ (true parameter) assume the following: identifiable,
+support of $P_\theta$ does not depends on $\theta^*$, $\theta^*$ is not on the
+boundaries of $\Theta$, $I(\theta)$ is invertible on $B_\delta(\theta)$, and
+some other technical conditions, then as $n\to \infty$
+\begin{align*}
+  \hat \theta_n^{MLE} & \to \theta^*, w.r.t P_{\theta^*} \\
+  \sqrt n (\hat \theta_n^{MLE} - \theta^*) & \to \mathcal{N}_d\{\vec{0},
+  I^{-1}(\theta)\}, w.r.t P_{\theta^*}
+\end{align*}
 
 
 \end{multicols*}
