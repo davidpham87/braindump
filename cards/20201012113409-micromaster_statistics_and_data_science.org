@@ -8,14 +8,14 @@
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[english]{babel}
 #+LATEX_HEADER: \usepackage{multicol}
-#+LATEX_HEADER: \usepackage[landscape, margin=0.5cm]{geometry}
+#+LATEX_HEADER: \usepackage[landscape, margin=0.2cm]{geometry}
 #+OPTIONS: title:nil
 #+OPTIONS: author:nil
 #+OPTIONS: date:nil
 
 # * Probability and Statistics
 
-\small
+\footnotesize
 
 #+begin_export latex
 \begin{multicols*}{4}
@@ -79,7 +79,7 @@ $X_n \sim \vec{p} Q^n$. \emph{Stationary} is $\vec sQ =  \vec s$.
 \paragraph{Convergence}
 $(Y_n)_{n=1}^\infty \to Y$ in probability if
 $P(\vert Y_n - Y \vert < \epsilon) \to 1$, $n \to \infty$,
-$\forall \epsilon > 0$, $Y$ a rv. If $X_n \to a$, $\Y_n \to b$
+$\forall \epsilon > 0$, $Y$ a rv. If $X_n \to a$, $Y_n \to b$
 in prob. (constants), then $X_n+Y_n \to a+b$, if $g\in C^0(\mathbb{R})$,
 $g(X_n) \to g(a)$. $EX_n$ does not always converge to $a$.
 
@@ -123,7 +123,7 @@ f(T_n) \to f(T)$, when $f \in C^0(\mathbb{R})$.
 
 \paragraph{Laws}
 
-Bernouilli: $p(k)=\binon{n}{k} p^k (1-p)^{n-k}$, $EX=p$, $Var(X)=np(1-p)$.
+Bernouilli: $p(k)=\binom{n}{k} p^k (1-p)^{n-k}$, $EX=p$, $Var(X)=np(1-p)$.
 
 Geometric: $p(k) = (1-p)^{k-1}p$, $EX = p^{-1}$, $Var(X)= (1-p)/p^2$.  Let $n$
 be a given a time and let $T$ be the first time of success after $n$. Then
@@ -178,8 +178,7 @@ Update rule (adapt for discrete laws).
   \frac{f_\Theta(\theta) f_{X \vert \Theta}(x \vert \theta)}
   {\int f_\Theta(\eta) f_{X \vert \Theta}(x \vert \eta) d\eta}
 \end{align*}
-MAP:
-$\hat\theta = \textrm{argmax}_\theta f_\Theta(\theta)f_{X\vert \Theta}(x\vert
+\textbf{MAP} (\emph{maximum a posteriori}): $\hat\theta = \textrm{argmax}_\theta f_\Theta(\theta)f_{X\vert \Theta}(x\vert
 \theta)$ ($\hat\theta$ maximizes the posterior). If $\Theta$ is discrete, the
 MAP minimizes (over all decision rules) the prob. of selecting an incorrect
 hypothesis. Estimator is a function of the data.  Conditional Expectation (LMS)
@@ -190,7 +189,7 @@ observation value x, as well as the probability of error over all decision
 rules.
 
 Estimators: $\hat\theta = E\Theta$ minimizes the equation $E(\Theta-\theta)^2$
-(idem for $E[\,\cdot\, \vert X = x]$). $\hat g(X) = E[\Theta \vert X]$ minimizes
+(idem for $E[\,\cdot\, \vert X = x]$). The \textbf{bayes estimator} $\hat g(X) = E[\Theta \vert X]$ minimizes
 $E(\Theta - g(X))^2$ over all estimators. $\hat g(X)$ is unbiased [0
 (un)conditional mean]. The error $\tilde \Theta = \hat \Theta - \theta $
 is uncorrelated with the estimates. The variance of $\Theta$ can be decomposed as
@@ -216,11 +215,11 @@ normal. $\bar X_n$ is unbiased for $\mu$ and variance $\sigma^2/n$. Variance
 estimator $\hat S^2_n = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar X_n)^2$ is
 unbiased.
 
-Confidence Interval \mathcal{I} of $1-\alpha$ such that
+Confidence Interval $\mathcal{I}$ of $1-\alpha$ such that
 \begin{align*}
 P(\Theta \in [\hat \Theta^-_n, \hat \Theta^+_n])) \geq 1-\alpha, \quad \forall \textrm{ valid } \theta.
 \end{align*}
-\mathcal{I} is random and the boundaries does not depend on $\Theta$.
+$\mathcal{I}$ is random and the boundaries does not depend on $\Theta$.
 
 OLS: $\beta_1 = \sigma_{xy}/\sigma_x$, $\beta_0 = \bar y - \beta_1 \bar x$,
 with $\sigma_x$ begin the biased estimator of the standard deviation. Bayesian LS assume
@@ -231,7 +230,6 @@ with $\sigma_x$ begin the biased estimator of the standard deviation. Bayesian L
 \end{itemize}
 
 Estimates are
-
 \begin{align*}
   \hat \theta_1 & = \frac{\sigma_1^2}{\sigma^2+\sigma_1^2\sum_i (x_i - \bar x)²}
   \sum_{i=1}^n (x_i -\bar x) (y_i - \bar y) \\
@@ -255,7 +253,7 @@ in the rejection region.
 
 \paragraph{Gaussian}
 Gaussian is symmetric, stable for linear transformation ($\sigma Z + \mu \sim
-\mathbcal{N}(\mu, \sigma^2), Z \sim \mathbcal{N}(0, 1)$. Quantiles $F(q_alpha)
+\mathcal{N}(\mu, \sigma^2), Z \sim \mathcal{N}(0, 1)$. Quantiles $F(q_alpha)
 = 1-\alpha$. For $Z \sim \mathcal{N}(0, 1)$, $q_{2.5\%} = 1.96$.
 
 \paragraph{Statistical Model}
@@ -285,7 +283,7 @@ inequalities, or plug-in (replace the parameter in the variance with the
 estimate.
 
 \paragraph{Delta $\Delta$ method}.
-Let $\sqrt n (Z_n-\theta)/\sigma^2 \to \mathcal{N}(0, 1)}$, $g \in
+Let $\sqrt n (Z_n-\theta)/\sigma^2 \to \mathcal{N}(0, 1)$, $g \in
 C^1(B_\delta(\theta))$, then $\sqrt n \{g(Z_n)-g(\theta)\} \to \mathcal{N}(0,
 \{g'(\theta)\}^2 \sigma^2)$ in $(d)$.
 
@@ -305,7 +303,7 @@ P(\psi = 0 \vert H_1)$. Power of $\psi$: $\pi_\psi = \inf_{\theta \in \Theta_1}
 \alpha_{\psi_n}(\theta) \leq \alpha$, $\forall \theta \in \Theta_0$. In general
 $\psi=1(T_n > c)$ for test statistic $T_n$, threshold $c\in\mathbb{R}$,
 rejection region $R_\psi = \{ T_n > c \}$. $p$-value of a test $\psi_\alpha$ is
-the smallest level $\alpha at which $\psi_\alpha$ reject $H_0$. Random and
+the smallest level $\alpha$ at which $\psi_\alpha$ reject $H_0$. Random and
 depends on the sample. Rule: $p$-value $\leq \alpha$ iff $H_0$ is rejected
 $\psi_\alpha$ at the (asymptotic) level $\alpha$.
 
@@ -339,10 +337,10 @@ X_n -\mu) \to \mathcal{N}_d(0, I_d)$ in $(d)$. Delta $\Delta$ method multivariat
 $\sqrt{n}\{g(T_n) - g(\theta)\} \to \mathcal{N}_k\{0, \nabla g(\theta)^T \Sigma
 \nabla g(\theta)\}$, $g: \mathbb{R}^d\to \mathbb{R}^k$.
 
-Fischer information: $\el(\theta) = \log L_1(X, \theta)$, then
+Fischer information: $l(\theta) = \log L_1(X, \theta)$, then
 \begin{align*}
-  I(\theta) = - E[\textbf{H}\el(\theta)] = var[\el'(\theta)] = -
-  E[\el''(\theta)],
+  I(\theta) = - E[\textbf{H}l(\theta)] = var[l'(\theta)] = -
+  E[l''(\theta)],
 \end{align*}
 where last two equalities only for $\theta \in \mathbb{R}$. \textbf{Don't forget the minus sign.}
 
@@ -360,9 +358,167 @@ w.r.t $P_{\theta^*}$.
 
 \paragraph{Methods of Moments}
 $m_k(\theta) = E_\theta[X_1^k]$. Empirical moments are the plug in averages
-$\hat m_k = \bar{X_n^k}$. From LLN, $\hat m_K \to m_k(\theta)$ in $P$ or
-a.s. Then the method of moments identifies $\theta$ by solving $\hat\theta^{MM}
-=M^1(\hat m_1, \dots, \hat m_k)$.
+$\hat m_k = n^{-1} \sum_{i=1}^n g_k(X_i)$, for some differentiable (different)
+$g_k$. From LLN, $\hat m_K \to m_k(\theta)$ in $P$ or a.s. Then the method of
+moments identifies $\theta$ by solving $\hat\theta^{MM} =M^1(\hat m_1, \dots,
+\hat m_k)$. If $M^{-1} \in C^1[B_\delta\{M(\theta)\}]$,
+$\Sigma(\Theta)=Cov_\theta(X_1, \dots, X_1^d)$. Then
+\begin{align*}
+  \sqrt n (\hat \theta^{MM}_n - \theta) \to \mathcal{N}\{0, \Gamma(\theta)\},
+  \ w.r.t \ P_\theta
+\end{align*}
+in $(d)$, where
+\begin{align*}
+\Gamma(\theta) = [\partial_\theta M^{-1}\{M(\theta)\}]^T \Sigma(\theta) [\partial_\theta M^{-1}\{M(\theta)\}]
+\end{align*}
+In general $MLE$ more accurate than $MM$, MLE is good if model is misspecified,
+sometimes $MLE$ is intractable, but $MM$ is easier.
+
+\paragraph{M-estimation}
+Find a function $\rho: E \times \mathcal{M} \to \mathbb{R}$ where $\mathcal{M}$
+is the set of all possible values of $\mu*$, such that $\mathcal{Q}(\mu)=
+E\{\rho(X_1, \mu)\}$ achieves its minimum at $\mu=\mu^*$. For $\rho$ is
+$L^2$-distance $\mu^*= EX$. If $\rho$ is $L^1$-distance then $\mu^*$ is the
+median. If $\rho(x, \mu) = - \log L_1(x, \mu)$, then $\mu^* =
+\hat\theta_n^{MLE}$.  Define $\mathcal{Q}_n(\mu)= \sum_{i=1}^n \rho(x_i,
+\mu)$. If $J(\mu) = \frac{\partial^2Q}{\partial \mu \partial \mu^T}(\mu)$,
+$i,j=1, \dots, n$ and $K(\mu) = Cov(\partial_\mu(X_1, \mu)$. If $\mu^* \in
+\mathcal{M}$, then $\hat\mu_n \to \mu^*$ in $P$, and asymptotic distribution of
+$\sqrt n (\mu^n-\mu^*)$ is centered gaussian with variance
+\begin{align*}
+  J(\mu^*)^{-1}K(\mu^*)J(\mu^*)^{-1}
+\end{align*}
+
+\paragraph{Hypothesis}
+T-test for $\sigma^2$ unknown for gaussian, Wald's test for asymptotic
+normality of $MLE$, multivariate parameters (implicit hypothesis). Goodness of
+fit test. For $H_0: \mu_x = \mu_y$, $H_1 = \mu_x \neq \mu_y$. If $m=cn$ as
+$n\to \infty$,
+\begin{align*}
+  T_{n, m} = \frac{\bar X_n - \bar Y_m - (\mu_x - \mu_y)}{\sqrt{\hat \sigma_x^2/n + \hat \sigma_y^2/m}} \to \mathcal{N}(0, 1)
+\end{align*}
+where $\sigma_x^2$ and $\sigma_y^2$ are the unbiased estimator of variance of
+$X$ and $Y$. Rejection region is of type ${T_{n, m} > q_\alpha}$. One sided,
+two sample test. If $n$, and $m$ are small, we can't apply Slutsky.
+
+The $\chi^2$ distribution with $d > 0$ degree of freedom is the law of
+$\sum_{i=1}^d Z_i$, where $Z_i$ are iid standard Gaussian. $\chi^2_2 =
+Exp(1/2)$. PDF is $\Gamma(d/2, 1/2)$. Properties for $V \sim \chi^2_d$. $EV =
+d$, $var(V) = 2d$. If $S_n$ is the biased sample variance, then $\bar X_n \perp
+S_n$ for all $n$, and $nSn/\sigma^2 \sim \chi^2_{n-1}$.
+
+For $d \in \mathbb{N}^*$, the Student's $T$ distribution with $d$ d.o.f $t_d$
+is the law of the random variable $Z/\sqrt(V/d)$ where $Z \sim \mathcal{N}(0,
+1)$ and $V \sim \chi^2_d$ and $Z \perp V$. If $T_n = \sqrt n \bar X_n/\sqrt{
+\tilde S_n}$, then $T_n \sim $t_{n-1}$. Student's $T$ test with non asymptotic
+level $\alpha$ is of type $\psi_\alpha = 1(\vert T_n \vert >
+q_{\alpha/2})$. One sided we have $\psi_\alpha = 1(T_n > q_{\alpha})$. For two
+sample $T-test$, Test statistics is the same as with normality, but the degree
+of freedom is defined by Welch-Satterhwaite formula.
+\begin{align*}
+  N = (\frac{\sigma_x^4}{n^2(n-1)} + \frac{\sigma_y^4}{m^2(m-1)})^{-1}(\sigma_x^2/n + \sigma_y^2/m)^2
+\end{align*}
+Advantage of $T-test$ exact test, drawback of popluation is gaussian.
+
+Test on MLE. If $\theta \in \mathbb{R}^d$, $H_0: \theta = \theta_0$, $H_1:
+\theta \neq \theta_0$, then under $H_0$,
+$\sqrt{n}I(\hat\theta_n^{MLE})^{1/2}(\hat\theta_n^{MLE} - \theta_0) \to
+\mathcal{N}_d(0, 1)$ in $(d)$. Hence by squaring we get in $(d)$
+\begin{align*}
+  n (\hat\theta_n^{MLE} - \theta_0)^T I(\hat\theta_n^{MLE})(\hat\theta_n^{MLE} - \theta_0) \to \chi^2_d
+\end{align*}
+The left side of the equation is denoted as $T_n$. The Wald's test with
+asymptotic level $\alpha$ is $\psi = 1(T_n > q_\alpha)$ with $q_\alpha$ is the
+$1-\alpha$ quantile of $\chi_d^2$. Wald test also valid if $H_1$ is one sided,
+but less powerful.
+
+Test on log likelihood: for checking if models with $d$ parameters can be
+assumed, we can use Wilk's Theorem. If we assume the big model has $r$ more
+dimension than the smaller model, $\theta^{MLE}_n$ is the MLE and $\theta_n^c$ is
+the constrained MLE the smaller model, then
+\begin{align*}
+  T_n = 2\{l_n(\theta_n) - l_n(\theta_n^c)\} \to \chi^2_{d-r}
+\end{align*}
+in $(d)$. Where $l(\cdot)$ is the log-likelhood as a function of
+$\theta$. The test is then $\psi = 1(T_n > q_\alpha)$ with $q_\alpha$ the
+$(1-\alpha)$ quantiles of $\chi^2_{d-r}$.
+
+Implicit hypotheses: if $\theta \in \mathbb{R}^d$, and $g: \mathbb{R}^d \to
+\mathbb{R}^k$, $k<d$, $g\in C^1(\mathbb{R})$. If $H_0: g(\theta) = 0$, $H_1:
+g(\theta) \neq 0$. Then $\Delta$ method and assuming $g(\theta) = 0$ we get
+\begin{align*}
+  T_n = n g(\hat\theta_n) \Gamma^{-1}(\hat\theta_n) g(\hat \theta_n) \to \chi^2_k,
+\end{align*}
+in $(d)$, where $\Gamma(\theta) = \nabla g(\theta)^T \Sigma(\theta) \nabla
+g(\theta) \in \mathbb{R}^{k\times k}$. Check if $T_n > q_\alpha$ for $q_\alpha$
+being the $1-\alpha$ quantile of $\chi^2_k$.
+
+Goodness of fit: for discrete case, with $K$ distinct values,
+\begin{align*}
+  T_n = n \sum_{j=1}^K (\hat p_j - p^0_j)^2/p^0_j \to \chi^2_{\textbf{K-1}}
+\end{align*}
+Use the $T_n$ and $\chi^2_{K-1}$ to make the test and $p$-values.
+
+Empirical CDF: $F_n(t) = 1/n \sum_{i=1}^n 1(X_i \leq t)$. Glivenko-Cantelli
+Theorem $\sum_{t\in \mathbb{R}} \vert F_n(t) - F(t) \vert \to 0$ a.s. By CLT,
+$F_n(t)$ converge $F(t)$ with variance $F(t) (1-F(t))$. Donsker theorem
+provides the distribution of of Glivenko-Cantelli statistics (supremum brownian
+bridge). If $H_0: F = F^0$, and $H_1: F \neq F^0$. then with Kolmogorv-Smirnov
+let $T_n = \sup_{t \in \mathbb{R}} \sqrt n \vert F_n(t) - F^0(t)\vert$, then use a
+pivot and check the KS test. Otherwise check the $Q-Q$ plots.
+
+\paragraph{LM}
+The regression function $f(x) = E[Y\vert X= x]$ is the regression function. The least square estimator is
+\begin{align*}
+  \hat \beta = \textrm{arg}\min_{\beta \in \mathbb{R}^p} \sum_{i=1}^n (Y_i - X_i^T\beta)^2
+\end{align*}
+For statistical inference, the design matrix is deterministic with rank $p$,
+noise are iid gaussian with same unknown variance. $\hat\sigma^2 = (n-p)^{-1}
+\vert\vert Y - X\hat\beta\vert\vert^2_2$. Theorems: $n-p \hat \sigma^2/\sigma^2
+\sim \chi^2_{n-p}$, and $\hat \beta \perp \hat\sigma^2$. Significance test, for
+$H_0: \beta_j = 0$ vs $H_1: \beta_j = 0$, if $\gamma_j$ is the $j$-th diagnoial coefficient of $(X^TX)^{-1}$, then
+\begin{align*}
+  T_n^{(j)} = \frac{\hat \beta_j - \beta_j}{\sqrt{\hat \sigma^2 \gamma_j}} \sim t_{n-p}
+\end{align*}
+Test with non asymptotic level $\alpha$, check $\vert T_n^{(j)} \vert >
+q_{\alpha/2}(t_{n-p})$, where $q_{\alpha/2}(t_{n-p})$ for $1-\alpha/2$ quantile
+of $t_{n-p}$.
+
+\paragraph{GLM}
+Generalized linear models have two components $Y$ continuous r.v with $Y \vert
+X = x $ following some distribution with mean $\mu(x) = g^{-1}(x^T\beta)$, the
+regression function, $g$ is the link function. For poisson $g(x) =
+x^{-1}$. Exponential family: density has the form
+\begin{align*}
+  f_\theta(y) = h(y) \exp[<\vec{\eta}(\theta), \vec{T}(y)> - B(\theta)].
+\end{align*}
+
+For gaussian, if $\mu, \sigma^2$ is unkown, then $\theta = (\mu/\sigma^2,
+-1/2\sigma^2$, $T(y) = (y, y^2)$, $B(\theta) = \mu^2/(2\sigma^2)+\log(\sigma
+\sqrt(2\pi)$. If only $\mu$ is unkown, $\eta = (\mu/\sigma^2)$, $T(y) = y$,
+$B(\theta) = \mu^2/2\sigma^2$, $h(y) =
+\exp(y^2/2\sigma^2)/\sqrt{2\pi\sigma^2}$. Poisson, Bernouilli, Gamma, Inverse
+Gamma, Inverse Gaussian, $\chi^2$, Beta, Binomial, negative binomial are also
+exponential. For $y\in \mathbb{R}$ and $k=1$
+\begin{align*}
+  f_\theta(y) = \exp\Big(\frac{y\theta - b(\theta)}{\phi} + c(y, \phi)\Big)
+\end{align*}
+If $\phi$ the dispersion parameter is known, then $\theta$ is the only
+canonical parameter, if unkown, may/may not be a two parameter exp. family. For
+Gaussian with known $\sigma^2$, $\theta=\mu$, $\phi=\sigma^2$,
+$b(\theta)=\theta^2/2$. For poisson, $b(\theta)=e^\theta^$, bernouilli
+$b(\theta) = \log(1 + e^\theta$. For gamma, $b(\theta)=-\log(-\theta)$. For
+exp. family, $E[\partial_\theta l] = 0$, $E[\partial^2_{\theta^2} l] +
+E[\{\partial_\theta l\}^2] = 0$, leading to $E[Y] = b'(\theta)$, and $Var(Y) =
+b''(\theta)\phi$. The link function has to be bijective and $C^1$. For
+discrete, link map $\mathbb{R}_+^*$ to $\mathbb{R}$. For Bernouilli, logit
+($\log(\mu(x)/(1-\mu(X))=X^T\beta$), or probit with inverse Gaussian cdf as
+link. Canonical link $g(\mu) = \theta$. Since $\mu = b'(\theta)$. Then $g =
+(b')^{-1}$. Using the canonical link, we have for a random sample
+\begin{align*}
+  l_n(y, X, \beta) = \sum_{i=1}^n \frac{Y_iX_i^T\beta - b(X^T\beta)}{\phi}
+\end{align*}
+Unique MLE if using the canonical link function.
 
 \end{multicols*}
 #+end_export
