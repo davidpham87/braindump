@@ -1,0 +1,53 @@
+#+TITLE: Micromaster Statistics and Data Science: Social Science and Machine Learning
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: micromaster-statistics-and-data-science-social-science-and-machine-learning
+#+ROAM_TAGS: micromaster-statistics-and-data-science-social-science-and-machine-learning msds edx machine-learning
+#+DATE: 2020-10-20
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper, 8pt]
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[english]{babel}
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage[landscape, margin=0.5cm]{geometry}
+#+OPTIONS: title:nil
+#+OPTIONS: author:nil
+#+OPTIONS: date:nil
+
+# * Micromaster Statistics and Data Science: Social Science and Machine Learning
+
+  #+begin_export latex
+  \begin{multicols*}{3}
+
+    \paragraph{Multiple Linear Regression with constraints} If $X\in \mathbb{R}^{n\times k}$,
+    $\beta \in \mathbb{R}^{k+1}$, $X\beta$ is the regression. We want to test
+  \begin{align*}
+    H_0: R\beta & = c \\
+    H_1: R\beta & \neq c,
+  \end{align*}
+  where $R \in \mathbb{R}^{r\times (k+1)}$. Estimate the unrestricted model,
+  impose the restrictions of the null and estitmate the model, compare the
+  goodness-of-fit of the models.
+  \begin{align*}
+    T = \frac{SSR_R - SSR_U}{r} \frac{n-(k+1)}{SSR_U} \sim F_{r, n-(k+1)},
+  \end{align*}
+  where the $F_{r, n-(k+1}$ is the distribution of two $\chi^2$ distribution with
+  degree of freedom $r$ and $n-(k+1)$.
+
+
+  \paragraph{Mixture model}
+  The mixture model takes $\theta = \vec p$, $\sum_k p_k = 1$, with $k$ pairs of
+  $(\mu_k, \sigma^2_k)$ for the gaussian. Given a sample of $x_1, \dots, x_n$
+  \begin{align*}
+    p(j \vert i) = \frac{p_j\; \mathcal{N}_{\mu_j, \sigma^2_j}(x_i)}{\sum_{k=1}^K p_k\; \mathcal{N}_{\mu_k, \sigma^2_k}(x_i)}
+  \end{align*}
+  The formulas for the M-steps are
+  \begin{align*}
+    \hat n_j & = \sum_{i=1}^N p(j \vert i) \\
+    & = \sum_{i=1}^N \frac{p_j \mathcal{N}_{\mu_j \sigma^2_j}(x_i)}{\sum_{k=1}^K p_k \mathcal{N}_{\mu_k, \sigma^2_k}(x_i)} \\
+    \hat p_j & = \frac{\hat n_j}{n} \\
+    \hat\mu_j & = \frac{1}{\hat n_j}\sum_{i=1}^n p(1 \vert i) x_i \\
+    \hat\sigma^2_j & = \frac{1}{\hat n_j} \sum_{i=1}^5 p(1 \vert i) (x_i - \mu_i)^2
+  \end{align*}
+
+  \end{multicols*}
+  #+end_export

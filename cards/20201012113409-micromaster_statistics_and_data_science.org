@@ -8,17 +8,17 @@
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[english]{babel}
 #+LATEX_HEADER: \usepackage{multicol}
-#+LATEX_HEADER: \usepackage[landscape, margin=0.2cm]{geometry}
+#+LATEX_HEADER: \usepackage[landscape, margin=0.5cm]{geometry}
 #+OPTIONS: title:nil
 #+OPTIONS: author:nil
 #+OPTIONS: date:nil
 
 # * Probability and Statistics
 
-\footnotesize
+# \footnotesize
 
 #+begin_export latex
-\begin{multicols*}{4}
+\begin{multicols*}{3}
 
 \paragraph{Partitions}
 Given $n$ elements, and $k_i \in \mathbb{N}, i=1, \dots, r$ with $\sum_i k_i = n$, the number
@@ -319,12 +319,10 @@ definite if zero, then args are equal. KL is a divergence, and the asymmetry is
 the key to estimate it. Minimizes $KL$ is equivalent to max. $\sum_n \log
 p_\theta(X_i)$. Likelihood is $L_n(x_1, \dots, x_n, \theta) = \prod_{i=1}^n
 f_\theta(x_i)$. MLE is defined as
-
 \begin{align*}
   \hat \theta_n^{MLE} = \textrm{argmax}_{\theta \in \Theta} \log\{L(X_1, \dots,
   X_n, \theta)\}.
 \end{align*}
-
 Multivariate concave functions is $x^T\textbf{H}h(\theta)x \leq 0$ for all $x
 \in \mathbb{R}^d$, $\theta \in \Theta$, where $\textbf{H}h(\theta)$ is the
 hessian matrix. Strictly concave with strict equality for some $\vec x \neq
@@ -332,7 +330,7 @@ hessian matrix. Strictly concave with strict equality for some $\vec x \neq
 
 Bernouilli, Poisson, Gaussian mean $\bar X_n$, Gaussian variance biased sample
 variance. Under regularity conditions $\hat \theta_n^{MLE} \to \theta^*$ in
-$O$. $Cov(AX+B) = A\Sigma A^T$. CLT Multivariate $\sqrt{n}\Sigma^{-1/2} (\bar
+$P$. $Cov(AX+B) = A\Sigma A^T$. CLT Multivariate $\sqrt{n}\Sigma^{-1/2} (\bar
 X_n -\mu) \to \mathcal{N}_d(0, I_d)$ in $(d)$. Delta $\Delta$ method multivariate
 $\sqrt{n}\{g(T_n) - g(\theta)\} \to \mathcal{N}_k\{0, \nabla g(\theta)^T \Sigma
 \nabla g(\theta)\}$, $g: \mathbb{R}^d\to \mathbb{R}^k$.
@@ -405,10 +403,10 @@ The $\chi^2$ distribution with $d > 0$ degree of freedom is the law of
 $\sum_{i=1}^d Z_i$, where $Z_i$ are iid standard Gaussian. $\chi^2_2 =
 Exp(1/2)$. PDF is $\Gamma(d/2, 1/2)$. Properties for $V \sim \chi^2_d$. $EV =
 d$, $var(V) = 2d$. If $S_n$ is the biased sample variance, then $\bar X_n \perp
-S_n$ for all $n$, and $nSn/\sigma^2 \sim \chi^2_{n-1}$.
+S_n$ for all $n$, and $nS_n/\sigma^2 \sim \chi^2_{n-1}$.
 
 For $d \in \mathbb{N}^*$, the Student's $T$ distribution with $d$ d.o.f $t_d$
-is the law of the random variable $Z/\sqrt(V/d)$ where $Z \sim \mathcal{N}(0,
+is the law of the random variable $Z/\sqrt{V/d}$ where $Z \sim \mathcal{N}(0,
 1)$ and $V \sim \chi^2_d$ and $Z \perp V$. If $T_n = \sqrt n \bar X_n/\sqrt{
 \tilde S_n}$, then $T_n \sim $t_{n-1}$. Student's $T$ test with non asymptotic
 level $\alpha$ is of type $\psi_\alpha = 1(\vert T_n \vert >
@@ -416,9 +414,9 @@ q_{\alpha/2})$. One sided we have $\psi_\alpha = 1(T_n > q_{\alpha})$. For two
 sample $T-test$, Test statistics is the same as with normality, but the degree
 of freedom is defined by Welch-Satterhwaite formula.
 \begin{align*}
-  N = (\frac{\sigma_x^4}{n^2(n-1)} + \frac{\sigma_y^4}{m^2(m-1)})^{-1}(\sigma_x^2/n + \sigma_y^2/m)^2
+  N = \Big(\frac{\sigma_x^4}{n^2(n-1)} + \frac{\sigma_y^4}{m^2(m-1)}\Big)^{-1}(\sigma_x^2/n + \sigma_y^2/m)^2
 \end{align*}
-Advantage of $T-test$ exact test, drawback of popluation is gaussian.
+Advantage of $T$-test exact test, drawback of popluation is gaussian.
 
 Test on MLE. If $\theta \in \mathbb{R}^d$, $H_0: \theta = \theta_0$, $H_1:
 \theta \neq \theta_0$, then under $H_0$,
@@ -474,7 +472,7 @@ The regression function $f(x) = E[Y\vert X= x]$ is the regression function. The 
 \end{align*}
 For statistical inference, the design matrix is deterministic with rank $p$,
 noise are iid gaussian with same unknown variance. $\hat\sigma^2 = (n-p)^{-1}
-\vert\vert Y - X\hat\beta\vert\vert^2_2$. Theorems: $n-p \hat \sigma^2/\sigma^2
+\vert\vert Y - X\hat\beta\vert\vert^2_2$. Theorems: $(n-p) \hat \sigma^2/\sigma^2
 \sim \chi^2_{n-p}$, and $\hat \beta \perp \hat\sigma^2$. Significance test, for
 $H_0: \beta_j = 0$ vs $H_1: \beta_j = 0$, if $\gamma_j$ is the $j$-th diagnoial coefficient of $(X^TX)^{-1}$, then
 \begin{align*}
@@ -494,27 +492,28 @@ x^{-1}$. Exponential family: density has the form
 \end{align*}
 
 For gaussian, if $\mu, \sigma^2$ is unkown, then $\theta = (\mu/\sigma^2,
--1/2\sigma^2$, $T(y) = (y, y^2)$, $B(\theta) = \mu^2/(2\sigma^2)+\log(\sigma
-\sqrt(2\pi)$. If only $\mu$ is unkown, $\eta = (\mu/\sigma^2)$, $T(y) = y$,
+-1/2\sigma^2)$, $T(y) = (y, y^2)$, $B(\theta) = \mu^2/(2\sigma^2)+\log(\sigma
+\sqrt{2\pi}$. If only $\mu$ is unkown, $\eta = (\mu/\sigma^2)$, $T(y) = y$,
 $B(\theta) = \mu^2/2\sigma^2$, $h(y) =
 \exp(y^2/2\sigma^2)/\sqrt{2\pi\sigma^2}$. Poisson, Bernouilli, Gamma, Inverse
 Gamma, Inverse Gaussian, $\chi^2$, Beta, Binomial, negative binomial are also
 exponential. For $y\in \mathbb{R}$ and $k=1$
 \begin{align*}
-  f_\theta(y) = \exp\Big(\frac{y\theta - b(\theta)}{\phi} + c(y, \phi)\Big)
+  f_\theta(y) = \exp\Big\{\frac{y\theta - b(\theta)}{\phi} + c(y, \phi)\Big\}
 \end{align*}
 If $\phi$ the dispersion parameter is known, then $\theta$ is the only
 canonical parameter, if unkown, may/may not be a two parameter exp. family. For
 Gaussian with known $\sigma^2$, $\theta=\mu$, $\phi=\sigma^2$,
 $b(\theta)=\theta^2/2$. For poisson, $b(\theta)=e^\theta^$, bernouilli
-$b(\theta) = \log(1 + e^\theta$. For gamma, $b(\theta)=-\log(-\theta)$. For
-exp. family, $E[\partial_\theta l] = 0$, $E[\partial^2_{\theta^2} l] +
-E[\{\partial_\theta l\}^2] = 0$, leading to $E[Y] = b'(\theta)$, and $Var(Y) =
-b''(\theta)\phi$. The link function has to be bijective and $C^1$. For
-discrete, link map $\mathbb{R}_+^*$ to $\mathbb{R}$. For Bernouilli, logit
-($\log(\mu(x)/(1-\mu(X))=X^T\beta$), or probit with inverse Gaussian cdf as
-link. Canonical link $g(\mu) = \theta$. Since $\mu = b'(\theta)$. Then $g =
-(b')^{-1}$. Using the canonical link, we have for a random sample
+$b(\theta) = \log(1 + e^\theta)$. For gamma, $b(\theta)=-\log(-\theta)$. For
+exp. family, $E[\partial_\theta l] = 0$,
+$E[\partial^2_{\theta^2} l] + E[\{\partial_\theta l\}^2] = 0$, leading to
+$E[Y] = b'(\theta)$, and $Var(Y) = b''(\theta)\phi$. The link function has to
+be bijective and $C^1$. For discrete, link map $\mathbb{R}_+^*$ to
+$\mathbb{R}$. For Bernouilli, logit function is
+$\log[\mu(x)/\{1-\mu(X)]=X^T\beta$, or probit with inverse Gaussian cdf as
+link. Canonical link $g(\mu) = \theta$. Since $\mu = b'(\theta)$. Then
+$g = (b')^{-1}$. Using the canonical link, we have for a random sample
 \begin{align*}
   l_n(y, X, \beta) = \sum_{i=1}^n \frac{Y_iX_i^T\beta - b(X^T\beta)}{\phi}
 \end{align*}
