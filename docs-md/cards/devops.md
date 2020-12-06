@@ -20,6 +20,11 @@ Remains to test in practice, but the [project](https://github.com/davidpham87/ne
 -   [X] Test the application
 
 
+# Java and Graal
+
+Alternative to select which version of java is used. <https://gist.github.com/ricardozanini/fa65e485251913e1467837b1c5a8ed28>
+
+
 ## See also (generated)
 
 -   [Ansible](20200505093245-ansible.md)

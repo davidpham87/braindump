@@ -15,7 +15,7 @@
     
     
       
-        <title>Probability and Statistics - David's Brain Dump</title>
+        <title>20201012113409 micromaster statistics and data science - David's Brain Dump</title>
       
     
     
@@ -55,11 +55,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#probability-and-statistics" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +78,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Probability and Statistics
+              20201012113409 micromaster statistics and data science
             
           </span>
         </div>
@@ -872,13 +867,35 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
     
-    
-    <a href="./" title="Probability and Statistics" class="md-nav__link md-nav__link--active">
-      Probability and Statistics
+    <a href="./" title="20201012113409 micromaster statistics and data science" class="md-nav__link md-nav__link--active">
+      20201012113409 micromaster statistics and data science
     </a>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20201020215418-micromaster_statistics_and_data_science_social_science_and_machine_learning/" title="20201020215418 micromaster statistics and data science social science and machine learning" class="md-nav__link">
+      20201020215418 micromaster statistics and data science social science and machine learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20201129163941-kafka/" title="Kafka" class="md-nav__link">
+      Kafka
+    </a>
   </li>
 
         
@@ -1002,21 +1019,6 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1026,197 +1028,9 @@
                   
                 
                 
-                <h1 id="probability-and-statistics">Probability and Statistics<a class="headerlink" href="#probability-and-statistics" title="Permanent link">&para;</a></h1>
-<p>\footnotesize</p>
-<p>\begin{multicols*}{4}</p>
-<p>\paragraph{Partitions}
-Given <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> elements, and <span><span class="MathJax_Preview">k_i \in \mathbb{N}, i=1, \dots, r</span><script type="math/tex">k_i \in \mathbb{N}, i=1, \dots, r</script></span> with <span><span class="MathJax_Preview">\sum_i k_i = n</span><script type="math/tex">\sum_i k_i = n</script></span>, the number
-of partition of the set into <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> disjoint subset with the <span><span class="MathJax_Preview">i^{th}</span><script type="math/tex">i^{th}</script></span> subset
-containing exactly <span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span> elements is equal to
-\begin{align<em>}
-  \binom{n}{k_1 \cdots k_r} = \frac{n!}{k_1!\dots k_r!}.
-\end{align</em>}</p>
-<p>\paragraph{Transformation}
-Let <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> be a continuous r.v and <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> monotonoic when <span><span class="MathJax_Preview">f_X(x) &gt; 0</span><script type="math/tex">f_X(x) > 0</script></span> then for
-<span><span class="MathJax_Preview">Y=g(X)</span><script type="math/tex">Y=g(X)</script></span>, <span><span class="MathJax_Preview">f_y(y) = f_X(h(y))\vert \partial_yh(y)\vert</span><script type="math/tex">f_y(y) = f_X(h(y))\vert \partial_yh(y)\vert</script></span>, where <span><span class="MathJax_Preview">h = g^-1</span><script type="math/tex">h = g^-1</script></span> where <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>
-is monotonic. If <span><span class="MathJax_Preview">Z=X+Y</span><script type="math/tex">Z=X+Y</script></span> then <span><span class="MathJax_Preview">f_z(z) = \int f_X(x)f_Y(z-x) dz</span><script type="math/tex">f_z(z) = \int f_X(x)f_Y(z-x) dz</script></span>.</p>
-<p>\paragraph{Expectation}
-\begin{align<em>}
-Eg(\vec X) &amp; = \sum_{\vec x} g(\vec x) p_{\vec X}(\vec x), \quad g: \mathbb{R}^n \to \mathbb{R} \
-Eg(\vec X) &amp; = \int_{\mathbb{R}^n} g(\vec x) f_{\vec X}(\vec x) d\vec x
-\end{align</em>}</p>
-<p>\paragraph{Dependence}
-<span><span class="MathJax_Preview">Cov(X,Y)</span><script type="math/tex">Cov(X,Y)</script></span> is bilinear, and <span><span class="MathJax_Preview">Cov(X,Y) = E[(X-\mu)(Y-\nu)] = EXY -
-EXEY</span><script type="math/tex">Cov(X,Y) = E[(X-\mu)(Y-\nu)] = EXY -
-EXEY</script></span>. <span><span class="MathJax_Preview">\rho_{X,Y}=Cov(x,y)/\sigma_x\sigma_y</span><script type="math/tex">\rho_{X,Y}=Cov(x,y)/\sigma_x\sigma_y</script></span> The total variance is
-<span><span class="MathJax_Preview">Var(Y) = E[Var(Y\vert X)] + Var(E[Y\vert X])</span><script type="math/tex">Var(Y) = E[Var(Y\vert X)] + Var(E[Y\vert X])</script></span>. If <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> random,
-<span><span class="MathJax_Preview">X_1, \dots, X_N</span><script type="math/tex">X_1, \dots, X_N</script></span> are iid, then
-\begin{align<em>}
-  EY &amp; = EN \cdot EX \
-  Var(Y) &amp; = EN \cdot Var(X) + (EX)^2 Var(N)
-\end{align</em>}</p>
-<p>Iterated expectetation <span><span class="MathJax_Preview">E[E[X \vert Y] = E[X]</span><script type="math/tex">E[E[X \vert Y] = E[X]</script></span>. <span><span class="MathJax_Preview">E[X\vert Y]</span><script type="math/tex">E[X\vert Y]</script></span> is the rv that
-take value <span><span class="MathJax_Preview">E[X \vert Y = y]</span><script type="math/tex">E[X \vert Y = y]</script></span> whenever <span><span class="MathJax_Preview">Y=y</span><script type="math/tex">Y=y</script></span>.</p>
-<p>\paragraph{Conditional PMF}
-\begin{align<em>}
-p_{X\vert Y}(x \vert y) &amp; = \frac{p_{X,Y}(x,y)}{p_Y(y)} \
-f_{X\vert Y}(x \vert y) &amp; = \frac{f_{X,Y}{X,Y}(x,y)}{f_Y(y)}
-\end{align</em>}</p>
-<p>\paragraph{Markov-chain}
-\emph{recurrent} (come back), \emph{transient} (never come back),
-GCD of number of steps for returning is $ &gt;1 $, otherwise \emph{aperiodic}.
-\emph{Transition matrix} <span><span class="MathJax_Preview">Q^1</span><script type="math/tex">Q^1</script></span>, where <span><span class="MathJax_Preview">q_{ij} = P(X_{n+1}=i\vert X_n =
-i)</span><script type="math/tex">q_{ij} = P(X_{n+1}=i\vert X_n =
-i)</script></span>. <span><span class="MathJax_Preview">Q^m</span><script type="math/tex">Q^m</script></span> gives the probability for <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> steps. If <span><span class="MathJax_Preview">X_0 \sim \vec p</span><script type="math/tex">X_0 \sim \vec p</script></span>, then
-<span><span class="MathJax_Preview">X_n \sim \vec{p} Q^n</span><script type="math/tex">X_n \sim \vec{p} Q^n</script></span>. \emph{Stationary} is <span><span class="MathJax_Preview">\vec sQ =  \vec s</span><script type="math/tex">\vec sQ =  \vec s</script></span>.</p>
-<p>\paragraph{Inequalities}
-\begin{enumerate}
-\item <span><span class="MathJax_Preview">\vert EXY \vert^2 \leq EX^2 EY^2</span><script type="math/tex">\vert EXY \vert^2 \leq EX^2 EY^2</script></span> (Cauchy-Schwarz)
-\item <span><span class="MathJax_Preview">P(X \geq a) \leq E\vert X \vert / a</span><script type="math/tex">P(X \geq a) \leq E\vert X \vert / a</script></span>, <span><span class="MathJax_Preview">a&gt; 0</span><script type="math/tex">a> 0</script></span>. (Markov)
-\item <span><span class="MathJax_Preview">P(\vert X-\mu \vert \geq a) \leq \sigma^2/a^2</span><script type="math/tex">P(\vert X-\mu \vert \geq a) \leq \sigma^2/a^2</script></span>. (Chebyshev)
-\item <span><span class="MathJax_Preview">g(EX) \leq Eg(X)</span><script type="math/tex">g(EX) \leq Eg(X)</script></span> if <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> convex, reverse if <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> concave. (Jensen)
-\end{enumerate}
-\paragraph{Convergence}
-<span><span class="MathJax_Preview">(Y_n)_{n=1}^\infty \to Y</span><script type="math/tex">(Y_n)_{n=1}^\infty \to Y</script></span> in probability if
-<span><span class="MathJax_Preview">P(\vert Y_n - Y \vert &lt; \epsilon) \to 1</span><script type="math/tex">P(\vert Y_n - Y \vert < \epsilon) \to 1</script></span>, <span><span class="MathJax_Preview">n \to \infty</span><script type="math/tex">n \to \infty</script></span>,
-<span><span class="MathJax_Preview">\forall \epsilon &gt; 0</span><script type="math/tex">\forall \epsilon > 0</script></span>, <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> a rv. \emph{Slutsky}, if <span><span class="MathJax_Preview">X_n \to a</span><script type="math/tex">X_n \to a</script></span>, <span><span class="MathJax_Preview">\Y_n \to b</span><script type="math/tex">\Y_n \to b</script></span>
-in prob. (constants), then <span><span class="MathJax_Preview">X_n+Y_n \to a+b</span><script type="math/tex">X_n+Y_n \to a+b</script></span>, if <span><span class="MathJax_Preview">g\in C^0(\mathbb{R})</span><script type="math/tex">g\in C^0(\mathbb{R})</script></span>,
-<span><span class="MathJax_Preview">g(X_n) \to g(a)</span><script type="math/tex">g(X_n) \to g(a)</script></span>. <span><span class="MathJax_Preview">EX_n</span><script type="math/tex">EX_n</script></span> does not always converge to <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>.</p>
-<p>WLLN. <span><span class="MathJax_Preview">(X_i)_{i=1}^\infty</span><script type="math/tex">(X_i)_{i=1}^\infty</script></span> i.i.d, <span><span class="MathJax_Preview">EX_i = \mu</span><script type="math/tex">EX_i = \mu</script></span>,
-<span><span class="MathJax_Preview">X \in L^2(\mathbb{R})</span><script type="math/tex">X \in L^2(\mathbb{R})</script></span>, then <span><span class="MathJax_Preview">\forall \epsilon &gt; 0</span><script type="math/tex">\forall \epsilon > 0</script></span>
-\begin{align<em>}
-\lim_{n\to\infty} P(\vert \bar X_n - \mu \vert &lt; \epsilon) = 1
-\end{align</em>}
-CLT. Same assumptions as wlln. Then <span><span class="MathJax_Preview">Var(X_i) = \sigma^2</span><script type="math/tex">Var(X_i) = \sigma^2</script></span>, and
-<span><span class="MathJax_Preview">Z_n = \sum_{i=1}^n (X_i-\mu)/(\sigma\sqrt n)</span><script type="math/tex">Z_n = \sum_{i=1}^n (X_i-\mu)/(\sigma\sqrt n)</script></span>, then
-\begin{align<em>}
-\lim_{n\to\infty} F_{Z_n}(z)\to F_z(z), \quad Z \sim \mathcal{N}(0, 1).
-\end{align</em>}
-De Moivre-Laplace Approximation to Binomial
-\begin{align<em>}
-  P(X=i) = P\Big(i-\frac{1}{2} \leq X \leq i + \frac{1}{2}\Big)
-\end{align</em>}
-using CLT to approximate the PMF of <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>.</p>
-<p>\paragraph{Laws}</p>
-<p>Bernouilli: <span><span class="MathJax_Preview">p(k)=\binon{n}{k} p^k (1-p)^{n-k}</span><script type="math/tex">p(k)=\binon{n}{k} p^k (1-p)^{n-k}</script></span>, <span><span class="MathJax_Preview">EX=p</span><script type="math/tex">EX=p</script></span>, <span><span class="MathJax_Preview">Var(X)=np(1-p)</span><script type="math/tex">Var(X)=np(1-p)</script></span>.</p>
-<p>Geometric: <span><span class="MathJax_Preview">p(k) = (1-p)^{k-1}p</span><script type="math/tex">p(k) = (1-p)^{k-1}p</script></span>, <span><span class="MathJax_Preview">EX = p^{-1}</span><script type="math/tex">EX = p^{-1}</script></span>, <span><span class="MathJax_Preview">Var(X)= (1-p)/p^2</span><script type="math/tex">Var(X)= (1-p)/p^2</script></span>.  Let <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>
-be a given a time and let <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> be the first time of success after <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>. Then
-<span><span class="MathJax_Preview">T-n</span><script type="math/tex">T-n</script></span> follows a geometric distribution with parameter <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> and
-<span><span class="MathJax_Preview">T - n \perp X_1, \dots,X_n</span><script type="math/tex">T - n \perp X_1, \dots,X_n</script></span>. Let <span><span class="MathJax_Preview">Y_k = \sum_i=1^k T_k</span><script type="math/tex">Y_k = \sum_i=1^k T_k</script></span>, then <span><span class="MathJax_Preview">EY_k=k/p</span><script type="math/tex">EY_k=k/p</script></span>,
-<span><span class="MathJax_Preview">Var(Y_k)=kp/(1-p)^2</span><script type="math/tex">Var(Y_k)=kp/(1-p)^2</script></span>. PMF is Pascal PMF of order <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>
-\begin{align<em>}
-  p_{Y_k}(t) = \binom{t-1}{k-1}p^k (1-p)^{t-k}, \quad t=k,k+1, \dots
-\end{align</em>}</p>
-<p>Poisson: <span><span class="MathJax_Preview">p(k) = e^{-\lambda} \lambda^k/k!</span><script type="math/tex">p(k) = e^{-\lambda} \lambda^k/k!</script></span>, <span><span class="MathJax_Preview">k=0,1,\dots</span><script type="math/tex">k=0,1,\dots</script></span>. <span><span class="MathJax_Preview">EX=\lambda</span><script type="math/tex">EX=\lambda</script></span>,
-<span><span class="MathJax_Preview">Var(X)=\lambda</span><script type="math/tex">Var(X)=\lambda</script></span>. For a fixed lambda, binomial law converge to poisson with
-<span><span class="MathJax_Preview">p=\lambda/n</span><script type="math/tex">p=\lambda/n</script></span>. So poisson is a good approx if <span><span class="MathJax_Preview">\lambda = np</span><script type="math/tex">\lambda = np</script></span>, <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> large and <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>
-really small.</p>
-<p>Poisson process <span><span class="MathJax_Preview">P(k, \tau)</span><script type="math/tex">P(k, \tau)</script></span> (<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> arrivals, intervals length <span><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>):
-time-homogeneity, independence, small interval probabilities (probabilities are
-<span><span class="MathJax_Preview">O(\tau)</span><script type="math/tex">O(\tau)</script></span>.</p>
-<p>Exponential: <span><span class="MathJax_Preview">f(t) = \lambda \exp(-\lambdat)</span><script type="math/tex">f(t) = \lambda \exp(-\lambdat)</script></span>, <span><span class="MathJax_Preview">EX = 1/\lambda</span><script type="math/tex">EX = 1/\lambda</script></span>,
-<span><span class="MathJax_Preview">Var(X)=1/\lambda^2</span><script type="math/tex">Var(X)=1/\lambda^2</script></span>.</p>
-<p>Poisson is indpendent of paste, waiting time is exponential and indpendent of
-past. <span><span class="MathJax_Preview">k^{th}</span><script type="math/tex">k^{th}</script></span> arrival time is described as the sum of each arrival time and
-has <span><span class="MathJax_Preview">EY_k=k/\lambda</span><script type="math/tex">EY_k=k/\lambda</script></span> and <span><span class="MathJax_Preview">Var(Y_k) = k/\lambda^2</span><script type="math/tex">Var(Y_k) = k/\lambda^2</script></span>. PDF is
-<span><span class="MathJax_Preview">f(y) = \lambda^k y^{k-1} e^{-\lambda y}/(k-1)!</span><script type="math/tex">f(y) = \lambda^k y^{k-1} e^{-\lambda y}/(k-1)!</script></span>.</p>
-<p>\paragraph{Sum of RV}
-If <span><span class="MathJax_Preview">Y = X_1 + \dots + X_N</span><script type="math/tex">Y = X_1 + \dots + X_N</script></span>, then
-\begin{enumerate}
-\item <span><span class="MathJax_Preview">X_i \sim Ber(p)</span><script type="math/tex">X_i \sim Ber(p)</script></span>, <span><span class="MathJax_Preview">N \sim Bin(m, q)</span><script type="math/tex">N \sim Bin(m, q)</script></span>, <span><span class="MathJax_Preview">Y\sim Bin(m, pq)</span><script type="math/tex">Y\sim Bin(m, pq)</script></span>.
-\item <span><span class="MathJax_Preview">X_i \sim Ber(p)</span><script type="math/tex">X_i \sim Ber(p)</script></span>, <span><span class="MathJax_Preview">N \sim Poi(\lambda)</span><script type="math/tex">N \sim Poi(\lambda)</script></span>, <span><span class="MathJax_Preview">Y\sim Poi(\lambda p)</span><script type="math/tex">Y\sim Poi(\lambda p)</script></span>.
-\item <span><span class="MathJax_Preview">X_i \sim Geom(p)</span><script type="math/tex">X_i \sim Geom(p)</script></span>, <span><span class="MathJax_Preview">N \sim Geom(q)</span><script type="math/tex">N \sim Geom(q)</script></span>, <span><span class="MathJax_Preview">Y\sim Geom(pq)</span><script type="math/tex">Y\sim Geom(pq)</script></span>.
-\item <span><span class="MathJax_Preview">X_i \sim Exp(\lambda)</span><script type="math/tex">X_i \sim Exp(\lambda)</script></span>, <span><span class="MathJax_Preview">N \sim Geom(q)</span><script type="math/tex">N \sim Geom(q)</script></span>, <span><span class="MathJax_Preview">Y\sim Exp(\lambda q)</span><script type="math/tex">Y\sim Exp(\lambda q)</script></span>.
-\end{enumerate}</p>
-<p>When two process are poissons, the distribution of the combination of both
-event is a poisson where rates are added (<span><span class="MathJax_Preview">\lambda = \sum_i r_i</span><script type="math/tex">\lambda = \sum_i r_i</script></span>).. Expectation
-time between two events is twice the mean. Each event in a component has a
-probability <span><span class="MathJax_Preview">r_i/\lambda</span><script type="math/tex">r_i/\lambda</script></span>.</p>
-<p>\paragraph{Bayesian Inference} Maximum a posteriori prob. (MAP), Least mean
-squares (LMS), Linear least mean squares (OLS). Bayesian inference:
-\begin{enumerate}
-\item start with a prior <span><span class="MathJax_Preview">f_\Theta</span><script type="math/tex">f_\Theta</script></span> of <span><span class="MathJax_Preview">\Theta</span><script type="math/tex">\Theta</script></span>.
-\item have a model <span><span class="MathJax_Preview">f_{X\vert \Theta}</span><script type="math/tex">f_{X\vert \Theta}</script></span> of the observation <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>.
-\item Update <span><span class="MathJax_Preview">p_{\Theta\vert x}</span><script type="math/tex">p_{\Theta\vert x}</script></span> using Baye's rule.
-\end{enumerate}
-Update rule (adapt for discrete laws).
-\begin{align<em>}
-  f_{\Theta \vert X}(\theta \vert x) =
-  \frac{f_\Theta(\theta) f_{X \vert \Theta}(x \vert \theta)}
-  {\int f_\Theta(\eta) f_{X \vert \Theta}(x \vert \eta) d\eta}
-\end{align</em>}
-MAP:
-<span><span class="MathJax_Preview">\hat\theta = \textrm{argmax}_\theta f_\Theta(\theta)f_{X\vert \Theta}(x\vert
-\theta)</span><script type="math/tex">\hat\theta = \textrm{argmax}_\theta f_\Theta(\theta)f_{X\vert \Theta}(x\vert
-\theta)</script></span> (<span><span class="MathJax_Preview">\hat\theta</span><script type="math/tex">\hat\theta</script></span> maximizes the posterior). If <span><span class="MathJax_Preview">\Theta</span><script type="math/tex">\Theta</script></span> is discrete, the
-MAP minimizes (over all decision rules) the prob. of selecting an incorrect
-hypothesis. Estimator is a function of the data.  Conditional Expectation (LMS)
-sets the <span><span class="MathJax_Preview">\hat \theta = E[\Theta \vert X = x]</span><script type="math/tex">\hat \theta = E[\Theta \vert X = x]</script></span>. Hypothesis testing: MAP rules
-selects hypothesis which has the largest a posteriori distribution. The MAP
-rule minimizes the probability of selecting an incorrect hypothesis for any
-observation value x, as well as the probability of error over all decision
-rules.</p>
-<p>Estimators: <span><span class="MathJax_Preview">\hat\theta = E\Theta</span><script type="math/tex">\hat\theta = E\Theta</script></span> minimizes the equation <span><span class="MathJax_Preview">E(\Theta-\theta)^2</span><script type="math/tex">E(\Theta-\theta)^2</script></span>
-(idem for <span><span class="MathJax_Preview">E[\dot \vert X = x]</span><script type="math/tex">E[\dot \vert X = x]</script></span>). <span><span class="MathJax_Preview">\hat g(X) = E[\Theta \vert X]</span><script type="math/tex">\hat g(X) = E[\Theta \vert X]</script></span> minimizes
-<span><span class="MathJax_Preview">E(\Theta - g(X))^2</span><script type="math/tex">E(\Theta - g(X))^2</script></span> over all estimators. <span><span class="MathJax_Preview">\hat g(X)</span><script type="math/tex">\hat g(X)</script></span> is unbiased [0
-(un)conditional mean]. The error $\tilde \Theta = \hat \Theta - \theta $
-is uncorrelated with the estimates. The variance of <span><span class="MathJax_Preview">\Theta</span><script type="math/tex">\Theta</script></span> can be decomposed as
-<span><span class="MathJax_Preview">Var(\hat \Theta) + Var(\tilde \Theta)</span><script type="math/tex">Var(\hat \Theta) + Var(\tilde \Theta)</script></span>. The linear LMS is given by
-\begin{align<em>}
-  \hat \Theta = E \Theta + \frac{cov(\Theta, X)}{var(X)} (X - EX)
-\end{align</em>}
-with mse equal to $(1- \rho^2)\sigma_\Theta^2 $,
-<span><span class="MathJax_Preview">\rho = cov(\Theta, X)/(\sigma_\Theta\sigma_X)</span><script type="math/tex">\rho = cov(\Theta, X)/(\sigma_\Theta\sigma_X)</script></span>.</p>
-<p>\paragraph{Classical Statistical Inferance}
-Estimator error $\tilde \Theta = \hat \Theta - \theta $, bias
-$E \tilde \Theta $. Expected value, variance and bias depends on <span><span class="MathJax_Preview">\hat \Theta</span><script type="math/tex">\hat \Theta</script></span>
-while estimation error also <span><span class="MathJax_Preview">X_1 \dots, X_n</span><script type="math/tex">X_1 \dots, X_n</script></span>. Unbiased if bias is 0 for all
-<span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, asymptotically unbiased if <span><span class="MathJax_Preview">E\hat \Theta_n \to \theta</span><script type="math/tex">E\hat \Theta_n \to \theta</script></span>, for all
-<span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>. An estimator is consistent if the sequence <span><span class="MathJax_Preview">\hat \Theta_n</span><script type="math/tex">\hat \Theta_n</script></span> converge
-to the true parameter <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> for all possible <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>.</p>
-<p>MLE <span><span class="MathJax_Preview">\hat \theta = argmax h(f_X(x \vert \theta))</span><script type="math/tex">\hat \theta = argmax h(f_X(x \vert \theta))</script></span>, where <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> is bijective function
-(e.g. <span><span class="MathJax_Preview">\log</span><script type="math/tex">\log</script></span>). Under some condition MLE is consistent and asymptotically
-normal. <span><span class="MathJax_Preview">\bar X_n</span><script type="math/tex">\bar X_n</script></span> is unbiased for <span><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> and variance <span><span class="MathJax_Preview">\sigma^2/n</span><script type="math/tex">\sigma^2/n</script></span>. Variance
-estimator <span><span class="MathJax_Preview">\hat S^2_n = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar X_n)^2</span><script type="math/tex">\hat S^2_n = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar X_n)^2</script></span> is
-unbiased.</p>
-<p>Confidence Interval of <span><span class="MathJax_Preview">1-\alpha</span><script type="math/tex">1-\alpha</script></span> such that
-\begin{align<em>}
-P(\Theta \in [\hat \Theta^-_n, \hat \Theta^+_n])) \geq 1-\alpha, \quad \forall \textrm{ valid } \theta.
-\end{align</em>}
-OLS: <span><span class="MathJax_Preview">\beta_1 = \sigma_{xy}/\sigma_x</span><script type="math/tex">\beta_1 = \sigma_{xy}/\sigma_x</script></span>, <span><span class="MathJax_Preview">\beta_0 = \bar y - \beta_1 \bar x</span><script type="math/tex">\beta_0 = \bar y - \beta_1 \bar x</script></span>,
-with <span><span class="MathJax_Preview">\sigma_x</span><script type="math/tex">\sigma_x</script></span> begin the biased estimator of the standard deviation. Bayesian LS assume
-\begin{itemize}
-\item <span><span class="MathJax_Preview">Y_i = \Theta_0 + \Theta_1 x_i + W_i</span><script type="math/tex">Y_i = \Theta_0 + \Theta_1 x_i + W_i</script></span>
-\item <span><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> are known constants, <span><span class="MathJax_Preview">\Theta_0, \Theta_1, W_j</span><script type="math/tex">\Theta_0, \Theta_1, W_j</script></span> are normal independent.
-\item <span><span class="MathJax_Preview">E\Theta_0 = E\Theta_1 = 0</span><script type="math/tex">E\Theta_0 = E\Theta_1 = 0</script></span> and variance <span><span class="MathJax_Preview">\Theta_i = \sigma_i^2</span><script type="math/tex">\Theta_i = \sigma_i^2</script></span>, <span><span class="MathJax_Preview">i=1,2</span><script type="math/tex">i=1,2</script></span>, <span><span class="MathJax_Preview">W_j \sim \mathcal{N}(0, \sigma^2)</span><script type="math/tex">W_j \sim \mathcal{N}(0, \sigma^2)</script></span>.
-\end{itemize}</p>
-<p>Estimates are</p>
-<div>
-<div class="MathJax_Preview">\begin{align*}
-  \hat \theta_1 &amp; = \frac{\sigma_1^2}{\sigma^2+\sigma_1^2\sum_i (x_i - \bar x)²}
-  \sum_{i=1}^n (x_i -\bar x) (y_i - \bar y) \\
-  \hat \theta_0 &amp; = \frac{n\sigma_0^2}{\sigma^2+n\sigma_0^2} (\bar y - \hat \theta_1 \bar x)
-\end{align*}</div>
-<script type="math/tex; mode=display">\begin{align*}
-  \hat \theta_1 & = \frac{\sigma_1^2}{\sigma^2+\sigma_1^2\sum_i (x_i - \bar x)²}
-  \sum_{i=1}^n (x_i -\bar x) (y_i - \bar y) \\
-  \hat \theta_0 & = \frac{n\sigma_0^2}{\sigma^2+n\sigma_0^2} (\bar y - \hat \theta_1 \bar x)
-\end{align*}</script>
-</div>
-<p>Likelihood ratio test: start with a target value <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> (5\%) for false
-rejection prob. Choose <span><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span> such that <span><span class="MathJax_Preview">P(L(X)&gt;\xi \vert H_0) = \alpha</span><script type="math/tex">P(L(X)>\xi \vert H_0) = \alpha</script></span>. Once
-the value <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> of X is observed, reject <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> is <span><span class="MathJax_Preview">L(x) &gt; \xi</span><script type="math/tex">L(x) > \xi</script></span>. Neyman-Person
-Lemma, given <span><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span>, we have <span><span class="MathJax_Preview">P(L(X)&gt;\xi \vert H_0) = \alpha</span><script type="math/tex">P(L(X)>\xi \vert H_0) = \alpha</script></span> and
-<span><span class="MathJax_Preview">P(L(X)&gt;\xi \vert H_1) = \beta</span><script type="math/tex">P(L(X)>\xi \vert H_1) = \beta</script></span>. Suppose that some other test, with rejection
-region <span><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>, achieves a smaller or equal false rejection prob:
-<span><span class="MathJax_Preview">P(X\in R \vert H_0) \leq a</span><script type="math/tex">P(X\in R \vert H_0) \leq a</script></span>. Then <span><span class="MathJax_Preview">P(X \notin R \vert H_1) \geq \beta</span><script type="math/tex">P(X \notin R \vert H_1) \geq \beta</script></span>, with
-strict inequality, when <span><span class="MathJax_Preview">P(X \in R \vert H_0) &lt; \alpha</span><script type="math/tex">P(X \in R \vert H_0) < \alpha</script></span>.</p>
-<p>Significance testing method: choose a test statistic, find the shape of
-rejection region given <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span>, choose the significance level, and the critical
-value <span><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span> so that prob. of false rejection is around <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>. This sets the
-rejection region. Reject hypothesis <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> if the observed test statistics falls
-in the rejection region.</p>
-<p>\end{multicols*}</p>
+                  <h1>20201012113409 micromaster statistics and data science</h1>
+                
+                
                 
               
               
@@ -1250,13 +1064,13 @@ in the rejection region.</p>
           </a>
         
         
-          <a href="../continuing_education/" title="Continuing Education" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../20201020215418-micromaster_statistics_and_data_science_social_science_and_machine_learning/" title="20201020215418 micromaster statistics and data science social science and machine learning" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Continuing Education
+                20201020215418 micromaster statistics and data science social science and machine learning
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

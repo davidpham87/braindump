@@ -15,7 +15,7 @@
     
     
       
-        <title>Clojure Debug - David's Brain Dump</title>
+        <title>Kafka - David's Brain Dump</title>
       
     
     
@@ -56,7 +56,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#clojure-debug" class="md-skip">
+        <a href="#kafka" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Clojure Debug
+              Kafka
             
           </span>
         </div>
@@ -697,73 +697,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Clojure Debug
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Clojure Debug" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../20200514104809-clojure_debug/" title="Clojure Debug" class="md-nav__link">
       Clojure Debug
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    Tips
-  </a>
-  
-    <nav class="md-nav" aria-label="Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#protocols" class="md-nav__link">
-    Protocols
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -951,11 +889,81 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../20201129163941-kafka/" title="Kafka" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Kafka
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Kafka" class="md-nav__link md-nav__link--active">
       Kafka
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topics" class="md-nav__link">
+    Topics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producer" class="md-nav__link">
+    Producer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consummers" class="md-nav__link">
+    Consummers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro" class="md-nav__link">
+    Avro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    Terms
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1098,28 +1106,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    Tips
+  <a href="#topics" class="md-nav__link">
+    Topics
   </a>
-  
-    <nav class="md-nav" aria-label="Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#protocols" class="md-nav__link">
-    Protocols
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#see-also-generated" class="md-nav__link">
-    See also (generated)
+  <a href="#producer" class="md-nav__link">
+    Producer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consummers" class="md-nav__link">
+    Consummers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro" class="md-nav__link">
+    Avro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    Terms
   </a>
   
 </li>
@@ -1140,13 +1156,64 @@
                   
                 
                 
-                <h1 id="clojure-debug">Clojure Debug<a class="headerlink" href="#clojure-debug" title="Permanent link">&para;</a></h1>
-<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
-<h3 id="protocols">Protocols<a class="headerlink" href="#protocols" title="Permanent link">&para;</a></h3>
-<p>When calling a function and the error messages state that the function is not implemented, while it is (for example with the <code>core.async</code> <code>take!</code> function, check that the arguments respects the protocol (in this case a <code>chan</code>).</p>
-<h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
+                <h1 id="kafka">Kafka<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h1>
+<p>Notes about Kafka.</p>
 <ul>
-<li><a href="../20200505124946-clj_toolkit/">Clojure toolkit</a></li>
+<li>The key data structure is append only logs (immutable data) or ledger.</li>
+<li>Events are facts about the world.</li>
+<li>Data are segmented into topics, producer sends events to topics, and consumers pull from it.</li>
+</ul>
+<p>The architectures runs with zookeepers, servers and topics. Zookeeper managed servers.</p>
+<p><code>--from-begininng</code> in consumer console can show all the data in the topics.</p>
+<h3 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Number of replicas [how many copies]</li>
+<li>Number of partitions [number of splits for a topics]</li>
+<li>Retention policy (either size, or time)</li>
+<li>Cleanup policy can be either compact (keep only a single observation per key) or delete. Compact is useful when consumers always expect on observation per key.</li>
+<li>Compression type (lz4 [fast], snappy [fast], gzip [compression/network], zstd [compression/network]).</li>
+</ul>
+<h3 id="producer">Producer<a class="headerlink" href="#producer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Acks: acknowledgments settings, how many brokers have to receive a message for a producer to consider a message received.</li>
+</ul>
+<p>Insure to set:</p>
+<ul>
+<li>client id</li>
+<li>batch size</li>
+<li>linger time (time waiting between sending message)</li>
+<li>compression type</li>
+</ul>
+<h3 id="consummers">Consummers<a class="headerlink" href="#consummers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Topics (avoid automatic creation)</li>
+<li>client id</li>
+<li>poll/consume</li>
+<li>offset number [number consumed message, earliest known offset], where to start on restart.</li>
+</ul>
+<h2 id="avro">Avro<a class="headerlink" href="#avro" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Schema definition.</li>
+<li>Schema registry: a web server to save your schema.</li>
+</ul>
+<h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Broker: a single server use for kafka.</li>
+<li>Cluster: a group of Kafka servers/brokers.</li>
+<li>Node: a compute instance.</li>
+<li>Zookeeper: determine which broker is the leader of a given partition and topic as well s track cluster membership and configuration for Kafka.</li>
+<li>Data partition: topics consist of one or more partitions. A partition provides ordering guarantees for all data contained within it, partition are chosen by hashing key values. [Nested map logic with <code>topic-&gt;partition-&gt;log</code> ]. The log is split into multiple partitions.</li>
+<li>Data Replication: a mechanism by which data is written to more than one broker to ensure that if a single broker is lost, a replicated copy of the data is available.</li>
+<li>In-Sync-Replica (ISR): A broker which is up to date with the leader for a particular broker for all message in the current topic. This number may be less than the replication factor for a topic.</li>
+<li>Rebalance: A process in which the current set of consumer changes (addition or removal of consumer). When this occurs, assignment of partitions to the various consumers in a consumer group must be change.</li>
+<li>Batch size: number of data sent/received by Kafka.</li>
+<li>acks: numbers of broker acknowledgments that must be received from Kafka before a producer continue processing.</li>
+<li>Synchronous production: producers which waits for a response before additional processing. Async: does not wait.</li>
+<li>Consumer Offset: a value indicating the last seen and processed message of a given consumer, by ID.</li>
+<li>Consumer Group: a collection of one or more consumers, identified by group.id, which collaborate to consume data from Kafka and share a consumer offset.</li>
+<li>Consumer Group Leader: the consumer in charge of working with the Group Coordinator to manage the consumer group.</li>
+<li>Topic Subscription: Kafka consumers indicate to the Kafka Cluster that they would like to consume from one or more topics by specifying those they want to subscribe to.</li>
+<li>Consumer Lag: difference between the offset of a consumer group and the latest message offset in Kafka itself.</li>
 </ul>
                 
               
@@ -1166,7 +1233,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../20200506224558-enlive/" title="Enlive" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../20201020215418-micromaster_statistics_and_data_science_social_science_and_machine_learning/" title="20201020215418 micromaster statistics and data science social science and machine learning" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1175,19 +1242,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Enlive
+                20201020215418 micromaster statistics and data science social science and machine learning
               </div>
             </div>
           </a>
         
         
-          <a href="../20200514114627-tools_deps/" title="tools.deps" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../continuing_education/" title="Continuing Education" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                tools.deps
+                Continuing Education
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

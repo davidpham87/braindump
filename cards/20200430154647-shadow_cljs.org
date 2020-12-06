@@ -343,3 +343,14 @@ configuration.
    - [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
    - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
    - [[file:20200505112918-nginx.org][nginx]]
+
+** See also (generated)
+
+   - [[file:20200521232124-cljss.org][cljss]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200524185034-clojure_functional_programming_principles.org][Clojure Functional Programming Principles]]
+   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+   - [[file:20200430141609-david_nolen.org][David Nolen]]
+   - [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
+   - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
+   - [[file:20200505112918-nginx.org][nginx]]
