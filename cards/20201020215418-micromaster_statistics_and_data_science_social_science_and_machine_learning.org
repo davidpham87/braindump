@@ -8,7 +8,12 @@
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[english]{babel}
 #+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usepackage{courier}
 #+LATEX_HEADER: \usepackage[landscape, margin=0.5cm]{geometry}
+#+LATEX_HEADER: \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+
 #+OPTIONS: title:nil
 #+OPTIONS: author:nil
 #+OPTIONS: date:nil
@@ -33,7 +38,6 @@
   where the $F_{r, n-(k+1}$ is the distribution of two $\chi^2$ distribution with
   degree of freedom $r$ and $n-(k+1)$.
 
-
   \paragraph{Mixture model}
   The mixture model takes $\theta = \vec p$, $\sum_k p_k = 1$, with $k$ pairs of
   $(\mu_k, \sigma^2_k)$ for the gaussian. Given a sample of $x_1, \dots, x_n$
@@ -45,9 +49,32 @@
     \hat n_j & = \sum_{i=1}^N p(j \vert i) \\
     & = \sum_{i=1}^N \frac{p_j \mathcal{N}_{\mu_j \sigma^2_j}(x_i)}{\sum_{k=1}^K p_k \mathcal{N}_{\mu_k, \sigma^2_k}(x_i)} \\
     \hat p_j & = \frac{\hat n_j}{n} \\
-    \hat\mu_j & = \frac{1}{\hat n_j}\sum_{i=1}^n p(1 \vert i) x_i \\
-    \hat\sigma^2_j & = \frac{1}{\hat n_j} \sum_{i=1}^5 p(1 \vert i) (x_i - \mu_i)^2
+    \hat\mu_j & = \frac{1}{\hat n_j}\sum_{i=1}^n p(j \vert i) x_i \\
+    \hat\sigma^2_j & = \frac{1}{\hat n_j} \sum_{i=1}^5 p(j \vert i) (x_i - \mu_i)^2
   \end{align*}
+
+  \paragraph{dplyr} This is quick dplyr intro.
+
+  \begin{lstlisting}[language=R]
+  library(dplyr)
+
+  starwars %>%
+    filter(species == "Droid")
+
+  starwars %>%
+    select(name, ends_with("color"))
+
+  starwars %>%
+    mutate(name, bmi=mass/((height/100)^2)) %>%
+    select(name:mass, bmi)
+
+  starwars %>%  arrange(desc(mass))
+
+  starwars %>%
+    group_by(species) %>%
+    summarise(n=n(), mass=mean(mass, na.rm=TRUE)) %>%
+    filter(n > 1, mass > 50)
+  \end{lstlisting}
 
   \end{multicols*}
   #+end_export
