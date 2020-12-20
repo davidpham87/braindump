@@ -1,42 +1,40 @@
 # Python
 
-  - \[X\] IPython
+-   [X] IPython
 
-  - \[X\] Jupyter Noteboks
+-   [X] Jupyter Noteboks
     
-    ``` bash
+    ```bash
     jupyter notebooks
     ```
 
-  - \[ \] scikit, read documentation.
+-   [ ] scikit, read documentation.
 
-  - \[X\] pylint
-    
-      - pylintrc to determine which mistakes to solve.
-      - One can also use `# pylint` header in python files, e.g. pandas
-        source code.
-      - you can use disable
+-   [X] pylint
+    -   pylintrc to determine which mistakes to solve.
+    -   One can also use `# pylint` header in python files, e.g. pandas source code.
+    -   you can use disable
 
-  - \[X\] pyflakes
+-   [X] pyflakes
 
-  - \[ \] nose2 and automatic test.
+-   [ ] nose2 and automatic test.
 
-  - \[X\] [Google Tensorflow](https://www.tensorflow.org/).
+-   [X] [Google Tensorflow](https://www.tensorflow.org/).
 
-  - \[ \] pytorch
+-   [ ] pytorch
+
 
 ## Conda
 
-  - Miniconda: <https://docs.conda.io/en/latest/miniconda.html>
+-   Miniconda: <https://docs.conda.io/en/latest/miniconda.html>
 
 Emacs settings:
 
-  - <https://gitmemory.com/issue/necaris/conda.el/63/645079680> Settings
-    the correct home environment to make conda mode work. Installed in
-    `/usr/lib/miniconda3`.
+-   <https://gitmemory.com/issue/necaris/conda.el/63/645079680> Settings the correct home environment to make conda mode work. Installed in `/usr/lib/miniconda3`.
+
 
 ## See also (generated)
 
-  - [ETHZ](20200430153912-ethz.org)
-  - [Learning tips](20200505111243-learning_tips.org)
-  - [R CRAN](r_cran.org)
+-   [ETHZ](20200430153912-ethz.md)
+-   [Learning tips](20200505111243-learning_tips.md)
+-   [R CRAN](r_cran.md)
