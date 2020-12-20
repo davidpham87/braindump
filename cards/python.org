@@ -27,6 +27,15 @@
   + [ ] pytorch
 
 
+** Conda
+
+   - Miniconda: https://docs.conda.io/en/latest/miniconda.html
+
+   Emacs settings:
+   - https://gitmemory.com/issue/necaris/conda.el/63/645079680 Settings the
+     correct home environment to make conda mode work. Installed in
+     =/usr/lib/miniconda3=.
+
 ** See also (generated)
 
    - [[file:20200430153912-ethz.org][ETHZ]]

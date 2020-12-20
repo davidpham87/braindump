@@ -10,8 +10,13 @@
   balancer)) on pods (docker containers). They allow for recover from failure
   for resource, and rolling update.
 
+  Podman, with podman-compose and buildah are alternative to docker and
+  docker-compose.
+
 * DevOPS
   Learn about ansible (again).
+
+
 ** Ubuntu Server/Install Starting Projects
 *** DONE Git [3/3]
     Remains to test in practice, but the [[https://github.com/davidpham87/new-ubuntu-config][project]] is pretty stable now.

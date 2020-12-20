@@ -88,3 +88,18 @@
      they want to subscribe to.
    - Consumer Lag: difference between the offset of a consumer group and the
      latest message offset in Kafka itself.
+
+** Streaming Application
+
+   - Two differences: KStream and KTable. The difference is KStream are
+     stateless and KTable are stateful, they usually keep their state in
+     RocksDB database to maintain the state and speed up recovery time.
+
+** Kafka Connect
+
+   API allowing to bind (source and sink) to multiple data sources without the
+   need to write kafka specific code.
+
+** Kafka Rest
+
+   HTTP server to Create Kafka application with Rest endpoint.

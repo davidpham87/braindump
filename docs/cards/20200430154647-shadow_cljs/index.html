@@ -445,41 +445,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#see-also-generated_1" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_2" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_3" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_4" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_5" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1021,6 +986,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20201220130520-emacs_configuration/" title="Emacs" class="md-nav__link">
+      Emacs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1201,41 +1178,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#see-also-generated_1" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_2" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_3" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_4" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also-generated_5" class="md-nav__link">
-    See also (generated)
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1254,7 +1196,8 @@
                 
                 <h1 id="shadow-cljs">shadow-cljs<a class="headerlink" href="#shadow-cljs" title="Permanent link">&para;</a></h1>
 <h2 id="nginx-configuration-for-developping-locally">NGINX Configuration for developping locally<a class="headerlink" href="#nginx-configuration-for-developping-locally" title="Permanent link">&para;</a></h2>
-<p>Install nginx on your remote server and place this file into your configuration.</p>
+<p>Install nginx on your remote server and place this file into your
+configuration.</p>
 <div class="highlight"><pre><span></span><code>server {
   listen 80 default_server;
   listen [::]:80 default_server;
@@ -1281,14 +1224,16 @@
 
 <ul>
 <li>Open the ports: `sudo ufw 8080` and `sudo ufw 9630`.</li>
-<li>Connect directly to the ip/domain of the server with the correct ports.</li>
+<li>Connect directly to the ip/domain of the server with the correct
+    ports.</li>
 </ul>
 <h2 id="inspect">Inspect<a class="headerlink" href="#inspect" title="Permanent link">&para;</a></h2>
-<p>Inject the correct namespaces with <code>:devtools</code> preloads in the <code>shadow-cljs.edn</code> config file.</p>
+<p>Inject the correct namespaces with <code>:devtools</code> preloads in the
+<code>shadow-cljs.edn</code> config file.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="ss">:devtools</span>
  <span class="p">{</span><span class="ss">:preloads</span> <span class="p">[</span><span class="nv">shadow.remote.runtime.cljs.browser</span>
-         <span class="c1">;; shadow.remote.runtime.cljs.node ;; for nodejs</span>
-         <span class="p">]}}</span>
+             <span class="c1">;; shadow.remote.runtime.cljs.node ;; for nodejs</span>
+             <span class="p">]}}</span>
 </code></pre></div>
 
 <p>Inspect with Clojure and not only ClojureScript</p>
@@ -1298,11 +1243,12 @@
 </code></pre></div>
 
 <h2 id="devcards">Devcards<a class="headerlink" href="#devcards" title="Permanent link">&para;</a></h2>
-<p>For devcards 0.2.7, we have to make the following adjustment for making it work with shadow-cljs.</p>
+<p>For devcards 0.2.7, we have to make the following adjustment for making
+it work with shadow-cljs.</p>
 <div class="highlight"><pre><span></span><code>     <span class="p">{</span><span class="ss">:builds</span>
       <span class="p">{</span><span class="ss">:app</span>
        <span class="p">{</span><span class="ss">:build-options</span> <span class="p">{</span><span class="ss">:ns-aliases</span> <span class="p">{</span><span class="nv">devcards-marked</span> <span class="nv">cljsjs.marked</span>
-                     <span class="nv">devcards-syntax-highlighter</span> <span class="nv">cljsjs.highlight</span><span class="p">}}}}}</span>
+                                     <span class="nv">devcards-syntax-highlighter</span> <span class="nv">cljsjs.highlight</span><span class="p">}}}}}</span>
 
 <span class="p">(</span><span class="kd">ns </span><span class="nv">cljsjs.marked</span>
   <span class="p">(</span><span class="ss">:require</span> <span class="p">[</span><span class="s">&quot;marked&quot;</span> <span class="ss">:as</span> <span class="nv">marked</span><span class="p">]))</span>
@@ -1326,67 +1272,16 @@
 </ul>
 <h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../20200521232124-cljss/">cljss</a></li>
-<li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200505124946-clj_toolkit/">Clojure toolkit</a></li>
-<li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
-<li><a href="../20200505113402-high_performance_clojurescript/">High Performance CLJS</a></li>
-<li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
-<li><a href="../20200505112918-nginx/">nginx</a></li>
-</ul>
-<h2 id="see-also-generated_1">See also (generated)<a class="headerlink" href="#see-also-generated_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../20200521232124-cljss/">cljss</a></li>
-<li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200505124946-clj_toolkit/">Clojure toolkit</a></li>
-<li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
-<li><a href="../20200505113402-high_performance_clojurescript/">High Performance CLJS</a></li>
-<li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
-<li><a href="../20200505112918-nginx/">nginx</a></li>
-</ul>
-<h2 id="see-also-generated_2">See also (generated)<a class="headerlink" href="#see-also-generated_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../20200521232124-cljss/">cljss</a></li>
-<li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200524185034-clojure_functional_programming_principles/">Clojure Functional Programming Principles</a></li>
-<li><a href="../20200505124946-clj_toolkit/">Clojure toolkit</a></li>
-<li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
-<li><a href="../20200505113402-high_performance_clojurescript/">High Performance CLJS</a></li>
-<li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
-<li><a href="../20200505112918-nginx/">nginx</a></li>
-</ul>
-<h2 id="see-also-generated_3">See also (generated)<a class="headerlink" href="#see-also-generated_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>&lt;../decks/clojure.md&gt;</li>
-<li>&lt;20200430141226-life_in_dynamic_typing.md&gt;</li>
-<li>&lt;20200430141609-david_nolen.md&gt;</li>
-<li>&lt;20200505112918-nginx.md&gt;</li>
-<li>&lt;20200505113402-high_performance_clojurescript.md&gt;</li>
-<li>&lt;20200505124946-clj_toolkit.md&gt;</li>
-<li>&lt;20200521232124-cljss.md&gt;</li>
-<li>&lt;20200524185034-clojure_functional_programming_principles.md&gt;</li>
-</ul>
-<h2 id="see-also-generated_4">See also (generated)<a class="headerlink" href="#see-also-generated_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>&lt;../decks/clojure.md&gt;</li>
-<li>&lt;20200430141226-life_in_dynamic_typing.md&gt;</li>
-<li>&lt;20200430141609-david_nolen.md&gt;</li>
-<li>&lt;20200505112918-nginx.md&gt;</li>
-<li>&lt;20200505113402-high_performance_clojurescript.md&gt;</li>
-<li>&lt;20200505124946-clj_toolkit.md&gt;</li>
-<li>&lt;20200521232124-cljss.md&gt;</li>
-<li>&lt;20200524185034-clojure_functional_programming_principles.md&gt;</li>
-</ul>
-<h2 id="see-also-generated_5">See also (generated)<a class="headerlink" href="#see-also-generated_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>&lt;../decks/clojure.md&gt;</li>
-<li>&lt;20200430141226-life_in_dynamic_typing.md&gt;</li>
-<li>&lt;20200430141609-david_nolen.md&gt;</li>
-<li>&lt;20200505112918-nginx.md&gt;</li>
-<li>&lt;20200505113402-high_performance_clojurescript.md&gt;</li>
-<li>&lt;20200505124946-clj_toolkit.md&gt;</li>
-<li>&lt;20200521232124-cljss.md&gt;</li>
-<li>&lt;20200524185034-clojure_functional_programming_principles.md&gt;</li>
+<li><a href="20200521232124-cljss.org">cljss</a></li>
+<li><a href="../decks/clojure.org">Clojure</a></li>
+<li><a href="20200524185034-clojure_functional_programming_principles.org">Clojure Functional Programming
+    Principles</a></li>
+<li><a href="20200505124946-clj_toolkit.org">Clojure toolkit</a></li>
+<li><a href="20200430141609-david_nolen.org">David Nolen</a></li>
+<li><a href="20200505113402-high_performance_clojurescript.org">High Performance
+    CLJS</a></li>
+<li><a href="20200430141226-life_in_dynamic_typing.org">Life In Dynamic Typing</a></li>
+<li><a href="20200505112918-nginx.org">nginx</a></li>
 </ul>
                 
               
