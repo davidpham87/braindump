@@ -525,5 +525,8 @@ Unique MLE if using the canonical link function.
 
 ** See also (generated)
 
+   - [[file:20200430153912-ethz.org][ETHZ]]
    - [[file:../decks/index.org][Index]]
+   - [[file:python.org][Python]]
+   - [[file:r_cran.org][R CRAN]]
 

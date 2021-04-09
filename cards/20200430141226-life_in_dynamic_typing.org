@@ -28,5 +28,6 @@
 ** See also (generated)
 
    - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430141609-david_nolen.org][David Nolen]]
    - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
 

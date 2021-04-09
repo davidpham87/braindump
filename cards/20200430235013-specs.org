@@ -404,5 +404,6 @@
 
 ** See also (generated)
 
+   - [[file:../decks/clojure.org][Clojure]]
    - [[file:20200504204808-why_clojure.org][Why Clojure?]]
 

@@ -9,5 +9,5 @@
 
 ** See also (generated)
 
-   - 
+   - [[file:../cards/202005291001-starting_scripting_clojure.org][Starting Scripting Clojure]]
 

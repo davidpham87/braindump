@@ -141,4 +141,5 @@ Clojure and have fun with it.
 
 ## See also (generated)
 
+  - [Clojure](./../decks/clojure.md)
   - [Index](./../decks/index.md)

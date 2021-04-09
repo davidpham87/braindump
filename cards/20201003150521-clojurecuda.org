@@ -101,4 +101,5 @@ compiler).
 ** See also (generated)
 
    - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20201011155722-jna.org][JNA]]
 

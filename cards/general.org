@@ -73,6 +73,7 @@
 
 ** See also (generated)
 
+   - [[file:20200505164639-cider.org][cider]]
    - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
    - [[file:20201220130520-emacs_configuration.org][emacs]]
    - [[file:20200503165952-materiala.org][Materiala]]

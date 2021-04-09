@@ -54,6 +54,7 @@ the following create a similar experience to usual pc layout
 
 ## See also (generated)
 
+  - [cider](./20200505164639-cider.md)
   - [CLI Arguments](./20200430154352-cli_arguments.md)
   - [Clojure](./../decks/clojure.md)
   - [General Skills](./general.md)

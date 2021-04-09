@@ -37,6 +37,7 @@ Emacs settings:
 
 ## See also (generated)
 
+  - [emacs](./20201220130520-emacs_configuration.md)
   - [ETHZ](./20200430153912-ethz.md)
   - [Learning tips](./20200505111243-learning_tips.md)
   - [R CRAN](./r_cran.md)

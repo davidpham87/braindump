@@ -66,4 +66,6 @@
 ** See also (generated)
 
    - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+   - [[file:20200430235013-specs.org][Specs]]
 

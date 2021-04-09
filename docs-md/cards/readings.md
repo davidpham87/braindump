@@ -85,4 +85,4 @@ Philosophy of linux.
 
 ## See also (generated)
 
-  -
+  - [Home for ideas for my Zettelkasten](./../README.md)

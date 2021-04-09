@@ -101,6 +101,7 @@ For grouping you need to escape the parenthesis.
 
 ## See also (generated)
 
+  - [cider](./20200505164639-cider.md)
   - [CLI Arguments](./20200430154352-cli_arguments.md)
   - [emacs](./20201220130520-emacs_configuration.md)
   - [Materiala](./20200503165952-materiala.md)

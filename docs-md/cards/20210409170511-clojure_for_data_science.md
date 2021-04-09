@@ -99,4 +99,5 @@ The building block is `neanderthal` and hence interop with
 
 ## See also (generated)
 
-  -
+  - [Clojure](./../decks/clojure.md)
+  - [Python](./python.md)

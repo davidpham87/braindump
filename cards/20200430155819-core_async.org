@@ -77,5 +77,7 @@
 ** See also (generated)
 
    - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
    - [[file:../README.org][Home for ideas for my Zettelkasten]]
 

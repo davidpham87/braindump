@@ -98,4 +98,6 @@
 
 ** See also (generated)
 
-   - 
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:python.org][Python]]
+
