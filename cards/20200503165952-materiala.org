@@ -28,8 +28,5 @@ My own tools for linking mkdocs and marginalia. See [[https://github.com/davidph
 
 ** See also (generated)
 
-   - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
-   - [[file:general.org][General Skills]]
-   - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
    - [[file:../todo.org][TODO]]
 

@@ -78,3 +78,9 @@
 
   \end{multicols*}
   #+end_export
+
+
+** See also (generated)
+
+   - [[file:../decks/index.org][Index]]
+

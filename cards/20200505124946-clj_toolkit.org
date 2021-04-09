@@ -11,13 +11,6 @@
 
 ** See also (generated)
 
-   - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200514104809-clojure_debug.org][Clojure Debug]]
-   - [[file:20200514114627-tools_deps.org][Clojure tools.deps]]
-   - [[file:20200506224558-enlive.org][Enlive]]
-   - [[file:20200505125105-medley.org][medley]]
-   - [[file:20200517212936-postmortem.org][Postmortem]]
    - [[file:20200505124708-potemkin.org][Potemkin: some ideas which are almost good]]
    - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
 

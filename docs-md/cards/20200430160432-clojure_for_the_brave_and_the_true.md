@@ -227,21 +227,6 @@ variable.
 
 ## See also (generated)
 
-  - [Applied Clojure](./20200430155637-applied_clojure.md)
-  - [CLI Arguments](./20200430154352-cli_arguments.md)
-  - [Clojure](./../decks/clojure.md)
-  - [core.async](./20200430155819-core_async.md)
-  - [David Nolen](./20200430141609-david_nolen.md)
-  - [edn and transit](./20200504212017-edn_and_transit.md)
-  - [Life In Dynamic Typing](./20200430141226-life_in_dynamic_typing.md)
-  - [Mastering Clojure
-    Macro](./20200430155438-mastering_clojure_macro.md)
-  - [Multiple Environment](./20200430154528-multiple_environment.md)
-  - [Org-roam-clj: Org-roam extension with
-    Clojure](./20200503222619-org_roam_clj.md)
   - [Parallel Programming in Clojure with
     Reducers](./20200505112138-clojure_reducers.md)
-  - [Simple Made Easy](./20200502122138-simple_made_easy.md)
-  - [Specs](./20200430235013-specs.md)
-  - [TODO](./../todo.md)
   - [Why Clojure?](./20200504204808-why_clojure.md)

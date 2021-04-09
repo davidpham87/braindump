@@ -138,3 +138,7 @@ your editor to the REPL.
 
 I hope this simple workflow will allow to experiment much more with
 Clojure and have fun with it.
+
+## See also (generated)
+
+  - [Index](./../decks/index.md)

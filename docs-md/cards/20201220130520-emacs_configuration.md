@@ -51,3 +51,7 @@ the following create a similar experience to usual pc layout
 (global-set-key (kbd "M-$") '"}")
 (global-set-key (kbd "C-<") '"\\")
 ```
+
+## See also (generated)
+
+  -

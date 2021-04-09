@@ -521,3 +521,9 @@ Unique MLE if using the canonical link function.
 
 \end{multicols*}
 #+end_export
+
+
+** See also (generated)
+
+   - [[file:../decks/index.org][Index]]
+

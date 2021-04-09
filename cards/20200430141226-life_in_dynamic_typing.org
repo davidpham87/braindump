@@ -27,11 +27,5 @@
 
 ** See also (generated)
 
-   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-   - [[file:20200430141609-david_nolen.org][David Nolen]]
-   - [[file:20200430155438-mastering_clojure_macro.org][Mastering Clojure Macro]]
    - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
-   - [[file:20200430235013-specs.org][Specs]]
 

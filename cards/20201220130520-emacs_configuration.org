@@ -54,3 +54,9 @@ When working with conda, install [[https://docs.conda.io/en/latest/miniconda.htm
      (global-set-key (kbd "M-$") '"}")
      (global-set-key (kbd "C-<") '"\\")
    #+end_src
+
+
+** See also (generated)
+
+   - 
+

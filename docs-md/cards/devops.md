@@ -32,6 +32,4 @@ Alternative to select which version of java is used.
 
 ## See also (generated)
 
-  - [Ansible](./20200505093245-ansible.md)
-  - [Multipass](./20200505093126-multipass.md)
-  - [nginx](./20200505112918-nginx.md)
+  -

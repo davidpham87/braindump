@@ -96,3 +96,9 @@ compiler).
    When we want to leverage other's code, we need to create bridge between C++
    and Java. One typical is to pass custom =struct=. To solve this we could use
    jna.
+
+
+** See also (generated)
+
+   - 
+

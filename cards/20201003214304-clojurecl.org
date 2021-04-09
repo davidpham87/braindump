@@ -70,3 +70,9 @@ player's card are kernels, deck of cards are programs.
   (release queue)
   (release ctx)
 #+end_src
+
+
+** See also (generated)
+
+   - 
+

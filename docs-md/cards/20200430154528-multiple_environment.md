@@ -15,12 +15,4 @@
 
 ## See also (generated)
 
-  - [Applied Clojure](./20200430155637-applied_clojure.md)
-  - [CLI Arguments](./20200430154352-cli_arguments.md)
-  - [Clojure](./../decks/clojure.md)
-  - [Clojure for the brave and the
-    true](./20200430160432-clojure_for_the_brave_and_the_true.md)
-  - [General Skills](./general.md)
-  - [Mastering Clojure
-    Macro](./20200430155438-mastering_clojure_macro.md)
-  - [Materiala](./20200503165952-materiala.md)
+  -

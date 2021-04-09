@@ -62,10 +62,4 @@ Use multipass and Ansible to simulate networks and kubernetes.
 
 ## See also (generated)
 
-  - [Applied Clojure](./cards/20200430155637-applied_clojure.md)
-  - [Clojure for the brave and the
-    true](./cards/20200430160432-clojure_for_the_brave_and_the_true.md)
-  - [core.async](./cards/20200430155819-core_async.md)
-  - [Goals](./cards/20200501163355-goals.md)
-  - [Materiala](./cards/20200503165952-materiala.md)
-  - [Specs](./cards/20200430235013-specs.md)
+  -
