@@ -1,48 +1,36 @@
 # Continuing Education
 
-
-## TODO FRM
+## <span class="todo TODO">TODO</span> FRM
 
 Read and do the exams for the two tests.
 
-
-## TODO CFA
-
+## <span class="todo TODO">TODO</span> CFA
 
 ## Level 2
 
--   [X] Register
--   [ ] Study
+  - \[X\] Register
+  - \[ \] Study
 
+## <span class="todo TODO">TODO</span> CQF
 
-## TODO CQF
+## <span class="todo TODO">TODO</span> Udacity Nanodegree
 
+## <span class="todo TODO">TODO</span> Fullstack
 
-## TODO Udacity Nanodegree
+## <span class="todo TODO">TODO</span> Data Streaming
 
-
-## TODO Fullstack
-
-
-## TODO Data Streaming
-
-
-## DONE Front-end
+## <span class="done DONE">DONE</span> Front-end
 
 Not necessary thanks to ClojureScript.
 
+## <span class="done DONE">DONE</span> Deep learning
 
-## DONE Deep learning
+## <span class="done DONE">DONE</span> Machine learning
 
+## <span class="todo TODO">TODO</span> Edx
 
-## DONE Machine learning
-
-
-## TODO Edx
-
--   Finish Micro Master in statistics and Data Science.
-
+  - Finish Micro Master in statistics and Data Science.
 
 ## See also (generated)
 
--
+  -

@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -957,6 +969,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1053,8 +1077,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1116,9 +1140,9 @@
 <p>Using <code>tech.jna</code>, we can link <code>C</code> native libraries into Clojure.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">ns </span><span class="nv">jna</span>
   <span class="p">(</span><span class="ss">:require</span> <span class="p">[</span><span class="nv">tech.jna</span> <span class="ss">:as</span> <span class="nv">jna</span><span class="p">]</span>
-        <span class="p">[</span><span class="nv">tech.jna.base</span> <span class="ss">:as</span> <span class="nv">base</span><span class="p">])</span>
+            <span class="p">[</span><span class="nv">tech.jna.base</span> <span class="ss">:as</span> <span class="nv">base</span><span class="p">])</span>
   <span class="p">(</span><span class="ss">:import</span> <span class="p">[</span><span class="nv">java.nio</span> <span class="nv">FloatBuffer</span><span class="p">]</span>
-       <span class="p">[</span><span class="nv">com.sun.jna</span> <span class="nv">Native</span> <span class="nv">Pointer</span> <span class="nv">NativeLibrary</span><span class="p">]))</span>
+           <span class="p">[</span><span class="nv">com.sun.jna</span> <span class="nv">Native</span> <span class="nv">Pointer</span> <span class="nv">NativeLibrary</span><span class="p">]))</span>
 
 <span class="p">(</span><span class="nf">jna/def-jna-fn</span> <span class="s">&quot;c&quot;</span> <span class="nv">memset</span>
   <span class="s">&quot;Set byte memory to a value&quot;</span>
@@ -1144,7 +1168,7 @@
        <span class="p">(</span><span class="nf">mapv</span> <span class="o">#</span><span class="p">(</span><span class="nf">.getFloat</span> <span class="nv">ptr</span> <span class="p">(</span><span class="nb">* </span><span class="nv">%</span> <span class="nv">Float/BYTES</span><span class="p">)))))</span>
 
 <span class="p">(</span><span class="k">def </span><span class="nv">test-ptr</span> <span class="p">(</span><span class="nb">-&gt; </span><span class="p">(</span><span class="nf">Native/malloc</span> <span class="p">(</span><span class="nb">* </span><span class="mi">4</span> <span class="nv">Float/BYTES</span><span class="p">))</span>
-          <span class="p">(</span><span class="nf">Pointer.</span><span class="p">)))</span>
+                  <span class="p">(</span><span class="nf">Pointer.</span><span class="p">)))</span>
 
 <span class="nv">test-ptr</span>
 
@@ -1154,7 +1178,8 @@
 <span class="p">(</span><span class="nf">float-ptr-&gt;vec</span> <span class="nv">test-ptr</span> <span class="mi">4</span><span class="p">)</span>
 </code></pre></div>
 
-<p>The following function is useful for interactive programming to reload native libraries.</p>
+<p>The following function is useful for interactive programming to reload
+native libraries.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">reload!</span>
   <span class="s">&quot;Reload a shared library.&quot;</span>
   <span class="p">[</span><span class="nv">libname</span><span class="p">]</span>

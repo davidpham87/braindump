@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -448,8 +460,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -1012,6 +1024,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1108,8 +1132,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1224,7 +1248,7 @@
                 
                 <h1 id="ethz">ETHZ<a class="headerlink" href="#ethz" title="Permanent link">&para;</a></h1>
 <h2 id="lectures">Lectures<a class="headerlink" href="#lectures" title="Permanent link">&para;</a></h2>
-<h3 id="done-projects-33">DONE Projects <code>[3/3]</code><a class="headerlink" href="#done-projects-33" title="Permanent link">&para;</a></h3>
+<h3 id="done-projects-33"><span class="done DONE">DONE</span> Projects [3/3]<a class="headerlink" href="#done-projects-33" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>[X] Semester paper in economics : Public Employment</p>
@@ -1250,27 +1274,48 @@
 </ul>
 </li>
 </ul>
-<h3 id="done-causality-22">DONE Causality <code>[2/2]</code><a class="headerlink" href="#done-causality-22" title="Permanent link">&para;</a></h3>
+<h3 id="done-causality-22"><span class="done DONE">DONE</span> Causality [2/2]<a class="headerlink" href="#done-causality-22" title="Permanent link">&para;</a></h3>
 <p>I had 5.75 (kind of deserved).</p>
 <ul>
-<li>PDAG: Partially means no directed cycle whereas DAG means no cycle at all. CPDAG (Markov Equivalent Graphs): for every directed node, all graph have the same edge. For undirected edges, there exist at least two graphs with opposite direction of the edge. Markov equivalent if they have the same skeleton and immoralities (v-struct).</li>
-<li>D-separation <span><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> Blocked Reverse engineer the definition by thinking about the independence</li>
-<li>Markov blanket <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>: for a target node <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>, it is smallest set <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> of nodes in the graphs that make <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> independent of all the other nodes given <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>. In DAG: for <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> it contains its parents, its children and the parents of children.</li>
-<li>Causal minimality: <span><span class="MathJax_Preview">P^X</span><script type="math/tex">P^X</script></span> is not markov to any proper subgraph of <span><span class="MathJax_Preview">\mathcal{G}</span><script type="math/tex">\mathcal{G}</script></span> if and only if there are no useless edge.</li>
-<li>Markov: conditional d-sep <span><span class="MathJax_Preview">\Rightarrow</span><script type="math/tex">\Rightarrow</script></span> independence, faithfulness is the converse. Local: <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> is independent of any non descendent given its parnets.</li>
-<li>Adjustment formula (tautology): the conditional probability given the parents remains the same under the interventions.</li>
-<li>The goal adjustment set: evaluate interventions or causality with observational data.</li>
-<li>Valid adjustment set <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>: <span><span class="MathJax_Preview">p_{\mathcal{S}, do(X=x)}(y) = \sum_{z \in Z} p_{\mathcal{S}}(y \vert X=x, z) p(z)</span><script type="math/tex">p_{\mathcal{S}, do(X=x)}(y) = \sum_{z \in Z} p_{\mathcal{S}}(y \vert X=x, z) p(z)</script></span> for <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> not in the parent of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> and <span><span class="MathJax_Preview">x, y \notin Z</span><script type="math/tex">x, y \notin Z</script></span>.</li>
-<li>Backdoor criterion: <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> blocks all paths from <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> to <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> that come \emph{into} <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> (backward path) and <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> contains no descendant of <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>.</li>
+<li>PDAG: Partially means no directed cycle whereas DAG means no cycle
+    at all. CPDAG (Markov Equivalent Graphs): for every directed node,
+    all graph have the same edge. For undirected edges, there exist at
+    least two graphs with opposite direction of the edge. Markov
+    equivalent if they have the same skeleton and immoralities
+    (v-struct).</li>
+<li>D-separation <span><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> Blocked Reverse engineer the definition by
+    thinking about the independence</li>
+<li>Markov blanket <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>: for a target node <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>, it is smallest set
+    <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> of nodes in the graphs that make <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> independent of all the
+    other nodes given <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>. In DAG: for <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> it contains its parents,
+    its children and the parents of children.</li>
+<li>Causal minimality: <span><span class="MathJax_Preview">P^X</span><script type="math/tex">P^X</script></span> is not markov to any proper subgraph of
+    <span><span class="MathJax_Preview">\mathcal{G}</span><script type="math/tex">\mathcal{G}</script></span> if and only if there are no useless edge.</li>
+<li>Markov: conditional d-sep <span><span class="MathJax_Preview">\Rightarrow</span><script type="math/tex">\Rightarrow</script></span> independence, faithfulness
+    is the converse. Local: <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> is independent of any non descendent
+    given its parnets.</li>
+<li>Adjustment formula (tautology): the conditional probability given
+    the parents remains the same under the interventions.</li>
+<li>The goal adjustment set: evaluate interventions or causality with
+    observational data.</li>
+<li>Valid adjustment set <span><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>:
+    <span><span class="MathJax_Preview">p_{\mathcal{S}, do(X=x)}(y) = \sum_{z \in Z}
+     p_{\mathcal{S}}(y \vert X=x, z) p(z)</span><script type="math/tex">p_{\mathcal{S}, do(X=x)}(y) = \sum_{z \in Z}
+     p_{\mathcal{S}}(y \vert X=x, z) p(z)</script></span> for <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> not in the parent
+    of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> and <span><span class="MathJax_Preview">x, y \notin Z</span><script type="math/tex">x, y \notin Z</script></span>.</li>
+<li>Backdoor criterion: <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> blocks all paths from <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> to <span><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> that
+    come <em>into</em> <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> (backward path) and <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> contains no descendant
+    of <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>.</li>
 </ul>
-<h3 id="done-qrm-33">DONE QRM <code>[3/3]</code><a class="headerlink" href="#done-qrm-33" title="Permanent link">&para;</a></h3>
-<p><span class="timestamp-wrapper"><span class="timestamp">&lt;2015-08-18 Tue&gt; </span></span> Know the main theorems by heart: Fisher-Tippet, Pickands-Balkema-de Hann, Sklar. 5.5/6</p>
+<h3 id="done-qrm-33"><span class="done DONE">DONE</span> QRM [3/3]<a class="headerlink" href="#done-qrm-33" title="Permanent link">&para;</a></h3>
+<p>\&lt;2015-08-18 Die> Know the main theorems by heart: Fisher-Tippet,
+Pickands-Balkema-de Hann, Sklar. 5.5/6</p>
 <ul>
 <li>[X] Read slides</li>
 <li>[X] Learn slides by heart</li>
 <li>[X] Do past exams</li>
 </ul>
-<h3 id="done-multivariate-statistics-22">DONE Multivariate Statistics <code>[2/2]</code><a class="headerlink" href="#done-multivariate-statistics-22" title="Permanent link">&para;</a></h3>
+<h3 id="done-multivariate-statistics-22"><span class="done DONE">DONE</span> Multivariate Statistics [2/2]<a class="headerlink" href="#done-multivariate-statistics-22" title="Permanent link">&para;</a></h3>
 <p>I had 4.5/6 (which was not deserved at all).</p>
 <ul>
 <li>
@@ -1287,14 +1332,15 @@
 <p>[X] Read scripts</p>
 </li>
 </ul>
-<h3 id="done-computational-statistics-finish-the-series-22">DONE Computational Statistics, finish the series <code>[2/2]</code><a class="headerlink" href="#done-computational-statistics-finish-the-series-22" title="Permanent link">&para;</a></h3>
-<p><span class="timestamp-wrapper"><span class="timestamp">&lt;2015-08-18 Tue&gt; </span></span> I got 6 (was a little bit easy, thanks to emacs and R-help).</p>
+<h3 id="done-computational-statistics-finish-the-series-22"><span class="done DONE">DONE</span> Computational Statistics, finish the series [2/2]<a class="headerlink" href="#done-computational-statistics-finish-the-series-22" title="Permanent link">&para;</a></h3>
+<p>\&lt;2015-08-18 Die> I got 6 (was a little bit easy, thanks to emacs and
+R-help).</p>
 <ul>
 <li>[X] Do Series</li>
 <li>[X] Read script</li>
 </ul>
-<h3 id="done-economics-cycle-22">DONE Economics Cycle <code>[2/2]</code><a class="headerlink" href="#done-economics-cycle-22" title="Permanent link">&para;</a></h3>
-<p><span class="timestamp-wrapper"><span class="timestamp">&lt;2015-06-09 Tue&gt; </span></span> I had 4.75/6 at the exam.</p>
+<h3 id="done-economics-cycle-22"><span class="done DONE">DONE</span> Economics Cycle [2/2]<a class="headerlink" href="#done-economics-cycle-22" title="Permanent link">&para;</a></h3>
+<p>\&lt;2015-06-09 Die> I had 4.75/6 at the exam.</p>
 <ul>
 <li>[X] Read scripts</li>
 <li>[X] Do Exercise</li>

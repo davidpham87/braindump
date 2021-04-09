@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -984,6 +996,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1080,8 +1104,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1170,47 +1194,84 @@
 <p>Emacs extension for using Clojure.</p>
 <h2 id="essential-shortcut">Essential shortcut<a class="headerlink" href="#essential-shortcut" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>C-x C-e</code> eval last S-EXP.</li>
-<li><code>C-c C-v w</code> eval last S-EXP and replace</li>
-<li><code>C-c M-i</code> inspect last S-EXP.</li>
-<li><code>C-c C-v [vrb]</code> eval [form around, region, buffer].</li>
-<li><code>C-c C-k</code> load buffer,</li>
-<li><code>C-c C-l</code> load file,</li>
-<li><code>C-c M-l</code> load all files</li>
 <li>
-<p><code>C-c C-d [djcwaf]</code> docs for <code>docs</code> or <code>javadoc</code>, <code>clojuredoc local</code>, <code>clojuredocs web</code>, <code>a propos</code>, <code>a propos documentation</code></p>
+<p><code>C-x C-e</code> eval last S-EXP.</p>
+</li>
+<li>
+<p><code>C-c C-v w</code> eval last S-EXP and replace</p>
+</li>
+<li>
+<p><code>C-c M-i</code> inspect last S-EXP.</p>
+</li>
+<li>
+<p><code>C-c C-v [vrb]</code> eval [form around, region, buffer].</p>
+</li>
+<li>
+<p><code>C-c C-k</code> load buffer,</p>
+</li>
+<li>
+<p><code>C-c C-l</code> load file,</p>
+</li>
+<li>
+<p><code>C-c M-l</code> load all files</p>
+</li>
+<li>
+<p><code>C-c C-d [djcwaf]</code> docs for <code>docs</code> or <code>javadoc</code>, <code>clojuredoc
+        local</code>, <code>clojuredocs web</code>, <code>a propos</code>, <code>a propos documentation</code></p>
 </li>
 <li>
 <p><code>C-c C-t n</code> run test of namespace.</p>
 </li>
-<li><code>C-c C-t r</code> run failed test.</li>
-<li><code>M-.</code> find-var</li>
-<li><code>C-c M-.</code> find resource</li>
-<li><code>M-,</code> return to prejump location.</li>
+<li>
+<p><code>C-c C-t r</code> run failed test.</p>
+</li>
+<li>
+<p><code>M-.</code> find-var</p>
+</li>
+<li>
+<p><code>C-c M-.</code> find resource</p>
+</li>
+<li>
+<p><code>M-,</code> return to prejump location.</p>
+</li>
 </ul>
 <h2 id="advanced-shortcut">Advanced shortcut<a class="headerlink" href="#advanced-shortcut" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>C-c M-s</code> for navigation</li>
-<li><code>C-u C-M-x</code> inside a function to turn on debugging mode, see <a href="https://docs.cider.mx/cider/debugging/debugger.html">here</a> for shortcuts.</li>
+<li><code>C-u C-M-x</code> inside a function to turn on debugging mode, see
+    <a href="https://docs.cider.mx/cider/debugging/debugger.html">here</a> for
+    shortcuts.</li>
 <li>Conditional breakpoints</li>
 </ul>
+<!-- end list -->
+
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">dotimes </span><span class="p">[</span><span class="nv">i</span> <span class="mi">10</span><span class="p">]</span>
   <span class="o">#</span><span class="nv">dbg</span> <span class="o">^</span><span class="p">{</span><span class="ss">:break/when</span> <span class="p">(</span><span class="nb">= </span><span class="nv">i</span> <span class="mi">7</span><span class="p">)}</span>
   <span class="p">(</span><span class="nb">prn </span><span class="nv">i</span><span class="p">))</span>
 </code></pre></div>
 
 <ul>
-<li><code>C-c M-t v</code>, tracing and untracing function.</li>
+<li>
+<p><code>C-c M-t v</code>, tracing and untracing function.</p>
+</li>
 <li>
 <p><code>C-c M-t n</code>, tracing and untracing all the namespace</p>
 </li>
 <li>
 <p><code>M-x cider-enlighten-mode</code></p>
 </li>
-<li><code>M-x cider-browser-ns</code>, browse namespace</li>
-<li><code>M-x cider-classpath</code>, browse classpath.</li>
-<li><code>M-x cider-browser-spec</code>, browse specs.</li>
-<li><code>M-x cider-browser-spec-all</code>, browse specs.</li>
+<li>
+<p><code>M-x cider-browser-ns</code>, browse namespace</p>
+</li>
+<li>
+<p><code>M-x cider-classpath</code>, browse classpath.</p>
+</li>
+<li>
+<p><code>M-x cider-browser-spec</code>, browse specs.</p>
+</li>
+<li>
+<p><code>M-x cider-browser-spec-all</code>, browse specs.</p>
+</li>
 </ul>
 <h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
 <ul>

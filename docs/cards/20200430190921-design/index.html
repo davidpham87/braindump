@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -1011,6 +1023,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1107,8 +1131,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1223,64 +1247,213 @@
                 <h1 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h1>
 <h2 id="design-composition-and-performance-rich-hickey-2013">Design, Composition and Performance - Rich Hickey [2013]<a class="headerlink" href="#design-composition-and-performance-rich-hickey-2013" title="Permanent link">&para;</a></h2>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
-<p><strong>Design</strong> is about taking things apart in such a way we can recompose them again. There are numerous concepts we should take apart (needs to problem, information to mechanism, knowns to unknowns, domain to technological solution, benefits and tradeoffs of solutions.) Design is an effective way to reduce the cost of bugs and to test our software as test now embeds the value of our design.</p>
-<p><strong>Composition</strong> is about constraints and communication. A composition is a design, or a plan for the performer. Bigger scales require more precision and lower scale allows more freedom to the performer.</p>
-<p><strong>Performance</strong> is about preparation, study and experience. It is the ability to bring our knowledge and our experience to solve the problem on a given context. Most coders stop learning after college which is a contrast to any artistic career who are lifelong learners.</p>
-<p>Both activities requires a sensibility about <strong>harmony</strong> (in a given context, will two things work well together?).</p>
-<p>Programming languages are like instruments. As such, we should chose those who are backing some fundamental idea (e.g. immutability, functional programming) and chose those who are aimed to those who have studied the language.</p>
-<p>In software engineering, everything is code all the way down. Hence we have a paralysis of choice and distraction (we can improve any part of the problem). Making choices, and hence putting constraints move us forward. Thus, the value of the design is based on the decision made.</p>
-<p>In conclusion, good design is about taking things about such that we can put them back together, we should compose by requiring as much constraint as possible, perform by preparing and studying and finally choose and learn simple tools aimed to experts.</p>
+<p><strong>Design</strong> is about taking things apart in such a way we can recompose
+them again. There are numerous concepts we should take apart (needs to
+problem, information to mechanism, knowns to unknowns, domain to
+technological solution, benefits and tradeoffs of solutions.) Design is
+an effective way to reduce the cost of bugs and to test our software as
+test now embeds the value of our design.</p>
+<p><strong>Composition</strong> is about constraints and communication. A composition is
+a design, or a plan for the performer. Bigger scales require more
+precision and lower scale allows more freedom to the performer.</p>
+<p><strong>Performance</strong> is about preparation, study and experience. It is the
+ability to bring our knowledge and our experience to solve the problem
+on a given context. Most coders stop learning after college which is a
+contrast to any artistic career who are lifelong learners.</p>
+<p>Both activities requires a sensibility about <strong>harmony</strong> (in a given
+context, will two things work well together?).</p>
+<p>Programming languages are like instruments. As such, we should chose
+those who are backing some fundamental idea (e.g. immutability,
+functional programming) and chose those who are aimed to those who have
+studied the language.</p>
+<p>In software engineering, everything is code all the way down. Hence we
+have a paralysis of choice and distraction (we can improve any part of
+the problem). Making choices, and hence putting constraints move us
+forward. Thus, the value of the design is based on the decision made.</p>
+<p>In conclusion, good design is about taking things about such that we can
+put them back together, we should compose by requiring as much
+constraint as possible, perform by preparing and studying and finally
+choose and learn simple tools aimed to experts.</p>
 <h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
-<p>Disclamer (joke): analogies are like equivalence, except when they are not.</p>
-<p>Design by definition is about to prepare the plans for (a work to be executed), especially to plan the form and the structure of. Execution is interesting as someone or a machine will perform the work. The root is to mark out, to make a plan and write it down.</p>
-<p>The value proposition of design: the bugs are the cheapest at design phases, when they are good. What is a good design?</p>
-<p>Good design is about taking things apart. We want to separating and break down things into several pieces in such a way that they can be put together again, i.e. recomposed.</p>
-<p>Each component should be <strong>about</strong> one or a few things. We solve a problem by composing the parts and it is iterative.</p>
+<p>Disclamer (joke): analogies are like equivalence, except when they are
+not.</p>
+<p>Design by definition is about to prepare the plans for (a work to be
+executed), especially to plan the form and the structure of. Execution
+is interesting as someone or a machine will perform the work. The root
+is to mark out, to make a plan and write it down.</p>
+<p>The value proposition of design: the bugs are the cheapest at design
+phases, when they are good. What is a good design?</p>
+<p>Good design is about taking things apart. We want to separating and
+break down things into several pieces in such a way that they can be put
+together again, i.e. recomposed.</p>
+<p>Each component should be <strong>about</strong> one or a few things. We solve a
+problem by composing the parts and it is iterative.</p>
 <p>Design is about taking things apart.</p>
 <ul>
-<li><strong>Requirements:</strong> move from the want/need to the problems. Take the features and requirements and break them down into a problems perspective. We can explicit the knowns to the unknowns (what do we know how to do, from what we don&rsquo;t know how to do?). Requirement from the domain side (what does the information encodes and what purpose its transformation will it serve for the customer) to the solution side (on which technology should the code run). We can split the cause and the symptom for the problem (how do you solve a black screen problem?), and explicit the unstated requirement (e.g. should not destroy the machine or crash), these are the state we should to avoid. We should transform the set all of need/features to the intrinsic problems.</li>
-<li><strong>Time, order and flow:</strong> In which ordering are the operation to happen, can they be commutative? Queues. Idempotency (redundant activity), transactions (operations have to happen together at the same time).</li>
-<li><strong>Place, participants:</strong> Who (developer) is participating into the process? Which processes (which systems)? Planing about independent development.</li>
-<li><strong>Information and mechanism:</strong> Which components belongs to the information or business problem, and which belongs to the technical solution. Information is usually a logical abstract idea (the sets of users) against a language construct to represent them (=#{:a :b :c}). It is information against the mechanics of a program.</li>
-<li><strong>Solutions:</strong> We have to compare multiple solutions and state their benefits and trade offs, costs and problem fit (if the solution is not too larger to the problem).</li>
+<li>Requirements<br />
+    move from the want/need to the problems. Take the features and
+    requirements and break them down into a problems perspective. We can
+    explicit the knowns to the unknowns (what do we know how to do, from
+    what we don't know how to do?). Requirement from the domain side
+    (what does the information encodes and what purpose its
+    transformation will it serve for the customer) to the solution side
+    (on which technology should the code run). We can split the cause
+    and the symptom for the problem (how do you solve a black screen
+    problem?), and explicit the unstated requirement (e.g. should not
+    destroy the machine or crash), these are the state we should to
+    avoid. We should transform the set all of need/features to the
+    intrinsic problems.</li>
+<li>Time, order and flow<br />
+    In which ordering are the operation to happen, can they be
+    commutative? Queues. Idempotency (redundant activity), transactions
+    (operations have to happen together at the same time).</li>
+<li>Place, participants<br />
+    Who (developer) is participating into the process? Which processes
+    (which systems)? Planing about independent development.</li>
+<li>Information and mechanism<br />
+    Which components belongs to the information or business problem, and
+    which belongs to the technical solution. Information is usually a
+    logical abstract idea (the sets of users) against a language
+    construct to represent them (=#{:a :b :c}). It is information
+    against the mechanics of a program.</li>
+<li>Solutions<br />
+    We have to compare multiple solutions and state their benefits and
+    trade offs, costs and problem fit (if the solution is not too larger
+    to the problem).</li>
 </ul>
-<p>Why Design? We can understand the system (because design is smaller). Coordination (for writing the code). Extension and reuse (the broken pieces of system become connecting points, and new pieces can be connected to the pieces and thus extend them). As the pieces are independent, they can be reuse in other contexts as well. Testing is facilitated as the design constraints are put into test, in opposition as tests driving the design (quickcheck is interesting we need to think at properties and the computer write the test). <strong>Efficiency</strong>: the easiest and cheapest way to remove bugs is at design phases, even after shipping, the solution for bugs in the field is to break things even more.</p>
-<p>Composition is about addressing self imposed problems and constraints. Learning requires inefficiency. Constraint is a driver of creativity. So we should ask as much constraint as possible when solving a problem. We are forced to take a choice and move on. Composition is designed for performers and is an organizational challenge. In composition, there is a vast variety of specificity and scale (fully orchestrated, arranged, larger scales in opposition to melody and changes, increased latitude for performance and more responsibility).</p>
-<p>Most composition are about one or a few things. (melodic, harmonic, rhythmic, timbral ideas). Theme: variations, resolutions, larger works, provides more structural components.</p>
-<p>Improvisation (not foreseen or provided). The melody and the changes and provides constraints. The performer provides variations. Improvisation (well executed) <strong>requires a tremendous amount of preparation, practice and study</strong>. It is about dynamic composition of planned material. The skill is about preparation of plans, material or sensibilities and apply them in the correct situation. Deep knowledge and vocabulary is necessary.</p>
-<p>Harmony (accord, congruity, how does things line up in simultaneous combinations). How do things work together when applied at the same time? It might also be the art or science concerned with the structure and combination. <strong>Harmonic sensibility is a key design skill</strong>. A good designer knows, in a given context, if they make new choices, the pieces will be harmonious (or work together), and the knowledge is acquired through study and experience.</p>
-<p>In the context of music, great composer and performers were masters of harmony, and they were students of harmoniousness. They went beyond the rules, they developed their own comprehension. They made new systems that preserver/explore harmonic essences.</p>
-<p>Programming languages are more like instruments. Most instrument are about one excitation (pluck, vibrate, strike), combined with control and interface to shape the excitation, with the projection (the problem is how people will hear the sound). They all also have the resonance problem (the body of the instrument will respond to the excitation). Instruments are limited (piano can&rsquo;t play in-between notes, saxophone can only play one note at a time). They are minimal yet sufficient (no missing notes usually). The shortcomings might be overcome by the player.</p>
-<p>Instruments are made for people who can play them. But beginners are not players yet. So we should stop designing languages for maximizing the first 5 minutes of experience of a language and we should target long term productivity. (The talk make criticism about cello which should auto-tunes, having green/red lights for good bad notes, or should note make any sound until the whole piece is played perfectly). The first critic is about coercion/javascript and the second one is about IDE, and the third is about static type compile checking (which would not run your program until it is self consistent with the types rules). Learning requires inefficiency.</p>
-<p>Players endures pains to overcome and learn instruments. Humans are incredible, good learners and good teachers. Minimizing beginners effort as primary goal will never allow them to reach virtuous abilities with the tools. So teaching and learning are not effort-free. We are all novices (beginner for only a really brief moment). We are permanently students. It takes efforts. Overcoming effort and accomplishing things provides a sense of engagement (effort matters). Instruments (and tools) are usually for one user.</p>
-<p>We should practice and plan much more than performing. Coders spend more time performing than studying (unlike other creative people).</p>
+<p>Why Design? We can understand the system (because design is smaller).
+Coordination (for writing the code). Extension and reuse (the broken
+pieces of system become connecting points, and new pieces can be
+connected to the pieces and thus extend them). As the pieces are
+independent, they can be reuse in other contexts as well. Testing is
+facilitated as the design constraints are put into test, in opposition
+as tests driving the design (quickcheck is interesting we need to think
+at properties and the computer write the test). <strong>Efficiency</strong>: the
+easiest and cheapest way to remove bugs is at design phases, even after
+shipping, the solution for bugs in the field is to break things even
+more.</p>
+<p>Composition is about addressing self imposed problems and constraints.
+Learning requires inefficiency. Constraint is a driver of creativity. So
+we should ask as much constraint as possible when solving a problem. We
+are forced to take a choice and move on. Composition is designed for
+performers and is an organizational challenge. In composition, there is
+a vast variety of specificity and scale (fully orchestrated, arranged,
+larger scales in opposition to melody and changes, increased latitude
+for performance and more responsibility).</p>
+<p>Most composition are about one or a few things. (melodic, harmonic,
+rhythmic, timbral ideas). Theme: variations, resolutions, larger works,
+provides more structural components.</p>
+<p>Improvisation (not foreseen or provided). The melody and the changes and
+provides constraints. The performer provides variations. Improvisation
+(well executed) <strong>requires a tremendous amount of preparation, practice
+and study</strong>. It is about dynamic composition of planned material. The
+skill is about preparation of plans, material or sensibilities and apply
+them in the correct situation. Deep knowledge and vocabulary is
+necessary.</p>
+<p>Harmony (accord, congruity, how does things line up in simultaneous
+combinations). How do things work together when applied at the same
+time? It might also be the art or science concerned with the structure
+and combination. <strong>Harmonic sensibility is a key design skill</strong>. A good
+designer knows, in a given context, if they make new choices, the pieces
+will be harmonious (or work together), and the knowledge is acquired
+through study and experience.</p>
+<p>In the context of music, great composer and performers were masters of
+harmony, and they were students of harmoniousness. They went beyond the
+rules, they developed their own comprehension. They made new systems
+that preserver/explore harmonic essences.</p>
+<p>Programming languages are more like instruments. Most instrument are
+about one excitation (pluck, vibrate, strike), combined with control and
+interface to shape the excitation, with the projection (the problem is
+how people will hear the sound). They all also have the resonance
+problem (the body of the instrument will respond to the excitation).
+Instruments are limited (piano can't play in-between notes, saxophone
+can only play one note at a time). They are minimal yet sufficient (no
+missing notes usually). The shortcomings might be overcome by the
+player.</p>
+<p>Instruments are made for people who can play them. But beginners are not
+players yet. So we should stop designing languages for maximizing the
+first 5 minutes of experience of a language and we should target long
+term productivity. (The talk make criticism about cello which should
+auto-tunes, having green/red lights for good bad notes, or should note
+make any sound until the whole piece is played perfectly). The first
+critic is about coercion/javascript and the second one is about IDE, and
+the third is about static type compile checking (which would not run
+your program until it is self consistent with the types rules). Learning
+requires inefficiency.</p>
+<p>Players endures pains to overcome and learn instruments. Humans are
+incredible, good learners and good teachers. Minimizing beginners effort
+as primary goal will never allow them to reach virtuous abilities with
+the tools. So teaching and learning are not effort-free. We are all
+novices (beginner for only a really brief moment). We are permanently
+students. It takes efforts. Overcoming effort and accomplishing things
+provides a sense of engagement (effort matters). Instruments (and tools)
+are usually for one user.</p>
+<p>We should practice and plan much more than performing. Coders spend more
+time performing than studying (unlike other creative people).</p>
 <blockquote>
-<p>In order to be creative you hate to know how to prepare to be creative &#x2013; Twyla Tharp, The Creative Habit.</p>
+<p>In order to be creative you hate to know how to prepare to be creative
+– Twyla Tharp, The Creative Habit.</p>
 </blockquote>
-<p>There is too much focus and emphasis on how fast a beginner can accomplish some things against what is required to be effective in the real world.</p>
-<p>Electronic instruments are at the intersection of art and computer software. In their construction, there are two types of interfaces: machine and human. The instrument makers were smart as they built a human interface on top the machine interface allowing to compose. In contrast in IT, we have two examples where human interface were designed first and brings a lot of problems: SQL and UNIX. When we need to programmatically interface with these, we need to smash strings together or parse the output from a another process.</p>
-<p>Design can also be layered and people are concerned with different matters. But for IT: code all the way down, we have the same mechanism at every layer (it does mean we can do filter design). It leads to distraction and unnecessary expansion. It yields the paralysis of choice (we don&rsquo;t know what to do).</p>
-<p>We need the impetus of constraint. <strong>Constraint drives creativity</strong> as it helps to move forward (when we have a few choices, we need to make a choice and move on). We need to quit fidgeting (agglomerating, fiddling, tweakling). Maybe a lot of good ideas does not lead to a good construct.</p>
-<p>Design is imagining (potential solutions) and embrace constraints, rush to them, create additional if not enough restrictive. It is <strong>optimistic</strong>, be positive and imagine a lot. Design is about making decisions. <strong>The value</strong> <strong>conveyed is in decisions made</strong>. Admit very little, and ability to say no. Leaving all options open is avoiding design.</p>
-<p>Performing is preparing (planning). We should practice and study. <strong>Develop</strong> <strong>sensibilities you can apply on the fly</strong> (pattern, techniques, knowledge what works and what not).</p>
-<p>Design is about taking <strong>things apart</strong> in order to be able to pull them back together. Design like Bartok (<strong>communicate very well</strong> at multiple levels). Code like Coltrane (<strong>prepare, study and experience</strong>, by doing multiple different things and not the same thing over and over), such that it feels more like improvisation.</p>
-<p>Find and choose tools that are like instruments (stable, <strong>simple</strong>, directed at <strong>one</strong> thing, and oriented around people who know how to use them). They should express and backing some <strong>fundamental</strong> idea (or excitation for instruments).</p>
-<p>Try to pursue harmony in the design, about the nature of harmoniousness, about what make things work together in a given context.</p>
+<p>There is too much focus and emphasis on how fast a beginner can
+accomplish some things against what is required to be effective in the
+real world.</p>
+<p>Electronic instruments are at the intersection of art and computer
+software. In their construction, there are two types of interfaces:
+machine and human. The instrument makers were smart as they built a
+human interface on top the machine interface allowing to compose. In
+contrast in IT, we have two examples where human interface were designed
+first and brings a lot of problems: SQL and UNIX. When we need to
+programmatically interface with these, we need to smash strings together
+or parse the output from a another process.</p>
+<p>Design can also be layered and people are concerned with different
+matters. But for IT: code all the way down, we have the same mechanism
+at every layer (it does mean we can do filter design). It leads to
+distraction and unnecessary expansion. It yields the paralysis of choice
+(we don't know what to do).</p>
+<p>We need the impetus of constraint. <strong>Constraint drives creativity</strong> as
+it helps to move forward (when we have a few choices, we need to make a
+choice and move on). We need to quit fidgeting (agglomerating, fiddling,
+tweakling). Maybe a lot of good ideas does not lead to a good construct.</p>
+<p>Design is imagining (potential solutions) and embrace constraints, rush
+to them, create additional if not enough restrictive. It is
+<strong>optimistic</strong>, be positive and imagine a lot. Design is about making
+decisions. <strong>The value</strong> <strong>conveyed is in decisions made</strong>. Admit very
+little, and ability to say no. Leaving all options open is avoiding
+design.</p>
+<p>Performing is preparing (planning). We should practice and study.
+<strong>Develop</strong> <strong>sensibilities you can apply on the fly</strong> (pattern,
+techniques, knowledge what works and what not).</p>
+<p>Design is about taking <strong>things apart</strong> in order to be able to pull them
+back together. Design like Bartok (<strong>communicate very well</strong> at multiple
+levels). Code like Coltrane (<strong>prepare, study and experience</strong>, by doing
+multiple different things and not the same thing over and over), such
+that it feels more like improvisation.</p>
+<p>Find and choose tools that are like instruments (stable, <strong>simple</strong>,
+directed at <strong>one</strong> thing, and oriented around people who know how to
+use them). They should express and backing some <strong>fundamental</strong> idea (or
+excitation for instruments).</p>
+<p>Try to pursue harmony in the design, about the nature of harmoniousness,
+about what make things work together in a given context.</p>
 <h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=MCZ3YgeEUPg">Design, Composition, and Performance - Rich Hickey</a></li>
+<li><a href="https://www.youtube.com/watch?v=MCZ3YgeEUPg">Design, Composition, and Performance - Rich
+    Hickey</a></li>
 </ul>
 <h2 id="solving-problems-the-clojure-way-rafal-dittwald-2019">Solving Problems the Clojure Way - Rafal Dittwald [2019]<a class="headerlink" href="#solving-problems-the-clojure-way-rafal-dittwald-2019" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Pure</strong> functions everywhere.</li>
 <li><strong>Minimize</strong> the number of mutable state.</li>
-<li><strong>Concentrate</strong> the mutable parts into a few objects, like re-frame global state</li>
-<li><strong>Defer</strong> side effects to the edge (end) of the program, like re-frame effects.</li>
-<li>Data first, something like <strong>configuration driven development</strong>. Put parts of your code into configuration.</li>
+<li><strong>Concentrate</strong> the mutable parts into a few objects, like re-frame
+    global state</li>
+<li><strong>Defer</strong> side effects to the edge (end) of the program, like
+    re-frame effects.</li>
+<li>Data first, something like <strong>configuration driven development</strong>. Put
+    parts of your code into configuration.</li>
 </ul>
 <h3 id="source_1">Source:<a class="headerlink" href="#source_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=vK1DazRK_a0">Solving Problems the Clojure Way - Rafal Dittwald</a></li>
+<li><a href="https://www.youtube.com/watch?v=vK1DazRK_a0">Solving Problems the Clojure Way - Rafal
+    Dittwald</a></li>
 </ul>
 <h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
 <ul>

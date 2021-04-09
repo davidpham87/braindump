@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -510,8 +522,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cards/20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../../cards/20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -1074,6 +1086,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cards/20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cards/continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1170,8 +1194,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cards/website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../../cards/website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1353,7 +1377,8 @@
 </ul>
 <h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[ ] specs: write about the principal functions. Test and use generative testing with specs.</li>
+<li>[ ] specs: write about the principal functions. Test and use
+    generative testing with specs.</li>
 <li>[ ] Create generators using asnyc and neanderthal.</li>
 <li>[ ] transducers: use them more extensively.</li>
 <li>[ ] core.async: find excuses to use them.</li>
@@ -1362,60 +1387,99 @@
 <li>[ ] Datomic</li>
 <li>[ ] Webworkers</li>
 </ul>
-<h2 id="todo-web-development-with-clojure">TODO Web Development with Clojure<a class="headerlink" href="#todo-web-development-with-clojure" title="Permanent link">&para;</a></h2>
-<p>A handler is a function that receive a request map (and response callaback and raise callback) and returns a response map or calls the reponse callback on the response map. A middleware is a function that whose first argument is a handler and should return a handler.</p>
+<h2 id="todo-web-development-with-clojure"><span class="todo TODO">TODO</span> Web Development with Clojure<a class="headerlink" href="#todo-web-development-with-clojure" title="Permanent link">&para;</a></h2>
+<p>A handler is a function that receive a request map (and response
+callaback and raise callback) and returns a response map or calls the
+reponse callback on the response map. A middleware is a function that
+whose first argument is a handler and should return a handler.</p>
 <h2 id="clojurescript">Clojurescript<a class="headerlink" href="#clojurescript" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[X] <a href="https://github.com/bhauman/lein-figwheel">https://github.com/bhauman/lein-figwheel</a> [shadow-cljs is more useful]</li>
+<li>[X] <a href="https://github.com/bhauman/lein-figwheel">https://github.com/bhauman/lein-figwheel</a> [shadow-cljs is
+    more useful]</li>
 <li>[ ] tools.deps, read more about arguments.</li>
 <li>[X] Understand how to wrap javascript code into Clojure. Use NPM.</li>
-<li>How to communicate between clojure and clojurescript (cljc) or sente.</li>
+<li>How to communicate between clojure and clojurescript (cljc) or
+    sente.</li>
 <li>[ ] <a href="https://funcool.github.io/clojurescript-unraveled/">https://funcool.github.io/clojurescript-unraveled/</a></li>
 <li>[ ] Make a summary of core.async chapter. Udemy [core.async]</li>
 </ul>
 <h2 id="elements-of-clojure">Elements of Clojure<a class="headerlink" href="#elements-of-clojure" title="Permanent link">&para;</a></h2>
 <h2 id="naming">Naming<a class="headerlink" href="#naming" title="Permanent link">&para;</a></h2>
-<p>There is a difference between the <strong>sign</strong> (the symbols or letters) and the <strong>referent</strong> (the thing/value to which the sign refers).</p>
-<p><strong>Consistency</strong> is one of the feature that allow to grow. Precision is a trade-off with generality. <strong>synthetic</strong> allow precision, <strong>natural</strong> allows beginners to understand (trade off wit how much to learn before being productive).</p>
+<p>There is a difference between the <strong>sign</strong> (the symbols or letters) and
+the <strong>referent</strong> (the thing/value to which the sign refers).</p>
+<p><strong>Consistency</strong> is one of the feature that allow to grow. Precision is a
+trade-off with generality. <strong>synthetic</strong> allow precision, <strong>natural</strong>
+allows beginners to understand (trade off wit how much to learn before
+being productive).</p>
 <h2 id="idioms">Idioms<a class="headerlink" href="#idioms" title="Permanent link">&para;</a></h2>
 <h2 id="indirection">Indirection<a class="headerlink" href="#indirection" title="Permanent link">&para;</a></h2>
-<p>Indirection is the process of separating the <em>how</em> from the <em>what</em>. It useful when answering the question <em>How does it work</em> is answered best with <em>it depends</em>.</p>
-<p><strong>Reference</strong> and <strong>conditionals</strong> are two tools to perform indirection. Getting the referent from a reference is called <strong>dereferencing</strong>. Reference are open, while conditional are closed (which could be a feature). Another difference is the <em>order</em> matters in conditional (like <code>cond</code>).</p>
-<p>Dispatch happens in two context runtime (<strong>dynamic</strong>) and compile time (<strong>static</strong> dispatching). Best to avoid hierarchies.</p>
-<p>Abstraction should be simplest model that satisfies the context requirements and self consistent. It depends on the context which sets the minimal set of constraints to pay attention to. As such it lives in a bubble/context. Hence, we should ask, what are the assumptions of the code?</p>
-<p>There are the two distinction for abstraction Principled vs Adaptable. Principled allows to create big architecture artifacts, but they are not adaptable (castle cards or sky scrapper, changing a room are hard). We should thrive for complex adaptable network, that is small components that are principled but in an adaptable network (pieces can be removed and substituted).</p>
-<p>How to gather code to create principled component? If code have the same set of assumption, then good place to gather them.</p>
+<p>Indirection is the process of separating the <em>how</em> from the <em>what</em>. It
+useful when answering the question <em>How does it work</em> is answered best
+with <em>it depends</em>.</p>
+<p><strong>Reference</strong> and <strong>conditionals</strong> are two tools to perform indirection.
+Getting the referent from a reference is called <strong>dereferencing</strong>.
+Reference are open, while conditional are closed (which could be a
+feature). Another difference is the <em>order</em> matters in conditional (like
+<code>cond</code>).</p>
+<p>Dispatch happens in two context runtime (<strong>dynamic</strong>) and compile time
+(<strong>static</strong> dispatching). Best to avoid hierarchies.</p>
+<p>Abstraction should be simplest model that satisfies the context
+requirements and self consistent. It depends on the context which sets
+the minimal set of constraints to pay attention to. As such it lives in
+a bubble/context. Hence, we should ask, what are the assumptions of the
+code?</p>
+<p>There are the two distinction for abstraction Principled vs Adaptable.
+Principled allows to create big architecture artifacts, but they are not
+adaptable (castle cards or sky scrapper, changing a room are hard). We
+should thrive for complex adaptable network, that is small components
+that are principled but in an adaptable network (pieces can be removed
+and substituted).</p>
+<p>How to gather code to create principled component? If code have the same
+set of assumption, then good place to gather them.</p>
 <p>Change is constant.</p>
 <h2 id="blogs">Blogs<a class="headerlink" href="#blogs" title="Permanent link">&para;</a></h2>
 <h2 id="agile-is-an-attitude-russ-olsen-cognitect-2017">Agile is an attitude - Russ Olsen <a href="http://blog.cognitect.com/blog/2017/7/27/how-we-work-agile-is-an-attitude">Cognitect</a> [2017]<a class="headerlink" href="#agile-is-an-attitude-russ-olsen-cognitect-2017" title="Permanent link">&para;</a></h2>
 <p>The Monkey wrench of agile is the following:</p>
 <blockquote>
-<p><em>To get the job done you need to focus on the goal and the people who will get you there.</em></p>
+<p><em>To get the job done you need to focus on the goal and the people who
+will get you there.</em></p>
 </blockquote>
 <ul>
-<li>There is no magic recipe, no set of practices that will guarantee success</li>
+<li>There is no magic recipe, no set of practices that will guarantee
+    success</li>
 </ul>
 <blockquote>
-<p>You need to be ready to throw away the rule book and bob and weave and flex with whatever comes next. You need to improvise, adapt and overcome.</p>
+<p>You need to be ready to throw away the rule book and bob and weave and
+flex with whatever comes next. You need to improvise, adapt and
+overcome.</p>
 <p>Above all, agile means keeping your eye on the fundamentals:</p>
 <p><em>What are the goals? And how are we going to get there?</em></p>
-<p>You need to be ready to throw away the rule book and bob and weave and flex with whatever comes next. <em>You need to improvise, adapt and overcome</em>. Above all, agile means keeping your eye on the fundamentals: <em>What are the goals? And how are we going to get there?</em>.</p>
+<p>You need to be ready to throw away the rule book and bob and weave and
+flex with whatever comes next. <em>You need to improvise, adapt and
+overcome</em>. Above all, agile means keeping your eye on the
+fundamentals: <em>What are the goals? And how are we going to get
+there?</em>.</p>
 </blockquote>
-<p>You need to improvise, adapt and overcome. What are the goals, and how are we going to get there? When agile processes make sense, use them. When they don&rsquo;t, let them go without regret.</p>
+<p>You need to improvise, adapt and overcome. What are the goals, and how
+are we going to get there? When agile processes make sense, use them.
+When they don't, let them go without regret.</p>
 <h2 id="iteration-zero-naoko-higashide-cognitect-2017">Iteration Zero - Naoko Higashide <a href="http://blog.cognitect.com/blog/2017/3/20/how-we-work-iteration-zero">Cognitect</a> [2017]<a class="headerlink" href="#iteration-zero-naoko-higashide-cognitect-2017" title="Permanent link">&para;</a></h2>
-<p>The framework is about people first, conversations, realizations, and shared understanding.</p>
+<p>The framework is about people first, conversations, realizations, and
+shared understanding.</p>
 <ul>
-<li>Bring people who will participate (not attend).</li>
+<li>
+<p>Bring people who will participate (not attend).</p>
+</li>
 <li>
 <p>First is to define responsibilities.</p>
 <blockquote>
-<p><Who> will <Do> <What> for <Whom>.</p>
+<p>\&lt;Who> will \&lt;Do> \&lt;What> for \&lt;Whom>.</p>
 </blockquote>
 </li>
 <li>
 <p>Finishing lines.</p>
 <blockquote>
-<p>The project will be complete when&#x2026;</p>
+<p>The project will be complete when…</p>
 </blockquote>
 </li>
 <li>
@@ -1430,33 +1494,66 @@
 </ul>
 </li>
 </ul>
-<p>Make sure that project&rsquo;s sponsor is aligned with those of the team.</p>
+<p>Make sure that project's sponsor is aligned with those of the team.</p>
 <h2 id="talks">Talks<a class="headerlink" href="#talks" title="Permanent link">&para;</a></h2>
 <h3 id="maybe-not-rich-hickey-2018">Maybe not - Rich Hickey [2018]<a class="headerlink" href="#maybe-not-rich-hickey-2018" title="Permanent link">&para;</a></h3>
-<p>The talk is about <code>clojure.spec</code> and about the optionality in requirements.</p>
-<p>Static typing proponents will always talks about the benefits of types without ever mentioning the costs.</p>
-<p>In non breaking changes of API (requiring less, providing more), static typing will break APIs callers.</p>
-<p>Records in contrast to maps (open sets of keys and values) are PLOP. Because you need to place something in the slot where they contain data, and hence options. Clojure will always forbid to create brittle system with closed specifications.</p>
-<p>In Clojure, when an field of information (the value of a key in map) in unknown, the key is removed from the map (and avoid keys with <code>nil</code> value). Because if the value is <code>nil</code>, we don&rsquo;t know if we should be worried if the value is <code>nil</code> or if it is valid. In contrast, if the key is not in the map we can safely ignore it.</p>
-<p>Data aggregates are herd of information and is moving from one process to another.</p>
-<p>The solution is to define herd is to split the specifications into two: a schema describing the aggregate (and its tree) and a context whenever in function calls and returns.</p>
+<p>The talk is about <code>clojure.spec</code> and about the optionality in
+requirements.</p>
+<p>Static typing proponents will always talks about the benefits of types
+without ever mentioning the costs.</p>
+<p>In non breaking changes of API (requiring less, providing more), static
+typing will break APIs callers.</p>
+<p>Records in contrast to maps (open sets of keys and values) are PLOP.
+Because you need to place something in the slot where they contain data,
+and hence options. Clojure will always forbid to create brittle system
+with closed specifications.</p>
+<p>In Clojure, when an field of information (the value of a key in map) in
+unknown, the key is removed from the map (and avoid keys with <code>nil</code>
+value). Because if the value is <code>nil</code>, we don't know if we should be
+worried if the value is <code>nil</code> or if it is valid. In contrast, if the key
+is not in the map we can safely ignore it.</p>
+<p>Data aggregates are herd of information and is moving from one process
+to another.</p>
+<p>The solution is to define herd is to split the specifications into two:
+a schema describing the aggregate (and its tree) and a context whenever
+in function calls and returns.</p>
 <h2 id="specs-leveragetestingcustom-generators-screencast-stuart-halloway-2016">Specs Leverage/Testing/Custom Generators, Screencast- Stuart Halloway [2016]<a class="headerlink" href="#specs-leveragetestingcustom-generators-screencast-stuart-halloway-2016" title="Permanent link">&para;</a></h2>
-<p>The advantage are validation, conformance, destructuring, error message, composition, example data generation, assertion, documentation, generative testing, instrumentation.</p>
-<p>It is about specs. Specs allows to define attributes, composites and function specs. A function specs takes three keys <code>:args</code>, <code>:ret</code> and <code>:fn</code> (which takes the specs as argument). The most interesting is the <code>fn</code> which is describe properties of the function returns. Specs allows to use regular expression on data structure for creating your specs. You can use <code>s/exercise</code> for generating sample of your spec and <code>(test/check `my-fn)</code> and <code>test/summarize-result</code> for checking your function specs. The function <code>s/valid?</code> and <code>s/explain-data</code> allows to validate and to get data for our mistakes.</p>
-<p>Whenever testing, you also can use <code>test/instrument</code> to instrument your function for better error message.</p>
-<p><code>s/alt</code> for alternative, <code>s/and</code> for predicates aggregation, <code>s/or</code> for <em>or</em> predicate composition. Maybe <code>s/&amp;</code>.</p>
-<p>The function <code>gen/fmap</code> takes a value from a generate and returns a value, while <code>gen/let</code> and <code>gen/bind</code> takes a generator and return a generator. Usually these are wrapped into functions and called with</p>
+<p>The advantage are validation, conformance, destructuring, error message,
+composition, example data generation, assertion, documentation,
+generative testing, instrumentation.</p>
+<p>It is about specs. Specs allows to define attributes, composites and
+function specs. A function specs takes three keys <code>:args</code>, <code>:ret</code> and
+<code>:fn</code> (which takes the specs as argument). The most interesting is the
+<code>fn</code> which is describe properties of the function returns. Specs allows
+to use regular expression on data structure for creating your specs. You
+can use <code>s/exercise</code> for generating sample of your spec and
+<code>(test/check
+`my-fn)</code> and <code>test/summarize-result</code> for checking your function specs.
+The function <code>s/valid?</code> and <code>s/explain-data</code> allows to validate and to
+get data for our mistakes.</p>
+<p>Whenever testing, you also can use <code>test/instrument</code> to instrument your
+function for better error message.</p>
+<p><code>s/alt</code> for alternative, <code>s/and</code> for predicates aggregation, <code>s/or</code> for
+<em>or</em> predicate composition. Maybe <code>s/&amp;</code>.</p>
+<p>The function <code>gen/fmap</code> takes a value from a generate and returns a
+value, while <code>gen/let</code> and <code>gen/bind</code> takes a generator and return a
+generator. Usually these are wrapped into functions and called with</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">s/exercise</span> <span class="ss">::s</span> <span class="p">{</span><span class="ss">::s</span> <span class="nv">wrapper-around-fmap</span><span class="p">})</span>
 <span class="c1">;; or</span>
 <span class="p">(</span><span class="nf">s/def</span> <span class="ss">::s</span> <span class="p">(</span><span class="nf">s/spec</span> <span class="nv">pred?</span> <span class="ss">:gen</span> <span class="nv">wrapper-around-fmap</span><span class="p">))</span>
 </code></pre></div>
 
-<p>Usually, <code>gen/let</code> and <code>gen/bind</code> are used in conjunction with a <em>model</em> for representing the input data. The model acts as generator of test input, helping to conceptualize the expected inputs. For example</p>
+<p>Usually, <code>gen/let</code> and <code>gen/bind</code> are used in conjunction with a <em>model</em>
+for representing the input data. The model acts as generator of test
+input, helping to conceptualize the expected inputs. For example</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">model</span> <span class="p">(</span><span class="nf">s/cat</span> <span class="ss">:prefix</span> <span class="nb">string? </span><span class="ss">:match</span> <span class="nb">string? </span><span class="ss">:suffix</span> <span class="nv">string?</span><span class="p">))</span>
 </code></pre></div>
 
 <p>when testing a <code>index-of</code> function for string.</p>
-<p>Write about <code>s/fspec</code>. The trick in using <code>s/fspec</code> is to provide reasonable generators. Using the <code>gen/return</code> allows to wrap a high order function as a <em>generator</em>. Read <code>test.check.generator</code> for more <a href="https://github.com/clojure/test.check/blob/master/doc/generator-examples.md">details</a>.</p>
+<p>Write about <code>s/fspec</code>. The trick in using <code>s/fspec</code> is to provide
+reasonable generators. Using the <code>gen/return</code> allows to wrap a high
+order function as a <em>generator</em>. Read <code>test.check.generator</code> for more
+<a href="https://github.com/clojure/test.check/blob/master/doc/generator-examples.md">details</a>.</p>
 <h3 id="design-composition-and-performance-2013">Design, Composition and Performance [2013]<a class="headerlink" href="#design-composition-and-performance-2013" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../../cards/20200430190921-design/">Design</a> card.</li>
@@ -1466,22 +1563,31 @@
 <li><a href="../../cards/20200430155637-applied_clojure/">Applied Clojure</a></li>
 <li><a href="../../cards/20200430154352-cli_arguments/">CLI Arguments</a></li>
 <li><a href="../../cards/20200521232124-cljss/">cljss</a></li>
-<li><a href="../../cards/20200430160432-clojure_for_the_brave_and_the_true/">Clojure for the brave and the true</a></li>
-<li><a href="../../cards/20200524185034-clojure_functional_programming_principles/">Clojure Functional Programming Principles</a></li>
+<li><a href="../../cards/20200430160432-clojure_for_the_brave_and_the_true/">Clojure for the brave and the
+    true</a></li>
+<li><a href="../../cards/20200524185034-clojure_functional_programming_principles/">Clojure Functional Programming
+    Principles</a></li>
 <li><a href="../../cards/20200505124946-clj_toolkit/">Clojure toolkit</a></li>
 <li><a href="../../cards/20200517205339-clojure_zippers/">Clojure Zippers</a></li>
 <li><a href="../../cards/20200430155819-core_async/">core.async</a></li>
 <li><a href="../../cards/20200430141609-david_nolen/">David Nolen</a></li>
 <li><a href="../../cards/20200430190921-design/">Design</a></li>
 <li><a href="../../cards/20200504212017-edn_and_transit/">edn and transit</a></li>
-<li><a href="../../cards/20200505113402-high_performance_clojurescript/">High Performance CLJS</a></li>
+<li><a href="../../cards/20200505113402-high_performance_clojurescript/">High Performance
+    CLJS</a></li>
 <li><a href="../..">Home for ideas for my Zettelkasten</a></li>
-<li><a href="../../cards/20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
-<li><a href="../../cards/20200430155438-mastering_clojure_macro/">Mastering Clojure Macro</a></li>
-<li><a href="../../cards/20200430154528-multiple_environment/">Multiple Environment</a></li>
-<li><a href="../../cards/20200503222619-org_roam_clj/">Org-roam-clj: Org-roam extension with Clojure</a></li>
-<li><a href="../../cards/20200505112138-clojure_reducers/">Parallel Programming in Clojure with Reducers</a></li>
-<li><a href="../../cards/20200505124708-potemkin/">Potemkin: some ideas which are almost good</a></li>
+<li><a href="../../cards/20200430141226-life_in_dynamic_typing/">Life In Dynamic
+    Typing</a></li>
+<li><a href="../../cards/20200430155438-mastering_clojure_macro/">Mastering Clojure
+    Macro</a></li>
+<li><a href="../../cards/20200430154528-multiple_environment/">Multiple
+    Environment</a></li>
+<li><a href="../../cards/20200503222619-org_roam_clj/">Org-roam-clj: Org-roam extension with
+    Clojure</a></li>
+<li><a href="../../cards/20200505112138-clojure_reducers/">Parallel Programming in Clojure with
+    Reducers</a></li>
+<li><a href="../../cards/20200505124708-potemkin/">Potemkin: some ideas which are almost
+    good</a></li>
 <li><a href="../../cards/20200501201607-quotes/">Quotes</a></li>
 <li><a href="../../cards/20200430154647-shadow_cljs/">shadow-cljs</a></li>
 <li><a href="../../cards/20200502122138-simple_made_easy/">Simple Made Easy</a></li>

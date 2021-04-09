@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -1005,6 +1017,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1101,8 +1125,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1210,7 +1234,8 @@
                 
                 <h1 id="shadow-cljs">shadow-cljs<a class="headerlink" href="#shadow-cljs" title="Permanent link">&para;</a></h1>
 <h2 id="nginx-configuration-for-developping-locally">NGINX Configuration for developping locally<a class="headerlink" href="#nginx-configuration-for-developping-locally" title="Permanent link">&para;</a></h2>
-<p>Install nginx on your remote server and place this file into your configuration.</p>
+<p>Install nginx on your remote server and place this file into your
+configuration.</p>
 <div class="highlight"><pre><span></span><code>server {
   listen 80 default_server;
   listen [::]:80 default_server;
@@ -1237,14 +1262,16 @@
 
 <ul>
 <li>Open the ports: `sudo ufw 8080` and `sudo ufw 9630`.</li>
-<li>Connect directly to the ip/domain of the server with the correct ports.</li>
+<li>Connect directly to the ip/domain of the server with the correct
+    ports.</li>
 </ul>
 <h2 id="inspect">Inspect<a class="headerlink" href="#inspect" title="Permanent link">&para;</a></h2>
-<p>Inject the correct namespaces with <code>:devtools</code> preloads in the <code>shadow-cljs.edn</code> config file.</p>
+<p>Inject the correct namespaces with <code>:devtools</code> preloads in the
+<code>shadow-cljs.edn</code> config file.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="ss">:devtools</span>
  <span class="p">{</span><span class="ss">:preloads</span> <span class="p">[</span><span class="nv">shadow.remote.runtime.cljs.browser</span>
-         <span class="c1">;; shadow.remote.runtime.cljs.node ;; for nodejs</span>
-         <span class="p">]}}</span>
+             <span class="c1">;; shadow.remote.runtime.cljs.node ;; for nodejs</span>
+             <span class="p">]}}</span>
 </code></pre></div>
 
 <p>Inspect with Clojure and not only ClojureScript</p>
@@ -1254,11 +1281,12 @@
 </code></pre></div>
 
 <h2 id="devcards">Devcards<a class="headerlink" href="#devcards" title="Permanent link">&para;</a></h2>
-<p>For devcards 0.2.7, we have to make the following adjustment for making it work with shadow-cljs.</p>
+<p>For devcards 0.2.7, we have to make the following adjustment for making
+it work with shadow-cljs.</p>
 <div class="highlight"><pre><span></span><code>     <span class="p">{</span><span class="ss">:builds</span>
       <span class="p">{</span><span class="ss">:app</span>
        <span class="p">{</span><span class="ss">:build-options</span> <span class="p">{</span><span class="ss">:ns-aliases</span> <span class="p">{</span><span class="nv">devcards-marked</span> <span class="nv">cljsjs.marked</span>
-                     <span class="nv">devcards-syntax-highlighter</span> <span class="nv">cljsjs.highlight</span><span class="p">}}}}}</span>
+                                     <span class="nv">devcards-syntax-highlighter</span> <span class="nv">cljsjs.highlight</span><span class="p">}}}}}</span>
 
 <span class="p">(</span><span class="kd">ns </span><span class="nv">cljsjs.marked</span>
   <span class="p">(</span><span class="ss">:require</span> <span class="p">[</span><span class="s">&quot;marked&quot;</span> <span class="ss">:as</span> <span class="nv">marked</span><span class="p">]))</span>
@@ -1284,10 +1312,12 @@
 <ul>
 <li><a href="../20200521232124-cljss/">cljss</a></li>
 <li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200524185034-clojure_functional_programming_principles/">Clojure Functional Programming Principles</a></li>
+<li><a href="../20200524185034-clojure_functional_programming_principles/">Clojure Functional Programming
+    Principles</a></li>
 <li><a href="../20200505124946-clj_toolkit/">Clojure toolkit</a></li>
 <li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
-<li><a href="../20200505113402-high_performance_clojurescript/">High Performance CLJS</a></li>
+<li><a href="../20200505113402-high_performance_clojurescript/">High Performance
+    CLJS</a></li>
 <li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
 <li><a href="../20200505112918-nginx/">nginx</a></li>
 </ul>
@@ -1295,10 +1325,12 @@
 <ul>
 <li><a href="../20200521232124-cljss/">cljss</a></li>
 <li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200524185034-clojure_functional_programming_principles/">Clojure Functional Programming Principles</a></li>
+<li><a href="../20200524185034-clojure_functional_programming_principles/">Clojure Functional Programming
+    Principles</a></li>
 <li><a href="../20200505124946-clj_toolkit/">Clojure toolkit</a></li>
 <li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
-<li><a href="../20200505113402-high_performance_clojurescript/">High Performance CLJS</a></li>
+<li><a href="../20200505113402-high_performance_clojurescript/">High Performance
+    CLJS</a></li>
 <li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
 <li><a href="../20200505112918-nginx/">nginx</a></li>
 </ul>
@@ -1320,7 +1352,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1329,7 +1361,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Multiple environments
+                20200430154528 multiple environment
               </div>
             </div>
           </a>

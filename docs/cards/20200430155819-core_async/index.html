@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -1005,6 +1017,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1101,8 +1125,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1210,7 +1234,8 @@
                 
                 <h1 id="coreasync">core.async<a class="headerlink" href="#coreasync" title="Permanent link">&para;</a></h1>
 <ul>
-<li><strong>tags:</strong> clojure asynchronous CSP</li>
+<li>tags<br />
+    clojure asynchronous CSP</li>
 </ul>
 <h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1219,40 +1244,73 @@
 </ul>
 <h2 id="coreasync-in-use">core.async in Use<a class="headerlink" href="#coreasync-in-use" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Source<br />
+<a href="https://www.youtube.com/watch?v=096pIlA3GDo">core.async in use</a></li>
+</ul>
+<!-- end list -->
+
+<ul>
+<li>Transducers are really important for using core.async.</li>
+</ul>
+<!-- end list -->
+
+<ul>
 <li>
-<p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=096pIlA3GDo">core.async in use</a></p>
+<p>Use transducers as much as possible in channels and go block to
+    avoid side effect.</p>
 </li>
 <li>
-<p>Transducers are really important for using core.async.</p>
+<p>Make sure to return the channels.</p>
 </li>
 <li>
-<p>Use transducers as much as possible in channels and go block to avoid side effect.</p>
-</li>
-<li>Make sure to return the channels.</li>
-<li>
-<p>Disadvantage: async code pollutes the return type, problem with error handling, channels are IO and hence have side effects. It introduces non-determinism in the code.</p>
+<p>Disadvantage: async code pollutes the return type, problem with
+    error handling, channels are IO and hence have side effects. It
+    introduces non-determinism in the code.</p>
 </li>
 <li>
-<p>Don&rsquo;t use async, unless required.</p>
+<p>Don't use async, unless required.</p>
 </li>
 <li>
 <p>Pattern fetch and them conj all the result in a callback.</p>
 </li>
 <li>
-<p>A good api for library creators is to ask the user to take the result of the asynchronous code as a callback.</p>
+<p>A good api for library creators is to ask the user to take the
+    result of the asynchronous code as a callback.</p>
 </li>
-<li>Make a framework where the asynchronicity is set as an implemented detail. Remove it from the interface (user or API). You need to contains the asynchronicity and hide it from the business perspective. This yields, testable data, explicit data.</li>
-<li>Reifying is the act of taking virtual and making it concrete. Intangible to tangible. The interceptors (<code>enter</code>, <code>exit</code>, <code>on-error</code>).</li>
-<li>Dataflow and FRP. Nodes are connected via communication channels, each nodes takes and emits from on or more inputs/outputs, each node consists of a function that computes outputs ased on inputs. The advantage is that it Separates transformation from communication and connection. It is functionally pure, async code is removed from the user interface, connections are explicit, and any connections can be used.</li>
-<li>Actor, connections are implicit, sending message inside user code, opqare state hidden in loop local.</li>
+<li>
+<p>Make a framework where the asynchronicity is set as an implemented
+    detail. Remove it from the interface (user or API). You need to
+    contains the asynchronicity and hide it from the business
+    perspective. This yields, testable data, explicit data.</p>
+</li>
+<li>
+<p>Reifying is the act of taking virtual and making it concrete.
+    Intangible to tangible. The interceptors (<code>enter</code>, <code>exit</code>,
+    <code>on-error</code>).</p>
+</li>
+<li>
+<p>Dataflow and FRP. Nodes are connected via communication channels,
+    each nodes takes and emits from on or more inputs/outputs, each node
+    consists of a function that computes outputs ased on inputs. The
+    advantage is that it Separates transformation from communication and
+    connection. It is functionally pure, async code is removed from the
+    user interface, connections are explicit, and any connections can be
+    used.</p>
+</li>
+<li>
+<p>Actor, connections are implicit, sending message inside user code,
+    opqare state hidden in loop local.</p>
+</li>
 </ul>
 <h3 id="pattern-in-pattern">Pattern in Pattern<a class="headerlink" href="#pattern-in-pattern" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Keep user space code pure;</li>
 <li>Move the complexity of async out of the user space;</li>
-<li>Make dependencies/connections between modules/components explicit (the system can introspect itself). It increase leverage;</li>
+<li>Make dependencies/connections between modules/components explicit
+    (the system can introspect itself). It increase leverage;</li>
 <li>Leverage this for easier testing;</li>
-<li>Use core.async to enable cleaner abstractions, not as aned in itself.</li>
+<li>Use core.async to enable cleaner abstractions, not as aned in
+    itself.</li>
 </ul>
 <h2 id="pitfalls">Pitfalls<a class="headerlink" href="#pitfalls" title="Permanent link">&para;</a></h2>
 <p>Sliding/dropping buffers still required to be put into channels</p>
@@ -1266,17 +1324,21 @@
 <h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://clojure.org/news/2013/06/28/clojure-clore-async-channels">Announcement</a></li>
-<li><a href="https://www.youtube.com/watch?v=9HspeHGBg-Q">Rich Hickey on core.async</a></li>
+<li><a href="https://www.youtube.com/watch?v=9HspeHGBg-Q">Rich Hickey on
+    core.async</a></li>
 <li><a href="https://www.youtube.com/watch?v=096pIlA3GDo">core.async in use</a></li>
 </ul>
 <h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../20200430155637-applied_clojure/">Applied Clojure</a></li>
 <li><a href="../../decks/clojure/">Clojure</a></li>
-<li><a href="../20200430160432-clojure_for_the_brave_and_the_true/">Clojure for the brave and the true</a></li>
+<li><a href="../20200430160432-clojure_for_the_brave_and_the_true/">Clojure for the brave and the
+    true</a></li>
 <li><a href="../..">Home for ideas for my Zettelkasten</a></li>
-<li><a href="../20200430155438-mastering_clojure_macro/">Mastering Clojure Macro</a></li>
-<li><a href="../20200505112138-clojure_reducers/">Parallel Programming in Clojure with Reducers</a></li>
+<li><a href="../20200430155438-mastering_clojure_macro/">Mastering Clojure
+    Macro</a></li>
+<li><a href="../20200505112138-clojure_reducers/">Parallel Programming in Clojure with
+    Reducers</a></li>
 <li><a href="../../todo/">TODO</a></li>
 </ul>
                 

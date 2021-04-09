@@ -1,7 +1,7 @@
 #+TITLE: Starting Scripting Clojure
 #+OPTIONS: toc:nil
 #+ROAM_ALIAS: starting-scripting-clojure clj/beginner
-#+ROAM_TAGS: scripting beginner start clj
+#+ROAM_TAGS: scripting beginner start clj clojure
 #+DATE: 2020-05-29
 
 * Starting Scripting Clojure
@@ -130,9 +130,3 @@
 
    I hope this simple workflow will allow to experiment much more with Clojure
    and have fun with it.
-
-
-** See also (generated)
-
-   - 
-

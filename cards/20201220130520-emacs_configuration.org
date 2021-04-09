@@ -6,6 +6,15 @@
 
 * Emacs
 
+** Native Comp
+   Install on ubuntu 20.04 [[https://emacs.stackexchange.com/questions/59538/compile-emacs-from-feature-native-comp-gccemacs-branch-on-ubuntu][Stackoverflow]]
+
+*** JSON Mode
+
+    - There is a bug in `json-snatcher.el`, you have to move the hook on
+      kill-buffer to the end of the file, otherwise it reference a variable
+      that has not yet been declared. <2020-12-20 So>
+
 ** Python
 
 When working with conda, install [[https://docs.conda.io/en/latest/miniconda.html][Miniconda]] and set =conda-anaconda-home= to

@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -447,21 +459,21 @@
       
         <li class="md-nav__item">
   <a href="#parallel-demons-concurrency" class="md-nav__link">
-    Parallel demons     :concurrency:
+    Parallel demons concurrency
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references-type-concurrencyepochal_time_model" class="md-nav__link">
-    References type     :concurrency:epochal_time_model:
+  <a href="#references-type-concurrency-epochal_time_model" class="md-nav__link">
+    References type concurrency epochal_time_model
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#coreasync-and-channels-core_async" class="md-nav__link">
-    core.async and channels     :core_async:
+    core.async and channels core_async
   </a>
   
 </li>
@@ -992,6 +1004,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1088,8 +1112,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1126,21 +1150,21 @@
       
         <li class="md-nav__item">
   <a href="#parallel-demons-concurrency" class="md-nav__link">
-    Parallel demons     :concurrency:
+    Parallel demons concurrency
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references-type-concurrencyepochal_time_model" class="md-nav__link">
-    References type     :concurrency:epochal_time_model:
+  <a href="#references-type-concurrency-epochal_time_model" class="md-nav__link">
+    References type concurrency epochal_time_model
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#coreasync-and-channels-core_async" class="md-nav__link">
-    core.async and channels     :core_async:
+    core.async and channels core_async
   </a>
   
 </li>
@@ -1183,29 +1207,48 @@
                 
                 
                 <h1 id="clojure-for-the-brave-and-the-true">Clojure for the brave and the true<a class="headerlink" href="#clojure-for-the-brave-and-the-true" title="Permanent link">&para;</a></h1>
-<h2 id="parallel-demons-concurrency">Parallel demons     :concurrency:<a class="headerlink" href="#parallel-demons-concurrency" title="Permanent link">&para;</a></h2>
+<h2 id="parallel-demons-concurrency">Parallel demons <span class="tag" data-tag-name="concurrency"><span class="smallcaps">concurrency</span></span><a class="headerlink" href="#parallel-demons-concurrency" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Reference cell: Read and write a shared state.</li>
-<li>Mutual exclusion: Example with writing a log with several processes, e.g. concatenate &ldquo;ab&rdquo; and &ldquo;cd&rdquo; in a file results in &ldquo;acbd&rdquo;.</li>
-<li>Deadlock: On a table, every one has to take the left and right stick and the same time. However, there is only one stick per person. Leading to a deadlock.</li>
+<li>Mutual exclusion: Example with writing a log with several processes,
+    e.g. concatenate "ab" and "cd" in a file results in "acbd".</li>
+<li>Deadlock: On a table, every one has to take the left and right stick
+    and the same time. However, there is only one stick per person.
+    Leading to a deadlock.</li>
 </ol>
-<p>Solutions to these are <code>future</code> (new thread), <code>delay</code> (like future but executed only at <code>deref</code> time), <code>promise</code> (empty memory location shared to all thread that will receive value only once with <code>deliver</code>). The advantage is all the execution are cached. <strong>Note</strong>: deference is done with either the <code>defer</code> function or the <code>@</code> sign in front of the variable.</p>
-<h2 id="references-type-concurrencyepochal_time_model">References type     :concurrency:epochal_time_model:<a class="headerlink" href="#references-type-concurrencyepochal_time_model" title="Permanent link">&para;</a></h2>
+<p>Solutions to these are <code>future</code> (new thread), <code>delay</code> (like future but
+executed only at <code>deref</code> time), <code>promise</code> (empty memory location shared
+to all thread that will receive value only once with <code>deliver</code>). The
+advantage is all the execution are cached. <strong>Note</strong>: deference is done
+with either the <code>defer</code> function or the <code>@</code> sign in front of the
+variable.</p>
+<h2 id="references-type-concurrency-epochal_time_model">References type <span class="tag" data-tag-name="concurrency"><span class="smallcaps">concurrency</span></span> <span class="tag" data-tag-name="epochal_time_model"><span class="smallcaps">epochal_time_model</span></span><a class="headerlink" href="#references-type-concurrency-epochal_time_model" title="Permanent link">&para;</a></h2>
 <ol>
-<li><code>atom</code> are identities that can be set and shared by multiple threads. They use a set and compare algorithm, i.e. the <code>swap!</code> function modifies the value of the atom variable only if its values did not change between the beginning and the end of the transaction. <code>swap!</code> and <code>reset!</code> are the main function to work with atoms.</li>
 <li>
-<p><code>watch</code> are function with four arguments: a key (a keyword for identifying the process calling the watcher), a reference variable being watched, the old-state, and the new state.</p>
+<p><code>atom</code> are identities that can be set and shared by multiple
+    threads. They use a set and compare algorithm, i.e. the <code>swap!</code>
+    function modifies the value of the atom variable only if its values
+    did not change between the beginning and the end of the transaction.
+    <code>swap!</code> and <code>reset!</code> are the main function to work with atoms.</p>
+</li>
+<li>
+<p><code>watch</code> are function with four arguments: a key (a keyword for
+    identifying the process calling the watcher), a reference variable
+    being watched, the old-state, and the new state.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">f</span> <span class="p">[</span><span class="nb">key </span><span class="nv">watched</span> <span class="nv">old-state</span> <span class="nv">new-state</span><span class="p">]</span> <span class="nv">nil</span><span class="p">)</span>
 </code></pre></div>
 
-<p>A watcher function is attached to a reference type (e.g an atom) with the <code>add-watch</code> function having the following signature:</p>
+<p>A watcher function is attached to a reference type (e.g an atom)
+with the <code>add-watch</code> function having the following signature:</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">counter</span> <span class="p">(</span><span class="nf">atom</span> <span class="mi">0</span><span class="p">))</span>
 <span class="p">(</span><span class="nf">add-watch</span> <span class="nv">counter</span> <span class="ss">:watching-counter</span> <span class="nv">watch-fn</span><span class="p">)</span>
 </code></pre></div>
 
 </li>
 <li>
-<p>Validators are functions that can check if new states are valid. They take as argument the atom and return a boolean. They are added to the atom as follow</p>
+<p>Validators are functions that can check if new states are valid.
+    They take as argument the atom and return a boolean. They are added
+    to the atom as follow</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">bigger-than-1</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span>
   <span class="p">(</span><span class="nb">or </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">x</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nf">throw</span> <span class="p">(</span><span class="nf">IllegalStateException.</span> <span class="s">&quot;That&#39;s too small&quot;</span><span class="p">))))</span>
 <span class="p">(</span><span class="k">def </span><span class="nv">account</span> <span class="p">(</span><span class="nf">atom</span> <span class="mi">2</span> <span class="ss">:validator</span> <span class="nv">bigger-than-1</span><span class="p">))</span>
@@ -1215,46 +1258,114 @@
 
 </li>
 <li>
-<p><code>ref</code> type are the ACI in the ACID accronym (atomic, consistent and isolated) and use <em>STM</em>. It means that either the operations between two refs happened correctly, or the transaction is aborted. <code>alter</code> and <code>dosync</code> are the key functions.</p>
+<p><code>ref</code> type are the ACI in the ACID accronym (atomic, consistent and
+    isolated) and use <em>STM</em>. It means that either the operations between
+    two refs happened correctly, or the transaction is aborted. <code>alter</code>
+    and <code>dosync</code> are the key functions.</p>
 <ul>
-<li>In a transaction (that is the body of <code>dosync</code>), every <code>ref</code> keep their state to the transaction (invisible to outside threads) and when the transaction tries to commit, every <code>ref</code> checks if the value has been altered by other threads.</li>
-<li>If any of them has been change, then <strong>none</strong> of the <code>ref</code> are updated, and the transaction restart with the new value and commits only when the initial states has not been /alter/ed by other processes.</li>
+<li>In a transaction (that is the body of <code>dosync</code>), every <code>ref</code>
+    keep their state to the transaction (invisible to outside
+    threads) and when the transaction tries to commit, every <code>ref</code>
+    checks if the value has been altered by other threads.</li>
+<li>If any of them has been change, then <strong>none</strong> of the <code>ref</code> are
+    updated, and the transaction restart with the new value and
+    commits only when the initial states has not been /alter/ed by
+    other processes.</li>
 </ul>
-<p><code>commute</code> also allow to change the state of a ref. However, at transaction time, if ref states have been altered, only the <code>commute</code> part is run again with the new states, which might lead to inconsistent state, but increased performance. <code>ensure</code> function protects refs from being modified by other transaction. This is helpful, when a transaction must modify only one refs, but the other related refs must not be altered by other transaction.
-5.  <code>vars</code> are associations between symbols and objects. <code>^:dynamic</code> is a keyword in <code>def</code> to signal to clojure that a vars is dynamic. Varnames are enclosed around <code>*</code> (e.g. <code>*user-email*</code>) to show to other programmers that the variable is dynamic. <code>bindings</code> is a dynamic <code>let</code>. Dynamic vars are often use to name a resource that one ore more functions target. <code>set!</code> allows to change the state of the dynamic vars. <code>alter-var-root</code> allows to rebind a immutable vars (which is unadvised), and <code>with-redefs</code> allows to create local binding for testing.
-6.  <code>pmap</code> and the following <code>ppmap</code> can be used to execute parallel task:</p>
+<p><code>commute</code> also allow to change the state of a ref. However, at
+transaction time, if ref states have been altered, only the
+<code>commute</code> part is run again with the new states, which might lead to
+inconsistent state, but increased performance. <code>ensure</code> function
+protects refs from being modified by other transaction. This is
+helpful, when a transaction must modify only one refs, but the other
+related refs must not be altered by other transaction.</p>
+</li>
+<li>
+<p><code>vars</code> are associations between symbols and objects. <code>^:dynamic</code> is
+    a keyword in <code>def</code> to signal to clojure that a vars is dynamic.
+    Varnames are enclosed around <code>*</code> (e.g. <code>*user-email*</code>) to show to
+    other programmers that the variable is dynamic. <code>bindings</code> is a
+    dynamic <code>let</code>. Dynamic vars are often use to name a resource that
+    one ore more functions target. <code>set!</code> allows to change the state of
+    the dynamic vars. <code>alter-var-root</code> allows to rebind a immutable vars
+    (which is unadvised), and <code>with-redefs</code> allows to create local
+    binding for testing.</p>
+</li>
+<li>
+<p><code>pmap</code> and the following <code>ppmap</code> can be used to execute parallel
+    task:</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defn </span><span class="nv">ppmap</span>
   <span class="s">&quot;Partitioned pmap, for grouping map ops together to make parallel</span>
 <span class="s">  overehead worthwile&quot;</span>
   <span class="p">[</span><span class="nv">grain-size</span> <span class="nv">f</span> <span class="o">&amp;</span> <span class="nv">colls</span><span class="p">]</span>
   <span class="p">(</span><span class="nb">apply </span><span class="nv">concat</span>
-     <span class="p">(</span><span class="nb">apply </span><span class="nv">pmap</span>
-        <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="o">&amp;</span> <span class="nv">pgroups</span><span class="p">]</span> <span class="p">(</span><span class="nb">doall </span><span class="p">(</span><span class="nb">apply map </span><span class="nv">f</span> <span class="nv">pgroups</span><span class="p">)))</span>
-        <span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="nb">partial </span><span class="nv">partition-all</span> <span class="nv">grain-size</span><span class="p">)</span> <span class="nv">colls</span><span class="p">))))</span>
+         <span class="p">(</span><span class="nb">apply </span><span class="nv">pmap</span>
+                <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="o">&amp;</span> <span class="nv">pgroups</span><span class="p">]</span> <span class="p">(</span><span class="nb">doall </span><span class="p">(</span><span class="nb">apply map </span><span class="nv">f</span> <span class="nv">pgroups</span><span class="p">)))</span>
+                <span class="p">(</span><span class="nb">map </span><span class="p">(</span><span class="nb">partial </span><span class="nv">partition-all</span> <span class="nv">grain-size</span><span class="p">)</span> <span class="nv">colls</span><span class="p">))))</span>
 </code></pre></div>
 
 </li>
 </ol>
-<h2 id="coreasync-and-channels-core_async">core.async and channels     :core_async:<a class="headerlink" href="#coreasync-and-channels-core_async" title="Permanent link">&para;</a></h2>
+<h2 id="coreasync-and-channels-core_async">core.async and channels <span class="tag" data-tag-name="core_async"><span class="smallcaps">core_async</span></span><a class="headerlink" href="#coreasync-and-channels-core_async" title="Permanent link">&para;</a></h2>
 <ol>
-<li><code>chan</code> creates a channel. And channel communicate through <em>messages</em>. One can <strong>put</strong> and <strong>take</strong> message. Processes wait for completion of their message. Process: Wait and do nothing until successful completion of either <em>put</em> or <em>take</em> from a channel. After success of the operation, continue.</li>
-<li><code>go</code> and their blocks (<em>go blocks</em>) runs separately on a concurrent thread. <code>go</code> creates a process (i.e. its go block), which runs a pool of threads equal two plus the number of machines cores (avoiding the overhead of creating threads). Each <code>go block</code> only live until it reach the ends of its body.</li>
-<li><code>&lt;!</code> and <code>&lt;!!</code> are the <em>take</em> function. It listen to the channel and wait until an another process puts a value in the channel which the <em>take</em> function returns. <code>&gt;!</code> and <code>&gt;!!</code> are the <em>put</em> function which always return true. It provides a message to a channel and wait until the message to be taken by another process before releasing resources. The number of <code>!</code> in the operation depends if one is inside a <em>go block</em> (one <code>!</code>) or not (two <code>!</code>). <em>Blocking</em> and <em>parking</em> waiting are key to understand the number of <code>!</code>. Parking wait allows a thread to handle several process (and this is only possible in a <em>go block</em>). When one of the process starts to wait, the thread put it aside and starts an another process until it starts to wait, and so on. Use <code>poll!</code> and <code>offer!</code> to have non blocking channel interactions in the REPL.</li>
+<li>
+<p><code>chan</code> creates a channel. And channel communicate through
+    <em>messages</em>. One can <strong>put</strong> and <strong>take</strong> message. Processes wait for
+    completion of their message. Process: Wait and do nothing until
+    successful completion of either <em>put</em> or <em>take</em> from a channel.
+    After success of the operation, continue.</p>
+</li>
+<li>
+<p><code>go</code> and their blocks (<em>go blocks</em>) runs separately on a concurrent
+    thread. <code>go</code> creates a process (i.e. its go block), which runs a
+    pool of threads equal two plus the number of machines cores
+    (avoiding the overhead of creating threads). Each <code>go block</code> only
+    live until it reach the ends of its body.</p>
+</li>
+<li>
+<p><code>&lt;!</code> and <code>&lt;!!</code> are the <em>take</em> function. It listen to the channel and
+    wait until an another process puts a value in the channel which the
+    <em>take</em> function returns. <code>&gt;!</code> and <code>&gt;!!</code> are the <em>put</em> function which
+    always return true. It provides a message to a channel and wait
+    until the message to be taken by another process before releasing
+    resources. The number of <code>!</code> in the operation depends if one is
+    inside a <em>go block</em> (one <code>!</code>) or not (two <code>!</code>). <em>Blocking</em> and
+    <em>parking</em> waiting are key to understand the number of <code>!</code>. Parking
+    wait allows a thread to handle several process (and this is only
+    possible in a <em>go block</em>). When one of the process starts to wait,
+    the thread put it aside and starts an another process until it
+    starts to wait, and so on. Use <code>poll!</code> and <code>offer!</code> to have non
+    blocking channel interactions in the REPL.</p>
+</li>
 <li>
 <p>Channel buffers are created as following:</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">buffer-size</span> <span class="mi">2</span><span class="p">)</span>
 <span class="p">(</span><span class="k">def </span><span class="nv">channel-buffer</span> <span class="p">(</span><span class="nf">chan</span> <span class="nv">buffer-size</span><span class="p">))</span>
 </code></pre></div>
 
-<p>This means we can create 2 values without waiting for a response. <code>sliding-buffer</code> (FIFO) and <code>dropping-buffer</code> (LIFO) can be used to discard channel message without blocking.
-5.  <code>close!</code> <em>closes</em> channel. A closed channel does not accept any puts anymore and after all the values have been retrieved, the subsequent takes return <code>nil</code>.
-6.  <code>alts!!</code> lets us use the result of the first successful channel operation among a collection of channel operations. The elegant solution with <code>alts!!</code> is one can define a timeout</p>
+<p>This means we can create 2 values without waiting for a response.
+<code>sliding-buffer</code> (FIFO) and <code>dropping-buffer</code> (LIFO) can be used to
+discard channel message without blocking.</p>
+</li>
+<li>
+<p><code>close!</code> <em>closes</em> channel. A closed channel does not accept any puts
+    anymore and after all the values have been retrieved, the subsequent
+    takes return <code>nil</code>.</p>
+</li>
+<li>
+<p><code>alts!!</code> lets us use the result of the first successful channel
+    operation among a collection of channel operations. The elegant
+    solution with <code>alts!!</code> is one can define a timeout</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">let </span><span class="p">[[</span><span class="nv">message</span> <span class="nv">channel</span><span class="p">]</span> <span class="p">(</span><span class="nf">alts!!</span> <span class="p">[</span><span class="nv">c1</span> <span class="nv">c2</span> <span class="p">(</span><span class="nf">timout</span> <span class="mi">20</span><span class="p">)])]</span> <span class="c1">;; c1 and c2 are predefined channels.</span>
   <span class="p">(</span><span class="nb">println </span><span class="nv">message</span><span class="p">))</span>
 </code></pre></div>
 
-<p>if the timeout is the first to finish than <code>message</code> is <code>nil</code>. See <code>alt!</code> macro as well.
-7.  Queues and pipelines (escaping the callback hell) are common patterns.</p>
+<p>if the timeout is the first to finish than <code>message</code> is <code>nil</code>. See
+<code>alt!</code> macro as well.</p>
+</li>
+<li>
+<p>Queues and pipelines (escaping the callback hell) are common
+    patterns.</p>
 </li>
 </ol>
 <h2 id="abstraction-and-polymorphism">Abstraction and polymorphism<a class="headerlink" href="#abstraction-and-polymorphism" title="Permanent link">&para;</a></h2>
@@ -1270,22 +1381,39 @@
 <span class="p">(</span><span class="nf">method-name</span> <span class="p">{</span><span class="ss">:type</span> <span class="ss">:what?</span><span class="p">})</span> <span class="c1">; =&gt; I don&#39;t know you</span>
 </code></pre></div>
 
-<p>One can also create hierarchies with <code>derive</code> and namespace keywords.
-2.  A <em>protocol</em> allows to make dispatch by the type of the first argument and it is a collection of polymorphic operations (unlike multimethod which is just one function). Methods from protocols can not have a <code>&amp; rest</code> argument. Key functions are <code>defprotocol</code>, <code>extend-type</code>, <code>extend-protocol</code> (for specifying for several type at once).
--   Caveat: methods from protocols are property of the namespace and not from the object.
-3.  Records are extension of <code>hash-map</code>.</p>
+<p>One can also create hierarchies with <code>derive</code> and namespace
+keywords.</p>
+</li>
+<li>
+<p>A <em>protocol</em> allows to make dispatch by the type of the first
+    argument and it is a collection of polymorphic operations (unlike
+    multimethod which is just one function). Methods from protocols can
+    not have a <code>&amp;
+            rest</code> argument. Key functions are <code>defprotocol</code>, <code>extend-type</code>,
+    <code>extend-protocol</code> (for specifying for several type at once).</p>
+<ul>
+<li>Caveat: methods from protocols are property of the namespace and
+    not from the object.</li>
+</ul>
+</li>
+<li>
+<p>Records are extension of <code>hash-map</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defrecord </span><span class="nv">WereWolf</span> <span class="p">[</span><span class="nb">name </span><span class="nv">title</span><span class="p">])</span>
 <span class="p">(</span><span class="nf">WereWolf.</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">)</span>
 <span class="p">(</span><span class="nf">-&gt;WereWolf</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">)</span>
 <span class="p">(</span><span class="nf">map-&gt;WereWolf</span>  <span class="p">{</span><span class="ss">:name</span> <span class="s">&quot;David&quot;</span> <span class="ss">:title</span> <span class="s">&quot;Master&quot;</span><span class="p">})</span>
 </code></pre></div>
 
-<p>On has to use the <code>:import:</code> statement in the <code>ns</code> macro in order to import records. One can access field through the keyword or the dot <code>.</code> macro.</p>
+<p>On has to use the <code>:import:</code> statement in the <code>ns</code> macro in order to
+import records. One can access field through the keyword or the dot
+<code>.</code> macro.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">.name</span> <span class="p">(</span><span class="nf">WereWolf.</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">))</span> <span class="c1">; &quot;David&quot;</span>
 <span class="p">(</span><span class="ss">:title</span> <span class="p">(</span><span class="nf">WereWolf.</span> <span class="s">&quot;David&quot;</span> <span class="s">&quot;Master&quot;</span><span class="p">))</span> <span class="c1">; &quot;Master&quot;</span>
 </code></pre></div>
 
-<p>Any function on map works on record (although they do not retain their class if one <code>dissoc</code> or <code>assoc</code> them). Here is how one could extend a protocol.</p>
+<p>Any function on map works on record (although they do not retain
+their class if one <code>dissoc</code> or <code>assoc</code> them). Here is how one could
+extend a protocol.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">defprotocol </span><span class="nv">WereCreature</span>
   <span class="s">&quot;Awesom Were&quot;</span>
   <span class="p">(</span><span class="nf">full-moon-behavior</span> <span class="p">[</span><span class="nv">x</span><span class="p">]</span> <span class="s">&quot;Full-moon behavior&quot;</span><span class="p">))</span>
@@ -1299,12 +1427,14 @@
 
 </li>
 <li>
-<p><code>deftype</code>, <code>reify</code>, <code>proxy</code>. reify is about implementing an anonymous protocol at runtime.</p>
+<p><code>deftype</code>, <code>reify</code>, <code>proxy</code>. reify is about implementing an
+    anonymous protocol at runtime.</p>
 </li>
 </ol>
 <h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.braveclojure.com/clojure-for-the-brave-and-true/">Brave and the True</a></li>
+<li><a href="https://www.braveclojure.com/clojure-for-the-brave-and-true/">Brave and the
+    True</a></li>
 </ul>
 <h2 id="see-also-generated">See also (generated)<a class="headerlink" href="#see-also-generated" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1315,10 +1445,13 @@
 <li><a href="../20200430141609-david_nolen/">David Nolen</a></li>
 <li><a href="../20200504212017-edn_and_transit/">edn and transit</a></li>
 <li><a href="../20200430141226-life_in_dynamic_typing/">Life In Dynamic Typing</a></li>
-<li><a href="../20200430155438-mastering_clojure_macro/">Mastering Clojure Macro</a></li>
+<li><a href="../20200430155438-mastering_clojure_macro/">Mastering Clojure
+    Macro</a></li>
 <li><a href="../20200430154528-multiple_environment/">Multiple Environment</a></li>
-<li><a href="../20200503222619-org_roam_clj/">Org-roam-clj: Org-roam extension with Clojure</a></li>
-<li><a href="../20200505112138-clojure_reducers/">Parallel Programming in Clojure with Reducers</a></li>
+<li><a href="../20200503222619-org_roam_clj/">Org-roam-clj: Org-roam extension with
+    Clojure</a></li>
+<li><a href="../20200505112138-clojure_reducers/">Parallel Programming in Clojure with
+    Reducers</a></li>
 <li><a href="../20200502122138-simple_made_easy/">Simple Made Easy</a></li>
 <li><a href="../20200430235013-specs/">Specs</a></li>
 <li><a href="../../todo/">TODO</a></li>

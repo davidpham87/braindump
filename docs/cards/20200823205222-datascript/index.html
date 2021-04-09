@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -984,6 +996,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1080,8 +1104,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1170,19 +1194,30 @@
 <h2 id="first-step-with-datascript">First step with datascript.<a class="headerlink" href="#first-step-with-datascript" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Transformation of the input is required, and transactions are not for free. Usually, it requires setting a schema and wrapping the keys for external entities into a datascript representation.</p>
+<p>Transformation of the input is required, and transactions are not
+    for free. Usually, it requires setting a schema and wrapping the
+    keys for external entities into a datascript representation.</p>
 </li>
 <li>
 <p>Quote the queries in <code>d/q</code>.</p>
 </li>
 <li>
-<p>You can use the vector form (<code>[:db/add]</code>, <code>[:db/retract]</code>) or the map form (<code>{:user/id "my name"}</code>, see datascript test for more example.</p>
+<p>You can use the vector form (<code>[:db/add]</code>, <code>[:db/retract]</code>) or the
+    map form (<code>{:user/id "my name"}</code>, see datascript test for more
+    example.</p>
 </li>
 </ul>
 <h2 id="re-frame-and-datascript">re-frame and datascript<a class="headerlink" href="#re-frame-and-datascript" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/day8/re-frame">Re-frame</a> is one of the common state management library in ClojureScript. It is an event with publisher subscriber system. The advantage of adding datascript to re-frame is the ability to exploit the query language and the normalization layer.</p>
-<p>There exist multiple package to couple the language but I found that the easiest way to leverage on datascript is to create immutable datascript database inside the re-frame database and to refer to them through subscription and us <code>datascript.api/db-with</code> to perform transactions.</p>
-<p>Since the database is immutable, the subscription will react on any change to the datastore.</p>
+<p><a href="https://github.com/day8/re-frame">Re-frame</a> is one of the common state
+management library in ClojureScript. It is an event with publisher
+subscriber system. The advantage of adding datascript to re-frame is the
+ability to exploit the query language and the normalization layer.</p>
+<p>There exist multiple package to couple the language but I found that the
+easiest way to leverage on datascript is to create immutable datascript
+database inside the re-frame database and to refer to them through
+subscription and us <code>datascript.api/db-with</code> to perform transactions.</p>
+<p>Since the database is immutable, the subscription will react on any
+change to the datastore.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">datascript.core</span> <span class="ss">:as</span> <span class="nv">d</span><span class="p">])</span>
 <span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">re-frame.core</span> <span class="ss">:as</span> <span class="nv">rf</span><span class="p">])</span>
 
@@ -1207,12 +1242,13 @@
  <span class="ss">:&lt;-</span> <span class="p">[</span><span class="ss">:ds</span><span class="p">]</span>
  <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">ds</span><span class="p">]</span>
    <span class="p">(</span><span class="nf">d/q</span> <span class="o">&#39;</span><span class="p">[</span><span class="ss">:find</span> <span class="p">(</span><span class="nf">pull</span> <span class="nv">?e</span> <span class="p">[</span><span class="nv">*</span><span class="p">])</span>
-      <span class="ss">:where</span>
-      <span class="p">[</span><span class="nv">?e</span> <span class="ss">:user/id</span><span class="p">]]</span>
-    <span class="nv">ds</span><span class="p">)))</span>
+          <span class="ss">:where</span>
+          <span class="p">[</span><span class="nv">?e</span> <span class="ss">:user/id</span><span class="p">]]</span>
+        <span class="nv">ds</span><span class="p">)))</span>
 </code></pre></div>
 
-<p>The users subscriptions will now be updated every time we transact a new users.</p>
+<p>The users subscriptions will now be updated every time we transact a new
+users.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">rf/dispatch</span> <span class="p">[</span><span class="ss">:init</span><span class="p">])</span> <span class="c1">;; initialize the database</span>
 
 <span class="p">(</span><span class="nf">rf/dispatch</span> <span class="p">[</span><span class="ss">:ds-transact</span> <span class="p">[{</span><span class="ss">:user/id</span> <span class="s">&quot;jean&quot;</span><span class="p">}]])</span>
@@ -1226,12 +1262,24 @@
 <span class="c1">;; =&gt; ([{:db/id 1, :user/id &quot;jean&quot;}] [{:db/id 2, :user/id &quot;logan&quot;}])</span>
 </code></pre></div>
 
-<p>The advantage of this methods is that we keep re-frame and datascript concepts separate: Re-frame events and subscriptions are the same as before (in contrast to posh/re-posh), and datascript queries and transactions are performed against an actual datascript database.</p>
+<p>The advantage of this methods is that we keep re-frame and datascript
+concepts separate: Re-frame events and subscriptions are the same as
+before (in contrast to posh/re-posh), and datascript queries and
+transactions are performed against an actual datascript database.</p>
 <h2 id="caveat">Caveat<a class="headerlink" href="#caveat" title="Permanent link">&para;</a></h2>
-<p>When queries are time expensive and multiple queries exist within a single view, all the subscription queries will run after any change in the datascript db.</p>
-<p>To avoid this, one can/should use posh/re-posh. The library detects the data required for queries and rerun them only when the underlying data has been modified by the transaction.</p>
-<p>The advantage of the library is obviously speed. The disadvantage is a new layer of complexity in the web app, as re-posh does not integrate seamlessly with re-frame.</p>
-<p>The performance issue without re-posh, might be a concern in some context [e.g. live streaming or live data updating, and chatting], but these can be avoided by creating multiple store inside re-frame and also transacting data smartly.</p>
+<p>When queries are time expensive and multiple queries exist within a
+single view, all the subscription queries will run after any change in
+the datascript db.</p>
+<p>To avoid this, one can/should use posh/re-posh. The library detects the
+data required for queries and rerun them only when the underlying data
+has been modified by the transaction.</p>
+<p>The advantage of the library is obviously speed. The disadvantage is a
+new layer of complexity in the web app, as re-posh does not integrate
+seamlessly with re-frame.</p>
+<p>The performance issue without re-posh, might be a concern in some
+context [e.g. live streaming or live data updating, and chatting], but
+these can be avoided by creating multiple store inside re-frame and also
+transacting data smartly.</p>
 <h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/tonsky/datascript">https://github.com/tonsky/datascript</a></li>

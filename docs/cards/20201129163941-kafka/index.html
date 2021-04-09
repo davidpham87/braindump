@@ -211,6 +211,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blog/20210329211501-clojure_how_to_get_started/" title="How to get started" class="md-nav__link">
+      How to get started
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -351,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../20200430154528-multiple_environment/" title="Multiple environments" class="md-nav__link">
-      Multiple environments
+    <a href="../20200430154528-multiple_environment/" title="20200430154528 multiple environment" class="md-nav__link">
+      20200430154528 multiple environment
     </a>
   </li>
 
@@ -1006,6 +1018,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../20210131100641-webapp_testing/" title="Webapp Testing" class="md-nav__link">
+      Webapp Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../continuing_education/" title="Continuing Education" class="md-nav__link">
       Continuing Education
     </a>
@@ -1102,8 +1126,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../website/" title="Website" class="md-nav__link">
-      Website
+    <a href="../website/" title="Website \[3/3\]" class="md-nav__link">
+      Website \[3/3\]
     </a>
   </li>
 
@@ -1213,23 +1237,31 @@
                 <h1 id="kafka">Kafka<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h1>
 <p>Notes about Kafka.</p>
 <ul>
-<li>The key data structure is append only logs (immutable data) or ledger.</li>
+<li>The key data structure is append only logs (immutable data) or
+    ledger.</li>
 <li>Events are facts about the world.</li>
-<li>Data are segmented into topics, producer sends events to topics, and consumers pull from it.</li>
+<li>Data are segmented into topics, producer sends events to topics, and
+    consumers pull from it.</li>
 </ul>
-<p>The architectures runs with zookeepers, servers and topics. Zookeeper managed servers.</p>
-<p><code>--from-begininng</code> in consumer console can show all the data in the topics.</p>
+<p>The architectures runs with zookeepers, servers and topics. Zookeeper
+managed servers.</p>
+<p><code>--from-begininng</code> in consumer console can show all the data in the
+topics.</p>
 <h3 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Number of replicas [how many copies]</li>
 <li>Number of partitions [number of splits for a topics]</li>
 <li>Retention policy (either size, or time)</li>
-<li>Cleanup policy can be either compact (keep only a single observation per key) or delete. Compact is useful when consumers always expect on observation per key.</li>
-<li>Compression type (lz4 [fast], snappy [fast], gzip [compression/network], zstd [compression/network]).</li>
+<li>Cleanup policy can be either compact (keep only a single observation
+    per key) or delete. Compact is useful when consumers always expect
+    on observation per key.</li>
+<li>Compression type (lz4 [fast], snappy [fast], gzip
+    [compression/network], zstd [compression/network]).</li>
 </ul>
 <h3 id="producer">Producer<a class="headerlink" href="#producer" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Acks: acknowledgments settings, how many brokers have to receive a message for a producer to consider a message received.</li>
+<li>Acks: acknowledgments settings, how many brokers have to receive a
+    message for a producer to consider a message received.</li>
 </ul>
 <p>Insure to set:</p>
 <ul>
@@ -1243,7 +1275,8 @@
 <li>Topics (avoid automatic creation)</li>
 <li>client id</li>
 <li>poll/consume</li>
-<li>offset number [number consumed message, earliest known offset], where to start on restart.</li>
+<li>offset number [number consumed message, earliest known offset],
+    where to start on restart.</li>
 </ul>
 <h2 id="avro">Avro<a class="headerlink" href="#avro" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1255,26 +1288,51 @@
 <li>Broker: a single server use for kafka.</li>
 <li>Cluster: a group of Kafka servers/brokers.</li>
 <li>Node: a compute instance.</li>
-<li>Zookeeper: determine which broker is the leader of a given partition and topic as well s track cluster membership and configuration for Kafka.</li>
-<li>Data partition: topics consist of one or more partitions. A partition provides ordering guarantees for all data contained within it, partition are chosen by hashing key values. [Nested map logic with <code>topic-&gt;partition-&gt;log</code> ]. The log is split into multiple partitions.</li>
-<li>Data Replication: a mechanism by which data is written to more than one broker to ensure that if a single broker is lost, a replicated copy of the data is available.</li>
-<li>In-Sync-Replica (ISR): A broker which is up to date with the leader for a particular broker for all message in the current topic. This number may be less than the replication factor for a topic.</li>
-<li>Rebalance: A process in which the current set of consumer changes (addition or removal of consumer). When this occurs, assignment of partitions to the various consumers in a consumer group must be change.</li>
+<li>Zookeeper: determine which broker is the leader of a given partition
+    and topic as well s track cluster membership and configuration for
+    Kafka.</li>
+<li>Data partition: topics consist of one or more partitions. A
+    partition provides ordering guarantees for all data contained within
+    it, partition are chosen by hashing key values. [Nested map logic
+    with <code>topic-&gt;partition-&gt;log</code> ]. The log is split into multiple
+    partitions.</li>
+<li>Data Replication: a mechanism by which data is written to more than
+    one broker to ensure that if a single broker is lost, a replicated
+    copy of the data is available.</li>
+<li>In-Sync-Replica (ISR): A broker which is up to date with the leader
+    for a particular broker for all message in the current topic. This
+    number may be less than the replication factor for a topic.</li>
+<li>Rebalance: A process in which the current set of consumer changes
+    (addition or removal of consumer). When this occurs, assignment of
+    partitions to the various consumers in a consumer group must be
+    change.</li>
 <li>Batch size: number of data sent/received by Kafka.</li>
-<li>acks: numbers of broker acknowledgments that must be received from Kafka before a producer continue processing.</li>
-<li>Synchronous production: producers which waits for a response before additional processing. Async: does not wait.</li>
-<li>Consumer Offset: a value indicating the last seen and processed message of a given consumer, by ID.</li>
-<li>Consumer Group: a collection of one or more consumers, identified by group.id, which collaborate to consume data from Kafka and share a consumer offset.</li>
-<li>Consumer Group Leader: the consumer in charge of working with the Group Coordinator to manage the consumer group.</li>
-<li>Topic Subscription: Kafka consumers indicate to the Kafka Cluster that they would like to consume from one or more topics by specifying those they want to subscribe to.</li>
-<li>Consumer Lag: difference between the offset of a consumer group and the latest message offset in Kafka itself.</li>
+<li>acks: numbers of broker acknowledgments that must be received from
+    Kafka before a producer continue processing.</li>
+<li>Synchronous production: producers which waits for a response before
+    additional processing. Async: does not wait.</li>
+<li>Consumer Offset: a value indicating the last seen and processed
+    message of a given consumer, by ID.</li>
+<li>Consumer Group: a collection of one or more consumers, identified by
+    group.id, which collaborate to consume data from Kafka and share a
+    consumer offset.</li>
+<li>Consumer Group Leader: the consumer in charge of working with the
+    Group Coordinator to manage the consumer group.</li>
+<li>Topic Subscription: Kafka consumers indicate to the Kafka Cluster
+    that they would like to consume from one or more topics by
+    specifying those they want to subscribe to.</li>
+<li>Consumer Lag: difference between the offset of a consumer group and
+    the latest message offset in Kafka itself.</li>
 </ul>
 <h2 id="streaming-application">Streaming Application<a class="headerlink" href="#streaming-application" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Two differences: KStream and KTable. The difference is KStream are stateless and KTable are stateful, they usually keep their state in RocksDB database to maintain the state and speed up recovery time.</li>
+<li>Two differences: KStream and KTable. The difference is KStream are
+    stateless and KTable are stateful, they usually keep their state in
+    RocksDB database to maintain the state and speed up recovery time.</li>
 </ul>
 <h2 id="kafka-connect">Kafka Connect<a class="headerlink" href="#kafka-connect" title="Permanent link">&para;</a></h2>
-<p>API allowing to bind (source and sink) to multiple data sources without the need to write kafka specific code.</p>
+<p>API allowing to bind (source and sink) to multiple data sources without
+the need to write kafka specific code.</p>
 <h2 id="kafka-rest">Kafka Rest<a class="headerlink" href="#kafka-rest" title="Permanent link">&para;</a></h2>
 <p>HTTP server to Create Kafka application with Rest endpoint.</p>
                 

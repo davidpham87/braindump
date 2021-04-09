@@ -1,5 +1,7 @@
 .cpcache/*
-.shadow-cljs/  
+.shadow-cljs/
+.clj-kondo/
+.lsp/
 org-roam.db
 *.tex
 *.pdf

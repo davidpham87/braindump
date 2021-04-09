@@ -1,6 +1,10 @@
+* Index
 
+** Clojure
 
-** See also (generated)
+*** Beginner
+    - [[file:../cards/202005291001-starting_scripting_clojure.org][Starting Scripting Clojure]]
 
-   - 
-
+** Data Science
+   - [[file:../cards/20201012113409-micromaster_statistics_and_data_science.org][Micromaster Statistics and Data Science]]
+   - [[file:../cards/20201020215418-micromaster_statistics_and_data_science_social_science_and_machine_learning.org][Micromaster Statistics and Data Science: Social Science and Machine Learning]]
