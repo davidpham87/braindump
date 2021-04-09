@@ -23,4 +23,5 @@ used effectively to fill this purpose.
 
 ## See also (generated)
 
+  - [Clojure](./../decks/clojure.md)
   - [shadow-cljs](./20200430154647-shadow_cljs.md)

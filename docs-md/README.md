@@ -34,3 +34,5 @@ See org-roam-clj on how to use the library.
 ## See also (generated)
 
   - [First blog ticket](./blog/20200502171331-first_blog_ticket.md)
+  - [org mode](./cards/20200430180442-org_mode.md)
+  - [Readings](./cards/readings.md)

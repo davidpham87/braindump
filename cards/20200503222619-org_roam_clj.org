@@ -34,5 +34,5 @@ Library for extending org-roam.
 
 ** See also (generated)
 
-   - 
+   - [[file:../decks/clojure.org][Clojure]]
 

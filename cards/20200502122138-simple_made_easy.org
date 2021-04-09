@@ -239,5 +239,7 @@
 
 ** See also (generated)
 
-   - 
+   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
 

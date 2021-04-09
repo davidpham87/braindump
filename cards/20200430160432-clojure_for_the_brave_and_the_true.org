@@ -207,6 +207,8 @@
 
 ** See also (generated)
 
+   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[file:../decks/clojure.org][Clojure]]
    - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
    - [[file:20200504204808-why_clojure.org][Why Clojure?]]
 

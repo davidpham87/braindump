@@ -96,4 +96,5 @@ the operation remove stick (`r/map`) and keep only the healthy ones
 
 ## See also (generated)
 
-  -
+  - [Applied Clojure](./20200430155637-applied_clojure.md)
+  - [Clojure](./../decks/clojure.md)

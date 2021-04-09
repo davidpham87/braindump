@@ -89,5 +89,6 @@
 
 ** See also (generated)
 
-   - 
+   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[file:../decks/clojure.org][Clojure]]
 

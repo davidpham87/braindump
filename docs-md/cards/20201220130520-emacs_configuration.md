@@ -54,4 +54,8 @@ the following create a similar experience to usual pc layout
 
 ## See also (generated)
 
-  -
+  - [CLI Arguments](./20200430154352-cli_arguments.md)
+  - [Clojure](./../decks/clojure.md)
+  - [General Skills](./general.md)
+  - [Python](./python.md)
+  - [UNIX](./unix.md)

@@ -138,5 +138,5 @@
 
 ** See also (generated)
 
-   - [[file:20200430235013-specs.org][Specs]]
+   - 
 

@@ -74,5 +74,5 @@ player's card are kernels, deck of cards are programs.
 
 ** See also (generated)
 
-   - 
+   - [[file:../decks/clojure.org][Clojure]]
 

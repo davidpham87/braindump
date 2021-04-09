@@ -297,6 +297,8 @@
 
 ** See also (generated)
 
-   - [[file:20200516171955-generative_testing.org][Generative Testing]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
    - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
+   - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 

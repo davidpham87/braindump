@@ -53,4 +53,7 @@
 
 ** See also (generated)
 
-   - 
+   - [[file:cards/20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[file:cards/20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
+   - [[file:cards/20200501163355-goals.org][Goals]]
+

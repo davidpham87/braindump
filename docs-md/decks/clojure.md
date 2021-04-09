@@ -223,13 +223,12 @@ order function as a *generator*. Read `test.check.generator` for more
 ## See also (generated)
 
   - [Applied Clojure](./../cards/20200430155637-applied_clojure.md)
+  - [Clojure for the brave and the
+    true](./../cards/20200430160432-clojure_for_the_brave_and_the_true.md)
   - [Home for ideas for my Zettelkasten](./../README.md)
   - [Life In Dynamic
     Typing](./../cards/20200430141226-life_in_dynamic_typing.md)
   - [Mastering Clojure
     Macro](./../cards/20200430155438-mastering_clojure_macro.md)
-  - [Multiple
-    Environment](./../cards/20200430154528-multiple_environment.md)
   - [Quotes](./../cards/20200501201607-quotes.md)
-  - [shadow-cljs](./../cards/20200430154647-shadow_cljs.md)
   - [Why Clojure?](./../cards/20200504204808-why_clojure.md)

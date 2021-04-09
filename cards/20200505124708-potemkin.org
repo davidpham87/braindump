@@ -25,5 +25,5 @@
 
 ** See also (generated)
 
-   - 
+   - [[file:../decks/clojure.org][Clojure]]
 

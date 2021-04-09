@@ -54,5 +54,6 @@
 
 ** See also (generated)
 
-   - 
+   - [[file:20201220130520-emacs_configuration.org][emacs]]
+   - [[file:general.org][General Skills]]
 

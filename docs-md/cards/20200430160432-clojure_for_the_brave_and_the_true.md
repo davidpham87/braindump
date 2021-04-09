@@ -227,6 +227,8 @@ variable.
 
 ## See also (generated)
 
+  - [Applied Clojure](./20200430155637-applied_clojure.md)
+  - [Clojure](./../decks/clojure.md)
   - [Parallel Programming in Clojure with
     Reducers](./20200505112138-clojure_reducers.md)
   - [Why Clojure?](./20200504204808-why_clojure.md)

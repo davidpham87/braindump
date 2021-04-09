@@ -95,7 +95,7 @@ The building block is `neanderthal` and hence interop with
     [tech.ml.dataset](https://github.com/techascent/tech.ml.dataset),
     [tech.ml](https://github.com/techascent/tech.ml)
   - <https://techascent.com/blog/next-gen-native.html>
-  - <https://github.com/gigasquid/libpython-clj-examples>
+  - <https://github.com/gigasquid/libpython-clj-examplesk>
 
 ## See also (generated)
 

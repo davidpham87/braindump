@@ -12,5 +12,4 @@
 ** See also (generated)
 
    - [[file:20200505124708-potemkin.org][Potemkin: some ideas which are almost good]]
-   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
 
