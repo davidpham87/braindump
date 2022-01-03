@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350
+:ROAM_ALIASES: build-tool cljs
+:END:
 #+TITLE: shadow-cljs
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: cljs build-tool
-#+ROAM_TAGS: cljs js webapp tool front-end nginx clj-toolkit
+#+filetags: :cljs:js:webapp:tool:front_end:nginx:clj_toolkit:
 
 * shadow-cljs
 
@@ -94,10 +97,10 @@ configuration.
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200524185034-clojure_functional_programming_principles.org][Clojure Functional Programming Principles]]
-   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
-   - [[file:20200823205222-datascript.org][Datascript]]
-   - [[file:20200505113402-high_performance_clojurescript.org][High Performance CLJS]]
-   - [[file:20200430141226-life_in_dynamic_typing.org][Life In Dynamic Typing]]
-   - [[file:20210131100641-webapp_testing.org][Web App Testing]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:2af1bd7c-d1a2-46e0-b820-f1d23090c2fc][Clojure Functional Programming Principles]]
+   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
+   - [[id:aea0aa1b-64be-44f9-a9f5-cc3e215d9d4c][Datascript]]
+   - [[id:87c93bc1-a6ef-47e3-b81e-dc7ba09324a8][High Performance CLJS]]
+   - [[id:bca207fc-25d3-45ff-a05f-8da06210c660][Life In Dynamic Typing]]
+   - [[id:187c080d-b3ef-4f46-8ba9-2a62fbbb9876][Web App Testing]]

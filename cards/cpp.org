@@ -1,6 +1,9 @@
+:PROPERTIES:
+:ID:       e45be8d1-a5f9-4e54-809d-a52338b1c65a
+:END:
 #+TITLE: C, C++
 #+OPTIONS: toc:nil
-#+ROAM_TAGS: gpu-computing opencl cuda native
+#+filetags: :gpu_computing:opencl:cuda:native:
 
 * C/C++
 

@@ -1,7 +1,9 @@
+:PROPERTIES:
+:ID:       0bf90cbd-1b4b-4031-89d8-c2b29084f042
+:ROAM_ALIASES: micromaster-statistics-and-data-science
+:END:
 #+TITLE: Micromaster Statistics and Data Science
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: micromaster-statistics-and-data-science
-#+ROAM_TAGS: micromaster-statistics-and-data-science msds edx probability statistics machine-learning
 #+DATE: 2020-10-12
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [a4paper, 8pt]
@@ -12,6 +14,7 @@
 #+OPTIONS: title:nil
 #+OPTIONS: author:nil
 #+OPTIONS: date:nil
+#+filetags: :micromaster_statistics_and_data_science:msds:edx:probability:statistics:machine_learning:
 
 # * Probability and Statistics
 
@@ -525,8 +528,8 @@ Unique MLE if using the canonical link function.
 
 ** See also (generated)
 
-   - [[file:20200430153912-ethz.org][ETHZ]]
+   - [[id:e7f0e7f4-d672-4e67-b785-abb4a3eefd0f][ETHZ]]
    - [[file:../decks/index.org][Index]]
-   - [[file:python.org][Python]]
-   - [[file:r_cran.org][R CRAN]]
+   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
+   - [[id:3f1cca19-4edc-448e-9cec-eb7c43a203dc][R CRAN]]
 

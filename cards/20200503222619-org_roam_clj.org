@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       49e82bce-1487-48b8-87c7-8bc692f85de1
+:ROAM_ALIASES: org-roam org-roam-clj
+:END:
 #+TITLE: Org-roam-clj: Org-roam extension with Clojure
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: org-roam-clj org-roam
-#+ROAM_TAGS: org-roam-clj org-roam clj-db project clj
 #+DATE: 2020-05-03
+#+filetags: :org_roam_clj:org_roam:clj_db:project:clj:
 
 * org-roam-clj
 
@@ -34,5 +37,5 @@ Library for extending org-roam.
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
 

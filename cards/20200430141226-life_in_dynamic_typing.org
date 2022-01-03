@@ -1,11 +1,14 @@
+:PROPERTIES:
+:ID:       bca207fc-25d3-45ff-a05f-8da06210c660
+:ROAM_ALIASES: life-dynamic-type
+:END:
 #+TITLE: Life In Dynamic Typing
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: life-dynamic-type
-#+ROAM_TAGS: dynamic-typing test clj david-nolen cljs
+#+filetags: :dynamic_typing:test:clj:david_nolen:cljs:
 
 * Life In Dynamic Typing
 
-  - tags :: [[file:../decks/clojure.org][Clojure]]
+  - tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
 
   In dynamic typed language, assertions are used often to check assumption of
   your input data. In Clojure the =:pre= and =:post= conditions can be used
@@ -27,7 +30,7 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430141609-david_nolen.org][David Nolen]]
-   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:08aa455d-2e74-47cd-89d8-02966408eca5][David Nolen]]
+   - [[id:a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350][shadow-cljs]]
 

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       449a4697-5a68-4b1c-998d-c02c44677938
+:ROAM_ALIASES: edn-and-transit
+:END:
 #+TITLE: edn and transit
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: edn-and-transit
-#+ROAM_TAGS: edn-and-transit data-format clj
 #+DATE: 2020-05-04
+#+filetags: :edn_and_transit:data_format:clj:
 
 * edn and transit
 
@@ -26,5 +29,5 @@ payloads.
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
 

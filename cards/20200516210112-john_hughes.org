@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       3b6ebb15-a107-4a54-aa51-506f4fc5acab
+:ROAM_ALIASES: john-hughes
+:END:
 #+TITLE: John Hughes
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: john-hughes
-#+ROAM_TAGS: john-hughes quick-check
 #+DATE: 2020-05-16
+#+filetags: :john_hughes:quick_check:
 
 * John Hughes
 

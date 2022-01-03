@@ -1,6 +1,9 @@
+:PROPERTIES:
+:ID:       bdb0a4d9-21df-4257-b7fb-3bddb3bb64db
+:END:
 #+TITLE: Goals
 #+OPTIONS: toc:nil
-#+ROAM_TAGS: todo journal improvment
+#+filetags: :todo:journal:improvment:
 
 * Goals
 
@@ -12,5 +15,5 @@
 
 ** See also (generated)
 
-   - [[file:../todo.org][TODO]]
+   - [[id:c832b4d9-e852-4cf9-8b96-e46b738dcbfd][TODO]]
 

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       187c080d-b3ef-4f46-8ba9-2a62fbbb9876
+:ROAM_ALIASES: webapp-testing
+:END:
 #+TITLE: Web App Testing
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: webapp-testing
-#+ROAM_TAGS: webapp-testing cljs shadow-cljs
 #+DATE: 2021-01-31
+#+filetags: :webapp_testing:cljs:shadow_cljs:
 
 * Webapp Testing
 
@@ -43,6 +46,7 @@ Using [[https://github.com/tatut/clj-chrome-devtools][clj-chrome-devtools]], you
 
   (def c (connect "localhost" 9222))
   (def chan-console (listen c :runtime :console-api-called))
+  ;; (def chan-console-error (listen c :runtime :exception-thrown)) This is the other important domain and event
 
   (a/go-loop []
     (let [x (a/<! chan-console)]
@@ -54,6 +58,55 @@ Using [[https://github.com/tatut/clj-chrome-devtools][clj-chrome-devtools]], you
   (runtime/evaluate c {:expression "1/0"}) ;; you should see an error
 #+end_src
 
+** Re-frame and CDP
+
+   The problem is whenever the state of the application is valid, but the web
+   browser is not. End to end testing is the process of replicating the user
+   interaction with the application in order to test its behavior. My biggest
+   feat is when the application enters an error mode from which the user can't
+   recover. Normally, this situation should be caught at development time,
+   however, as the code base grows and the code base more coupled, it is worth
+   to develop a test suite in which we trust.
+
+   As much as unit testing is helpful to keep regression and verify some
+   correctness properties, I found end-to-end (e2e) testing more appealing and
+   worthy of my time, as they replicate my manual testing process with the
+   browser.
+
+   There are many contenders in the domain (pupeeter and taiko for example),
+   but my biggest hurdle with these solutions is they assume you don't have any
+   control on the event system of the application: they force the tester to
+   interact with finding the application by finding the right UI field and the
+   right button and start inputing there.
+
+   Instead of finding the node and interacting with it, it would be much more
+   interesting to dispatch re-frame events, and listen to the browser for any
+   thrown errors.
+
+   The advantage is the reuse (or creation) the state machine interaction and
+   the generation of user interaction travel.
+
+   The disadvantage is obviously testing speed, as we need to wait for events
+   to render and possibly a lot of noise. It is awefuly slow. Moreover, some
+   dispatched events might never be dispatched by users as they might not be
+   able interact with the UI part. But, it allows you to replicate your manual
+   testing process, which gives some confidence.
+
+*** Strategy
+
+    The strategy is to create a =test= module in our clojurescript app in which
+    several testing functions are defined, running a chrome devtools protocol
+    process which will call the test functions in a test browser.
+
+    The necessary steps are to adjust the shadow-cljs configuration, adding the
+    module to the =html= in CDP, and call the export test function.
+
+** Playwright with nbbjs
+
+   Playwright (a fork of puppeteer) could be used in conjunction with nbbjs (a
+   clojure repl with only node as dependency) to make `e2e` call as well. The
+   advantage is the usage of premade containers, easing the deployment of the
+   solution.
 
 ** Links
    - https://juxt.pro/blog/cljs-apps
@@ -63,6 +116,5 @@ Using [[https://github.com/tatut/clj-chrome-devtools][clj-chrome-devtools]], you
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
-
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350][shadow-cljs]]

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       8818abd1-cdef-4492-be89-3354bcc34203
+:ROAM_ALIASES: cider
+:END:
 #+TITLE: cider
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: cider
-#+ROAM_TAGS: cider emacs clj-tools
 #+DATE: 2020-05-05
+#+filetags: :cider:emacs:clj_tools:
 
 * cider
 
@@ -54,6 +57,6 @@
 
 ** See also (generated)
 
-   - [[file:20201220130520-emacs_configuration.org][emacs]]
-   - [[file:general.org][General Skills]]
+   - [[id:d7b7095f-676d-4dbf-a32c-6fb1de56331f][emacs]]
+   - [[id:cd1a96fd-ddbe-49d2-a5c7-df8d8fe200e6][General Skills]]
 

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       05ea36a1-3ee9-4d40-83d1-d23058512093
+:ROAM_ALIASES: data-streaming kafka
+:END:
 #+TITLE: kafka
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: kafka data-streaming
-#+ROAM_TAGS: kafka data-engineering data-streaming
 #+DATE: 2020-11-29
+#+filetags: :kafka:data_engineering:data_streaming:
 
 * Kafka
 

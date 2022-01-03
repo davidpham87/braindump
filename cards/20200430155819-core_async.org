@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       843bd7e1-7106-4c45-ba46-fd2691b349b6
+:ROAM_ALIASES: parallelism concurrency core.async
+:END:
 #+TITLE: core.async
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: core.async concurrency parallelism
-#+ROAM_TAGS: clj concurrency core.async
+#+filetags: :clj:concurrency:core_async:
 
 * core.async
 
@@ -76,8 +79,8 @@
 
 ** See also (generated)
 
-   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-   - [[file:../README.org][Home for ideas for my Zettelkasten]]
+   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75][Clojure for the brave and the true]]
+   - [[id:fcaa7ed0-ed8c-48bb-a440-ffa872141583][Home for ideas for my Zettelkasten]]
 

@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       e7f0e7f4-d672-4e67-b785-abb4a3eefd0f
+:ROAM_ALIASES: mathematics studies statistics
+:END:
 #+TITLE: ETHZ
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: statistics studies mathematics
-#+ROAM_TAGS: statistics causality studies ethz
+#+filetags: :statistics:causality:studies:ethz:
 
 * ETHZ
 
@@ -80,6 +83,6 @@
 
 ** See also (generated)
 
-   - [[file:python.org][Python]]
-   - [[file:r_cran.org][R CRAN]]
+   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
+   - [[id:3f1cca19-4edc-448e-9cec-eb7c43a203dc][R CRAN]]
 

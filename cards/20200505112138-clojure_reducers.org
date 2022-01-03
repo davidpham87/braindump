@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       ec0e78c6-a0ce-4244-bf23-004734d85adc
+:ROAM_REFS: https://www.braveclojure.com/quests/reducers/intro/
+:ROAM_ALIASES: clj-hpc parallel-programming-in-clojure-with-reducers reducers
+:END:
 #+TITLE: Parallel Programming in Clojure with Reducers
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: reducers parallel-programming-in-clojure-with-reducers clj-hpc
-#+ROAM_KEY: https://www.braveclojure.com/quests/reducers/intro/
-#+ROAM_TAGS: clj book reducers parallelism concurrency hpc
 #+DATE: 2020-05-05
+#+filetags: :clj:book:reducers:parallelism:concurrency:hpc:
 
 * Clojure Reducers
 
@@ -84,13 +87,13 @@
     - [[https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/Reducers.md][Transcripts]]
 
 ** Links
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
+   - [[id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75][Clojure for the brave and the true]]
+   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
 
 ** See also (generated)
 
-   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-   - [[file:20200430155819-core_async.org][core.async]]
+   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75][Clojure for the brave and the true]]
+   - [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]]
 

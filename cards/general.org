@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       cd1a96fd-ddbe-49d2-a5c7-df8d8fe200e6
+:ROAM_ALIASES: linux emacs
+:END:
 #+TITLE: General Skills
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: emacs linux
-#+ROAM_TAGS: emacs build tool
+#+filetags: :emacs:build:tool:
 
 * General
   + Learn with https://www.hackerrank.com/ (especially Clojure).
@@ -73,8 +76,8 @@
 
 ** See also (generated)
 
-   - [[file:20200505164639-cider.org][cider]]
-   - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
-   - [[file:20201220130520-emacs_configuration.org][emacs]]
-   - [[file:20200503165952-materiala.org][Materiala]]
+   - [[id:8818abd1-cdef-4492-be89-3354bcc34203][cider]]
+   - [[id:aa56ac8a-9e23-4378-b338-627b7f851dea][CLI Arguments]]
+   - [[id:d7b7095f-676d-4dbf-a32c-6fb1de56331f][emacs]]
+   - [[id:973e1d96-4712-421f-8146-9c72325bdd34][Materiala]]
 

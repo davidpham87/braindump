@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       c473667e-bbd9-4ce8-9b34-6e55a500b586
+:ROAM_ALIASES: jna
+:END:
 #+TITLE: JNA
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: jna
-#+ROAM_TAGS: jna hpc clojure-cuda
 #+DATE: 2020-10-11
+#+filetags: :jna:hpc:clojure_cuda:
 
 * JNA
 
@@ -63,6 +66,165 @@
         (base/do-load-library libname)))
   #+end_src
 
+** tech.v3.jna
+
+   In the latest version, one has to dispose of the process manually.
+  #+begin_src clojure
+    (import '[com.sun.jna NativeLibrary])
+    (defn reload!
+      "Reload a shared library."
+      [libname]
+      (defn reload! [libname]
+        (try
+          (.dispose (NativeLibrary/getInstance libname))
+          (catch Exception e))
+        (NativeLibrary/getInstance libname))
+  #+end_src
+
+  Full example for passing =C= struct
+
+  #+begin_src c
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    typedef struct point {
+      int x;
+      int y;
+    } point_t;
+
+    void greeting() {
+      printf("Hello, greeting!");
+    };
+
+    int greet() {
+      printf("Hello, World!");
+      return 0;
+    }
+
+    // simple test with simple types
+    int add(int x, int y) {
+      return x+y;
+    }
+
+    // compose to simple type
+    int projection_x(point_t *a) {
+      return a->x;
+    };
+
+    // composite to simple type
+    int sum_all(point_t *a, point_t *b) {
+      return a->x + b->x + a->y + b->y;
+    };
+
+    // Notice that we passe pointers to the function
+    void plus(point_t *a, point_t *b, point_t *c) {
+      c->x = a->x + b->x;
+      c->y = a->y + b->y;
+    };
+
+    // Example of returning a point, see that we are still returning a pointer;
+    point_t *minus(point_t *a, point_t *b) {
+      point_t* c = (point_t*) malloc(sizeof(point_t));
+      c->x = a->x - b->x;
+      c->y = a->y - b->y;
+      return c;
+    };
+  #+end_src
+
+  Let's compile this
+  #+begin_src bash
+    gcc -shared -o libs/libhello.so -fPIC cpp/hello.c
+  #+end_src
+
+  - shared is to tell the artefacts will be used by other process or programs.
+  - =-fPIC= means position independent code, used for library binary code.
+
+    #+begin_src clojure
+      (ns hello
+        (:require
+         [tech.v3.datatype.ffi :as dt-ffi]
+         [tech.v3.datatype.struct :as dt-struct])
+        (:import [com.sun.jna NativeLibrary]))
+
+      (println (. System getProperty "java.library.path"))
+
+      (defn reload! [libname]
+        (try
+          (.dispose (NativeLibrary/getInstance libname))
+          (catch Exception e))
+        (NativeLibrary/getInstance libname))
+
+      (defonce point
+        (dt-struct/define-datatype!
+          :point_t [{:name :x :datatype :int32}
+                    {:name :y :datatype :int32}]))
+
+      ;; Allocation to this type won't work as it is not defined in our library
+      ;; (defonce person
+      ;;   (dt-struct/define-datatype!
+      ;;     :person_t [{:name :age :datatype :int32}
+      ;;                {:name :weight :datatype :float32}]))
+
+      (def fn-defs
+        {:greeting     {:rettype :void}
+         :greet        {:rettype :int32}
+         :add          {:rettype  :int32
+                        :argtypes [['x :int32] ['y :int32]]}
+         :sum_all      {:rettype  :int32
+                        :argtypes '[[a :pointer]
+                                    [b :pointer]]}
+         :projection_x {:rettype  :int32
+                        :argtypes '[[a :pointer]]}
+
+         :plus         {:rettype  :void
+                        :argtypes '[[a :pointer]
+                                    [b :pointer]
+                                    [c :pointer]]}
+         :minus        {:rettype  :pointer
+                        :argtypes '[[a :pointer]
+                                    [b :pointer]]}})
+
+      (def library-def (dt-ffi/define-library fn-defs))
+
+      ;; the name of the library is the last argument
+      (def library-instance (dt-ffi/instantiate-library library-def "hello"))
+      (defonce lib (dt-ffi/library-singleton #'fn-defs))
+
+      (dt-ffi/library-singleton-set! lib nil)
+      (dt-ffi/define-library-functions fn-defs
+        (fn [fn-name] (dt-ffi/library-singleton-find-fn lib fn-name)) nil)
+
+      (comment
+        (reload! "hello") ;; use this if you want to change the library and experiment
+        (add 1 100) ;; => 101
+        (greet) ;; => 0, but should not print in the repl
+        (greeting) ;; does nothing , but message will be shown when shutting down the repl
+
+        ;; doing the complicated stuff now
+        (let [a (dt-struct/new-struct :point_t {:container-type :native-heap})
+              b (dt-struct/new-struct :point_t {:container-type :native-heap})
+              c (dt-struct/new-struct :point_t {:container-type :native-heap})
+              ;; filling the structures
+              _ (do (.put a :x 2)
+                    (.put a :y 3)
+                    (.put b :x 5)
+                    (.put b :y 5))]
+          (println a)
+          (println b)
+          (plus a b c) ;; clearly not functional!
+
+          {:max-norm (max_norm a b)
+           :plus c
+           :minus
+           ;; transform a pointer back into a structure
+           (dt-ffi/ptr->struct :point_t (minus a))}))
+
+    #+end_src
+
+** C style
+
+   Pointers
+
 ** Links
 
   - https://github.com/techascent/tech.jna
@@ -71,5 +233,4 @@
 
 ** See also (generated)
 
-   - [[file:20201003150521-clojurecuda.org][ClojureCuda]]
-
+   - [[id:003c7db5-2cae-46d4-8b70-6646112aae90][ClojureCuda]]

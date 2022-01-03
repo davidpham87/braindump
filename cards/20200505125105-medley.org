@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       58e67e81-7f21-4a92-b617-66a3862d53f9
+:ROAM_ALIASES: medley
+:END:
 #+TITLE: medley
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: medley
-#+ROAM_TAGS: medley clj-toolkit
 #+DATE: 2020-05-05
+#+filetags: :medley:clj_toolkit:
 
 * medley
   Clojure and ClojureScript common functions not implemented in core
@@ -13,5 +16,5 @@
 
 ** See also (generated)
 
-   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
 

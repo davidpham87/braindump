@@ -1,8 +1,11 @@
+g:PROPERTIES:
+:ID:       9675056b-206c-41f3-a99f-86b29bc30c33
+:ROAM_ALIASES: clj-ds
+:END:
 #+TITLE: Clojure for Data Science
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clj-ds
-#+ROAM_TAGS: clj-ds clj machine-learning data-science clojure-cudads cljds Neanderthal
 #+DATE: 2021-04-09
+#+filetags: :clj_ds:clj:machine_learning:data_science:clojure_cudads:cljds:Neanderthal:
 
 * Clojure Data Science
 
@@ -93,11 +96,9 @@
    - [[https://github.com/cnuernber/dtype-next][dtype-next]], [[https://github.com/techascent/tech.ml.dataset][tech.ml.dataset]], [[https://github.com/techascent/tech.ml][tech.ml]]
    - https://techascent.com/blog/next-gen-native.html
    - https://github.com/gigasquid/libpython-clj-examplesk
-     
 
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:python.org][Python]]
-
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]

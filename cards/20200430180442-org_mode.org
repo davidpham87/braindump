@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       ea7b9063-7e26-4c95-9be9-b3d60f772d69
+:ROAM_ALIASES: notes-taking org org-mode
+:END:
 #+TITLE: org mode
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: org-mode org notes-taking
-#+ROAM_TAGS: org org-mode
+#+filetags: :org:org_mode:
 
 * Org mode
 
@@ -20,5 +23,5 @@ org2gfm [OPTION] FILE
 
 ** See also (generated)
 
-   - [[file:../README.org][Home for ideas for my Zettelkasten]]
+   - [[id:fcaa7ed0-ed8c-48bb-a440-ffa872141583][Home for ideas for my Zettelkasten]]
 

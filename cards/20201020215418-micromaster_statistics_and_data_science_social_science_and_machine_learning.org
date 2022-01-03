@@ -1,7 +1,9 @@
+:PROPERTIES:
+:ID:       4d2bd4c5-4c14-4a8a-b113-c5c5c96d7495
+:ROAM_ALIASES: micromaster-statistics-and-data-science-social-science-and-machine-learning
+:END:
 #+TITLE: Micromaster Statistics and Data Science: Social Science and Machine Learning
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: micromaster-statistics-and-data-science-social-science-and-machine-learning
-#+ROAM_TAGS: micromaster-statistics-and-data-science-social-science-and-machine-learning msds edx machine-learning
 #+DATE: 2020-10-20
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [a4paper, 8pt]
@@ -13,6 +15,7 @@
 #+LATEX_HEADER: \usepackage{courier}
 #+LATEX_HEADER: \usepackage[landscape, margin=0.5cm]{geometry}
 #+LATEX_HEADER: \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+#+filetags: :micromaster_statistics_and_data_science_social_science_and_machine_learning:msds:edx:machine_learning:
 
 #+OPTIONS: title:nil
 #+OPTIONS: author:nil

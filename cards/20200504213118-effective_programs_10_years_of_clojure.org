@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       1edaad86-c8e0-46d1-8d4b-4c51bae60af1
+:ROAM_ALIASES: effective-programs-10-years-of-clojure
+:END:
 #+TITLE: Effective Programs - 10 years of clojure
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: effective-programs-10-years-of-clojure
-#+ROAM_TAGS: effective-programs-10-years-of-clojure rich-hickey
 #+DATE: 2020-05-04
+#+filetags: :effective_programs_10_years_of_clojure:rich_hickey:
 
 * Effective Programs - 10 years of clojure
 
@@ -13,5 +16,5 @@
 
 ** See also (generated)
 
-   - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
+   - [[id:f5738e4e-2f64-412a-92bd-64917b118c58][Rich Hickey]]
 

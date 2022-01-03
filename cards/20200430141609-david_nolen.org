@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       08aa455d-2e74-47cd-89d8-02966408eca5
+:ROAM_ALIASES: david-nolen
+:END:
 #+TITLE: David Nolen
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: david-nolen
-#+ROAM_TAGS: clj cljs
+#+filetags: :clj:cljs:
 
 * David Nolen
 
@@ -43,5 +46,5 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350][shadow-cljs]]

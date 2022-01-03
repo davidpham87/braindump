@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       87c93bc1-a6ef-47e3-b81e-dc7ba09324a8
+:ROAM_ALIASES: hpc-cljs high-performance-clojurescript
+:END:
 #+TITLE: High Performance CLJS
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: high-performance-clojurescript hpc-cljs
-#+ROAM_TAGS: hpc cljs
 #+DATE: 2020-05-05
+#+filetags: :hpc:cljs:
 
 * High Performance Clojurescript
 
@@ -36,6 +39,6 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350][shadow-cljs]]
 

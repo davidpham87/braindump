@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       ecb637df-eb21-439e-9af7-cadd9f2b336f
+:ROAM_ALIASES: cljss
+:END:
 #+TITLE: cljss
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: cljss
-#+ROAM_TAGS: cljss styling cljs/style cljs
 #+DATE: 2020-05-21
+#+filetags: :cljss:styling:cljs_style:cljs:
 
 * cljss
 

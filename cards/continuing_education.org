@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       b6ecaf72-2c09-48ee-bf9b-32ba1451e8be
+:END:
 #+Title: Continuing Education
 #+OPTIONS: toc:nil
 

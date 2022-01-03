@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       fcaa7ed0-ed8c-48bb-a440-ffa872141583
+:ROAM_ALIASES: rationale read org
+:END:
 #+TITLE: Home for ideas for my Zettelkasten
 #+AUTHOR: David
 #+OPTIONS: toc:nil
-#+ROAM_TAGS: org read rationale
-#+ROAM_ALIAS: org read rationale
+#+filetags: :org:read:rationale:
 
 * Why?
 
@@ -11,7 +14,7 @@
 - Org mode is great for authoring, but I do prefer some nice font and a good
   navigation, search navigation. mkdocs-material offered a great compromise and
   orgmk allowed me to have a command line conversion.
-- [[file:decks/clojure.org][Clojure]] allowed to handle all the files systems, interaction with the sqlite
+- [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]] allowed to handle all the files systems, interaction with the sqlite
   database, the parsing and the concurrency.
 - I came up with my own set up, cards for writing anything that goes into my
   minds, links them and decks for writing summaries. Blog posts are a place
@@ -28,14 +31,14 @@ See org-roam-clj on how to use the library.
 ** Small index for quick access
 
 *** Programming
-   - [[file:decks/clojure.org][clj]], [[file:cards/20200430155819-core_async.org][core.async]].
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]], [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]].
 
 
 ** See also (generated)
 
-   - [[file:decks/clojure.org][Clojure]]
-   - [[file:cards/20200430155819-core_async.org][core.async]]
-   - [[file:blog/20200502171331-first_blog_ticket.org][First blog ticket]]
-   - [[file:cards/20200430180442-org_mode.org][org mode]]
-   - [[file:cards/readings.org][Readings]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]]
+   - [[id:6b384a56-0dc3-4569-9012-fcdb44f61eae][First blog ticket]]
+   - [[id:ea7b9063-7e26-4c95-9be9-b3d60f772d69][org mode]]
+   - [[id:84911f54-7623-449b-8219-adc57fd87edf][Readings]]
 

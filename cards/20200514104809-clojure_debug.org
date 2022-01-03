@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       5eef5b3b-507a-4f79-9dbd-ddad8ae8bf32
+:ROAM_ALIASES: clojure-debug
+:END:
 #+TITLE: Clojure Debug
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clojure-debug
-#+ROAM_TAGS: clojure-debug clj-toolkit
 #+DATE: 2020-05-14
+#+filetags: :clojure_debug:clj_toolkit:
 
 * Clojure Debug
 
@@ -18,5 +21,5 @@
 
 ** See also (generated)
 
-   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
 

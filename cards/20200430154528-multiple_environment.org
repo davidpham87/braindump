@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       96e7c4e0-37a8-477a-aaa7-46800c733ed1
+:ROAM_ALIASES: build acceptance production
+:END:
 #+TITLE: Multiple Environment
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: production acceptance build
-#+ROAM_TAGS: build prod clj
+#+filetags: :build:prod:clj:
 
 ** Multiple environments
    - We can have different class paths for configuration with =clj= and alias
@@ -12,7 +15,7 @@
      {:maven {:proxy {:host "proxy.host.com" :port 8080}}}
    #+END_SRC
 
-- tags :: [[file:../decks/clojure.org][clj]] build
+- tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]] build
 
 
 ** See also (generated)

@@ -1,13 +1,16 @@
+:PROPERTIES:
+:ID:       54521b70-98ed-45f9-b083-17730013f985
+:ROAM_ALIASES: clj/how-to-get-started clj/beginner
+:END:
 #+TITLE: Clojure - How to get started
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clj/beginner clj/how-to-get-started
-#+ROAM_TAGS: clj/beginner
 #+DATE: 2021-03-29
+#+filetags: :clj_beginner:
 
 * How to get started
 
 
 ** See also (generated)
 
-   - [[file:../cards/202005291001-starting_scripting_clojure.org][Starting Scripting Clojure]]
+   - [[id:25497709-b5d5-4ab5-ba45-d159143e7748][Starting Scripting Clojure]]
 

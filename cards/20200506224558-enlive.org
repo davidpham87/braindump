@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       e3e3ba3e-cab4-4150-bda3-65e5798bbfce
+:ROAM_ALIASES: web-template enlive
+:END:
 #+TITLE: Enlive
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: enlive web-template
-#+ROAM_TAGS: enlive web-scrapping web-template clj-web clj-toolkit
 #+DATE: 2020-05-06
+#+filetags: :enlive:web_scrapping:web_template:clj_web:clj_toolkit:
 
 * Enlive
 
@@ -36,5 +39,5 @@
 
 ** See also (generated)
 
-   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
 

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       6b384a56-0dc3-4569-9012-fcdb44f61eae
+:ROAM_ALIASES: first-blog-ticket
+:END:
 #+TITLE: First blog ticket
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: first-blog-ticket
-#+ROAM_TAGS: first-blog-ticket intro notes
 #+DATE: 2020-05-02
+#+filetags: :first_blog_ticket:intro:notes:
 
 * First blog ticket
 
@@ -15,9 +18,9 @@ I just created this website to gather my notes and find a system that can make
 leverage of all the ideas. I think the zettelkasten method is interesting and I
 decided to try it.
 
-Please read the [[file:../README.org][README]] for more details!
+Please read the [[id:fcaa7ed0-ed8c-48bb-a440-ffa872141583][README]] for more details!
 
 ** See also (generated)
 
-   - [[file:../README.org][Home for ideas for my Zettelkasten]]
+   - [[id:fcaa7ed0-ed8c-48bb-a440-ffa872141583][Home for ideas for my Zettelkasten]]
 

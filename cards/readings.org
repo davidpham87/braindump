@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       84911f54-7623-449b-8219-adc57fd87edf
+:ROAM_ALIASES: books read
+:END:
 #+TITLE: Readings
-#+ROAM_ALIAS: read books
 #+OPTIONS: toc:nil
 
 * Books
@@ -77,5 +80,5 @@
 
 ** See also (generated)
 
-   - [[file:../README.org][Home for ideas for my Zettelkasten]]
+   - [[id:fcaa7ed0-ed8c-48bb-a440-ffa872141583][Home for ideas for my Zettelkasten]]
 

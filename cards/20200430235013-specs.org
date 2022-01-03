@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       a6d4dd25-46d6-49d4-b83d-1fed62894a4e
+:ROAM_ALIASES: clojure.spec spec specs
+:END:
 #+TITLE: Specs
 #+OPTIONS: toc:nil
-#+ROAM_TAGS: specs quick-check test.check clj property-based-testing types test
-#+ROAM_ALIAS: specs spec clojure.spec
+#+filetags: :specs:quick_check:test_check:clj:property_based_testing:types:test:
 
 * Specs
 
@@ -183,7 +186,7 @@
     (post conditions) or on a relationship between the arguments and the return
     value or some invariant properties on the function call itself.
 
-    See [[file:20200516171955-generative_testing.org][Generative Testing]].
+    See [[id:495f759c-a06a-45bd-842f-31ed7b2d4736][Generative Testing]].
 
 *** Generation
 
@@ -345,7 +348,7 @@
 
 *** Properties
 
-    See [[file:20200516171955-generative_testing.org][Generative Testing]].
+    See [[id:495f759c-a06a-45bd-842f-31ed7b2d4736][Generative Testing]].
 
 *** Share specs over the wire
 
@@ -404,6 +407,6 @@
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200504204808-why_clojure.org][Why Clojure?]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:61d6a5d9-7522-46f2-94d6-326620cb7f3c][Why Clojure?]]
 

@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       ab553c45-6dc8-4971-a1d4-925cc51a0152
+:ROAM_ALIASES: concurrency core.async transducers design clj-advanced
+:END:
 #+TITLE: Applied Clojure
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clj-advanced design transducers core.async concurrency
-#+ROAM_TAGS: clj advanced core.async design transducers book
+#+filetags: :clj:advanced:core_async:design:transducers:book:
 
 * Applied Clojure
 
@@ -292,16 +295,16 @@
 ** Link
 - [[https://pragprog.com/book/vmclojeco/clojure-applied][Clojure Applied]]
 
-- tags :: [[file:../decks/clojure.org][clj]] [[file:20200430155819-core_async.org][core-async]] [[file:20200430190921-design.org][design]]
+- tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]] [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core-async]] [[id:f65785b4-b6c7-48bf-b53f-046512a74952][design]]
 
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430160432-clojure_for_the_brave_and_the_true.org][Clojure for the brave and the true]]
-   - [[file:20200430155819-core_async.org][core.async]]
-   - [[file:20200430190921-design.org][Design]]
-   - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
-   - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
-   - [[file:../todo.org][TODO]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75][Clojure for the brave and the true]]
+   - [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]]
+   - [[id:f65785b4-b6c7-48bf-b53f-046512a74952][Design]]
+   - [[id:ec0e78c6-a0ce-4244-bf23-004734d85adc][Parallel Programming in Clojure with Reducers]]
+   - [[id:0d37c851-9fb3-4633-9ca4-7f814a83bf0e][Simple Made Easy]]
+   - [[id:c832b4d9-e852-4cf9-8b96-e46b738dcbfd][TODO]]
 

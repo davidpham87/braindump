@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       8a25f159-fa4a-4bdb-9ad2-1db6731b4a75
+:ROAM_ALIASES: core.async clj-beginner clj-intro
+:END:
 #+TITLE: Clojure for the brave and the true
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clj-intro clj-beginner core.async
-#+ROAM_TAGS: clj clj-beginner core.async book
+#+filetags: :clj:clj_beginner:core_async:book:
 
 * Clojure for the brave and the true
 
@@ -207,10 +210,10 @@
 
 ** See also (generated)
 
-   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430155819-core_async.org][core.async]]
-   - [[file:20200505112138-clojure_reducers.org][Parallel Programming in Clojure with Reducers]]
-   - [[file:../todo.org][TODO]]
-   - [[file:20200504204808-why_clojure.org][Why Clojure?]]
+   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]]
+   - [[id:ec0e78c6-a0ce-4244-bf23-004734d85adc][Parallel Programming in Clojure with Reducers]]
+   - [[id:c832b4d9-e852-4cf9-8b96-e46b738dcbfd][TODO]]
+   - [[id:61d6a5d9-7522-46f2-94d6-326620cb7f3c][Why Clojure?]]
 

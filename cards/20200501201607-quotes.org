@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       7e4e1cee-6020-4e63-ac1d-47793ba2ae42
+:ROAM_ALIASES: quotes
+:END:
 #+TITLE: Quotes
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: quotes
-#+ROAM_TAGS: quotes
 #+DATE: 2020-05-01
+#+filetags: :quotes:
 
 
 * Quotes
@@ -91,10 +94,10 @@
    (Rich Hickey)
    #+end_quote
 
-   - tags :: [[file:../decks/clojure.org][clj]]
+   - tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]]
 
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
 

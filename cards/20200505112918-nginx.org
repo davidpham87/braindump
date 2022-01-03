@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       ce8a6476-597d-4e2a-a819-25b363ec3502
+:ROAM_ALIASES: nginx
+:END:
 #+TITLE: nginx
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: nginx
-#+ROAM_TAGS: nginx devops web-dev
 #+DATE: 2020-05-05
+#+filetags: :nginx:devops:web_dev:
 
 * nginx
 
@@ -189,5 +192,4 @@
 
 ** See also (generated)
 
-   - 
-
+   -

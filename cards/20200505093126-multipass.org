@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       555e395a-17db-430e-b416-1329d2039882
+:ROAM_ALIASES: multipass
+:END:
 #+TITLE: Multipass
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: multipass
-#+ROAM_TAGS: multipass k8s devops
 #+DATE: 2020-05-05
+#+filetags: :multipass:k8s:devops:
 
 * Multipass
 
@@ -14,5 +17,5 @@
 
 ** See also (generated)
 
-   - [[file:devops.org][Devops]]
+   - [[id:8c632bb6-d0b3-410f-b184-cde6d851aadd][Devops]]
 

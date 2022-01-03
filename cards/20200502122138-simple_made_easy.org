@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       0d37c851-9fb3-4633-9ca4-7f814a83bf0e
+:ROAM_ALIASES: simpliciy-matters talk design simplicity simple-made-easy
+:END:
 #+TITLE: Simple Made Easy
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: simple-made-easy simplicity design talk simpliciy-matters
-#+ROAM_TAGS: simple-made-easy simplicity design clj rich-hickey talk
 #+DATE: 2020-05-02
+#+filetags: :simple_made_easy:simplicity:design:clj:rich_hickey:talk:
 
 * Simple Made Easy and Simplicity Matters
 
@@ -239,8 +242,8 @@
 
 ** See also (generated)
 
-   - [[file:20200430155637-applied_clojure.org][Applied Clojure]]
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20200430190921-design.org][Design]]
-   - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
+   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:f65785b4-b6c7-48bf-b53f-046512a74952][Design]]
+   - [[id:f5738e4e-2f64-412a-92bd-64917b118c58][Rich Hickey]]
 

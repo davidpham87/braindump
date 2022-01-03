@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       c2e671b8-6ab6-49a7-a7d1-568bd25d770a
+:ROAM_ALIASES: clj-advanced lisp macro
+:END:
 #+TITLE: Mastering Clojure Macro
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: macro lisp clj-advanced
-#+ROAM_TAGS: macro clj advanced danger book
+#+filetags: :macro:clj:advanced:danger:book:
 
 * Mastering Clojure Macro
   - Macro is about manipulating the arguments of your functions before they
@@ -80,10 +83,10 @@
 
 - [[https://pragprog.com/book/cjclojure/mastering-clojure-macros][Mastering Clojure Macros]]
 
-- tags :: [[file:../decks/clojure.org][clj]]
+- tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]]
 
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
 

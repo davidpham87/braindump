@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       ab4b3a2e-672d-4600-8a05-ee073d0d0c53
+:ROAM_ALIASES: learning-tips
+:END:
 #+TITLE: Learning tips
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: learning-tips
-#+ROAM_TAGS: learning-tips learning continuing-education teaching
 #+DATE: 2020-05-05
+#+filetags: :learning_tips:learning:continuing_education:teaching:
 
 * Learning tips
 
@@ -43,12 +46,12 @@
 
 
 ** Links
-   - [[file:20200505093245-ansible.org][ansible]]
-   - [[file:python.org][programming]]
+   - [[id:7ba45811-ac2e-4d42-b28b-0659fbd9e700][ansible]]
+   - [[id:0befe780-b37e-400c-b15d-04406646f532][programming]]
 
 
 ** See also (generated)
 
-   - [[file:20200505093245-ansible.org][Ansible]]
-   - [[file:python.org][Python]]
+   - [[id:7ba45811-ac2e-4d42-b28b-0659fbd9e700][Ansible]]
+   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
 

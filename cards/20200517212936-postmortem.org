@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       21e80590-fde0-43fa-905c-4584c0fe954a
+:ROAM_ALIASES: postmortem
+:END:
 #+TITLE: Postmortem
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: postmortem
-#+ROAM_TAGS: postmortem clj-toolkit debug
 #+DATE: 2020-05-17
+#+filetags: :postmortem:clj_toolkit:debug:
 
 * Postmortem
 
@@ -16,5 +19,5 @@ A tiny value-oriented debugging tool for Clojure(Script), powered by transducers
 
 ** See also (generated)
 
-   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
 

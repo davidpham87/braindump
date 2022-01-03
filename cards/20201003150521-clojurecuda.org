@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       003c7db5-2cae-46d4-8b70-6646112aae90
+:ROAM_ALIASES: clojure-cuda
+:END:
 #+TITLE: ClojureCuda
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: clojure-cuda
-#+ROAM_TAGS: clojure-cuda clj Neanderthal
 #+DATE: 2020-10-03
+#+filetags: :clojure_cuda:clj:Neanderthal:
 
 * ClojureCuda
 
@@ -100,6 +103,6 @@ compiler).
 
 ** See also (generated)
 
-   - [[file:../decks/clojure.org][Clojure]]
-   - [[file:20201011155722-jna.org][JNA]]
+   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[id:c473667e-bbd9-4ce8-9b34-6e55a500b586][JNA]]
 

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       f5738e4e-2f64-412a-92bd-64917b118c58
+:ROAM_ALIASES: rich-hickey
+:END:
 #+TITLE: Rich Hickey
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: rich-hickey
-#+ROAM_TAGS: rich-hickey
 #+DATE: 2020-05-04
+#+filetags: :rich_hickey:
 
 * Rich Hickey
 
@@ -14,6 +17,6 @@
 
 ** See also (generated)
 
-   - [[file:20200504213118-effective_programs_10_years_of_clojure.org][Effective Programs - 10 years of clojure]]
-   - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
+   - [[id:1edaad86-c8e0-46d1-8d4b-4c51bae60af1][Effective Programs - 10 years of clojure]]
+   - [[id:0d37c851-9fb3-4633-9ca4-7f814a83bf0e][Simple Made Easy]]
 

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       973e1d96-4712-421f-8146-9c72325bdd34
+:ROAM_ALIASES: build clj-tool clj-docs docs
+:END:
 #+TITLE: Materiala
 #+OPTIONS: toc:nil
-#+ROAM_TAGS: docs clj-docs clj-tool build
-#+ROAM_ALIAS: docs clj-docs clj-tool build
 #+DATE: 2020-05-03
+#+filetags: :docs:clj_docs:clj_tool:build:
 
 * Materiala
 
@@ -28,7 +31,7 @@ My own tools for linking mkdocs and marginalia. See [[https://github.com/davidph
 
 ** See also (generated)
 
-   - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
-   - [[file:general.org][General Skills]]
-   - [[file:../todo.org][TODO]]
+   - [[id:aa56ac8a-9e23-4378-b338-627b7f851dea][CLI Arguments]]
+   - [[id:cd1a96fd-ddbe-49d2-a5c7-df8d8fe200e6][General Skills]]
+   - [[id:c832b4d9-e852-4cf9-8b96-e46b738dcbfd][TODO]]
 

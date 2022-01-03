@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       3f1cca19-4edc-448e-9cec-eb7c43a203dc
+:ROAM_ALIASES: statistics r-cran R
+:END:
 #+TITLE: R CRAN
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: R r-cran statistics
-#+ROAM_TAGS: statistics programming-language data-science
+#+filetags: :statistics:programming_language:data_science:
 
 * R
    + [X] Do the empirical stuff, start MSc Thesis.
@@ -13,6 +16,6 @@
 
 ** See also (generated)
 
-   - [[file:20200430153912-ethz.org][ETHZ]]
-   - [[file:python.org][Python]]
+   - [[id:e7f0e7f4-d672-4e67-b785-abb4a3eefd0f][ETHZ]]
+   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
 

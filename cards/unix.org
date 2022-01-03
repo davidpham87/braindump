@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       ad215bf7-b067-41f4-8593-d59351e8a87d
+:ROAM_ALIASES: linux unix
+:END:
 #+Title: UNIX
 #+OPTIONS: toc:nil
-#+ROAM_ALIAS: unix linux
-#+ROAM_TAGS: tooling tool
+#+filetags: :tooling:tool:
 
 * Unix command learning
    + [X] find command: options are: =-name ("*.cpp" or ".c")=, =-type (f, d)=,
@@ -15,5 +18,5 @@
 
 ** See also (generated)
 
-   - [[file:20201220130520-emacs_configuration.org][emacs]]
+   - [[id:d7b7095f-676d-4dbf-a32c-6fb1de56331f][emacs]]
 
