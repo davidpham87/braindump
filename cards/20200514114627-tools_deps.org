@@ -5,7 +5,7 @@
 #+TITLE: Clojure tools.deps
 #+OPTIONS: toc:nil
 #+DATE: 2020-05-14
-#+filetags: :tools_deps:clj_toolkit:
+#+filetags: :tools_deps:clj_toolkit:clj
 
 * tools.deps
 
@@ -25,5 +25,5 @@
 
 ** See also (generated)
 
-   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
+   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
 

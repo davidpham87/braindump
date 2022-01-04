@@ -85,5 +85,5 @@
 
 ** See also (generated)
 
-   - [[file:../decks/index.org][Index]]
+   - 
 

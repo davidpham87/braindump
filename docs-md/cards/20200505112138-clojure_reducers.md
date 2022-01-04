@@ -101,8 +101,6 @@ the operation remove stick (`r/map`) and keep only the healthy ones
 
 ## See also (generated)
 
--   [Applied Clojure](./id:ab553c45-6dc8-4971-a1d4-925cc51a0152)
--   [Clojure](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8)
--   [Clojure for the brave and the
-    true](./id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75)
--   [core.async](./id:843bd7e1-7106-4c45-ba46-fd2691b349b6)
+-   [Applied Clojure](./20200430155637-applied_clojure.md)
+-   [Clojure](./../decks/clojure.md)
+-   [core.async](./20200430155819-core_async.md)

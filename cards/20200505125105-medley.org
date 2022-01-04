@@ -5,7 +5,7 @@
 #+TITLE: medley
 #+OPTIONS: toc:nil
 #+DATE: 2020-05-05
-#+filetags: :medley:clj_toolkit:
+#+filetags: :medley:clj_toolkit:clj
 
 * medley
   Clojure and ClojureScript common functions not implemented in core
@@ -16,5 +16,5 @@
 
 ** See also (generated)
 
-   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
+   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
 

@@ -33,8 +33,5 @@ See org-roam-clj on how to use the library.
 
 ## See also (generated)
 
--   [Clojure](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8)
--   [core.async](./id:843bd7e1-7106-4c45-ba46-fd2691b349b6)
--   [First blog ticket](./id:6b384a56-0dc3-4569-9012-fcdb44f61eae)
--   [org mode](./id:ea7b9063-7e26-4c95-9be9-b3d60f772d69)
--   [Readings](./id:84911f54-7623-449b-8219-adc57fd87edf)
+-   [org mode](./cards/20200430180442-org_mode.md)
+-   [Readings](./cards/readings.md)

@@ -16,3 +16,11 @@
    #+END_SRC
 
 - tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]] build
+
+
+** See also (generated)
+
+   - [[file:20200430154352-cli_arguments.org][CLI Arguments]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200503165952-materiala.org][Materiala]]
+

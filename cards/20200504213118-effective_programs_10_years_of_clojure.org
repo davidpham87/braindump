@@ -5,7 +5,7 @@
 #+TITLE: Effective Programs - 10 years of clojure
 #+OPTIONS: toc:nil
 #+DATE: 2020-05-04
-#+filetags: :effective_programs_10_years_of_clojure:rich_hickey:
+#+filetags: :effective_programs_10_years_of_clojure:rich_hickey:clj
 
 * Effective Programs - 10 years of clojure
 
@@ -16,5 +16,5 @@
 
 ** See also (generated)
 
-   - [[id:f5738e4e-2f64-412a-92bd-64917b118c58][Rich Hickey]]
+   - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
 

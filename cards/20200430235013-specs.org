@@ -404,3 +404,9 @@
    - [[https://clojure.org/api/cheatsheet][Clojure cheat sheet]]
    - https://blog.taylorwood.io/2018/10/15/clojure-spec-faq.html, good FAQ
    - https://blog.taylorwood.io/2017/10/15/fspec.html , good details about fspec
+
+
+** See also (generated)
+
+   - [[file:../decks/clojure.org][Clojure]]
+

@@ -233,4 +233,5 @@
 
 ** See also (generated)
 
-   - [[id:003c7db5-2cae-46d4-8b70-6646112aae90][ClojureCuda]]
+   - [[file:20201003150521-clojurecuda.org][ClojureCuda]]
+

@@ -30,3 +30,9 @@
   important. Human are full of biases (perception and memory) and might also
   employ fallacies to argue (such as the appeal to authority, to nature or to
   perfect solution).
+
+
+** See also (generated)
+
+   - [[file:../cards/20220103-skepticism.org][Scientific Method: Skepticism]]
+

@@ -22,3 +22,11 @@
 
      (:options (parse-opts *command-line-args* cli-options))
    #+END_SRC
+
+
+** See also (generated)
+
+   - [[file:20200505124946-clj_toolkit.org][Clojure toolkit]]
+   - [[file:20200503165952-materiala.org][Materiala]]
+   - [[file:20200430154528-multiple_environment.org][Multiple Environment]]
+

@@ -224,3 +224,7 @@ variable.
 
 -   [Brave and the
     True](https://www.braveclojure.com/clojure-for-the-brave-and-true/)
+
+## See also (generated)
+
+-   [Clojure](./../decks/clojure.md)

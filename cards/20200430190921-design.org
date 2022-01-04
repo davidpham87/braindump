@@ -236,8 +236,6 @@
 
 ** See also (generated)
 
-   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:f5738e4e-2f64-412a-92bd-64917b118c58][Rich Hickey]]
-   - [[id:0d37c851-9fb3-4633-9ca4-7f814a83bf0e][Simple Made Easy]]
+   - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
+   - [[file:20200502122138-simple_made_easy.org][Simple Made Easy]]
 

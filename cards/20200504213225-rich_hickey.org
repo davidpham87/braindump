@@ -5,7 +5,7 @@
 #+TITLE: Rich Hickey
 #+OPTIONS: toc:nil
 #+DATE: 2020-05-04
-#+filetags: :rich_hickey:
+#+filetags: :rich-hickey:clojure:clj:
 
 * Rich Hickey
 
@@ -17,6 +17,4 @@
 
 ** See also (generated)
 
-   - [[id:1edaad86-c8e0-46d1-8d4b-4c51bae60af1][Effective Programs - 10 years of clojure]]
-   - [[id:0d37c851-9fb3-4633-9ca4-7f814a83bf0e][Simple Made Easy]]
-
+   - Clojure

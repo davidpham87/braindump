@@ -116,6 +116,6 @@ Using [[https://github.com/tatut/clj-chrome-devtools][clj-chrome-devtools]], you
 
 ** See also (generated)
 
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350][shadow-cljs]]
-     
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:20200430154647-shadow_cljs.org][shadow-cljs]]
+

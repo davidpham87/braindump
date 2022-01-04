@@ -85,5 +85,4 @@ Philosophy of linux.
 
 ## See also (generated)
 
--   [Home for ideas for my
-    Zettelkasten](./id:fcaa7ed0-ed8c-48bb-a440-ffa872141583)
+-   

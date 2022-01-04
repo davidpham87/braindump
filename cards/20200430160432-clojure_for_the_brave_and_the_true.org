@@ -206,3 +206,9 @@
 ** Link
 
 - [[https://www.braveclojure.com/clojure-for-the-brave-and-true/][Brave and the True]]
+
+
+** See also (generated)
+
+   - [[file:../decks/clojure.org][Clojure]]
+

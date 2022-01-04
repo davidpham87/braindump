@@ -222,4 +222,6 @@ order function as a *generator*. Read `test.check.generator` for more
 
 ## See also (generated)
 
+-   [Applied Clojure](./../cards/20200430155637-applied_clojure.md)
+-   [core.async](./../cards/20200430155819-core_async.md)
 -   [Specs](./../cards/20200430235013-specs.md)

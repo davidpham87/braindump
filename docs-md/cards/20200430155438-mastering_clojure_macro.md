@@ -97,3 +97,7 @@
     Macros](https://pragprog.com/book/cjclojure/mastering-clojure-macros)
 
 -   tags :: [clj](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8)
+
+## See also (generated)
+
+-   [Clojure](./../decks/clojure.md)

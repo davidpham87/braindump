@@ -8,23 +8,38 @@
 
 ** TODO FRM
   Read and do the exams for the two tests.
+
 ** TODO CFA
+
 ** Level 2
    - [X] Register
    - [ ] Study
+
 ** TODO CQF
+
 ** TODO Udacity Nanodegree
+
 ** TODO Fullstack
-** TODO Data Streaming
+
+** DONE Udacity Data Streaming
+   CLOSED: [2022-01-04 Di 16:47]
+   Done in 2020.
+
 ** DONE Front-end
    CLOSED: [2020-01-05 So 21:42]
    Not necessary thanks to ClojureScript.
-** DONE Deep learning
+** DONE Udacity Deep learning
    CLOSED: [2020-01-05 So 21:42]
+
+** DONE Coursera  Deep learning
+   CLOSED: [2020-01-05 So 21:42]
+
 ** DONE Machine learning
    CLOSED: [2020-01-05 So 21:42]
-** TODO Edx
-   - Finish Micro Master in statistics and Data Science.
+
+** DONE edx
+CLOSED: [2022-01-04 Di 16:47]
+   - [X] Finish Micro Master in statistics and Data Science.
 
 
 ** See also (generated)

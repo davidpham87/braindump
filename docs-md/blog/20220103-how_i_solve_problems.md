@@ -26,3 +26,7 @@ know things and where mistakes and bias might occur. This is this part
 is important. Human are full of biases (perception and memory) and might
 also employ fallacies to argue (such as the appeal to authority, to
 nature or to perfect solution).
+
+## See also (generated)
+
+-   [Scientific Method: Skepticism](./../cards/20220103-skepticism.md)

@@ -6,4 +6,4 @@
 
 ## See also (generated)
 
--   [Rich Hickey](./id:f5738e4e-2f64-412a-92bd-64917b118c58)
+-   [Rich Hickey](./20200504213225-rich_hickey.md)

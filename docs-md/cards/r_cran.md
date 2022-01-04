@@ -8,5 +8,5 @@
 
 ## See also (generated)
 
--   [ETHZ](./id:e7f0e7f4-d672-4e67-b785-abb4a3eefd0f)
--   [Python](./id:0befe780-b37e-400c-b15d-04406646f532)
+-   [ETHZ](./20200430153912-ethz.md)
+-   [Python](./python.md)

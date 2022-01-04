@@ -2,5 +2,5 @@
 
 ## See also (generated)
 
--   [Starting Scripting
-    Clojure](./id:25497709-b5d5-4ab5-ba45-d159143e7748)
+-   [Clojure for the brave and the
+    true](./../cards/20200430160432-clojure_for_the_brave_and_the_true.md)

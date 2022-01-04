@@ -100,5 +100,6 @@
 
 ** See also (generated)
 
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:python.org][Python]]
+

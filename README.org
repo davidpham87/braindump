@@ -36,9 +36,6 @@ See org-roam-clj on how to use the library.
 
 ** See also (generated)
 
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]]
-   - [[id:6b384a56-0dc3-4569-9012-fcdb44f61eae][First blog ticket]]
-   - [[id:ea7b9063-7e26-4c95-9be9-b3d60f772d69][org mode]]
-   - [[id:84911f54-7623-449b-8219-adc57fd87edf][Readings]]
+   - [[file:cards/20200430180442-org_mode.org][org mode]]
+   - [[file:cards/readings.org][Readings]]
 

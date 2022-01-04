@@ -528,8 +528,7 @@ Unique MLE if using the canonical link function.
 
 ** See also (generated)
 
-   - [[id:e7f0e7f4-d672-4e67-b785-abb4a3eefd0f][ETHZ]]
-   - [[file:../decks/index.org][Index]]
-   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
-   - [[id:3f1cca19-4edc-448e-9cec-eb7c43a203dc][R CRAN]]
+   - [[file:20200430153912-ethz.org][ETHZ]]
+   - [[file:python.org][Python]]
+   - [[file:r_cran.org][R CRAN]]
 

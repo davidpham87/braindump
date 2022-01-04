@@ -37,5 +37,5 @@ Library for extending org-roam.
 
 ** See also (generated)
 
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
+   - [[file:../decks/clojure.org][Clojure]]
 

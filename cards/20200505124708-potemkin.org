@@ -28,6 +28,5 @@
 
 ** See also (generated)
 
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
+   - [[file:../decks/clojure.org][Clojure]]
 

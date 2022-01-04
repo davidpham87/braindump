@@ -242,5 +242,7 @@
 
 ** See also (generated)
 
+   - [[file:../decks/clojure.org][Clojure]]
    - [[file:20200430190921-design.org][Design]]
+   - [[file:20200504213225-rich_hickey.org][Rich Hickey]]
 

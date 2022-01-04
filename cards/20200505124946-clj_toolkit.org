@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0dffd466-49f4-46d0-ab62-4c0cca23b2af
-:ROAM_ALIASES: clj-toolkit
+:ROAM_ALIASES: clj-toolkit clj_toolkit
 :END:
 #+TITLE: Clojure toolkit
 #+OPTIONS: toc:nil
@@ -14,6 +14,5 @@
 
 ** See also (generated)
 
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:d5b95661-b8f2-47fd-b67e-8ce75305275b][Potemkin: some ideas which are almost good]]
+   - [[file:../decks/clojure.org][Clojure]]
 
