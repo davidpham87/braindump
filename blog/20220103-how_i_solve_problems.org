@@ -7,6 +7,8 @@
 #+DATE: 2022-01-03
 #+filetags: :problem-solving:scientific-method:skepticism
 
+* Methods to Solve Real Life Problems
+
 - [[id:1eec7b94-0959-400a-87a6-11161a0464d7][How to Solve it]] from Polya.
 - [[id:f65785b4-b6c7-48bf-b53f-046512a74952][Design, Composition and Performance]] from Rich Hickey.
 - [[id:554d2f50-b05a-4776-a593-361ffb5e1226][Scientific Method: Skepticism]] (multiple authors).
