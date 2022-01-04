@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       1eec7b94-0959-400a-87a6-11161a0464d7
+:ROAM_ALIAS: how-to-solve-it
+:END:
+#+TITLE: How to Solve it
+#+OPTIONS: toc:nil
+#+filetags: how-to-solve-it:problems-solving
+#+DATE: 2022-01-04
+
+* How to Solve It
+
+ The book is from [[https://en.wikipedia.org/wiki/How_to_Solve_It][Polya]].
+
+ 1. Understand the problem.
+ 2. Make a plan.
+ 3. Carry out the plan.
+ 4. Check the results.
+ 5. Look back on the work. (Improvement, genelarization).
+
+
+** Links
+ - [[id:554d2f50-b05a-4776-a593-361ffb5e1226][Scientific Method: Skepticism]]

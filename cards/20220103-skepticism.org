@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       554d2f50-b05a-4776-a593-361ffb5e1226
+:ROAM_ALIASES: skepticism
+:END:
+#+TITLE: Scientific Method: Skepticism
+#+OPTIONS: toc:nil
+#+DATE: 2022-01-03
+#+filetags: :zetetic:skepticism:problem-solving:design
+
+* Scientific method
+
+
+** Links
+
+- Skeptic guide to the universe
+
+   #+begin_src bibtex
+    @book{novella2018skeptics,
+      title={The Skeptics' Guide to the Universe: How to Know What's Really Real in a World Increasingly Full of Fake},
+      author={Novella, S. and Novella, B. and Maria, C.S. and Novella, J. and Bernstein, E.},
+      isbn={9781538760512},
+      lccn={2018013089},
+      url={https://books.google.ch/books?id=6aNKDwAAQBAJ},
+      year={2018},
+      publisher={Grand Central Publishing}
+    }
+   #+end_src
+
+- Tronche en biais and https://www.menace-theoriste.fr
+  #+begin_src bibtex
+          @book{durand2021science,
+          title={La science des balivernes},
+          author={Durand, T.C.},
+          isbn={9782379311932},
+          url={https://books.google.ch/books?id=yAwtEAAAQBAJ},
+          year={2021},
+          publisher={Humensis}}
+  #+end_src

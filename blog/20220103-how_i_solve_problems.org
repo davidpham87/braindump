@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID: bd688479-4931-4006-b35f-c943ae7dfcc7
+:ROAM_ALIASES: Problem Solving
+:END:
+#+TITLE: Problem Solving
+#+OPTIONS: toc:nil
+#+DATE: 2022-01-03
+#+filetags: :problem-solving:scientific-method:skepticism
+
+- How to solve it from Poly
+- Design, composition and performance from Rich Hickey
+- Scientific method for knowing what is true from Novella and Durand.

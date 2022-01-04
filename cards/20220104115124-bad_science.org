@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       bebde254-e616-444e-b3b6-a1a9b0e03eea
+:ROAM_ALIAS: bad-science
+:END:
+#+TITLE: Bad Science
+#+OPTIONS: toc:nil
+#+filetags: bad-science:skepticism
+#+DATE: 2022-01-04
+
+* Bad Science
+
+** Link
+
+- Bad Science from Ben Goldacre
+#+begin_src bibtex
+  @book{goldacre2008bad,
+  title={Bad Science},
+  author={Goldacre, B.},
+  isbn={9780007283194},
+  url={https://books.google.ch/books?id=Gv1NQubrGNIC},
+  year={2008},
+  publisher={HarperCollins Publishers}
+}
+#+end_src

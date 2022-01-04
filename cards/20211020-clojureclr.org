@@ -1,4 +1,5 @@
-g:PROPERTIES:
+:PROPERTIES:
+:ID:       09a8990d-8a5b-47fc-9833-5e73a36c9126
 :ROAM_ALIASES: cljr
 :END:
 #+TITLE: ClojureCLR
@@ -9,11 +10,11 @@ g:PROPERTIES:
 * ClojureCLR
 
 ** Installing dotnet on ubuntu
-   Avoid using the snap, use the binarie, because the snap has some issue with require sudo rights to run.
+Avoid using the snap, use the binarie, because the snap has some issue with require sudo rights to run.
 
 ** Starting a socket server
 
-   Installing ClojureCLR for the whole system under =~/.dotnet/tools/Clojure.Main=
+Installing ClojureCLR for the whole system under =~/.dotnet/tools/Clojure.Main=
 
    #+begin_src shell
    dotnet tool install --global Clojure.Main
