@@ -1,0 +1,3 @@
+-   How to solve it from Poly
+-   Design, composition and performance from Rich Hickey
+-   Scientific method for knowing what is true from Novella and Durand.
