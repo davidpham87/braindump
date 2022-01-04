@@ -17,5 +17,5 @@
 
 ** See also (generated)
 
-   - [[id:8c632bb6-d0b3-410f-b184-cde6d851aadd][Devops]]
+   - [[file:devops.org][Devops]]
 

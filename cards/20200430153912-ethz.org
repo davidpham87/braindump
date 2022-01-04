@@ -79,10 +79,3 @@
     <2015-06-09 Die> I had 4.75/6 at the exam.
     + [X] Read scripts
     + [X] Do Exercise
-
-
-** See also (generated)
-
-   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
-   - [[id:3f1cca19-4edc-448e-9cec-eb7c43a203dc][R CRAN]]
-

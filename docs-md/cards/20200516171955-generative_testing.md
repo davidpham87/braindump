@@ -2,93 +2,91 @@
 
 ## Properties
 
-Taking from [Applied Clojure](./20200430155637-applied_clojure.md)
+Taking from [Applied Clojure](./id:ab553c45-6dc8-4971-a1d4-925cc51a0152)
 
 > We are looking for *invariants* – properties that are always true.
 > \[…\] mathematical laws, relationships between inputs and outputs,
 > round-trip or complementing functions, and comparing action effects.
-> 
+>
 > Properties like identity, associativity, commutativity and idempotency
 > are an excellent place to start.
 
 Other general properties:
 
-  - membership is not modified (frequencies of element still are the
+-   membership is not modified (frequencies of element still are the
     same), maybe distinct for sets and hash-map.
 
-  - Trusted implementation. Compare the results and calculation on a
+-   Trusted implementation. Compare the results and calculation on a
     trusted different implementation (different language, slower/faster
     version). For stateful components (like database), apply same
     logical operation on a logical model correct implementation like
     hash-map or vectors (e.g. `create` is `assoc`, `delete` is
     `dissoc`).
 
-  - Avoid to implement again the same algorithms.
+-   Avoid to implement again the same algorithms.
 
-  - Commutativity of operations
+-   Commutativity of operations
 
-  - Hard to prove, quick to verify (e.g. path in maze to the exit).
+-   Hard to prove, quick to verify (e.g. path in maze to the exit).
 
-  - Backward properties: generate the output and think which input would
+-   Backward properties: generate the output and think which input would
     have yielded this output (like in finding a key in a hash map:
     inserting the key first to insure the key is in the collection).
 
-  - Expect failures and create failure.
+-   Expect failures and create failure.
 
-  - Ask the hard questions.
+-   Ask the hard questions.
 
-  - Create the visibility you need (for asserting that a function did
+-   Create the visibility you need (for asserting that a function did
     what it is supposed to do).
 
-  - What defines success of a service? This leads to property.
+-   What defines success of a service? This leads to property.
 
-  - Hammock time leads (care and randomness).
+-   Hammock time leads (care and randomness).
 
-  - Preconditions are predicates returning if some operations are valid,
+-   Preconditions are predicates returning if some operations are valid,
     given the state of object or input of the function. If the
     preconditions is not met, then it is a noop (no operation).
 
-  - Postcondition are what ought to be true after the function call
+-   Postcondition are what ought to be true after the function call
     (usually we check if the result coincide with a predicted model).
 
 ## How to specify it
 
 Talk about how to specify properties for pure functions.
 
-  - Invariant  
-    things that ought to be always true. Optimize for correctness in the
-    assertion, not for performance (test case are usually small). Make
-    sure that generator are also valid.
+Invariant  
+things that ought to be always true. Optimize for correctness in the
+assertion, not for performance (test case are usually small). Make sure
+that generator are also valid.
 
-  - Postcondition  
-    Asking what is the postcondition? Finding what ought to be true
-    after the function call. If the properties requires to have the
-    function under test, create a generator that insures that the state
-    is consistent (for example, in a hash-map, for testing `contains?`,
-    you can insert and remove key to test the properties of
-    `contains?`).
+Postcondition  
+Asking what is the postcondition? Finding what ought to be true after
+the function call. If the properties requires to have the function under
+test, create a generator that insures that the state is consistent (for
+example, in a hash-map, for testing `contains?`, you can insert and
+remove key to test the properties of `contains?`).
 
-  - Metamorphic properties  
-    instead of predicting and test the result from an input, predict and
-    test the relationship of result from two almost input. It is the
-    idea of paths for getting to a final state. The relationship could
-    be equality, size comparison. You can also check equivalence on
-    result (as function of the result). You have to change in terms of
-    the space of continuous functions: if input change, how will the
-    change on the image be \(\Delta f = f(x+\delta) - f(x)\)? Some write
-    metamorphic relations.
+Metamorphic properties  
+instead of predicting and test the result from an input, predict and
+test the relationship of result from two almost input. It is the idea of
+paths for getting to a final state. The relationship could be equality,
+size comparison. You can also check equivalence on result (as function
+of the result). You have to change in terms of the space of continuous
+functions: if input change, how will the change on the image be
+*Δ**f* = *f*(*x*+*δ*) − *f*(*x*)? Some write metamorphic relations.
 
-  - Inductive properties  
-    argument by induction that only the correct function can pass the
-    test (using recursion). Double check the conformity by applying
-    operations that should also keep the result valid.
+Inductive properties  
+argument by induction that only the correct function can pass the test
+(using recursion). Double check the conformity by applying operations
+that should also keep the result valid.
 
-  - Model-based properties  
-    similar to trusted implementation by working on a abstraction
-    function with an abstraction operation. The assumption is you can
-    convert your result into the abstraction and applying the same
-    operations on the abstraction (you have an
-    [homomorphism](https://en.wikipedia.org/wiki/Homomorphism)).
+Model-based properties  
+similar to trusted implementation by working on a abstraction function
+with an abstraction operation. The assumption is you can convert your
+result into the abstraction and applying the same operations on the
+abstraction (you have an
+[homomorphism](https://en.wikipedia.org/wiki/Homomorphism)).
 
 Model-based properties is one of the most powerful representation.
 However, the model based properties can look too alike than the
@@ -129,40 +127,36 @@ order to insure that your implementation is correct.
 
 ## Property Based Testing with Proper
 
-  - Side effects can be grouped together at one end of the system, and
-    we can
+-   Side effects can be grouped together at one end of the system, and
+    we can keep the rest of the code as pure as possible.
 
-keep the rest of the code as pure as possible.
+    -   Targeted Properties and Simulated Annealing are cool stuff to
+        learn about, even if you won’t use Property-Based Testing that
+        much. Don’t skim over that chapter in the book.
 
-  - Targeted Properties and Simulated Annealing are cool stuff to learn
-    about,
-
-even if you won’t use Property-Based Testing that much. Don’t skim over
-that chapter in the book.
-
-> Any intelligent fool can make things bigger, more complex, and more
-> violent. It takes a touch of genius – and a lot of courage – to move
-> in the opposite direction.
-> 
-> – Ernst Friedrich "Fritz" Schumacher (in Small is Beautiful).
+        > Any intelligent fool can make things bigger, more complex, and
+        > more violent. It takes a touch of genius – and a lot of
+        > courage – to move in the opposite direction.
+        >
+        > – Ernst Friedrich "Fritz" Schumacher (in Small is Beautiful).
 
 ## Links
 
-  - <https://fsharpforfunandprofit.com/posts/property-based-testing-2/>
-  - [How to specify
+-   <https://fsharpforfunandprofit.com/posts/property-based-testing-2/>
+-   [How to specify
     it?](https://www.tfp2019.org/resources/tfp2019-how-to-specify-it.pdf),
     [video](https://www.youtube.com/watch?v=G0NUOst-53U) (jump until
     minute 10 for start of content).
-  - [How to write test and stay
+-   [How to write test and stay
     sane?](https://www.youtube.com/watch?v=zi0rHwfiX1Q)
-  - [Jessica Kerr
-    (midwest.io 2014)](https://www.youtube.com/watch?v=shngiiBfD80)
-  - ScalaCheck (book about PBT)
-  - [Fast check](https://github.com/dubzzz/fast-check), quick check for
+-   [Jessica Kerr (midwest.io
+    2014)](https://www.youtube.com/watch?v=shngiiBfD80)
+-   ScalaCheck (book about PBT)
+-   [Fast check](https://github.com/dubzzz/fast-check), quick check for
     javascript.
-  - [Hypothesis](https://hypothesis.works/articles/), quick check for
+-   [Hypothesis](https://hypothesis.works/articles/), quick check for
     python.
 
 ## See also (generated)
 
-  - [Specs](./20200430235013-specs.md)
+-   [Specs](./id:a6d4dd25-46d6-49d4-b83d-1fed62894a4e)

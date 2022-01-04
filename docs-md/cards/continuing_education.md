@@ -8,8 +8,8 @@ Read and do the exams for the two tests.
 
 ## Level 2
 
-  - \[X\] Register
-  - \[ \] Study
+-   [x] Register
+-   [ ] Study
 
 ## <span class="todo TODO">TODO</span> CQF
 
@@ -29,8 +29,8 @@ Not necessary thanks to ClojureScript.
 
 ## <span class="todo TODO">TODO</span> Edx
 
-  - Finish Micro Master in statistics and Data Science.
+-   Finish Micro Master in statistics and Data Science.
 
 ## See also (generated)
 
-  -
+-   

@@ -22,11 +22,3 @@
 
      (:options (parse-opts *command-line-args* cli-options))
    #+END_SRC
-
-** See also (generated)
-
-   - [[id:0dffd466-49f4-46d0-ab62-4c0cca23b2af][Clojure toolkit]]
-   - [[id:d7b7095f-676d-4dbf-a32c-6fb1de56331f][emacs]]
-   - [[id:cd1a96fd-ddbe-49d2-a5c7-df8d8fe200e6][General Skills]]
-   - [[id:973e1d96-4712-421f-8146-9c72325bdd34][Materiala]]
-

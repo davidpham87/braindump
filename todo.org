@@ -56,10 +56,6 @@
 
 ** See also (generated)
 
-   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
-   - [[id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75][Clojure for the brave and the true]]
-   - [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]]
-   - [[id:bdb0a4d9-21df-4257-b7fb-3bddb3bb64db][Goals]]
-   - [[id:973e1d96-4712-421f-8146-9c72325bdd34][Materiala]]
-   - [[id:a6d4dd25-46d6-49d4-b83d-1fed62894a4e][Specs]]
+   - [[file:cards/20200501163355-goals.org][Goals]]
+   - [[file:cards/20200430235013-specs.org][Specs]]
 

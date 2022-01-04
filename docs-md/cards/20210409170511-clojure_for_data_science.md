@@ -91,13 +91,13 @@ The building block is `neanderthal` and hence interop with
 
 ## Links
 
-  - [dtype-next](https://github.com/cnuernber/dtype-next),
+-   [dtype-next](https://github.com/cnuernber/dtype-next),
     [tech.ml.dataset](https://github.com/techascent/tech.ml.dataset),
     [tech.ml](https://github.com/techascent/tech.ml)
-  - <https://techascent.com/blog/next-gen-native.html>
-  - <https://github.com/gigasquid/libpython-clj-examplesk>
+-   <https://techascent.com/blog/next-gen-native.html>
+-   <https://github.com/gigasquid/libpython-clj-examplesk>
 
 ## See also (generated)
 
-  - [Clojure](./../decks/clojure.md)
-  - [Python](./python.md)
+-   [Clojure](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8)
+-   [Python](./id:0befe780-b37e-400c-b15d-04406646f532)

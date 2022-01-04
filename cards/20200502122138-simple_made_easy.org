@@ -242,8 +242,5 @@
 
 ** See also (generated)
 
-   - [[id:ab553c45-6dc8-4971-a1d4-925cc51a0152][Applied Clojure]]
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:f65785b4-b6c7-48bf-b53f-046512a74952][Design]]
-   - [[id:f5738e4e-2f64-412a-92bd-64917b118c58][Rich Hickey]]
+   - [[file:20200430190921-design.org][Design]]
 

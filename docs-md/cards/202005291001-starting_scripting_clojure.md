@@ -35,9 +35,9 @@ same workflow working in many context and it might help many.
 
 ## Goals
 
-  - Ability to start scripting and a repl with your text editor in any
+-   Ability to start scripting and a repl with your text editor in any
     folder with low ceremony.
-  - Quick start of scripts in Clojure which can be converted into bigger
+-   Quick start of scripts in Clojure which can be converted into bigger
     project.
 
 ## Too long don't read
@@ -50,8 +50,6 @@ Then, two solutions
 
 1.  Install clojure, and then for a
 
-<!-- end list -->
-
 ``` bash
 clojure
 ```
@@ -59,16 +57,14 @@ clojure
 1.  For super fast startup and for shell scripting you can install
     babashka. Then start the repl with
 
-<!-- end list -->
-
 ``` bash
 bb --nrepl-server 1667
 ```
 
 ## Setting up your machines
 
-  - nrepl
-  - Brew install clojure, download babhaska.
+-   nrepl
+-   Brew install clojure, download babhaska.
 
 ### Adding dependencies
 
@@ -89,7 +85,7 @@ This workflow helped me tremendously when coding in ClojureScript. I use
 `shadow-cljs` and the typical workflow is to start it on the command
 line for compiling and watching change of your source code. I spent a
 bit of time understanding how I could connect Emacs to the REPL (`M-x
-cider-connect-cljs`) which was different than the typical
+   cider-connect-cljs`) which was different than the typical
 `cider-jack-in` function.
 
 ## ClojureScript, other targets and considerations
@@ -97,9 +93,9 @@ cider-connect-cljs`) which was different than the typical
 I describe my workflow for writing quick script with Clojure JVM.
 Obviously, there are alternatives with other costs/benefits attributes.
 
-  - lumo and plank for leveraging the node and the javascript
+-   lumo and plank for leveraging the node and the javascript
     environment.
-  - joker, an Clojure implementation in Go.
+-   joker, an Clojure implementation in Go.
 
 That being said, I know many expert Clojurian have a single REPL process
 running for weeks, hence the start of a REPL might not matter after some
@@ -114,18 +110,18 @@ interact with it.
 
 ## Steps summary
 
-  - Find a text editor/IDE that supports the `nrepl` (it should not be
+-   Find a text editor/IDE that supports the `nrepl` (it should not be
     that hard).
-  - Write a simple command line that can launch a `nrepl` server in the
+-   Write a simple command line that can launch a `nrepl` server in the
     root directory where you want to work. It can be as easy as calling
     `bb
-        --nrepl-server` or `clojure -A:nrepl` after defining the `:nrepl`
+     --nrepl-server` or `clojure -A:nrepl` after defining the `:nrepl`
     alias in `.clojure/deps.edn`. Note the port or set it to a fix
     value.
-  - Create a `.clj` (anywhere)
-  - Connect your text editor to the REPL and start sending forms from
+-   Create a `.clj` (anywhere)
+-   Connect your text editor to the REPL and start sending forms from
     your file.
-  - Once you feel comfortable with this workflow, see how you can adapt
+-   Once you feel comfortable with this workflow, see how you can adapt
     it to other situations (e.g. ClojureScript, react native, server
     repl, server vm).
 
@@ -141,5 +137,4 @@ Clojure and have fun with it.
 
 ## See also (generated)
 
-  - [Clojure](./../decks/clojure.md)
-  - [Index](./../decks/index.md)
+-   [Clojure](./../decks/clojure.md)

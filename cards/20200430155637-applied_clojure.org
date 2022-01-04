@@ -300,11 +300,5 @@
 
 ** See also (generated)
 
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75][Clojure for the brave and the true]]
-   - [[id:843bd7e1-7106-4c45-ba46-fd2691b349b6][core.async]]
-   - [[id:f65785b4-b6c7-48bf-b53f-046512a74952][Design]]
-   - [[id:ec0e78c6-a0ce-4244-bf23-004734d85adc][Parallel Programming in Clojure with Reducers]]
-   - [[id:0d37c851-9fb3-4633-9ca4-7f814a83bf0e][Simple Made Easy]]
-   - [[id:c832b4d9-e852-4cf9-8b96-e46b738dcbfd][TODO]]
+   - [[file:20200430190921-design.org][Design]]
 

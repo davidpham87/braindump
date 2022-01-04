@@ -1,6 +1,6 @@
 # Clojure for the brave and the true
 
-## Parallel demons <span class="tag" data-tag-name="concurrency"><span class="smallcaps">concurrency</span></span>
+## Parallel demons <span class="tag" tag-name="concurrency"><span class="smallcaps">concurrency</span></span>
 
 1.  Reference cell: Read and write a shared state.
 2.  Mutual exclusion: Example with writing a log with several processes,
@@ -16,7 +16,7 @@ advantage is all the execution are cached. **Note**: deference is done
 with either the `defer` function or the `@` sign in front of the
 variable.
 
-## References type <span class="tag" data-tag-name="concurrency"><span class="smallcaps">concurrency</span></span> <span class="tag" data-tag-name="epochal_time_model"><span class="smallcaps">epochal\_time\_model</span></span>
+## References type <span class="tag" tag-name="concurrency"><span class="smallcaps">concurrency</span></span> <span class="tag" tag-name="epochal_time_model"><span class="smallcaps">epochal_time_model</span></span>
 
 1.  `atom` are identities that can be set and shared by multiple
     threads. They use a set and compare algorithm, i.e. the `swap!`
@@ -27,14 +27,14 @@ variable.
 2.  `watch` are function with four arguments: a key (a keyword for
     identifying the process calling the watcher), a reference variable
     being watched, the old-state, and the new state.
-    
+
     ``` clojure
     (defn f [key watched old-state new-state] nil)
     ```
-    
+
     A watcher function is attached to a reference type (e.g an atom)
     with the `add-watch` function having the following signature:
-    
+
     ``` clojure
     (def counter (atom 0))
     (add-watch counter :watching-counter watch-fn)
@@ -43,7 +43,7 @@ variable.
 3.  Validators are functions that can check if new states are valid.
     They take as argument the atom and return a boolean. They are added
     to the atom as follow
-    
+
     ``` clojure
     (defn bigger-than-1 [x]
       (or (> x 1) (throw (IllegalStateException. "That's too small"))))
@@ -56,16 +56,16 @@ variable.
     isolated) and use *STM*. It means that either the operations between
     two refs happened correctly, or the transaction is aborted. `alter`
     and `dosync` are the key functions.
-    
-      - In a transaction (that is the body of `dosync`), every `ref`
+
+    -   In a transaction (that is the body of `dosync`), every `ref`
         keep their state to the transaction (invisible to outside
         threads) and when the transaction tries to commit, every `ref`
         checks if the value has been altered by other threads.
-      - If any of them has been change, then **none** of the `ref` are
+    -   If any of them has been change, then **none** of the `ref` are
         updated, and the transaction restart with the new value and
         commits only when the initial states has not been /alter/ed by
         other processes.
-    
+
     `commute` also allow to change the state of a ref. However, at
     transaction time, if ref states have been altered, only the
     `commute` part is run again with the new states, which might lead to
@@ -86,7 +86,7 @@ variable.
 
 6.  `pmap` and the following `ppmap` can be used to execute parallel
     task:
-    
+
     ``` clojure
     (defn ppmap
       "Partitioned pmap, for grouping map ops together to make parallel
@@ -98,7 +98,7 @@ variable.
                     (map (partial partition-all grain-size) colls))))
     ```
 
-## core.async and channels <span class="tag" data-tag-name="core_async"><span class="smallcaps">core\_async</span></span>
+## core.async and channels <span class="tag" tag-name="core_async"><span class="smallcaps">core_async</span></span>
 
 1.  `chan` creates a channel. And channel communicate through
     *messages*. One can **put** and **take** message. Processes wait for
@@ -127,12 +127,12 @@ variable.
     blocking channel interactions in the REPL.
 
 4.  Channel buffers are created as following:
-    
+
     ``` clojure
     (def buffer-size 2)
     (def channel-buffer (chan buffer-size))
     ```
-    
+
     This means we can create 2 values without waiting for a response.
     `sliding-buffer` (FIFO) and `dropping-buffer` (LIFO) can be used to
     discard channel message without blocking.
@@ -144,12 +144,12 @@ variable.
 6.  `alts!!` lets us use the result of the first successful channel
     operation among a collection of channel operations. The elegant
     solution with `alts!!` is one can define a timeout
-    
+
     ``` clojure
     (let [[message channel] (alts!! [c1 c2 (timout 20)])] ;; c1 and c2 are predefined channels.
       (println message))
     ```
-    
+
     if the timeout is the first to finish than `message` is `nil`. See
     `alt!` macro as well.
 
@@ -159,7 +159,7 @@ variable.
 ## Abstraction and polymorphism
 
 1.  Multimethods
-    
+
     ``` clojure
     (defmulti method-name (fn [x] (:type x))) ;; or simplty :type, can be more complicated as well
     (defmethod method-name :hello [x] "Hello")
@@ -169,7 +169,7 @@ variable.
     (method-name {:type :good-bye}) ; Good-bye
     (method-name {:type :what?}) ; => I don't know you
     ```
-    
+
     One can also create hierarchies with `derive` and namespace
     keywords.
 
@@ -177,43 +177,43 @@ variable.
     argument and it is a collection of polymorphic operations (unlike
     multimethod which is just one function). Methods from protocols can
     not have a `&
-            rest` argument. Key functions are `defprotocol`, `extend-type`,
+      rest` argument. Key functions are `defprotocol`, `extend-type`,
     `extend-protocol` (for specifying for several type at once).
-    
-      - Caveat: methods from protocols are property of the namespace and
+
+    -   Caveat: methods from protocols are property of the namespace and
         not from the object.
 
 3.  Records are extension of `hash-map`.
-    
+
     ``` clojure
     (defrecord WereWolf [name title])
     (WereWolf. "David" "Master")
     (->WereWolf "David" "Master")
     (map->WereWolf  {:name "David" :title "Master"})
     ```
-    
+
     On has to use the `:import:` statement in the `ns` macro in order to
     import records. One can access field through the keyword or the dot
     `.` macro.
-    
+
     ``` clojure
     (.name (WereWolf. "David" "Master")) ; "David"
     (:title (WereWolf. "David" "Master")) ; "Master"
     ```
-    
+
     Any function on map works on record (although they do not retain
     their class if one `dissoc` or `assoc` them). Here is how one could
     extend a protocol.
-    
+
     ``` clojure
     (defprotocol WereCreature
       "Awesom Were"
       (full-moon-behavior [x] "Full-moon behavior"))
-    
+
     (defrecord WereWolf [name title]
       WereCreature
       (full-moon-behavior [x] (str name " will kill everyone")))
-    
+
     (full-moon-behavior (WereWolf. "David" "Master"))
     ```
 
@@ -222,15 +222,5 @@ variable.
 
 ## Link
 
-  - [Brave and the
+-   [Brave and the
     True](https://www.braveclojure.com/clojure-for-the-brave-and-true/)
-
-## See also (generated)
-
-  - [Applied Clojure](./20200430155637-applied_clojure.md)
-  - [Clojure](./../decks/clojure.md)
-  - [core.async](./20200430155819-core_async.md)
-  - [Parallel Programming in Clojure with
-    Reducers](./20200505112138-clojure_reducers.md)
-  - [TODO](./../todo.md)
-  - [Why Clojure?](./20200504204808-why_clojure.md)

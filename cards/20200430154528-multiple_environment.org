@@ -6,7 +6,7 @@
 #+OPTIONS: toc:nil
 #+filetags: :build:prod:clj:
 
-** Multiple environments
+* Multiple environments
    - We can have different class paths for configuration with =clj= and alias
      in =deps.edn= to manage them.
    - Proxies: you add in ~.shadow-cljs/config.edn or in the config file
@@ -16,9 +16,3 @@
    #+END_SRC
 
 - tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]] build
-
-
-** See also (generated)
-
-   - 
-

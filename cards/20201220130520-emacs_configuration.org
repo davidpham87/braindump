@@ -61,10 +61,6 @@ When working with conda, install [[https://docs.conda.io/en/latest/miniconda.htm
 
 ** See also (generated)
 
-   - [[id:8818abd1-cdef-4492-be89-3354bcc34203][cider]]
-   - [[id:aa56ac8a-9e23-4378-b338-627b7f851dea][CLI Arguments]]
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:cd1a96fd-ddbe-49d2-a5c7-df8d8fe200e6][General Skills]]
-   - [[id:0befe780-b37e-400c-b15d-04406646f532][Python]]
-   - [[id:ad215bf7-b067-41f4-8593-d59351e8a87d][UNIX]]
+   - [[file:../decks/clojure.org][Clojure]]
+   - [[file:python.org][Python]]
 

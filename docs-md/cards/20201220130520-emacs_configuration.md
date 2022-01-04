@@ -7,9 +7,9 @@ Install on ubuntu 20.04
 
 ### JSON Mode
 
-  - There is a bug in \`json-snatcher.el\`, you have to move the hook on
+-   There is a bug in \`json-snatcher.el\`, you have to move the hook on
     kill-buffer to the end of the file, otherwise it reference a
-    variable that has not yet been declared. \<2020-12-20 So\>
+    variable that has not yet been declared. \<2020-12-20 So>
 
 ## Python
 
@@ -54,9 +54,5 @@ the following create a similar experience to usual pc layout
 
 ## See also (generated)
 
-  - [cider](./20200505164639-cider.md)
-  - [CLI Arguments](./20200430154352-cli_arguments.md)
-  - [Clojure](./../decks/clojure.md)
-  - [General Skills](./general.md)
-  - [Python](./python.md)
-  - [UNIX](./unix.md)
+-   [Clojure](./../decks/clojure.md)
+-   [Python](./python.md)

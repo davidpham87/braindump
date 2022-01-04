@@ -9,11 +9,9 @@
 
 * Scientific method
 
-
 ** Links
 
 - Skeptic guide to the universe
-
    #+begin_src bibtex
     @book{novella2018skeptics,
       title={The Skeptics' Guide to the Universe: How to Know What's Really Real in a World Increasingly Full of Fake},
@@ -27,12 +25,27 @@
    #+end_src
 
 - Tronche en biais and https://www.menace-theoriste.fr
+
   #+begin_src bibtex
-          @book{durand2021science,
-          title={La science des balivernes},
-          author={Durand, T.C.},
-          isbn={9782379311932},
-          url={https://books.google.ch/books?id=yAwtEAAAQBAJ},
-          year={2021},
-          publisher={Humensis}}
+   @book{durand2021science,
+       title={La science des balivernes},
+       author={Durand, T.C.},
+       isbn={9782379311932},
+       url={https://books.google.ch/books?id=yAwtEAAAQBAJ},
+       year={2021},
+       publisher={Humensis}
+  }
+
+  #+end_src
+
+- Bad Science from Ben Goldacre
+  #+begin_src bibtex
+    @book{goldacre2008bad,
+      title={Bad Science},
+      author={Goldacre, B.},
+      isbn={9780007283194},
+      url={https://books.google.ch/books?id=Gv1NQubrGNIC},
+      year={2008},
+      publisher={HarperCollins Publishers}
+    }
   #+end_src

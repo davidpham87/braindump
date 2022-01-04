@@ -15,5 +15,5 @@
 
 ** See also (generated)
 
-   - [[id:c832b4d9-e852-4cf9-8b96-e46b738dcbfd][TODO]]
+   - [[file:../todo.org][TODO]]
 

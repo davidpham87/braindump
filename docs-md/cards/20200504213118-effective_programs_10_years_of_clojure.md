@@ -2,8 +2,8 @@
 
 ## Links
 
-  - <https://www.youtube.com/watch?v=2V1FtfBDsLU>, Conj 2017
+-   <https://www.youtube.com/watch?v=2V1FtfBDsLU>, Conj 2017
 
 ## See also (generated)
 
-  - [Rich Hickey](./20200504213225-rich_hickey.md)
+-   [Rich Hickey](./id:f5738e4e-2f64-412a-92bd-64917b118c58)

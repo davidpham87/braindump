@@ -63,11 +63,12 @@ We code in data and values, that is generic types are left as is and no
 artificial types is generally not enforced. There are only few generic
 types and values:
 
-  - Atomic  
-    `nil`, booleans, integers, floats, string, characters, dates,
-    keywords, symbols (maybe a few other)
-  - Composite  
-    vectors, maps, sets, list, sorted-map.
+Atomic  
+`nil`, booleans, integers, floats, string, characters, dates, keywords,
+symbols (maybe a few other)
+
+Composite  
+vectors, maps, sets, list, sorted-map.
 
 We respect this fact and try to code as much as possible with values.
 
@@ -76,11 +77,11 @@ return types and polymorphism.
 
 ## Links
 
-  - [Clojure rationale](https://clojure.org/about/rationale)
-  - [edn](https://github.com/edn-format/edn)
-  - [transit](https://blog.cognitect.com/blog/2014/7/22/transit)
+-   [Clojure rationale](https://clojure.org/about/rationale)
+-   [edn](https://github.com/edn-format/edn)
+-   [transit](https://blog.cognitect.com/blog/2014/7/22/transit)
 
 ## See also (generated)
 
-  - [Clojure](./../decks/clojure.md)
-  - [shadow-cljs](./20200430154647-shadow_cljs.md)
+-   [Clojure](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8)
+-   [shadow-cljs](./id:a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350)

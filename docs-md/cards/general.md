@@ -1,28 +1,28 @@
 # General
 
-  - Learn with <https://www.hackerrank.com/> (especially Clojure).
+-   Learn with <https://www.hackerrank.com/> (especially Clojure).
     Complete some harder problems in functional programming.
-  - www.pythonchallenge.com
-  - Exercise
+-   www.pythonchallenge.com
+-   Exercise
 
 ## <span class="todo TODO">TODO</span> Read introduction to elisp
 
 ## <span class="todo TODO">TODO</span> Diff, ediff
 
-  - `a` or `b` to select which version is correct. Append `x` for
+-   `a` or `b` to select which version is correct. Append `x` for
     saving.
-  - In magit, use `e` for diffing with ediff.
+-   In magit, use `e` for diffing with ediff.
 
 ## magit and git, gitimmersion
 
-  - \[X\] Revert file in magit
-  - \[ \] Read introduction
+-   [x] Revert file in magit
+-   [ ] Read introduction
 
 ## Master/read manual org-mode
 
-  - org-mode easy template (e.g. `<s[tab]`) allows to easily include org
+-   org-mode easy template (e.g. `<s[tab]`) allows to easily include org
     syntax. `C-c C-,` to open the shortcut window.
-  - `C-c C-q` (insert tags), `C-c /` (filter org-file by).
+-   `C-c C-q` (insert tags), `C-c /` (filter org-file by).
 
 ## Rewrite emacs.d through org-mode and usepackage.
 
@@ -31,21 +31,21 @@ files and usepackage.
 
 ## Dired mode
 
-  - Find files with grep
-  - Still have to learn the new shortcuts. Most important are `R`, `C`,
+-   Find files with grep
+-   Still have to learn the new shortcuts. Most important are `R`, `C`,
     `D`, `(`, `%
-        m` and =% g0.
-  - Using `Q`, empower the user to query and replace in files. Using `*
-    u` to select all non-saved buffer to close them all.
+     m` and =% g0.
+-   Using `Q`, empower the user to query and replace in files. Using
+    `* u` to select all non-saved buffer to close them all.
 
 ## Perfect use of keyboard \[2/2\]
 
-  - \[X\] The comma should be hit with the middle finger.
-  - \[X\] Emacs keybindings should be used using both hands, this has to
+-   [x] The comma should be hit with the middle finger.
+-   [x] Emacs keybindings should be used using both hands, this has to
     be set with key-bindings.
-  - Tip: use the hand palm for reaching the CTRL keys.
-  - \[ \]: balance the space between the hand. Especially the right
-    thumb as most words in english finish with the left hand letters.
+-   Tip: use the hand palm for reaching the CTRL keys.
+-   [ ] : balance the space between the hand. Especially the right thumb
+    as most words in english finish with the left hand letters.
 
 ## Write a script to update my-emacs-config automatically.
 
@@ -94,14 +94,11 @@ Set `deft-ignore-file-regexp` \[2020-05-06 Mi\].
 
 For grouping you need to escape the parenthesis.
 
-  - [Documentation on
+-   [Documentation on
     regex](https://www.gnu.org/software/emacs/manual/html_node/emacs/Regexps.html)
-  - [Escape
+-   [Escape
     characters](https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Backslash.html#Regexp-Backslash)
 
 ## See also (generated)
 
-  - [cider](./20200505164639-cider.md)
-  - [CLI Arguments](./20200430154352-cli_arguments.md)
-  - [emacs](./20201220130520-emacs_configuration.md)
-  - [Materiala](./20200503165952-materiala.md)
+-   [emacs](./20201220130520-emacs_configuration.md)

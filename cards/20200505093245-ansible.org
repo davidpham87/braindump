@@ -29,6 +29,5 @@
 
 ** See also (generated)
 
-   - [[id:8c632bb6-d0b3-410f-b184-cde6d851aadd][Devops]]
-   - [[id:ab4b3a2e-672d-4600-8a05-ee073d0d0c53][Learning tips]]
+   - [[file:devops.org][Devops]]
 

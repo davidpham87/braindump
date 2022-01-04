@@ -21,9 +21,9 @@ Remains to test in practice, but the
 [project](https://github.com/davidpham87/new-ubuntu-config) is pretty
 stable now.
 
-  - \[X\] Create a python file that writes the makefile automatically
-  - \[X\] Create README.md where appropriate.
-  - \[X\] Test the application
+-   [x] Create a python file that writes the makefile automatically
+-   [x] Create README.md where appropriate.
+-   [x] Test the application
 
 # Java and Graal
 
@@ -32,4 +32,4 @@ Alternative to select which version of java is used.
 
 ## See also (generated)
 
-  - [Multipass](./20200505093126-multipass.md)
+-   [Multipass](./id:555e395a-17db-430e-b416-1329d2039882)

@@ -2,10 +2,11 @@
 
 ## Concepts
 
-  - Concurrency  
-    the concept of handling multiple tasks at the same time.
-  - Parallelism  
-    the concept of performing multiple computations at the same time.
+Concurrency  
+the concept of handling multiple tasks at the same time.
+
+Parallelism  
+the concept of performing multiple computations at the same time.
 
 The difference lies in the fact that in concurrency there is a sense of
 competition of resources (who/what gets to use the memory or cpu) for
@@ -14,8 +15,8 @@ coordination and collaboration to achieve its goal.
 
 ### Sources
 
-  - [How to Think about Parallel Programming:
-    Not\!](https://github.com/matthiasn/talk-transcripts/blob/master/Steele_Guy/ParallelProg.md),
+-   [How to Think about Parallel Programming:
+    Not!](https://github.com/matthiasn/talk-transcripts/blob/master/Steele_Guy/ParallelProg.md),
     Guy Steele.
 
 ## Reducers
@@ -24,28 +25,32 @@ The things that can be improved is usually latency and resources usages.
 Scan operation can be parallelized. The goal is to amortizing the
 overhead for launching parallel computation.
 
-  - Work-span  
-    Compare the unit time cost of your program against what is the
-    minimal sequential path of unit of work on a machine with infinite
-    core, when the cost is one, the term is embarrassingly parallel
-    problems. Observer that the amount of work increased with parallel
-    work than in a serial version.
-  - Tiling  
-    gathering many of the small problem, and compute the function on
-    each group/tile.
-  - Parallel stack  
-    ability to steal work from other tiles to increase speed.
-  - Fusion  
-    is to join the operations to remove communication (similar to
-    transducers to sequences operations).
-  - Fork/join  
-    split the work, until a base case, make the computation the segment
-    and combine the blocks back.
+Work-span  
+Compare the unit time cost of your program against what is the minimal
+sequential path of unit of work on a machine with infinite core, when
+the cost is one, the term is embarrassingly parallel problems. Observer
+that the amount of work increased with parallel work than in a serial
+version.
+
+Tiling  
+gathering many of the small problem, and compute the function on each
+group/tile.
+
+Parallel stack  
+ability to steal work from other tiles to increase speed.
+
+Fusion  
+is to join the operations to remove communication (similar to
+transducers to sequences operations).
+
+Fork/join  
+split the work, until a base case, make the computation the segment and
+combine the blocks back.
 
 ### Sources
 
-  - <https://www.braveclojure.com/quests/reducers/intro/>
-  - [Parallel Programming, Fork Join, and Reducers - Daniel
+-   <https://www.braveclojure.com/quests/reducers/intro/>
+-   [Parallel Programming, Fork Join, and Reducers - Daniel
     Higginbotham](https://www.youtube.com/watch?v=eRq5UBx6cbA)
 
 ## Reducers A Library and Model for Collection Proc - Rich Hickey \[2012\]
@@ -84,20 +89,20 @@ the operation remove stick (`r/map`) and keep only the healthy ones
 
 ### Sources
 
-  - [Talks from Rich
+-   [Talks from Rich
     Hickey](https://www.youtube.com/watch?v=IjB-IOwGrGE)
-  - [Transcripts](https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/Reducers.md)
+-   [Transcripts](https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/Reducers.md)
 
 ## Links
 
-  - [Clojure for the brave and the
-    true](./20200430160432-clojure_for_the_brave_and_the_true.md)
-  - [Applied Clojure](./20200430155637-applied_clojure.md)
+-   [Clojure for the brave and the
+    true](./id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75)
+-   [Applied Clojure](./id:ab553c45-6dc8-4971-a1d4-925cc51a0152)
 
 ## See also (generated)
 
-  - [Applied Clojure](./20200430155637-applied_clojure.md)
-  - [Clojure](./../decks/clojure.md)
-  - [Clojure for the brave and the
-    true](./20200430160432-clojure_for_the_brave_and_the_true.md)
-  - [core.async](./20200430155819-core_async.md)
+-   [Applied Clojure](./id:ab553c45-6dc8-4971-a1d4-925cc51a0152)
+-   [Clojure](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8)
+-   [Clojure for the brave and the
+    true](./id:8a25f159-fa4a-4bdb-9ad2-1db6731b4a75)
+-   [core.async](./id:843bd7e1-7106-4c45-ba46-fd2691b349b6)

@@ -1,17 +1,17 @@
 # Why?
 
-  - Using [org-roam](https://github.com/jethrokuan/org-roam),
+-   Using [org-roam](https://github.com/jethrokuan/org-roam),
     [mkdocs-material](https://squidfunk.github.io/mkdocs-material/), I
     can generate a website to search for my idea, using the zettelkasten
     methods.
-  - Org mode is great for authoring, but I do prefer some nice font and
+-   Org mode is great for authoring, but I do prefer some nice font and
     a good navigation, search navigation. mkdocs-material offered a
     great compromise and orgmk allowed me to have a command line
     conversion.
-  - [Clojure](./decks/clojure.md) allowed to handle all the files
-    systems, interaction with the sqlite database, the parsing and the
-    concurrency.
-  - I came up with my own set up, cards for writing anything that goes
+-   [Clojure](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8) allowed to
+    handle all the files systems, interaction with the sqlite database,
+    the parsing and the concurrency.
+-   I came up with my own set up, cards for writing anything that goes
     into my minds, links them and decks for writing summaries. Blog
     posts are a place where I can write some ideas and opinions to share
     them.
@@ -28,13 +28,13 @@ See org-roam-clj on how to use the library.
 
 ### Programming
 
-  - [clj](./decks/clojure.md),
-    [core.async](./cards/20200430155819-core_async.md).
+-   [clj](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8),
+    [core.async](./id:843bd7e1-7106-4c45-ba46-fd2691b349b6).
 
 ## See also (generated)
 
-  - [Clojure](./decks/clojure.md)
-  - [core.async](./cards/20200430155819-core_async.md)
-  - [First blog ticket](./blog/20200502171331-first_blog_ticket.md)
-  - [org mode](./cards/20200430180442-org_mode.md)
-  - [Readings](./cards/readings.md)
+-   [Clojure](./id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8)
+-   [core.async](./id:843bd7e1-7106-4c45-ba46-fd2691b349b6)
+-   [First blog ticket](./id:6b384a56-0dc3-4569-9012-fcdb44f61eae)
+-   [org mode](./id:ea7b9063-7e26-4c95-9be9-b3d60f772d69)
+-   [Readings](./id:84911f54-7623-449b-8219-adc57fd87edf)

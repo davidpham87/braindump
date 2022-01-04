@@ -27,10 +27,3 @@
 ** Source
 
    - http://swannodette.github.io/2015/01/09/life-with-dynamic-typing/
-
-** See also (generated)
-
-   - [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][Clojure]]
-   - [[id:08aa455d-2e74-47cd-89d8-02966408eca5][David Nolen]]
-   - [[id:a5ae204f-2b2a-4bbc-8e67-86bfe3f1e350][shadow-cljs]]
-
