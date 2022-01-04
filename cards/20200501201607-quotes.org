@@ -45,6 +45,11 @@
    should always be placed foremost. -- Albert EINSTEIN
    #+END_QUOTE
 
+   #+begin_quote
+   Absence of evidence is not evidence of absence, except it kind of is in
+   science.
+   #+end_quote
+
 ** Education
    #+BEGIN_QUOTE
    Everybody is a genius. But if you judge a dolphin by its ability to climb a
@@ -96,8 +101,14 @@
 
    - tags :: [[id:9336fa0f-85f3-4943-b374-6ca2f01ee0f8][clj]]
 
+** Twitter
+
+#+begin_quote
+Don't judge the quality of the decision by its outcom, but by the information
+available at the time of decision. (Anonymous)
+#+end_quote
+
 
 ** See also (generated)
 
-   - 
-
+   -
