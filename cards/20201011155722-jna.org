@@ -221,6 +221,11 @@
 
     #+end_src
 
+*** Discusssion
+
+    - https://clojurians.zulipchat.com/#narrow/stream/151924-data-science/topic/dtype-next.20jna
+    - https://clojurians.zulipchat.com/#narrow/stream/236259-tech.2Eml.2Edataset.2Edev/topic/Neanderthal.20version
+
 ** C style
 
    Pointers
@@ -234,4 +239,3 @@
 ** See also (generated)
 
    - [[file:20201003150521-clojurecuda.org][ClojureCuda]]
-
