@@ -185,6 +185,10 @@
      }
    #+end_src
 
+** Security
+
+   See https://gist.github.com/plentz/6737338
+
 ** Links
    - https://nginx.org/en/
    - [[https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04][Digital ocean guide]]
@@ -193,4 +197,3 @@
 ** See also (generated)
 
    - [[file:devops.org][Devops]]
-

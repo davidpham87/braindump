@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       987b8c22-2bab-4536-9be6-2f3eec3b667d
+:END:
+#+TITLE: tailwindcss
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: tailwindcss
+#+filetags: tailwindcss
+#+DATE: 2022-03-08
+
+* tailwindcss
+
+  - https://tailwindcss.com/
+  - Example of configuration with clojurescript https://github.com/ribelo/doxa-re-frame-example
