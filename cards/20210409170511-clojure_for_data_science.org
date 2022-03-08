@@ -91,6 +91,10 @@
    The building block is =neanderthal= and hence interop with =tech.ml.dataset=
    is welcome.
 
+** Time Manipulation
+
+   https://github.com/juxt/tick
+
 ** Links
 
    - [[https://github.com/cnuernber/dtype-next][dtype-next]], [[https://github.com/techascent/tech.ml.dataset][tech.ml.dataset]], [[https://github.com/techascent/tech.ml][tech.ml]]
