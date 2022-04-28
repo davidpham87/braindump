@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       0bf90cbd-1b4b-4031-89d8-c2b29084f042
-:ROAM_ALIASES: micromaster-statistics-and-data-science
+:ROAM_ALIASES: micromaster-statistics-and-data-science data-science statistics
 :END:
 #+TITLE: Micromaster Statistics and Data Science
 #+OPTIONS: toc:nil
@@ -531,4 +531,3 @@ Unique MLE if using the canonical link function.
    - [[file:20200430153912-ethz.org][ETHZ]]
    - [[file:python.org][Python]]
    - [[file:r_cran.org][R CRAN]]
-

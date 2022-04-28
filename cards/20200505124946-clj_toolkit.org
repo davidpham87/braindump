@@ -12,6 +12,19 @@
   Libraries supporting writing clojure in a better way. It can be code editor
   support or libraries to avoid writing too much code.
 
+** js2cljs
+
+   Transform javascript code to clojurescript code.
+   - https://gitlab.com/mauricioszabo/js2cljs
+   - https://mauricioszabo.gitlab.io/js2cljs/
+
+** JSX to reagent
+
+   Transform jsx to clojurescript code automatically.
+   
+   - https://github.com/madvas/jsx-to-clojurescript
+
+     
 ** See also (generated)
 
    - [[file:../decks/clojure.org][Clojure]]

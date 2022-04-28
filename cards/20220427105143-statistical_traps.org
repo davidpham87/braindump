@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       9e67a01f-72bb-4b5f-9e5d-97b43655348f
+:END:
+#+TITLE: Statistical Traps
+#+OPTIONS: toc:nil
+#+ROAM_ALIAS: statistical-traps
+#+filetags: statistical-traps statistics data-science
+#+DATE: 2022-04-27
+
+* Statistical Traps
+
+This is my own summary of chapter 45 from [[http://www.intuitivebiostatistics.com/][Intuitive Biostatistics]].
+
+1. Focusing on /p-values/ and statistical significance rather than effect size.
+   - Focus on the size of effect (it should be big enough to be of interest).
+   - Is the effect determined with sufficient precision.
+2. Testing hypotheses suggested by the data (known as /HARKING/) or data leaking.
+3. Analyzing withoutt a plan (/p-hacking/), problem of multiple comparison, and
+   power of tests.
+4. Correlation does not prove causation.
+5.
+
+
+
+** Source
+
+http://www.intuitivebiostatistics.com/
+
+#+begin_src bibtex
+  @book{motulsky2018intuitive,
+    title={Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking},
+    author={Motulsky, H.},
+    isbn=9780190643560,
+    lccn=2017048570,
+    url={https://books.google.ch/books?id=zxi2swEACAAJ},
+    year=2018,
+    publisher={Oxford University Press}
+  }
+#+end_src
